@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Каталог</title>
+<style>
+    #workspace {
+    display: grid;
+    grid-template-columns: 60% 35%;
+    gap: 5%;
+}
+    #sheet-layout {
+    aspect-ratio: 210 / 297;
+    width: 67%;
+    border: 1px solid black;
+
+}
+    #sheet-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    left: 2.0cm;
+}
+    #sheet-panel h2 {
+    width: 100%;
+    text-align: center;
+}
+    
+</style>
+</head>
+<body>
+
+    <h1>КАТАЛОГ НАКЛЕЕК</h1>
+
+    <p>Здесь будут наши наклейки.</p>
+    <div id="workspace">
+
+    <div id="catalog">
+    <h2>КАТАЛОГ</h2>
+
+    <img id="sticker1" src="images/ChatGPT Image 6 сент. 2026 г., 23_18_15.png" width="200">
+    <script>
+    document.getElementById("sticker1").ondblclick = function() {
+        if (selectedSize === null) {
+            alert("Сначала выберите размер");
+            return;
+        }
+        
+        const quantity = document.getElementById("quantity").value;
+        let existingItem = orderItems.find(function(item) {
+            return item.image === this.id && item.size === selectedSize;
+        }, this);
+        if (existingItem) {
+            existingItem.quantity += Number(quantity);
+        } else {
+            orderItems.push({
+                image: this.id,
+                size: selectedSize,
+                quantity: Number(quantity)
+            });
+        }
+        
+for (let i = 0; i < quantity; i++) {
+    const copy = document.createElement("img");
+    copy.src = this.src;
+    copy.dataset.image = this.id;
+    copy.dataset.size = selectedSize;
+    
+    copy.width = selectedSize === "A" ? 25 :
+                 selectedSize === "B" ? 50 :
+                 selectedSize === "C" ? 75 :
+                 100;
+
+    copy.ondblclick = function() {
+        this.remove();
+
+        let item = orderItems.find(function(item) {
+        return item.image === this.dataset.image &&
+               item.size === this.dataset.size;
+        }, this);
+
+        if (item) {
+            item.quantity--;
+
+            if (item.quantity === 0) {
+                orderItems.splice(orderItems.indexOf(item), 1);
+            }
+        }
+        let orderText = "";
+
+        orderItems.forEach(function(item) {
+            orderText += item.image + " — размер " +
+                 item.size + ", количество " +
+                 item.quantity + "\n";
+        });
+
+document.getElementById("order-items").innerText = orderText;
+    };
+
+    document.getElementById("sheet-layout").appendChild(copy);
+}
+let orderText = "";
+
+orderItems.forEach(function(item) {
+    orderText += item.image + " — размер " +
+                 item.size + ", количество " +
+                 item.quantity + "\n";
+});
+
+document.getElementById("order-items").innerText = orderText;
+    };
+</script>
+    <p>Двойной клик по наклейке — добавить в Лист-Макет</p>
+
+    <h2>Грозный Трансформер</h2>
+
+    <p>Размер: <span id="selectedSizeText">не выбран</span></p>
+    <p>
+    Количество:
+    <input id="quantity" type="number" value="1" min="1">
+</p>
+
+    <button id="sizeA">A</button>
+    <button id="sizeB">B</button>
+    <button id="sizeC">C</button>
+    <button id="sizeD">D</button>
+</div>
+
+    <div id="sheet-panel">
+        <h2>ЛИСТ-МАКЕТ</h2>
+        <div id="sheet-layout">
+</div>
+
+    <div id="order-summary">
+        <h2>ЗАКАЗ</h2>
+        <div id="order-items"></div>
+    </div>
+
+</div>
+
+
+<script>
+    let selectedSize = null;
+    let orderItems = [];
+    
+    let catalogItem = {
+    id: 1,
+    name: "Грозный Трансформер",
+    image: "images/ChatGPT Image 6 сент. 2026 г., 23_18_15.png"
+    };
+    
+    
+
+const buttons = document.querySelectorAll("button");
+
+buttons.forEach(function(button) {
+    button.onclick = function() {
+        if (selectedSize === this.innerText) {
+    selectedSize = null;
+    document.getElementById("selectedSizeText").innerText = "не выбран";
+    this.style.backgroundColor = "";
+    this.style.color = "";
+    return;
+}
+
+        buttons.forEach(function(button) {
+            button.style.backgroundColor = "";
+            button.style.color = "";
+        });
+
+        this.style.backgroundColor = "black";
+        this.style.color = "white";
+
+        selectedSize = this.innerText;
+        document.getElementById("selectedSizeText").innerText = selectedSize;
+    };
+});
+    
+</script>
+</body>
+</html>
