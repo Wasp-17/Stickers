@@ -1,0 +1,13 @@
+# Original artwork and generated production images are kept outside GitHub.
+images/*
+production/
+
+# Local packages and temporary processing files.
+*.zip
+_incoming/
+__pycache__/
+*.pyc
+
+# Local development artifacts.
+.DS_Store
+Thumbs.db
