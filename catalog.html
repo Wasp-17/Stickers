@@ -1,182 +1,153 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Каталог</title>
-<style>
-    #workspace {
-    display: grid;
-    grid-template-columns: 60% 35%;
-    gap: 5%;
-}
-    #sheet-layout {
-    aspect-ratio: 210 / 297;
-    width: 67%;
-    border: 1px solid black;
-
-}
-    #sheet-panel {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    left: 2.0cm;
-}
-    #sheet-panel h2 {
-    width: 100%;
-    text-align: center;
-}
-    
-</style>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Каталог — Наклейки</title>
+<link rel="stylesheet" href="catalog.css?v=20261015-4"><script src="layout.js?v=20261008-1" defer></script><script src="catalog-search.js?v=20260921-1" defer></script><script src="local-store.js?v=20261014-1" defer></script><script src="catalog.js?v=20261015-4" defer></script>
 </head>
 <body>
-
-    <h1>КАТАЛОГ НАКЛЕЕК</h1>
-
-    <p>Здесь будут наши наклейки.</p>
-    <div id="workspace">
-
-    <div id="catalog">
-    <h2>КАТАЛОГ</h2>
-
-    <img id="sticker1" src="images/ChatGPT Image 6 сент. 2026 г., 23_18_15.png" width="200">
-    <script>
-    document.getElementById("sticker1").ondblclick = function() {
-        if (selectedSize === null) {
-            alert("Сначала выберите размер");
-            return;
-        }
-        
-        const quantity = document.getElementById("quantity").value;
-        let existingItem = orderItems.find(function(item) {
-            return item.image === this.id && item.size === selectedSize;
-        }, this);
-        if (existingItem) {
-            existingItem.quantity += Number(quantity);
-        } else {
-            orderItems.push({
-                image: this.id,
-                size: selectedSize,
-                quantity: Number(quantity)
-            });
-        }
-        
-for (let i = 0; i < quantity; i++) {
-    const copy = document.createElement("img");
-    copy.src = this.src;
-    copy.dataset.image = this.id;
-    copy.dataset.size = selectedSize;
-    
-    copy.width = selectedSize === "A" ? 25 :
-                 selectedSize === "B" ? 50 :
-                 selectedSize === "C" ? 75 :
-                 100;
-
-    copy.ondblclick = function() {
-        this.remove();
-
-        let item = orderItems.find(function(item) {
-        return item.image === this.dataset.image &&
-               item.size === this.dataset.size;
-        }, this);
-
-        if (item) {
-            item.quantity--;
-
-            if (item.quantity === 0) {
-                orderItems.splice(orderItems.indexOf(item), 1);
-            }
-        }
-        let orderText = "";
-
-        orderItems.forEach(function(item) {
-            orderText += item.image + " — размер " +
-                 item.size + ", количество " +
-                 item.quantity + "\n";
-        });
-
-document.getElementById("order-items").innerText = orderText;
-    };
-
-    document.getElementById("sheet-layout").appendChild(copy);
-}
-let orderText = "";
-
-orderItems.forEach(function(item) {
-    orderText += item.image + " — размер " +
-                 item.size + ", количество " +
-                 item.quantity + "\n";
-});
-
-document.getElementById("order-items").innerText = orderText;
-    };
-</script>
-    <p>Двойной клик по наклейке — добавить в Лист-Макет</p>
-
-    <h2>Грозный Трансформер</h2>
-
-    <p>Размер: <span id="selectedSizeText">не выбран</span></p>
-    <p>
-    Количество:
-    <input id="quantity" type="number" value="1" min="1">
-</p>
-
-    <button id="sizeA">A</button>
-    <button id="sizeB">B</button>
-    <button id="sizeC">C</button>
-    <button id="sizeD">D</button>
+<header>
+<a href="index.html">НАКЛЕЙКИ</a><span>Выбирай только то, что нравится</span>
+<nav class="catalog-account" aria-label="Навигация по сайту">
+<section id="order-summary" class="header-cart" aria-label="Корзина">
+<button id="order-toggle" class="cart-button" type="button" aria-expanded="false" aria-controls="order-details" aria-label="Показать состав корзины">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.1 9.1a2 2 0 0 0 2 1.5h7.7a2 2 0 0 0 1.9-1.4L20 8H6.2M9 19a1 1 0 1 0 0 .01M17 19a1 1 0 1 0 0 .01"/></svg>
+<span id="cart-count" class="cart-count">0</span>
+</button>
+<div id="order-details" hidden><button id="order-close" class="cart-close" type="button" aria-label="Закрыть корзину">×</button><div id="order-items"></div></div>
+</section>
+<a href="index.html">Главная</a><a href="account.html">Личный кабинет</a>
+</nav>
+</header>
+<main id="workspace">
+<section id="catalog">
+<h1 class="eyebrow">ТВОЯ КОЛЛЕКЦИЯ</h1>
+<div class="selection-panel">
+<div class="controls"><fieldset><legend>Размер: <span id="selectedSizeText">не выбран</span></legend><div id="sizes"></div><p class="size-note">A — 15 мм · B — 25 мм · C — 50 мм · D — 100 мм · E — по рабочей области A4</p></fieldset>
+<label for="quantity">Количество<input id="quantity" type="number" min="1" step="1" value="1" inputmode="numeric" aria-describedby="selected-sticker message"></label>
+<label class="search-control" for="search-query">Поиск<input id="search-query" type="search" placeholder="Название, тема, роль…" autocomplete="off" aria-controls="sticker-grid" aria-describedby="search-status"></label></div>
+<div class="catalog-filters" aria-label="Фильтры каталога">
+<label class="filter-control" for="filter-section">Раздел<select id="filter-section"><option value="">Выберите раздел</option></select></label>
+<label class="filter-control" for="filter-character">Персонаж<select id="filter-character"><option value="">Все персонажи</option></select></label>
+<label class="filter-control" for="filter-role">Роль<select id="filter-role"><option value="">Все роли</option></select></label>
+<label class="filter-control" for="filter-mood">Настроение<select id="filter-mood"><option value="">Все настроения</option></select></label>
+<button id="apply-search" class="primary filter-apply" type="button" disabled>Найти</button><button id="clear-filters" class="filter-reset" type="button" disabled>Сбросить</button>
 </div>
-
-    <div id="sheet-panel">
-        <h2>ЛИСТ-МАКЕТ</h2>
-        <div id="sheet-layout">
+<p id="selected-sticker" class="selected-sticker" role="status"></p>
+<p id="search-status" class="search-status" role="status" aria-live="polite"></p>
 </div>
-
-    <div id="order-summary">
-        <h2>ЗАКАЗ</h2>
-        <div id="order-items"></div>
-    </div>
-
+<p id="message" role="status" aria-live="polite"></p>
+<div id="sticker-grid" class="sticker-grid" aria-label="Наклейки"></div>
+<div class="more-results"><button id="show-more-results" class="secondary" type="button" hidden>Показать ещё</button></div>
+</section>
+<aside>
+<div class="side-panels">
+<section id="sheet-panel"><div class="sheet-heading"><h2 id="sheet-title">Лист-макет</h2><span id="sheet-count"></span></div>
+<div id="sheet-layout" aria-label="Лист-макет"></div><p class="muted hint">Нажмите на наклейку — открыть инструменты</p>
+<div class="sheet-actions"><button id="delete-sheet" class="secondary" disabled>Удалить этот лист</button></div>
+<div id="delete-confirmation" hidden role="region" aria-label="Подтверждение удаления листа"><p id="delete-warning" role="alert"></p><div class="dialog-actions"><button id="confirm-delete-sheet" class="primary">Да, удалить лист</button><button id="cancel-delete-sheet" class="secondary">Отмена</button></div></div>
+<nav id="sheet-list" aria-label="Остальные листы"></nav>
+<div class="layout-order-actions"><button id="layout-checkout" class="checkout-light" type="button" disabled>Оформить заказ</button><button id="send-to-cart" class="secondary" type="button" disabled>Отправить в корзину</button></div>
+</section></div></aside>
+</main>
+<section id="sticker-inspector" class="sticker-inspector" hidden role="dialog" aria-label="Действия с наклейкой">
+<nav class="inspector-tools" aria-label="Инструменты наклейки">
+<button id="inspector-delete" class="inspector-tool inspector-delete" type="button" aria-label="Удалить наклейку" aria-expanded="false" title="Удалить">×</button>
+<button id="inspector-settings" class="inspector-tool inspector-settings" type="button" aria-label="Размер и количество" aria-expanded="false" title="Размер и количество"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5-5L11.8 3.4 9.4 5.8 7.3 3.7a4 4 0 0 0 5 5L4 17l3 3 8.3-8.3a4 4 0 0 0 5-5l-2.1 2.1-2.4-2.4 2.1-2.1Z"/></svg></button>
+<button id="inspector-add-one" class="inspector-tool inspector-add-one" type="button" aria-label="Добавить ещё одну такую же наклейку" title="Добавить такую же">+</button>
+<button id="inspector-more" class="inspector-tool inspector-more" type="button" aria-label="Другие настройки" title="Другие настройки">•••</button>
+<button id="inspector-info" class="inspector-tool inspector-info" type="button" aria-label="Сведения о наклейке" aria-expanded="false" title="Сведения о наклейке">i</button>
+</nav>
+<div class="inspector-card">
+<img id="inspector-image" alt="" draggable="false"><strong id="inspector-name"></strong><span id="inspector-summary"></span>
+<section id="inspector-settings-panel" class="inspector-panel inspector-settings-panel" hidden aria-label="Размер и количество">
+<div class="inspector-scope" aria-label="Область изменения"><button id="scope-one" type="button" aria-pressed="true">По количеству</button><button id="scope-all" type="button" aria-pressed="false"></button></div>
+<div class="inspector-size-editor"><span>Размер</span><div id="inspector-sizes" aria-label="Новый размер наклейки"></div></div>
+<label for="inspector-quantity">Сколько изменить<input id="inspector-quantity" type="number" min="1" step="1" inputmode="numeric"></label>
+<button id="inspector-apply" class="inspector-apply" type="button">Применить</button>
+<p id="inspector-message" role="status" aria-live="polite"></p>
+</section>
+<section id="inspector-delete-panel" class="inspector-panel inspector-delete-panel" hidden aria-label="Подтверждение удаления">
+<strong>Удалить только эту наклейку?</strong><div><button id="inspector-confirm-delete" type="button">Удалить</button><button id="inspector-cancel-delete" type="button">Отмена</button></div>
+</section>
+<section id="inspector-info-panel" class="inspector-panel inspector-info-panel" hidden aria-label="Сведения о наклейке">
+<dl>
+<div><dt>Раздел</dt><dd id="inspector-info-section"></dd></div>
+<div><dt>Персонаж</dt><dd id="inspector-info-character"></dd></div>
+<div><dt>Размер</dt><dd id="inspector-info-size"></dd></div>
+<div><dt>В заказе</dt><dd id="inspector-info-count"></dd></div>
+<div><dt>Лист</dt><dd id="inspector-info-sheet"></dd></div>
+<div><dt>Обработка</dt><dd id="inspector-info-effects"></dd></div>
+</dl>
+<button id="inspector-find-catalog" type="button">Найти в каталоге</button>
+</section>
 </div>
-
-
-<script>
-    let selectedSize = null;
-    let orderItems = [];
-    
-    let catalogItem = {
-    id: 1,
-    name: "Грозный Трансформер",
-    image: "images/ChatGPT Image 6 сент. 2026 г., 23_18_15.png"
-    };
-    
-    
-
-const buttons = document.querySelectorAll("button");
-
-buttons.forEach(function(button) {
-    button.onclick = function() {
-        if (selectedSize === this.innerText) {
-    selectedSize = null;
-    document.getElementById("selectedSizeText").innerText = "не выбран";
-    this.style.backgroundColor = "";
-    this.style.color = "";
-    return;
-}
-
-        buttons.forEach(function(button) {
-            button.style.backgroundColor = "";
-            button.style.color = "";
-        });
-
-        this.style.backgroundColor = "black";
-        this.style.color = "white";
-
-        selectedSize = this.innerText;
-        document.getElementById("selectedSizeText").innerText = selectedSize;
-    };
-});
-    
-</script>
-</body>
-</html>
+</section>
+<div id="addition-feedback" class="addition-feedback" data-context="page" hidden role="status" aria-live="polite"><span id="addition-feedback-text"></span><button id="undo-addition" type="button">Отменить</button></div>
+<dialog id="preview" aria-labelledby="preview-title">
+<button id="close-preview" class="close" type="button" aria-label="Закрыть увеличенный просмотр">×</button>
+<div class="preview-stage">
+<button id="preview-previous" class="preview-arrow preview-arrow-previous" type="button" aria-label="Предыдущая наклейка">‹</button>
+<img id="preview-image" alt="Увеличенный просмотр наклейки" draggable="false">
+<button id="preview-next" class="preview-arrow preview-arrow-next" type="button" aria-label="Следующая наклейка">›</button>
+</div>
+<div class="preview-details">
+<div><h2 id="preview-title"></h2><p id="preview-position" class="muted" aria-live="polite"></p></div>
+<button id="preview-character" class="secondary preview-character" type="button" hidden></button>
+</div>
+<aside class="preview-editor-dock" aria-label="Редактирование изображения">
+<button id="preview-editor-toggle" class="preview-editor-toggle" type="button" aria-expanded="false" aria-controls="preview-effects-controls" title="Редактировать изображение" aria-label="Открыть редактор изображения"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5-5L11.8 3.4 9.4 5.8 7.3 3.7a4 4 0 0 0 5 5L4 17l3 3 8.3-8.3a4 4 0 0 0 5-5l-2.1 2.1-2.4-2.4 2.1-2.1Z"/></svg></button>
+<section id="preview-effects-controls" class="preview-effects-controls" hidden aria-label="Обработка изображения">
+<div class="preview-edit-effects">
+<button id="edit-mirror" type="button" aria-pressed="false">Зеркально</button>
+<button id="edit-grayscale" type="button" aria-pressed="false">Ч/Б</button>
+<button id="edit-sepia" type="button" aria-pressed="false">Сепия</button>
+<button id="edit-brightness" type="button" aria-pressed="false">Светлее</button>
+<button id="edit-saturation" type="button" aria-pressed="false">Насыщеннее</button>
+<button id="edit-reset" type="button">Сбросить эффекты</button>
+</div>
+<p id="preview-effects-scope" class="muted"></p>
+</section>
+</aside>
+<div id="preview-order-controls" class="preview-order-controls" aria-label="Параметры добавления наклейки">
+<fieldset><legend>Размер</legend><div id="preview-sizes" class="preview-sizes"></div></fieldset>
+<label for="preview-quantity">Количество<input id="preview-quantity" type="number" min="1" max="20" step="1" inputmode="numeric" autocomplete="off"></label>
+<button id="preview-add" class="primary" type="button">Добавить</button>
+<p id="preview-message" role="status"></p>
+</div>
+</dialog>
+<dialog id="checkout-dialog" aria-labelledby="checkout-title">
+<div class="checkout-header"><h2 id="checkout-title">Проверка заказа</h2><button id="close-checkout" class="close" type="button" aria-label="Закрыть проверку заказа">×</button></div>
+<form id="checkout-form">
+<div class="checkout-top">
+<section aria-labelledby="checkout-items-title"><h3 id="checkout-items-title">Состав заказа</h3><div id="checkout-items"></div><p id="checkout-totals" class="checkout-totals"></p></section>
+<section aria-labelledby="delivery-title">
+<h3 id="delivery-title">Почтовый адрес</h3>
+<label id="saved-address-field" class="saved-address-field" for="saved-address" hidden>Сохранённый адрес<select id="saved-address"><option value="">Заполнить новый адрес</option></select></label>
+<div class="address-grid">
+<label class="address-wide" for="delivery-recipient">Получатель: фамилия, имя и отчество <span class="required-mark">*</span><input id="delivery-recipient" autocomplete="name" maxlength="150" placeholder="Иванов Иван Иванович" required></label>
+<label class="address-wide" for="delivery-phone">Телефон <span class="optional-mark">необязательно</span><input id="delivery-phone" type="tel" autocomplete="tel" inputmode="tel" maxlength="30" placeholder="+7 900 000-00-00"></label>
+<label for="delivery-country">Страна <span class="required-mark">*</span><input id="delivery-country" autocomplete="country-name" maxlength="80" required></label>
+<label for="delivery-postal-code">Почтовый индекс <span class="required-mark">*</span><input id="delivery-postal-code" autocomplete="postal-code" inputmode="numeric" maxlength="20" required></label>
+<label for="delivery-region">Область / регион <span class="optional-mark">необязательно</span><input id="delivery-region" autocomplete="address-level1" maxlength="100"></label>
+<label for="delivery-city">Город / населённый пункт <span class="required-mark">*</span><input id="delivery-city" autocomplete="address-level2" maxlength="100" required></label>
+<label class="address-wide" for="delivery-street">Улица <span class="required-mark">*</span><input id="delivery-street" autocomplete="street-address" maxlength="140" required></label>
+<label for="delivery-house">Дом / корпус <span class="required-mark">*</span><input id="delivery-house" maxlength="30" required></label>
+<label for="delivery-apartment">Квартира / офис <span class="optional-mark">необязательно</span><input id="delivery-apartment" maxlength="30"></label>
+<label class="address-wide" for="delivery-comment">Комментарий <span class="optional-mark">необязательно</span><textarea id="delivery-comment" rows="2" maxlength="300"></textarea></label>
+</div>
+<label id="save-address-field" class="save-address-field" hidden><input id="save-address" type="checkbox">Сохранить этот адрес в личном кабинете</label>
+<p class="muted">Пока адрес сохраняется только в этом браузере и никуда не отправляется.</p>
+</section>
+</div>
+<section class="checkout-sheets-section" aria-labelledby="checkout-sheets-title"><h3 id="checkout-sheets-title">Листы заказа</h3><p class="muted checkout-sheets-hint">Нажмите на наклейку, чтобы открыть инструменты.</p><div id="checkout-sheets"></div></section>
+<div class="checkout-actions"><button id="back-to-layout" class="secondary" type="button">Вернуться к макету</button><button class="primary" type="submit">Проверить заполнение</button></div>
+<p id="checkout-feedback" role="status" aria-live="polite"></p>
+</form>
+</dialog>
+<dialog id="overflow-dialog" aria-labelledby="overflow-title" aria-describedby="overflow-message overflow-next">
+<h2 id="overflow-title">Не все наклейки поместились</h2>
+<p id="overflow-message"></p><p id="overflow-next">В заказ добавлено всё, что удалось разместить в пределах семи листов. Оформите текущий заказ, затем продолжите набор в новом заказе.</p>
+<div class="dialog-actions"><button id="overflow-checkout" class="primary">Оформить заказ</button><button id="close-overflow" class="primary">Вернуться к каталогу</button></div>
+</dialog>
+</body></html>

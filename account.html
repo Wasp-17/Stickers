@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Личный кабинет покупателя наклеек.">
+  <title>Личный кабинет — Наклейки</title>
+  <link rel="stylesheet" href="account.css?v=20261013-1">
+  <script src="layout.js" defer></script>
+  <script src="local-store.js?v=20261013-1" defer></script>
+  <script src="account.js?v=20261013-1" defer></script>
+</head>
+<body>
+  <header class="cabinet-header">
+    <a class="brand" href="index.html" aria-label="Наклейки — на главную">
+      <span class="brand-mark" aria-hidden="true">Н</span>
+      <span>НАКЛЕЙКИ</span>
+    </a>
+    <nav aria-label="Основная навигация">
+      <a href="index.html">Главная</a>
+      <a href="index.html#sections">Выбрать наклейки</a>
+      <button id="cabinet-logout" type="button" hidden>Выйти</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="signed-out-view" class="signed-out" hidden>
+      <p class="eyebrow">ЛИЧНЫЙ КАБИНЕТ</p>
+      <h1>Сначала войди в аккаунт</h1>
+      <p>Регистрация и вход сейчас находятся на стартовой странице.</p>
+      <a class="primary-link" href="index.html">Перейти на стартовую</a>
+    </section>
+
+    <div id="cabinet-view" hidden>
+      <section class="profile-card" aria-labelledby="cabinet-title">
+        <span id="cabinet-avatar" class="profile-avatar" aria-hidden="true">Я</span>
+        <div>
+          <p class="eyebrow">ЛИЧНЫЙ КАБИНЕТ</p>
+          <h1 id="cabinet-title">Мой аккаунт</h1>
+          <p id="cabinet-email" class="muted"></p>
+        </div>
+      </section>
+
+      <div class="cabinet-layout">
+        <nav class="cabinet-menu" aria-label="Разделы личного кабинета">
+          <a class="is-current" href="#current-order">Текущий заказ <span id="menu-order-count">0</span></a>
+          <a href="#cart-orders">Корзина <span id="menu-cart-count">0</span></a>
+          <a href="#drafts">Черновики <span id="menu-draft-count">0</span></a>
+          <span>История заказов <small>позже</small></span>
+          <a href="#addresses">Адреса <span id="menu-address-count">0</span></a>
+          <a href="#my-collection">Моя коллекция <small>скоро</small></a>
+          <span>Избранное <small>позже</small></span>
+        </nav>
+
+        <section id="current-order" class="order-card" aria-labelledby="order-title">
+          <div class="order-card-heading">
+            <div>
+              <p class="eyebrow">КОРЗИНА</p>
+              <h2 id="order-title">Текущий заказ</h2>
+            </div>
+            <p id="order-updated" class="muted"></p>
+          </div>
+
+          <div id="cabinet-order-empty" class="empty-order" hidden>
+            <p>В корзине пока нет наклеек.</p>
+            <a class="primary-link" href="index.html#sections">Выбрать наклейки</a>
+          </div>
+
+          <div id="cabinet-order-content" hidden>
+            <div id="cabinet-order-items" class="order-items"></div>
+            <div class="order-total">
+              <span id="cabinet-sticker-total"></span>
+              <span id="cabinet-sheet-total"></span>
+            </div>
+            <div id="cabinet-address" class="saved-address" hidden>
+              <strong>Адрес доставки</strong>
+              <p></p>
+            </div>
+            <div class="order-actions">
+              <a class="primary-link" href="index.html#sections">Продолжить собирать заказ</a>
+              <button id="park-order" class="dark-secondary" type="button">Отложить в черновики</button>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <section id="cart-orders" class="drafts-section" aria-labelledby="cart-orders-title">
+        <div class="drafts-heading">
+          <div><p class="eyebrow">КОРЗИНА</p><h2 id="cart-orders-title">Заказы в корзине</h2></div>
+          <p>Здесь можно переименовать заказ или снова открыть его на листах-макетах.</p>
+        </div>
+        <div id="cart-orders-empty" class="drafts-empty">Корзина пока пуста.</div>
+        <div id="cart-orders-list" class="drafts-list"></div>
+      </section>
+
+      <section id="drafts" class="drafts-section" aria-labelledby="drafts-title">
+        <div class="drafts-heading">
+          <div><p class="eyebrow">ОТЛОЖЕННЫЕ ЗАКАЗЫ</p><h2 id="drafts-title">Черновики</h2></div>
+          <p>Сюда можно отложить текущую корзину и продолжить её позже.</p>
+        </div>
+        <div id="drafts-empty" class="drafts-empty">Черновиков пока нет.</div>
+        <div id="drafts-list" class="drafts-list"></div>
+      </section>
+
+      <section id="addresses" class="drafts-section" aria-labelledby="addresses-title">
+        <div class="drafts-heading">
+          <div><p class="eyebrow">ДОСТАВКА</p><h2 id="addresses-title">Сохранённые адреса</h2></div>
+          <div class="addresses-heading-action"><p>Добавь адрес здесь или сохрани его во время оформления заказа.</p><button id="open-address-form" class="cabinet-action" type="button">Добавить адрес</button></div>
+        </div>
+        <form id="cabinet-address-form" class="cabinet-address-form" hidden>
+          <p><span class="required-mark">*</span> — обязательные поля</p>
+          <div class="cabinet-address-grid">
+            <label class="address-wide" for="cabinet-recipient">Получатель: фамилия, имя и отчество <span class="required-mark">*</span><input id="cabinet-recipient" autocomplete="name" maxlength="150" placeholder="Иванов Иван Иванович" required></label>
+            <label class="address-wide" for="cabinet-phone">Телефон <span class="optional-mark">необязательно</span><input id="cabinet-phone" type="tel" autocomplete="tel" inputmode="tel" maxlength="30" placeholder="+7 900 000-00-00"></label>
+            <label for="cabinet-country">Страна <span class="required-mark">*</span><input id="cabinet-country" autocomplete="country-name" maxlength="80" required></label>
+            <label for="cabinet-postal-code">Почтовый индекс <span class="required-mark">*</span><input id="cabinet-postal-code" autocomplete="postal-code" inputmode="numeric" maxlength="20" required></label>
+            <label for="cabinet-region">Область / регион <span class="optional-mark">необязательно</span><input id="cabinet-region" autocomplete="address-level1" maxlength="100"></label>
+            <label for="cabinet-city">Город / населённый пункт <span class="required-mark">*</span><input id="cabinet-city" autocomplete="address-level2" maxlength="100" required></label>
+            <label class="address-wide" for="cabinet-street">Улица <span class="required-mark">*</span><input id="cabinet-street" autocomplete="street-address" maxlength="140" required></label>
+            <label for="cabinet-house">Дом / корпус <span class="required-mark">*</span><input id="cabinet-house" maxlength="30" required></label>
+            <label for="cabinet-apartment">Квартира / офис <span class="optional-mark">необязательно</span><input id="cabinet-apartment" maxlength="30"></label>
+            <label class="address-wide" for="cabinet-comment">Комментарий <span class="optional-mark">необязательно</span><textarea id="cabinet-comment" rows="2" maxlength="300"></textarea></label>
+          </div>
+          <div class="address-form-actions"><button class="primary-button" type="submit">Сохранить адрес</button><button id="cancel-address-form" class="plain-button" type="button">Отмена</button></div>
+        </form>
+        <div id="addresses-empty" class="drafts-empty">Сохранённых адресов пока нет.</div>
+        <div id="addresses-list" class="addresses-list"></div>
+      </section>
+
+      <section id="my-collection" class="drafts-section" aria-labelledby="my-collection-title">
+        <div class="drafts-heading">
+          <div><p class="eyebrow">ЭКСКЛЮЗИВНЫЕ КАРТОЧКИ</p><h2 id="my-collection-title">Моя коллекция</h2></div>
+          <p>Здесь будут храниться эксклюзивные карточки, открытые для твоего аккаунта.</p>
+        </div>
+        <div class="collection-placeholder">
+          <span class="collection-placeholder-mark" aria-hidden="true">✦</span>
+          <h3>Коллекция пока пуста</h3>
+          <p>Карточки появятся здесь после подключения механики коллекционирования.</p>
+        </div>
+      </section>
+
+      <section class="future-grid" aria-label="Будущие разделы кабинета">
+        <article><span>01</span><h2>История заказов</h2><p>После подключения оплаты здесь появятся завершённые заказы.</p></article>
+        <article><span>02</span><h2>Избранное</h2><p>Место для наклеек, к которым хочется вернуться.</p></article>
+      </section>
+    </div>
+  </main>
+
+  <dialog id="draft-name-dialog" aria-labelledby="draft-name-title">
+    <button class="dialog-close" type="button" data-close-dialog aria-label="Закрыть">×</button>
+    <p class="eyebrow">ЧЕРНОВИК</p>
+    <h2 id="draft-name-title">Как назвать черновик?</h2>
+    <form id="draft-name-form">
+      <label for="draft-name">Название</label>
+      <input id="draft-name" type="text" maxlength="60" required placeholder="Например, подарок другу">
+      <div class="dialog-actions"><button class="primary-button" type="submit">Сохранить</button><button class="plain-button" type="button" data-close-dialog>Отмена</button></div>
+    </form>
+  </dialog>
+
+  <dialog id="cart-name-dialog" aria-labelledby="cart-name-title">
+    <button class="dialog-close" type="button" data-close-dialog aria-label="Закрыть">×</button>
+    <p class="eyebrow">КОРЗИНА</p>
+    <h2 id="cart-name-title">Переименовать заказ</h2>
+    <form id="cart-name-form">
+      <label for="cart-name">Название</label>
+      <input id="cart-name" type="text" maxlength="60" required>
+      <div class="dialog-actions"><button class="primary-button" type="submit">Сохранить</button><button class="plain-button" type="button" data-close-dialog>Отмена</button></div>
+    </form>
+  </dialog>
+
+  <dialog id="activate-draft-dialog" aria-labelledby="activate-draft-title">
+    <button class="dialog-close" type="button" data-close-dialog aria-label="Закрыть">×</button>
+    <p class="eyebrow">ПЕРЕКЛЮЧЕНИЕ</p>
+    <h2 id="activate-draft-title">В корзине уже есть заказ</h2>
+    <p>Что сделать с текущим заказом перед открытием черновика?</p>
+    <div class="dialog-actions vertical-actions">
+      <button id="park-and-activate" class="primary-button" type="button">Отложить текущий и открыть</button>
+      <button id="replace-and-activate" class="danger-button" type="button">Заменить текущий</button>
+      <button class="plain-button" type="button" data-close-dialog>Отмена</button>
+    </div>
+  </dialog>
+
+  <dialog id="delete-draft-dialog" aria-labelledby="delete-draft-title">
+    <button class="dialog-close" type="button" data-close-dialog aria-label="Закрыть">×</button>
+    <p class="eyebrow">УДАЛЕНИЕ</p>
+    <h2 id="delete-draft-title">Удалить черновик?</h2>
+    <p id="delete-draft-copy"></p>
+    <div class="dialog-actions"><button id="confirm-delete-draft" class="danger-button" type="button">Удалить</button><button class="plain-button" type="button" data-close-dialog>Отмена</button></div>
+  </dialog>
+
+  <dialog id="delete-address-dialog" aria-labelledby="delete-address-title">
+    <button class="dialog-close" type="button" data-close-dialog aria-label="Закрыть">×</button>
+    <p class="eyebrow">АДРЕС</p>
+    <h2 id="delete-address-title">Удалить сохранённый адрес?</h2>
+    <p id="delete-address-copy"></p>
+    <div class="dialog-actions"><button id="confirm-delete-address" class="danger-button" type="button">Удалить</button><button class="plain-button" type="button" data-close-dialog>Отмена</button></div>
+  </dialog>
+</body>
+</html>
