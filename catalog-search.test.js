@@ -1,0 +1,36 @@
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const Search = require('./catalog-search');
+const catalog = JSON.parse(fs.readFileSync('./catalog-data/site_catalog.json','utf8'));
+const dictionary = JSON.parse(fs.readFileSync('./catalog-data/global_search_dictionary.v1.json','utf8'));
+const engine = Search.createEngine(catalog, dictionary);
+const ids = (query, filters) => engine.run(query, filters).map(result => result.entry.image_id);
+
+assert.equal(catalog.entries.length, 118);
+assert(!catalog.filters.sections.includes(''));
+assert.equal(catalog.search_execution.section_is_required, true);
+assert.equal(ids('').length, 118);
+assert.equal(ids('Чеддер').length, 117);
+assert(!ids('Чеддер').includes('TRANSFORMER-LOCAL'));
+assert.equal(ids('Космический мечтатель')[0], 'RK17-0001');
+assert.deepEqual(ids("Чеддер д'Артаньян"), ['RK17-0042']);
+assert.deepEqual(ids("Рыжик д'Артаньян"), []);
+assert(ids('астронавт').includes('RK17-0001'));
+assert(ids('программер').some(id => id.startsWith('RK17-')));
+assert(ids('играю в футбол').includes('RK17-0025'));
+assert.equal(ids('кот').length, 117);
+assert.equal(ids('животное').length, 117);
+assert.deepEqual(ids('трансформер'), ['TRANSFORMER-LOCAL']);
+assert.deepEqual(ids('', { section:'ТРАНСФОРМЕРЫ' }), ['TRANSFORMER-LOCAL']);
+assert.equal(ids('', { character:'RK17' }).length, 117);
+assert.deepEqual(ids('Вот это да!'), ['RK17-0091']);
+assert.deepEqual(ids('потягиваться'), ['RK17-0104']);
+assert.equal(ids('Первый диплом')[0], 'RK17-0105');
+assert.deepEqual(ids('Мир под микроскопом'), ['RK17-0120']);
+assert.deepEqual(ids('огнетушитель'), ['RK17-0129']);
+
+const first = catalog.entries.find(entry => entry.image_id === 'RK17-0001');
+assert.deepEqual(ids('', { role:first.field_concepts.role[0], mood:first.field_concepts.mood[0] }).slice(0,1), ['RK17-0001']);
+const world = dictionary.concepts.find(c => c.canonical === 'ОБРАЗ МИРА').concept_id;
+assert(!catalog.entries.some(entry => entry.concept_ids.includes(world)) || ids('ОБРАЗ МИРА').every(id => id.startsWith('RK17-')));
+console.log('PASS: 118 catalog entries, exact AND filters, names, character, morphology, synonyms and subject hierarchy');
