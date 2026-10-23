@@ -11,6 +11,11 @@ The goal of the project is to help users express and emphasize their individuali
 
 The project is currently in the early development stage.
 
+Sticker artwork and other image assets are intentionally kept outside this public
+repository. The local site preview needs separately supplied WEB preview files in
+`images/`; production MASTER and ART files must remain in private storage. Public
+catalog metadata lists image filenames but does not contain the image bytes.
+
 Current site, hardware-test and Printnik status as of 23 October 2026 is recorded
 in [PROJECT_STATUS_2026-10-23.md](PROJECT_STATUS_2026-10-23.md). The detailed
 Printnik instructions and calibration results are in `printnik/README.md` and

@@ -1,4 +1,5 @@
 # Local attachments, generated outputs and production assets
+images/
 .codex-remote-attachments/
 output/
 tmp/
