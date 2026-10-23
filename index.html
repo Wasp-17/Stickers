@@ -1,28 +1,124 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Наклейки</title>
-
-    <style>
-        body {
-            text-align: center;
-        }
-        a {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color:rgba(251, 0, 255, 0.868);
-    color: white;
-    text-decoration: none;
-}
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Выбери раздел и собери собственный лист наклеек.">
+  <title>Наклейки</title>
+  <link rel="stylesheet" href="home.css?v=20260925-4">
+  <script src="local-store.js?v=20261018-3" defer></script>
+  <script src="home.js?v=20261018-1" defer></script>
 </head>
 <body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Наклейки — на главную">
+      <span class="brand-mark" aria-hidden="true">Н</span>
+      <span class="brand-name">НАКЛЕЙКИ</span>
+    </a>
 
-    <h1>НАКЛЕЙКИ</h1>
+    <div class="account-area">
+      <a class="header-catalog-link" href="#sections">Выбрать наклейки</a>
+      <nav id="guest-account-actions" class="account-actions" aria-label="Аккаунт">
+        <button id="open-login" class="text-button" type="button" aria-expanded="false" aria-controls="account-panel">Войти</button>
+        <button id="open-registration" class="outline-button" type="button" aria-expanded="false" aria-controls="account-panel">Создать аккаунт</button>
+      </nav>
 
-    <p>Магазин наклеек</p>
-    <a href="catalog.html">КАТАЛОГ</a>
+      <button id="account-button" class="account-button" type="button" aria-expanded="false" aria-controls="account-panel" hidden>
+        <span id="account-avatar" class="account-avatar" aria-hidden="true">Я</span>
+        <span id="account-button-name">Мой аккаунт</span>
+      </button>
+
+      <section id="account-panel" class="account-panel" aria-labelledby="account-panel-title" hidden>
+        <button id="close-account-panel" class="account-panel-close" type="button" aria-label="Закрыть окно аккаунта">×</button>
+
+        <div id="account-auth-view">
+          <p class="eyebrow">ЛИЧНЫЙ АККАУНТ</p>
+          <h2 id="account-panel-title">Создать аккаунт</h2>
+          <p id="account-panel-copy" class="account-panel-copy">Сохраним один аккаунт в этом браузере.</p>
+
+          <div class="account-tabs" role="tablist" aria-label="Вход или регистрация">
+            <button id="registration-tab" class="account-tab" type="button" role="tab" aria-selected="true">Регистрация</button>
+            <button id="login-tab" class="account-tab" type="button" role="tab" aria-selected="false">Вход</button>
+          </div>
+
+          <form id="account-form" class="account-form" novalidate>
+            <label id="account-name-field">Как тебя зовут?
+              <input id="account-name" name="name" type="text" autocomplete="name" maxlength="40" placeholder="Например, Алексей">
+            </label>
+            <label>Электронная почта
+              <input id="account-email" name="email" type="email" autocomplete="email" placeholder="name@example.com" required>
+            </label>
+            <label>Пароль
+              <span class="password-field">
+                <input id="account-password" name="password" type="password" autocomplete="new-password" minlength="8" placeholder="Не меньше 8 символов" required>
+                <button id="toggle-password" class="password-toggle" type="button" aria-label="Показать пароль">Показать</button>
+              </span>
+            </label>
+            <button id="account-submit" class="account-submit" type="submit">Создать аккаунт</button>
+            <p id="account-status" class="account-status" role="status" aria-live="polite"></p>
+          </form>
+
+          <p class="account-local-note">Пока это локальная версия: аккаунт будет доступен только на этом устройстве и в этом браузере.</p>
+        </div>
+
+        <div id="account-profile-view" hidden>
+          <p class="eyebrow">ТЫ ВОШЁЛ</p>
+          <div class="account-profile-heading">
+            <span id="profile-avatar" class="profile-avatar" aria-hidden="true">Я</span>
+            <div>
+              <h2 id="profile-name">Мой аккаунт</h2>
+              <p id="profile-email"></p>
+            </div>
+          </div>
+          <p class="account-panel-copy">Здесь доступны корзина, заказы, адреса и коллекция наклеек.</p>
+          <a class="account-cabinet-link" href="account.html">Открыть личный кабинет</a>
+          <button id="logout-button" class="account-submit" type="button">Выйти из аккаунта</button>
+        </div>
+      </section>
+    </div>
+  </header>
+
+  <main>
+    <section class="logo-hero" aria-labelledby="logo-message-title">
+      <div id="logo-stage" class="logo-stage">
+        <img src="images/logo-agent-envelope-transparent.png" alt="Персонаж проекта выглядывает из конверта с табличкой">
+        <div id="logo-message" class="logo-message" aria-live="polite">
+          <h1 id="logo-message-title">Наклейки, которые выбираешь ты</h1>
+        </div>
+      </div>
+    </section>
+
+    <div class="home-grid">
+      <section id="sections" class="sections-panel" aria-labelledby="sections-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">РАЗДЕЛЫ</p>
+            <h2 id="sections-title">С чего начнём?</h2>
+          </div>
+          <p>Выбери тему — сразу откроется каталог с наклейками этого раздела.</p>
+        </div>
+        <p id="sections-status" class="sections-status" role="status" aria-live="polite"></p>
+        <div id="section-grid" class="section-grid" aria-label="Разделы каталога"></div>
+      </section>
+
+      <aside class="learning-panel" aria-labelledby="learning-title">
+        <p class="eyebrow">СКОРО</p>
+        <h2 id="learning-title">Обучающие видео</h2>
+        <p>Здесь появятся короткие видео о выборе размеров, работе с Agent и оформлении заказа.</p>
+        <div class="video-placeholder" aria-hidden="true">
+          <span>Место для видео</span>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer>
+    <p>Следи за проектом</p>
+    <nav aria-label="Социальные сети">
+      <span>Instagram</span><span>VK</span><span>Одноклассники</span><span>Telegram</span>
+      <a href="https://github.com/Wasp-17/Stickers" target="_blank" rel="noreferrer">GitHub ↗</a>
+    </nav>
+  </footer>
 
 </body>
 </html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Проверка состава заказа, адреса доставки и итоговой стоимости.">
+  <title>Оформление заказа — Наклейки</title>
+  <link rel="stylesheet" href="checkout.css?v=20261018-3">
+  <script src="layout.js?v=20261018-2" defer></script>
+  <script src="local-store.js?v=20261018-3" defer></script>
+  <script src="checkout.js?v=20261018-2" defer></script>
+</head>
+<body>
+  <header class="checkout-header">
+    <a class="brand" href="index.html">НАКЛЕЙКИ</a>
+    <a class="return-link" href="catalog.html">← Вернуться в каталог</a>
+  </header>
+
+  <main>
+    <section class="checkout-intro" aria-labelledby="checkout-title">
+      <div><p class="eyebrow">ОФОРМЛЕНИЕ ЗАКАЗА</p><h1 id="checkout-title">Проверим всё перед оплатой</h1><p id="working-order-name" class="working-order-name"></p></div>
+      <div class="public-order-id"><span>Номер заказа</span><strong>Будет присвоен после оплаты</strong><small>Он появится в «Моих заказах», будет напечатан на листах и понадобится при обращении в поддержку.</small></div>
+    </section>
+
+    <nav class="checkout-steps" aria-label="Этапы оформления">
+      <button type="button" data-step-button="1"><span>1</span><strong>Состав</strong><small>Наклейки и листы</small></button>
+      <button type="button" data-step-button="2"><span>2</span><strong>Доставка</strong><small>Получатель и адрес</small></button>
+      <button type="button" data-step-button="3"><span>3</span><strong>Подтверждение</strong><small>Стоимость и оплата</small></button>
+    </nav>
+
+    <section id="empty-order" class="empty-order" hidden>
+      <h2>В заказе пока нет наклеек</h2>
+      <p>Вернись в каталог, выбери размер и добавь наклейки на лист-макет.</p>
+      <a class="primary-link" href="catalog.html">Перейти в каталог</a>
+    </section>
+
+    <section id="step-1" class="checkout-step" aria-labelledby="step-1-title">
+      <div class="step-heading"><div><p class="eyebrow">ШАГ 1 ИЗ 3</p><h2 id="step-1-title">Состав заказа</h2></div><p>Проверь наклейки и расположение на листах. Для редактирования вернись к листу-макету.</p></div>
+      <div class="summary-grid">
+        <article><span>Наклеек</span><strong id="summary-stickers">0</strong></article>
+        <article><span>Листов</span><strong id="summary-sheets">0</strong></article>
+        <article><span>Предварительно</span><strong id="summary-price">0 ₽</strong></article>
+      </div>
+      <div class="composition-layout">
+        <section class="composition-card" aria-labelledby="composition-title"><h3 id="composition-title">Что входит в заказ</h3><div id="composition-list"></div></section>
+        <section class="sheets-card" aria-labelledby="sheets-title"><div class="sheets-heading"><h3 id="sheets-title">Листы заказа</h3><p>Нажми на наклейку, если хочешь удалить её из заказа.</p></div><div id="checkout-sheets" class="checkout-sheets"></div></section>
+      </div>
+      <div class="step-actions"><a class="secondary-link" href="catalog.html">Вернуться к листу-макету</a><button id="to-delivery" class="primary-button" type="button">Всё верно — перейти к доставке</button></div>
+    </section>
+
+    <section id="step-2" class="checkout-step" aria-labelledby="step-2-title" hidden>
+      <div class="step-heading"><div><p class="eyebrow">ШАГ 2 ИЗ 3</p><h2 id="step-2-title">Адрес доставки</h2></div><p><span class="required-mark">*</span> — обязательные поля</p></div>
+
+      <aside id="registration-offer" class="registration-offer" hidden>
+        <div><strong>Хочешь сохранить адрес для следующих заказов?</strong><p>Зарегистрируйся — после возвращения сюда введённые данные останутся в текущем заказе.</p></div>
+        <div><a id="checkout-register" class="primary-link" href="index.html">Зарегистрироваться</a><a id="checkout-login" class="text-link" href="index.html">У меня уже есть аккаунт</a></div>
+      </aside>
+
+      <form id="delivery-form" novalidate>
+        <label id="saved-address-field" class="saved-address-field" hidden>Сохранённый адрес<select id="saved-address"><option value="">Заполнить новый адрес</option></select></label>
+        <div class="address-grid">
+          <label class="wide">Получатель: фамилия, имя и отчество <span class="required-mark">*</span><input id="delivery-recipient" autocomplete="name" maxlength="150" placeholder="Иванов Иван Иванович" required></label>
+          <label class="wide">Телефон <span class="optional-mark">необязательно</span><input id="delivery-phone" type="tel" autocomplete="tel" inputmode="tel" maxlength="30" placeholder="+7 900 000-00-00"></label>
+          <label>Страна <span class="required-mark">*</span><input id="delivery-country" autocomplete="country-name" maxlength="80" required></label>
+          <label>Почтовый индекс <span class="required-mark">*</span><input id="delivery-postal-code" autocomplete="postal-code" inputmode="numeric" maxlength="20" required></label>
+          <label>Область / регион <span class="optional-mark">необязательно</span><input id="delivery-region" autocomplete="address-level1" maxlength="100"></label>
+          <label>Город / населённый пункт <span class="required-mark">*</span><input id="delivery-city" autocomplete="address-level2" maxlength="100" required></label>
+          <label class="wide">Улица <span class="required-mark">*</span><input id="delivery-street" autocomplete="street-address" maxlength="140" required></label>
+          <label>Дом / корпус <span class="required-mark">*</span><input id="delivery-house" maxlength="30" required></label>
+          <label>Квартира / офис <span class="optional-mark">необязательно</span><input id="delivery-apartment" maxlength="30"></label>
+          <label class="wide">Комментарий <span class="optional-mark">необязательно</span><textarea id="delivery-comment" rows="3" maxlength="300"></textarea></label>
+        </div>
+        <label id="save-address-field" class="save-address-field" hidden><input id="save-address" type="checkbox">Сохранить этот адрес в личном кабинете</label>
+        <p id="address-feedback" class="form-feedback" role="status" aria-live="polite"></p>
+        <div class="step-actions"><button class="secondary-button" type="button" data-go-step="1">Назад к составу</button><button class="primary-button" type="submit">Перейти к подтверждению</button></div>
+      </form>
+    </section>
+
+    <section id="step-3" class="checkout-step" aria-labelledby="step-3-title" hidden>
+      <div class="step-heading"><div><p class="eyebrow">ШАГ 3 ИЗ 3</p><h2 id="step-3-title">Подтверждение заказа</h2></div><p>Окончательная проверка перед переходом к оплате.</p></div>
+      <div class="confirmation-grid">
+        <section class="confirmation-card"><div class="confirmation-card-heading"><h3>Доставка</h3><button type="button" data-go-step="2">Изменить</button></div><p id="confirmation-recipient"></p><p id="confirmation-address"></p><p id="confirmation-phone" class="muted"></p></section>
+        <section class="confirmation-card"><h3>Заказ</h3><dl><div><dt>Наклеек</dt><dd id="confirmation-stickers"></dd></div><div><dt>Листов</dt><dd id="confirmation-sheets"></dd></div><div><dt>Рабочее название</dt><dd id="confirmation-name"></dd></div><div><dt>Номер заказа</dt><dd>после оплаты</dd></div></dl></section>
+        <section class="price-card"><h3>Стоимость</h3><dl><div><dt id="sheet-price-label">Листы</dt><dd id="sheet-price"></dd></div><div><dt>Доставка</dt><dd>будет рассчитана позже</dd></div><div class="total"><dt>Предварительно</dt><dd id="checkout-total"></dd></div></dl><p>Стоимость доставки и оплата будут подключены вместе с серверной частью сайта.</p></section>
+      </div>
+      <p id="payment-feedback" class="payment-feedback" role="status" aria-live="polite"></p>
+      <div class="step-actions"><button class="secondary-button" type="button" data-go-step="2">Назад к адресу</button><button id="confirm-order" class="primary-button payment-button" type="button">Подтвердить данные</button></div>
+    </section>
+  </main>
+
+  <dialog id="delete-sticker-dialog" aria-labelledby="delete-sticker-title">
+    <button class="dialog-close" type="button" data-close-dialog aria-label="Закрыть">×</button>
+    <p class="eyebrow">СОСТАВ ЗАКАЗА</p><h2 id="delete-sticker-title">Удалить эту наклейку?</h2><p id="delete-sticker-copy"></p>
+    <div class="dialog-actions"><button id="confirm-delete-sticker" class="danger-button" type="button">Удалить</button><button class="secondary-button" type="button" data-close-dialog>Отмена</button></div>
+  </dialog>
+</body>
+</html>

@@ -1,0 +1,593 @@
+{
+  "architecture_revision": "1.2 current edition 2026-09-20",
+  "assignment_rule": "Only images explicitly approved with character = RK17 are linked. OTHER images are excluded.",
+  "character_registry_file": "character_registry.json",
+  "links": [
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0001"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0002"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0003"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0004"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0005"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0006"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0007"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0008"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0009"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0010"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0011"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0012"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0013"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0014"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0015"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0016"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0017"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0018"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0019"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0020"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0021"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0022"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0023"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0024"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0025"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0026"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0027"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0028"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0029"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0030"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0031"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0032"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0033"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0034"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0035"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0036"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0037"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0038"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0039"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0040"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0041"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0042"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0043"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0044"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0045"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0046"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0047"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0048"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0049"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0050"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0051"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0052"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0053"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0054"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0055"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0056"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0057"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0058"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0059"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0060"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0061"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0062"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0063"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0064"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0065"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0066"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0067"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0068"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0069"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0070"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0071"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0072"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0073"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0074"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0075"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0091"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0092"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0093"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0094"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0095"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0096"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0097"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0098"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0099"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0100"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0101"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0102"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0103"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0104"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0105"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0106"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0107"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0108"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0109"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0110"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0111"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0112"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0113"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0114"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0115"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0116"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0117"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0118"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0119"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0120"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0121"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0122"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0123"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0124"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0125"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0126"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0127"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0128"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0129"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0130"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0131"
+    },
+    {
+      "assignment_status": "approved",
+      "character_id": "RK17",
+      "image_id": "RK17-0132"
+    }
+  ],
+  "schema_version": "image_character_links_1.0"
+}

@@ -1,0 +1,176 @@
+{
+  "manifest_version": "1.0",
+  "architecture_revision": "1.2 current edition 2026-09-19",
+  "batch_id": "OTHER-0089-0090",
+  "source": {
+    "source_file": "Изображение Codex 19 сент. 2026 г., 18_47_13.png",
+    "source_sha256": "061917fa445c2ea7d32a2c7495090ea5e6b6b8e8cbdc4632f595523b7bc968dd",
+    "source_pixels": [
+      1536,
+      1024
+    ],
+    "numbering": "left-to-right"
+  },
+  "processing": {
+    "art_pixel_exact_crop": true,
+    "master_rgb_pixels_preserved": true,
+    "transparent_padding_px": 32,
+    "web_max_dimension": 768,
+    "print_variants_created": false,
+    "cut_path_created": false,
+    "artistic_changes": false
+  },
+  "items": [
+    {
+      "image_id": "OTHER-0089",
+      "sheet_number": 1,
+      "status": "approved_ready",
+      "semantic_status": "approved_current_architecture_1_2",
+      "character_id": null,
+      "character_assignment": "OTHER",
+      "derived_from_temporary_id": "OTHER_TMP_20260919_182744_03",
+      "art_file": "OTHER-0089_ART.png",
+      "master_file": "OTHER-0089_MASTER.png",
+      "web_file": "OTHER-0089_WEB.webp",
+      "art_sha256": "007a0f37ce32322ed64fafe773db6c7a5c7b15d1adbdc905a892e9eae0e98712",
+      "master_sha256": "d2122177f673e57377d430f9e2af079151758a83004cd261d9768f4ad8905bf0",
+      "web_sha256": "71d00941c420060ea3b4744ad1abafdb16fd3ef02341cddb7950f27173bd41be",
+      "source_crop_xyxy": [
+        7,
+        7,
+        762,
+        1008
+      ],
+      "art_pixels": [
+        755,
+        1001
+      ],
+      "master_pixels": [
+        801,
+        686
+      ],
+      "web_pixels": [
+        768,
+        658
+      ],
+      "transparent_padding_px": 32,
+      "rgb_pixels_verified": true,
+      "display_name": "Горы зовут",
+      "character": null,
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": "ТУРИСТ",
+      "mood": [
+        "ВОСХИЩЕНИЕ",
+        "СПОКОЙСТВИЕ"
+      ],
+      "themes": [
+        "туризм",
+        "горы",
+        "природа",
+        "путешествие"
+      ],
+      "scenario": "Кот с рюкзаком остановился на скале и смотрит на горы и озеро.",
+      "actions": [
+        "смотреть на пейзаж",
+        "путешествовать"
+      ],
+      "objects": [
+        "рюкзак"
+      ],
+      "clothing": [],
+      "decorations": [],
+      "intent": [
+        "поход",
+        "путешествие в горы",
+        "любоваться природой"
+      ],
+      "search_aliases": []
+    },
+    {
+      "image_id": "OTHER-0090",
+      "sheet_number": 2,
+      "status": "approved_ready",
+      "semantic_status": "approved_current_architecture_1_2",
+      "character_id": null,
+      "character_assignment": "OTHER",
+      "derived_from_temporary_id": "OTHER_TMP_20260919_182744_08",
+      "art_file": "OTHER-0090_ART.png",
+      "master_file": "OTHER-0090_MASTER.png",
+      "web_file": "OTHER-0090_WEB.webp",
+      "art_sha256": "2d1264efcfde81e9c698d8afc5795e594ff0b00e1a892df32deb5ddf011b9272",
+      "master_sha256": "504bbf8f64dae2cd6ddb4483eb45f7748cfc32d7a9cf056d5bc0c0f2358c9f03",
+      "web_sha256": "50130c876250bb9bb398d1deeb4884788c54159b15be10e8d65668543222831d",
+      "source_crop_xyxy": [
+        775,
+        7,
+        1529,
+        1008
+      ],
+      "art_pixels": [
+        754,
+        1001
+      ],
+      "master_pixels": [
+        785,
+        780
+      ],
+      "web_pixels": [
+        768,
+        763
+      ],
+      "transparent_padding_px": 32,
+      "rgb_pixels_verified": true,
+      "display_name": "Доброе утро",
+      "character": null,
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [
+        "птица"
+      ],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": null,
+      "mood": [
+        "СПОКОЙСТВИЕ",
+        "УМИРОТВОРЕНИЕ"
+      ],
+      "themes": [
+        "зима",
+        "утро",
+        "уют",
+        "дом",
+        "горячий напиток"
+      ],
+      "scenario": "Кот сидит дома у зимнего окна с кружкой; рядом маленькая птица.",
+      "actions": [
+        "держать кружку",
+        "смотреть в окно"
+      ],
+      "objects": [
+        "кружка",
+        "книги"
+      ],
+      "clothing": [
+        "шарф"
+      ],
+      "decorations": [],
+      "intent": [
+        "доброе утро",
+        "зимний уют",
+        "согреться",
+        "спокойный отдых"
+      ],
+      "search_aliases": []
+    }
+  ],
+  "semantic_schema_version": "semantic_metadata_1.2_current",
+  "semantic_source": "semantic/OTHER/architecture_1_2/OTHER_semantic_metadata_1_2.json"
+}

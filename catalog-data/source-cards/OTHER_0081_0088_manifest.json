@@ -1,0 +1,607 @@
+{
+  "manifest_version": "1.0",
+  "architecture_revision": "1.2 current edition 2026-09-19",
+  "batch_id": "OTHER-0081-0088",
+  "source": {
+    "source_file": "Изображение Codex 19 сент. 2026 г., 18_27_44.png",
+    "source_sha256": "f4a44f31abe61477249cc9106e85e5a85853081e53e0683fa533735155601cc2",
+    "source_pixels": [
+      1536,
+      1024
+    ],
+    "numbering": "left-to-right, top-to-bottom"
+  },
+  "processing": {
+    "art_pixel_exact_crop": true,
+    "master_rgb_pixels_preserved": true,
+    "transparent_padding_px": 32,
+    "web_max_dimension": 768,
+    "print_variants_created": false,
+    "cut_path_created": false,
+    "artistic_changes": false
+  },
+  "items": [
+    {
+      "image_id": "OTHER-0081",
+      "sheet_number": 1,
+      "status": "approved_ready",
+      "semantic_status": "approved_current_architecture_1_2",
+      "character_id": null,
+      "character_assignment": "OTHER",
+      "art_file": "OTHER-0081_ART.png",
+      "master_file": "OTHER-0081_MASTER.png",
+      "web_file": "OTHER-0081_WEB.webp",
+      "art_sha256": "b516d3dc39e11017d9f66180d27fb60de63f03804520a226d5815ed55951c98a",
+      "master_sha256": "b56002eaf0ddae4544a12f2719c07111942849025a3c4c506b4ab81f686540c1",
+      "web_sha256": "7fd86653f6674d9f353249a107fd063c0f0eee3f4317d9a62e889fa03fb605c6",
+      "source_crop_xyxy": [
+        11,
+        7,
+        380,
+        318
+      ],
+      "art_pixels": [
+        369,
+        311
+      ],
+      "master_pixels": [
+        427,
+        365
+      ],
+      "web_pixels": [
+        427,
+        365
+      ],
+      "transparent_padding_px": 32,
+      "rgb_pixels_verified": true,
+      "derived_from_temporary_id": "OTHER_TMP_20260919_175840_01",
+      "display_name": "Чай на орбите",
+      "character": null,
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": "АСТРОНАВТ, КОСМОНАВТ",
+      "mood": [
+        "СПОКОЙСТВИЕ",
+        "ЗАДУМЧИВОСТЬ"
+      ],
+      "themes": [
+        "космос",
+        "космический полёт",
+        "Земля"
+      ],
+      "scenario": "Кот-астронавт/космонавт с кружкой смотрит на Землю из иллюминатора.",
+      "actions": [
+        "смотреть на Землю",
+        "держать кружку"
+      ],
+      "objects": [
+        "иллюминатор",
+        "кружка"
+      ],
+      "clothing": [
+        "скафандр"
+      ],
+      "decorations": [],
+      "intent": [
+        "космос",
+        "полёт",
+        "отдых на орбите"
+      ],
+      "search_aliases": []
+    },
+    {
+      "image_id": "OTHER-0082",
+      "sheet_number": 2,
+      "status": "approved_ready",
+      "semantic_status": "approved_current_architecture_1_2",
+      "character_id": null,
+      "character_assignment": "OTHER",
+      "art_file": "OTHER-0082_ART.png",
+      "master_file": "OTHER-0082_MASTER.png",
+      "web_file": "OTHER-0082_WEB.webp",
+      "art_sha256": "778f68808db6b6d807d37f147eef92d6bab5c9ed5b6da403d8c969b8d1c74446",
+      "master_sha256": "4c14bdc84bdacdd1df99bd1b4d867c0a3a2766021e7df26b75cab88f4f5bc343",
+      "web_sha256": "c740623ffcec5e4d83b50ce1ae2f30533d740281290e1513d9c56043547dd053",
+      "source_crop_xyxy": [
+        391,
+        7,
+        762,
+        318
+      ],
+      "art_pixels": [
+        371,
+        311
+      ],
+      "master_pixels": [
+        400,
+        376
+      ],
+      "web_pixels": [
+        400,
+        376
+      ],
+      "transparent_padding_px": 32,
+      "rgb_pixels_verified": true,
+      "derived_from_temporary_id": "OTHER_TMP_20260919_175840_02",
+      "display_name": "Секретный рецепт",
+      "character": null,
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": "ПОВАР",
+      "mood": [
+        "РАДОСТЬ",
+        "УДОВОЛЬСТВИЕ"
+      ],
+      "themes": [
+        "кулинария",
+        "приготовление еды",
+        "кухня"
+      ],
+      "scenario": "Кот-повар радостно готовит еду в кастрюле.",
+      "actions": [
+        "готовить",
+        "помешивать"
+      ],
+      "objects": [
+        "кастрюля",
+        "половник"
+      ],
+      "clothing": [
+        "поварской колпак",
+        "фартук",
+        "перчатки"
+      ],
+      "decorations": [],
+      "intent": [
+        "готовить еду",
+        "вкусная еда",
+        "кулинария"
+      ],
+      "search_aliases": []
+    },
+    {
+      "image_id": "OTHER-0083",
+      "sheet_number": 4,
+      "status": "approved_ready",
+      "semantic_status": "approved_current_architecture_1_2",
+      "character_id": null,
+      "character_assignment": "OTHER",
+      "art_file": "OTHER-0083_ART.png",
+      "master_file": "OTHER-0083_MASTER.png",
+      "web_file": "OTHER-0083_WEB.webp",
+      "art_sha256": "b8e495fb8701a363a87f392f908a40691e7bad84e90e942475bf6c5b6ffb92da",
+      "master_sha256": "f133cbf2ca89aa10f03e7618961a7a9c461c4d3f92163d6355d29361b13bc033",
+      "web_sha256": "5f68830b5ff02e38cfb2f3b85b4c1d7b000d1aeca8b327a79c7f11da7d7c770e",
+      "source_crop_xyxy": [
+        1155,
+        7,
+        1524,
+        318
+      ],
+      "art_pixels": [
+        369,
+        311
+      ],
+      "master_pixels": [
+        429,
+        368
+      ],
+      "web_pixels": [
+        429,
+        368
+      ],
+      "transparent_padding_px": 32,
+      "rgb_pixels_verified": true,
+      "derived_from_temporary_id": "OTHER_TMP_20260919_175840_05",
+      "display_name": "Мой аккорд",
+      "character": null,
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": "ГИТАРИСТ",
+      "mood": [
+        "УВЛЕЧЁННОСТЬ",
+        "РАДОСТЬ"
+      ],
+      "themes": [
+        "музыка",
+        "гитара",
+        "музицирование"
+      ],
+      "scenario": "Кот в наушниках играет на акустической гитаре.",
+      "actions": [
+        "играть на гитаре",
+        "слушать музыку"
+      ],
+      "objects": [
+        "гитара",
+        "наушники"
+      ],
+      "clothing": [],
+      "decorations": [],
+      "intent": [
+        "музыка",
+        "играть на гитаре",
+        "любимая музыка"
+      ],
+      "search_aliases": []
+    },
+    {
+      "image_id": "OTHER-0084",
+      "sheet_number": 5,
+      "status": "approved_ready",
+      "semantic_status": "approved_current_architecture_1_2",
+      "character_id": null,
+      "character_assignment": "OTHER",
+      "art_file": "OTHER-0084_ART.png",
+      "master_file": "OTHER-0084_MASTER.png",
+      "web_file": "OTHER-0084_WEB.webp",
+      "art_sha256": "d66b449342143048466b70aa5711b6594a79a8824acd382db6356d2c607433fb",
+      "master_sha256": "81fe246f7e5530965c8ec0b765f17bc658576524ddc8b78fca43e825d3e61cf0",
+      "web_sha256": "0a8d8d436f4034c3a40cc9c93d5911cbdcb5af02ee0e62afec6154efca138430",
+      "source_crop_xyxy": [
+        11,
+        328,
+        488,
+        648
+      ],
+      "art_pixels": [
+        477,
+        320
+      ],
+      "master_pixels": [
+        480,
+        376
+      ],
+      "web_pixels": [
+        480,
+        376
+      ],
+      "transparent_padding_px": 32,
+      "rgb_pixels_verified": true,
+      "derived_from_temporary_id": "OTHER_TMP_20260919_175840_07",
+      "display_name": "Шеф пришёл",
+      "character": null,
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": "РУКОВОДИТЕЛЬ",
+      "mood": [
+        "УВЕРЕННОСТЬ"
+      ],
+      "themes": [
+        "бизнес",
+        "руководство",
+        "статус",
+        "работа"
+      ],
+      "scenario": "Кот в деловом костюме и тёмных очках держит стакан BOSS.",
+      "actions": [
+        "держать кофе"
+      ],
+      "objects": [
+        "стакан BOSS",
+        "тёмные очки"
+      ],
+      "clothing": [
+        "деловой костюм",
+        "галстук"
+      ],
+      "decorations": [],
+      "intent": [
+        "начальник",
+        "руководитель",
+        "бизнес",
+        "статус"
+      ],
+      "search_aliases": []
+    },
+    {
+      "image_id": "OTHER-0085",
+      "sheet_number": 6,
+      "status": "approved_ready",
+      "semantic_status": "approved_current_architecture_1_2",
+      "character_id": null,
+      "character_assignment": "OTHER",
+      "art_file": "OTHER-0085_ART.png",
+      "master_file": "OTHER-0085_MASTER.png",
+      "web_file": "OTHER-0085_WEB.webp",
+      "art_sha256": "a1eda389732699469d4073123eb865e0aabd576fdfe9b06c4547758268eedcd7",
+      "master_sha256": "2bd47bd2fb6581e02e3a24d2d5544cd5e7311afcc6b42e2dea8eeba16febf50f",
+      "web_sha256": "ac43f9e81ff4eb6464ecb7e1add262d8edb9285dd50e3577d0f695375a808167",
+      "source_crop_xyxy": [
+        498,
+        328,
+        980,
+        648
+      ],
+      "art_pixels": [
+        482,
+        320
+      ],
+      "master_pixels": [
+        538,
+        363
+      ],
+      "web_pixels": [
+        538,
+        363
+      ],
+      "transparent_padding_px": 32,
+      "rgb_pixels_verified": true,
+      "derived_from_temporary_id": "OTHER_TMP_20260919_175840_09",
+      "display_name": "Уютное чтение",
+      "character": null,
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": null,
+      "mood": [
+        "СПОКОЙСТВИЕ",
+        "УМИРОТВОРЕНИЕ"
+      ],
+      "themes": [
+        "чтение",
+        "книги",
+        "уют",
+        "отдых"
+      ],
+      "scenario": "Укутанный в плед кот читает книгу с кружкой «Уют».",
+      "actions": [
+        "читать",
+        "пить горячий напиток"
+      ],
+      "objects": [
+        "книга",
+        "кружка",
+        "плед"
+      ],
+      "clothing": [],
+      "decorations": [],
+      "intent": [
+        "читать книгу",
+        "уютный отдых",
+        "домашний вечер"
+      ],
+      "search_aliases": []
+    },
+    {
+      "image_id": "OTHER-0086",
+      "sheet_number": 7,
+      "status": "approved_ready",
+      "semantic_status": "approved_current_architecture_1_2",
+      "character_id": null,
+      "character_assignment": "OTHER",
+      "art_file": "OTHER-0086_ART.png",
+      "master_file": "OTHER-0086_MASTER.png",
+      "web_file": "OTHER-0086_WEB.webp",
+      "art_sha256": "1632f83656d4696ece47df0d23b32f5854c0a3f64827588a767b27519a50bc47",
+      "master_sha256": "91719ec9237846c900b59804c24409b91b0af5eb0be116eaf99add726f6d0ff7",
+      "web_sha256": "ba88e2138294f6f61180ffcd58ca805a577b9bc55097da69f09df73ba49acc1a",
+      "source_crop_xyxy": [
+        990,
+        328,
+        1524,
+        648
+      ],
+      "art_pixels": [
+        534,
+        320
+      ],
+      "master_pixels": [
+        574,
+        384
+      ],
+      "web_pixels": [
+        574,
+        384
+      ],
+      "transparent_padding_px": 32,
+      "rgb_pixels_verified": true,
+      "derived_from_temporary_id": "OTHER_TMP_20260919_175840_11",
+      "display_name": "Отпуск удался",
+      "character": null,
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": null,
+      "mood": [
+        "РАССЛАБЛЕННОСТЬ",
+        "ДОВОЛЬСТВО"
+      ],
+      "themes": [
+        "отдых",
+        "отпуск",
+        "море",
+        "пляж",
+        "лето"
+      ],
+      "scenario": "Кот в солнечных очках отдыхает в гамаке у моря.",
+      "actions": [
+        "лежать в гамаке",
+        "отдыхать"
+      ],
+      "objects": [
+        "гамак",
+        "солнечные очки"
+      ],
+      "clothing": [],
+      "decorations": [],
+      "intent": [
+        "отпуск",
+        "пляжный отдых",
+        "ничего не делать"
+      ],
+      "search_aliases": []
+    },
+    {
+      "image_id": "OTHER-0087",
+      "sheet_number": 9,
+      "status": "approved_ready",
+      "semantic_status": "approved_current_architecture_1_2",
+      "character_id": null,
+      "character_assignment": "OTHER",
+      "art_file": "OTHER-0087_ART.png",
+      "master_file": "OTHER-0087_MASTER.png",
+      "web_file": "OTHER-0087_WEB.webp",
+      "art_sha256": "0c5ce9785b9c440a2fc5433d297438189e0412ea94a4f90d7fde0b20e167c264",
+      "master_sha256": "51b6c3058c44e0423ac3580edc70a181294376523244ca38892b8e2f30b09209",
+      "web_sha256": "36612a9826e6a76d1278984e85fdb1a753a917696a912c4a5bf5dbcbf977aa68",
+      "source_crop_xyxy": [
+        499,
+        657,
+        980,
+        1008
+      ],
+      "art_pixels": [
+        481,
+        351
+      ],
+      "master_pixels": [
+        481,
+        404
+      ],
+      "web_pixels": [
+        481,
+        404
+      ],
+      "transparent_padding_px": 32,
+      "rgb_pixels_verified": true,
+      "derived_from_temporary_id": "OTHER_TMP_20260919_175840_13",
+      "display_name": "Книжный сон",
+      "character": null,
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": null,
+      "mood": [
+        "СПОКОЙСТВИЕ"
+      ],
+      "themes": [
+        "книги",
+        "сон",
+        "отдых"
+      ],
+      "scenario": "Кот спит, свернувшись на стопке книг.",
+      "actions": [
+        "спать"
+      ],
+      "objects": [
+        "книги"
+      ],
+      "clothing": [],
+      "decorations": [],
+      "intent": [
+        "сон",
+        "отдых",
+        "книги",
+        "любитель чтения"
+      ],
+      "search_aliases": []
+    },
+    {
+      "image_id": "OTHER-0088",
+      "sheet_number": 10,
+      "status": "approved_ready",
+      "semantic_status": "approved_current_architecture_1_2",
+      "character_id": null,
+      "character_assignment": "OTHER",
+      "art_file": "OTHER-0088_ART.png",
+      "master_file": "OTHER-0088_MASTER.png",
+      "web_file": "OTHER-0088_WEB.webp",
+      "art_sha256": "d4efd7240788175307306a08125c6b931cc879683684f2142320d852d9677c60",
+      "master_sha256": "51b87977cab786860a07fcf7e6fdfbb6715b96c02ee57236f65672d09b4c1fcd",
+      "web_sha256": "10b763c85069718c7ab5f85705d747155f35a77ddf7499d8217219cea411b4e0",
+      "source_crop_xyxy": [
+        991,
+        657,
+        1523,
+        1008
+      ],
+      "art_pixels": [
+        532,
+        351
+      ],
+      "master_pixels": [
+        557,
+        404
+      ],
+      "web_pixels": [
+        557,
+        404
+      ],
+      "transparent_padding_px": 32,
+      "rgb_pixels_verified": true,
+      "derived_from_temporary_id": "OTHER_TMP_20260919_175840_14",
+      "display_name": "Листопад!",
+      "character": null,
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": null,
+      "mood": [
+        "ВОСТОРГ",
+        "РАДОСТЬ"
+      ],
+      "themes": [
+        "осень",
+        "листопад",
+        "осенние листья"
+      ],
+      "scenario": "Кот восторженно ловит падающие осенние листья.",
+      "actions": [
+        "ловить листья",
+        "радоваться"
+      ],
+      "objects": [
+        "осенние листья"
+      ],
+      "clothing": [
+        "шарф"
+      ],
+      "decorations": [],
+      "intent": [
+        "осень",
+        "радоваться осени",
+        "листопад"
+      ],
+      "search_aliases": []
+    }
+  ],
+  "semantic_schema_version": "semantic_metadata_1.2_current",
+  "semantic_source": "semantic/OTHER/architecture_1_2/OTHER_semantic_metadata_1_2.json"
+}

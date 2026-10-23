@@ -1,13 +1,28 @@
-# Original artwork and generated production images are kept outside GitHub.
-images/*
+# Local attachments, generated outputs and production assets
+.codex-remote-attachments/
+output/
+tmp/
 production/
+catalog-data-v1.0-review.zip
+*.docx
+catalog-data/migration-source/
+catalog-data/rk17_web_asset_import.json
+catalog-data/import_rk17_web_assets.py
+catalog-data/process_rk17_0105_0132.py
 
-# Local packages and temporary processing files.
-*.zip
-_incoming/
-__pycache__/
+# Python caches and local Printnik state/builds
+**/__pycache__/
 *.pyc
-
-# Local development artifacts.
-.DS_Store
-Thumbs.db
+printnik/.build-deps/
+printnik/build/
+printnik/dist/
+printnik/installer-payload/
+printnik/data/
+printnik/jobs/
+printnik/validation-jobs/
+printnik/calibration-jobs/
+printnik/tests/_work/
+printnik/Printnik*.spec
+printnik/docs/test-evidence/
+printnik/examples/
+printnik/experiments/

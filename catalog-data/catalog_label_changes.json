@@ -1,0 +1,12 @@
+{
+  "changes": [
+    {
+      "change": "display_name",
+      "from": "Рыжик д'Артаньян",
+      "image_id": "RK17-0042",
+      "status": "approved_by_user",
+      "to": "Чеддер д'Артаньян"
+    }
+  ],
+  "schema_version": "catalog_label_changes_1.0"
+}

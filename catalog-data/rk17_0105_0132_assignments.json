@@ -1,0 +1,173 @@
+{
+  "assignments": [
+    {
+      "display_name": "Первый диплом",
+      "image_id": "RK17-0105",
+      "source_file": "DT-01.png",
+      "variant_key": "DT-01"
+    },
+    {
+      "display_name": "Выпускной день",
+      "image_id": "RK17-0106",
+      "source_file": "DT-02.png",
+      "variant_key": "DT-02"
+    },
+    {
+      "display_name": "Гордый выпускник",
+      "image_id": "RK17-0107",
+      "source_file": "DT-03.png",
+      "variant_key": "DT-03"
+    },
+    {
+      "display_name": "Диплом получен",
+      "image_id": "RK17-0108",
+      "source_file": "DT-04.png",
+      "variant_key": "DT-04"
+    },
+    {
+      "display_name": "Король трассы",
+      "image_id": "RK17-0109",
+      "source_file": "DT-06.png",
+      "variant_key": "DT-06"
+    },
+    {
+      "display_name": "Держу курс",
+      "image_id": "RK17-0110",
+      "source_file": "DT-07.png",
+      "variant_key": "DT-07"
+    },
+    {
+      "display_name": "Маршрут готов",
+      "image_id": "RK17-0111",
+      "source_file": "DT-08.png",
+      "variant_key": "DT-08"
+    },
+    {
+      "display_name": "Большая дорога",
+      "image_id": "RK17-0112",
+      "source_file": "DT-09.png",
+      "variant_key": "DT-09"
+    },
+    {
+      "display_name": "За рулём",
+      "image_id": "RK17-0113",
+      "source_file": "DT-10.png",
+      "variant_key": "DT-10"
+    },
+    {
+      "display_name": "На приёме",
+      "image_id": "RK17-0114",
+      "source_file": "MS-01.png",
+      "variant_key": "MS-01"
+    },
+    {
+      "display_name": "Точный диагноз",
+      "image_id": "RK17-0115",
+      "source_file": "MS-02.png",
+      "variant_key": "MS-02"
+    },
+    {
+      "display_name": "Первая помощь",
+      "image_id": "RK17-0116",
+      "source_file": "MS-03.png",
+      "variant_key": "MS-03"
+    },
+    {
+      "display_name": "Добрый ветеринар",
+      "image_id": "RK17-0117",
+      "source_file": "MS-05.png",
+      "variant_key": "MS-05"
+    },
+    {
+      "display_name": "Светлая формула",
+      "image_id": "RK17-0118",
+      "source_file": "MS-06.png",
+      "variant_key": "MS-06"
+    },
+    {
+      "display_name": "Удачный опыт",
+      "image_id": "RK17-0119",
+      "source_file": "MS-07.png",
+      "variant_key": "MS-07"
+    },
+    {
+      "display_name": "Мир под микроскопом",
+      "image_id": "RK17-0120",
+      "source_file": "MS-08.png",
+      "variant_key": "MS-08"
+    },
+    {
+      "display_name": "Эврика!",
+      "image_id": "RK17-0121",
+      "source_file": "MS-09.png",
+      "variant_key": "MS-09"
+    },
+    {
+      "display_name": "Формула знаний",
+      "image_id": "RK17-0122",
+      "source_file": "MS-10.png",
+      "variant_key": "MS-10"
+    },
+    {
+      "display_name": "Генерал",
+      "image_id": "RK17-0123",
+      "source_file": "WF-01.png",
+      "variant_key": "WF-01"
+    },
+    {
+      "display_name": "На задании",
+      "image_id": "RK17-0124",
+      "source_file": "WF-02.png",
+      "variant_key": "WF-02"
+    },
+    {
+      "display_name": "Парадный шаг",
+      "image_id": "RK17-0125",
+      "source_file": "WF-03.png",
+      "variant_key": "WF-03"
+    },
+    {
+      "display_name": "Танкист",
+      "image_id": "RK17-0126",
+      "source_file": "WF-04.png",
+      "variant_key": "WF-04"
+    },
+    {
+      "display_name": "На связи",
+      "image_id": "RK17-0127",
+      "source_file": "WF-05.png",
+      "variant_key": "WF-05"
+    },
+    {
+      "display_name": "Пожарный",
+      "image_id": "RK17-0128",
+      "source_file": "WF-06.png",
+      "variant_key": "WF-06"
+    },
+    {
+      "display_name": "Огнетушитель",
+      "image_id": "RK17-0129",
+      "source_file": "WF-07.png",
+      "variant_key": "WF-07"
+    },
+    {
+      "display_name": "Спасение",
+      "image_id": "RK17-0130",
+      "source_file": "WF-08.png",
+      "variant_key": "WF-08"
+    },
+    {
+      "display_name": "Спасатель",
+      "image_id": "RK17-0131",
+      "source_file": "WF-09.png",
+      "variant_key": "WF-09"
+    },
+    {
+      "display_name": "Тушение",
+      "image_id": "RK17-0132",
+      "source_file": "WF-10.png",
+      "variant_key": "WF-10"
+    }
+  ],
+  "batch_id": "RK17-0105-0132"
+}

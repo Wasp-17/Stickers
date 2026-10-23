@@ -1,0 +1,567 @@
+{
+  "batch_id": "RK17-0091-0104",
+  "existing_concept_ids_used": [
+    "ACTION_093D746ECD486ADE",
+    "ACTION_0B9E8A0192FD0166",
+    "ACTION_4E88D2A1FC423C72",
+    "ACTION_AB04A44D05C5A267",
+    "ACTION_CC68047838CDCF8B",
+    "INTENT_87773A2DCDBA75BC",
+    "INTENT_COZY",
+    "MOOD_02557292CC9A6972",
+    "MOOD_1807E5C0E3BBDF30",
+    "MOOD_463E1CF6DF9027E9",
+    "MOOD_7B9D686BA6E937D5",
+    "MOOD_8096F9131E782472",
+    "MOOD_95D26E7AA030537E",
+    "MOOD_AB955A64AF4ADCD8",
+    "MOOD_C3986D9DAFA07F51",
+    "MOOD_C7FDDE313C4467BB",
+    "MOOD_E4EEF0D22E9B4D0F",
+    "MOOD_E5923C0CA30B9900",
+    "MOOD_EF69F90E76718848",
+    "SUBJECT_CAT",
+    "THEME_552D043416FD4144",
+    "THEME_649D46872F7FBD9F",
+    "THEME_84C951CDFB09287A",
+    "THEME_9DA6CEC55134F953",
+    "THEME_CF24381FDF4BEEB8"
+  ],
+  "new_concepts": [
+    {
+      "canonical": "УЛЫБАТЬСЯ",
+      "concept_id": "GSC-000001",
+      "concept_type": "ACTION",
+      "history": [
+        {
+          "batch_id": "RK17-0091-0104",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0091-0104_GSC-000001"
+    },
+    {
+      "canonical": "ХОРОШЕЕ НАСТРОЕНИЕ",
+      "concept_id": "GSC-000002",
+      "concept_type": "INTENT",
+      "history": [
+        {
+          "batch_id": "RK17-0091-0104",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0091-0104_GSC-000002"
+    },
+    {
+      "canonical": "ХИТРОСТЬ",
+      "concept_id": "GSC-000003",
+      "concept_type": "MOOD",
+      "history": [
+        {
+          "batch_id": "RK17-0091-0104",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0091-0104_GSC-000003"
+    },
+    {
+      "canonical": "УХМЫЛЯТЬСЯ",
+      "concept_id": "GSC-000004",
+      "concept_type": "ACTION",
+      "history": [
+        {
+          "batch_id": "RK17-0091-0104",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0091-0104_GSC-000004"
+    },
+    {
+      "canonical": "ПРИЩУРИВАТЬСЯ",
+      "concept_id": "GSC-000005",
+      "concept_type": "ACTION",
+      "history": [
+        {
+          "batch_id": "RK17-0091-0104",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0091-0104_GSC-000005"
+    },
+    {
+      "canonical": "ЗАДУМАЛ ЧТО-ТО",
+      "concept_id": "GSC-000006",
+      "concept_type": "INTENT",
+      "history": [
+        {
+          "batch_id": "RK17-0091-0104",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0091-0104_GSC-000006"
+    },
+    {
+      "canonical": "УДИВЛЯТЬСЯ",
+      "concept_id": "GSC-000007",
+      "concept_type": "ACTION",
+      "history": [
+        {
+          "batch_id": "RK17-0091-0104",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0091-0104_GSC-000007"
+    },
+    {
+      "canonical": "ПУГАТЬСЯ",
+      "concept_id": "GSC-000008",
+      "concept_type": "ACTION",
+      "history": [
+        {
+          "batch_id": "RK17-0091-0104",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0091-0104_GSC-000008"
+    },
+    {
+      "canonical": "СКЕПСИС",
+      "concept_id": "GSC-000009",
+      "concept_type": "MOOD",
+      "history": [
+        {
+          "batch_id": "RK17-0091-0104",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0091-0104_GSC-000009"
+    },
+    {
+      "canonical": "СОМНЕНИЕ",
+      "concept_id": "GSC-000010",
+      "concept_type": "THEME",
+      "history": [
+        {
+          "batch_id": "RK17-0091-0104",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0091-0104_GSC-000010"
+    },
+    {
+      "canonical": "УСМЕХАТЬСЯ",
+      "concept_id": "GSC-000011",
+      "concept_type": "ACTION",
+      "history": [
+        {
+          "batch_id": "RK17-0091-0104",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0091-0104_GSC-000011"
+    },
+    {
+      "canonical": "НЕДОВЕРИЕ",
+      "concept_id": "GSC-000012",
+      "concept_type": "INTENT",
+      "history": [
+        {
+          "batch_id": "RK17-0091-0104",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0091-0104_GSC-000012"
+    },
+    {
+      "canonical": "СКЕПТИЧЕСКАЯ РЕАКЦИЯ",
+      "concept_id": "GSC-000013",
+      "concept_type": "INTENT",
+      "history": [
+        {
+          "batch_id": "RK17-0091-0104",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0091-0104_GSC-000013"
+    },
+    {
+      "canonical": "РАССЛАБИТЬСЯ",
+      "concept_id": "GSC-000014",
+      "concept_type": "INTENT",
+      "history": [
+        {
+          "batch_id": "RK17-0091-0104",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0091-0104_GSC-000014"
+    },
+    {
+      "canonical": "НЕДОВОЛЬСТВО",
+      "concept_id": "GSC-000015",
+      "concept_type": "MOOD",
+      "history": [
+        {
+          "batch_id": "RK17-0091-0104",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0091-0104_GSC-000015"
+    },
+    {
+      "canonical": "ХМУРИТЬСЯ",
+      "concept_id": "GSC-000016",
+      "concept_type": "ACTION",
+      "history": [
+        {
+          "batch_id": "RK17-0091-0104",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0091-0104_GSC-000016"
+    },
+    {
+      "canonical": "ЗЛИТЬСЯ",
+      "concept_id": "GSC-000017",
+      "concept_type": "ACTION",
+      "history": [
+        {
+          "batch_id": "RK17-0091-0104",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0091-0104_GSC-000017"
+    },
+    {
+      "canonical": "СЕРДИТАЯ РЕАКЦИЯ",
+      "concept_id": "GSC-000018",
+      "concept_type": "INTENT",
+      "history": [
+        {
+          "batch_id": "RK17-0091-0104",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0091-0104_GSC-000018"
+    },
+    {
+      "canonical": "ДРУЖЕЛЮБИЕ",
+      "concept_id": "GSC-000019",
+      "concept_type": "THEME",
+      "history": [
+        {
+          "batch_id": "RK17-0091-0104",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0091-0104_GSC-000019"
+    },
+    {
+      "canonical": "ПРИВЕТСТВИЕ",
+      "concept_id": "GSC-000020",
+      "concept_type": "INTENT",
+      "history": [
+        {
+          "batch_id": "RK17-0091-0104",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0091-0104_GSC-000020"
+    },
+    {
+      "canonical": "ШУТКА",
+      "concept_id": "GSC-000021",
+      "concept_type": "INTENT",
+      "history": [
+        {
+          "batch_id": "RK17-0091-0104",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0091-0104_GSC-000021"
+    },
+    {
+      "canonical": "ОБЩЕНИЕ",
+      "concept_id": "GSC-000022",
+      "concept_type": "THEME",
+      "history": [
+        {
+          "batch_id": "RK17-0091-0104",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0091-0104_GSC-000022"
+    },
+    {
+      "canonical": "МАХАТЬ ЛАПОЙ",
+      "concept_id": "GSC-000023",
+      "concept_type": "ACTION",
+      "history": [
+        {
+          "batch_id": "RK17-0091-0104",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0091-0104_GSC-000023"
+    },
+    {
+      "canonical": "ПРИВЕТСТВОВАТЬ",
+      "concept_id": "GSC-000024",
+      "concept_type": "ACTION",
+      "history": [
+        {
+          "batch_id": "RK17-0091-0104",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0091-0104_GSC-000024"
+    },
+    {
+      "canonical": "ПРИВЕТ",
+      "concept_id": "GSC-000025",
+      "concept_type": "INTENT",
+      "history": [
+        {
+          "batch_id": "RK17-0091-0104",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0091-0104_GSC-000025"
+    },
+    {
+      "canonical": "ВСТРЕЧА",
+      "concept_id": "GSC-000026",
+      "concept_type": "INTENT",
+      "history": [
+        {
+          "batch_id": "RK17-0091-0104",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0091-0104_GSC-000026"
+    },
+    {
+      "canonical": "ИГРА",
+      "concept_id": "GSC-000027",
+      "concept_type": "THEME",
+      "history": [
+        {
+          "batch_id": "RK17-0091-0104",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0091-0104_GSC-000027"
+    },
+    {
+      "canonical": "ЛЕЖАТЬ НА СПИНЕ",
+      "concept_id": "GSC-000028",
+      "concept_type": "ACTION",
+      "history": [
+        {
+          "batch_id": "RK17-0091-0104",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0091-0104_GSC-000028"
+    },
+    {
+      "canonical": "ВАЛЯТЬСЯ",
+      "concept_id": "GSC-000029",
+      "concept_type": "ACTION",
+      "history": [
+        {
+          "batch_id": "RK17-0091-0104",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0091-0104_GSC-000029"
+    },
+    {
+      "canonical": "РАССЛАБЛЕНИЕ",
+      "concept_id": "GSC-000030",
+      "concept_type": "INTENT",
+      "history": [
+        {
+          "batch_id": "RK17-0091-0104",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0091-0104_GSC-000030"
+    },
+    {
+      "canonical": "ДВИЖЕНИЕ",
+      "concept_id": "GSC-000031",
+      "concept_type": "THEME",
+      "history": [
+        {
+          "batch_id": "RK17-0091-0104",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0091-0104_GSC-000031"
+    },
+    {
+      "canonical": "ПРОГУЛКА",
+      "concept_id": "GSC-000032",
+      "concept_type": "THEME",
+      "history": [
+        {
+          "batch_id": "RK17-0091-0104",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0091-0104_GSC-000032"
+    },
+    {
+      "canonical": "ГУЛЯТЬ",
+      "concept_id": "GSC-000033",
+      "concept_type": "ACTION",
+      "history": [
+        {
+          "batch_id": "RK17-0091-0104",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0091-0104_GSC-000033"
+    },
+    {
+      "canonical": "ИДТИ ПО ДЕЛАМ",
+      "concept_id": "GSC-000034",
+      "concept_type": "INTENT",
+      "history": [
+        {
+          "batch_id": "RK17-0091-0104",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0091-0104_GSC-000034"
+    },
+    {
+      "canonical": "ПРОБУЖДЕНИЕ",
+      "concept_id": "GSC-000035",
+      "concept_type": "THEME",
+      "history": [
+        {
+          "batch_id": "RK17-0091-0104",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0091-0104_GSC-000035"
+    },
+    {
+      "canonical": "ПОТЯГИВАТЬСЯ",
+      "concept_id": "GSC-000036",
+      "concept_type": "ACTION",
+      "history": [
+        {
+          "batch_id": "RK17-0091-0104",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0091-0104_GSC-000036"
+    },
+    {
+      "canonical": "РАЗМЯТЬСЯ",
+      "concept_id": "GSC-000037",
+      "concept_type": "INTENT",
+      "history": [
+        {
+          "batch_id": "RK17-0091-0104",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0091-0104_GSC-000037"
+    },
+    {
+      "canonical": "ПРОСНУТЬСЯ",
+      "concept_id": "GSC-000038",
+      "concept_type": "INTENT",
+      "history": [
+        {
+          "batch_id": "RK17-0091-0104",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0091-0104_GSC-000038"
+    }
+  ],
+  "new_relations": [],
+  "requires_semantic_approval": [],
+  "source_bindings_added": []
+}

@@ -1,0 +1,3301 @@
+{
+  "schema_version": "semantic_metadata_1.2_current",
+  "character": "RK17",
+  "records": [
+    {
+      "image_id": "RK17-0001",
+      "display_name": "Космический мечтатель",
+      "character": "RK17 / Рыжий Кот №17",
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": "АСТРОНАВТ",
+      "mood": [
+        "ЗАДУМЧИВОСТЬ",
+        "СПОКОЙСТВИЕ"
+      ],
+      "themes": [
+        "космос",
+        "мечты",
+        "будущее"
+      ],
+      "scenario": "сидит у иллюминатора космического корабля с кружкой и мечтает",
+      "actions": [
+        "смотреть в космос",
+        "мечтать"
+      ],
+      "objects": [
+        "иллюминатор",
+        "кружка"
+      ],
+      "clothing": [
+        "скафандр"
+      ],
+      "decorations": [],
+      "intent": [
+        "мечты",
+        "размышления",
+        "хочу в космос"
+      ],
+      "search_aliases": [],
+      "migration_status": "READY_FOR_WORK",
+      "source_semantic_status": "semantic_approved",
+      "semantic_status": "approved_current_architecture_1_2"
+    },
+    {
+      "image_id": "RK17-0002",
+      "display_name": "Невесомость",
+      "character": "RK17 / Рыжий Кот №17",
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": "АСТРОНАВТ",
+      "mood": [
+        "РАДОСТЬ",
+        "ВОСТОРГ"
+      ],
+      "themes": [
+        "космос",
+        "приключения",
+        "полёт"
+      ],
+      "scenario": "радостно парит в невесомости",
+      "actions": [
+        "парить",
+        "лететь"
+      ],
+      "objects": [
+        "космос"
+      ],
+      "clothing": [
+        "скафандр"
+      ],
+      "decorations": [],
+      "intent": [
+        "свобода",
+        "радость",
+        "приключение"
+      ],
+      "search_aliases": [],
+      "migration_status": "READY_FOR_WORK",
+      "source_semantic_status": "semantic_approved",
+      "semantic_status": "approved_current_architecture_1_2"
+    },
+    {
+      "image_id": "RK17-0003",
+      "display_name": "Созерцатель",
+      "character": "RK17 / Рыжий Кот №17",
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": "АСТРОНАВТ",
+      "mood": [
+        "ЗАДУМЧИВОСТЬ",
+        "ВОСХИЩЕНИЕ"
+      ],
+      "themes": [
+        "космос",
+        "размышления",
+        "планета"
+      ],
+      "scenario": "смотрит через иллюминатор на Землю и космос",
+      "actions": [
+        "наблюдать",
+        "созерцать"
+      ],
+      "objects": [
+        "иллюминатор",
+        "Земля"
+      ],
+      "clothing": [
+        "скафандр"
+      ],
+      "decorations": [],
+      "intent": [
+        "созерцание",
+        "размышления"
+      ],
+      "search_aliases": [],
+      "migration_status": "READY_FOR_WORK",
+      "source_semantic_status": "semantic_approved",
+      "semantic_status": "approved_current_architecture_1_2"
+    },
+    {
+      "image_id": "RK17-0004",
+      "display_name": "Предвкушение",
+      "character": "RK17 / Рыжий Кот №17",
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": "ПОВАР",
+      "mood": [
+        "СОСРЕДОТОЧЕННОСТЬ",
+        "ПРЕДВКУШЕНИЕ"
+      ],
+      "themes": [
+        "кулинария",
+        "еда",
+        "рыба"
+      ],
+      "scenario": "нарезает лосося",
+      "actions": [
+        "готовить",
+        "нарезать"
+      ],
+      "objects": [
+        "лосось",
+        "нож",
+        "стол"
+      ],
+      "clothing": [
+        "поварской колпак"
+      ],
+      "decorations": [],
+      "intent": [
+        "готовка",
+        "аппетит"
+      ],
+      "search_aliases": [],
+      "migration_status": "READY_FOR_WORK",
+      "source_semantic_status": "semantic_approved",
+      "semantic_status": "approved_current_architecture_1_2"
+    },
+    {
+      "image_id": "RK17-0005",
+      "display_name": "Кулинарное творчество",
+      "character": "RK17 / Рыжий Кот №17",
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": "ПОВАР",
+      "mood": [
+        "УВЛЕЧЁННОСТЬ",
+        "ПРЕДВКУШЕНИЕ"
+      ],
+      "themes": [
+        "кулинария",
+        "творчество",
+        "еда"
+      ],
+      "scenario": "готовит целую рыбу",
+      "actions": [
+        "готовить",
+        "разделывать рыбу"
+      ],
+      "objects": [
+        "рыба",
+        "нож",
+        "стол"
+      ],
+      "clothing": [
+        "поварской колпак"
+      ],
+      "decorations": [],
+      "intent": [
+        "кулинарное творчество",
+        "любовь к готовке"
+      ],
+      "search_aliases": [],
+      "migration_status": "READY_FOR_WORK",
+      "source_semantic_status": "semantic_approved",
+      "semantic_status": "approved_current_architecture_1_2"
+    },
+    {
+      "image_id": "RK17-0006",
+      "display_name": "Шерсть дыбом",
+      "character": "RK17 / Рыжий Кот №17",
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": null,
+      "mood": [
+        "СТРАХ",
+        "ШОК"
+      ],
+      "themes": [
+        "эмоции",
+        "испуг",
+        "неожиданность"
+      ],
+      "scenario": "выгибает спину и распушает шерсть от испуга",
+      "actions": [
+        "испугаться",
+        "выгнуть спину"
+      ],
+      "objects": [],
+      "clothing": [],
+      "decorations": [],
+      "intent": [
+        "мне страшно",
+        "сильный испуг"
+      ],
+      "search_aliases": [],
+      "migration_status": "READY_FOR_WORK",
+      "source_semantic_status": "semantic_approved",
+      "semantic_status": "approved_current_architecture_1_2"
+    },
+    {
+      "image_id": "RK17-0007",
+      "display_name": "Ошеломление",
+      "character": "RK17 / Рыжий Кот №17",
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": null,
+      "mood": [
+        "ШОК",
+        "УДИВЛЕНИЕ"
+      ],
+      "themes": [
+        "эмоции",
+        "неожиданность"
+      ],
+      "scenario": "подскакивает от сильного потрясения",
+      "actions": [
+        "подскочить",
+        "испугаться"
+      ],
+      "objects": [],
+      "clothing": [],
+      "decorations": [],
+      "intent": [
+        "ошеломление",
+        "внезапная реакция"
+      ],
+      "search_aliases": [],
+      "migration_status": "READY_FOR_WORK",
+      "source_semantic_status": "semantic_approved",
+      "semantic_status": "approved_current_architecture_1_2"
+    },
+    {
+      "image_id": "RK17-0008",
+      "display_name": "Ой!",
+      "character": "RK17 / Рыжий Кот №17",
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": null,
+      "mood": [
+        "УДИВЛЕНИЕ",
+        "СТРАХ"
+      ],
+      "themes": [
+        "эмоции",
+        "неожиданность",
+        "неловкость"
+      ],
+      "scenario": "подскакивает и проливает напиток",
+      "actions": [
+        "подскочить",
+        "пролить"
+      ],
+      "objects": [
+        "кружка",
+        "напиток"
+      ],
+      "clothing": [],
+      "decorations": [],
+      "intent": [
+        "ой",
+        "маленькая катастрофа"
+      ],
+      "search_aliases": [],
+      "migration_status": "READY_FOR_WORK",
+      "source_semantic_status": "semantic_approved",
+      "semantic_status": "approved_current_architecture_1_2"
+    },
+    {
+      "image_id": "RK17-0009",
+      "display_name": "Домашка достала",
+      "character": "RK17 / Рыжий Кот №17",
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": "УЧЕНИК",
+      "mood": [
+        "ЗЛОСТЬ",
+        "РАЗДРАЖЕНИЕ"
+      ],
+      "themes": [
+        "учёба",
+        "домашнее задание",
+        "эмоции"
+      ],
+      "scenario": "сердится над домашним заданием",
+      "actions": [
+        "учиться",
+        "сердиться"
+      ],
+      "objects": [
+        "тетрадь",
+        "учебные принадлежности"
+      ],
+      "clothing": [],
+      "decorations": [],
+      "intent": [
+        "учёба достала",
+        "не получается задача"
+      ],
+      "search_aliases": [],
+      "migration_status": "READY_FOR_WORK",
+      "source_semantic_status": "semantic_approved",
+      "semantic_status": "approved_current_architecture_1_2"
+    },
+    {
+      "image_id": "RK17-0010",
+      "display_name": "Заколебали!",
+      "character": "RK17 / Рыжий Кот №17",
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": "ОФИСНЫЙ РАБОТНИК",
+      "mood": [
+        "ЗЛОСТЬ",
+        "РАЗДРАЖЕНИЕ"
+      ],
+      "themes": [
+        "работа",
+        "офис",
+        "эмоции"
+      ],
+      "scenario": "злится на работе",
+      "actions": [
+        "работать",
+        "возмущаться"
+      ],
+      "objects": [
+        "рабочее место"
+      ],
+      "clothing": [],
+      "decorations": [],
+      "intent": [
+        "работа достала",
+        "накипело"
+      ],
+      "search_aliases": [],
+      "migration_status": "READY_FOR_WORK",
+      "source_semantic_status": "semantic_approved",
+      "semantic_status": "approved_current_architecture_1_2"
+    },
+    {
+      "image_id": "RK17-0011",
+      "display_name": "Бесит!",
+      "character": "RK17 / Рыжий Кот №17",
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": null,
+      "mood": [
+        "ЗЛОСТЬ",
+        "РАЗДРАЖЕНИЕ"
+      ],
+      "themes": [
+        "эмоции",
+        "реакция"
+      ],
+      "scenario": "ярко выражает раздражение",
+      "actions": [
+        "сердиться"
+      ],
+      "objects": [],
+      "clothing": [
+        "красный худи"
+      ],
+      "decorations": [],
+      "intent": [
+        "бесит",
+        "я зол"
+      ],
+      "search_aliases": [],
+      "migration_status": "READY_FOR_WORK",
+      "source_semantic_status": "semantic_approved",
+      "semantic_status": "approved_current_architecture_1_2"
+    },
+    {
+      "image_id": "RK17-0012",
+      "display_name": "Шеф-повар",
+      "character": "RK17 / Рыжий Кот №17",
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": "ШЕФ-ПОВАР",
+      "mood": [
+        "УВЕРЕННОСТЬ",
+        "УВЛЕЧЁННОСТЬ"
+      ],
+      "themes": [
+        "кулинария",
+        "еда"
+      ],
+      "scenario": "готовит на сковороде",
+      "actions": [
+        "готовить"
+      ],
+      "objects": [
+        "сковорода"
+      ],
+      "clothing": [
+        "поварской колпак"
+      ],
+      "decorations": [],
+      "intent": [
+        "готовлю",
+        "работа на кухне"
+      ],
+      "search_aliases": [],
+      "migration_status": "READY_FOR_WORK",
+      "source_semantic_status": "semantic_approved",
+      "semantic_status": "approved_current_architecture_1_2"
+    },
+    {
+      "image_id": "RK17-0013",
+      "display_name": "Будет вкусно",
+      "character": "RK17 / Рыжий Кот №17",
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": "ПОВАР",
+      "mood": [
+        "ПРЕДВКУШЕНИЕ",
+        "ДОВОЛЬСТВО"
+      ],
+      "themes": [
+        "кулинария",
+        "еда",
+        "рыба"
+      ],
+      "scenario": "приготовил блюдо из лосося и показывает его",
+      "actions": [
+        "готовить",
+        "подавать блюдо"
+      ],
+      "objects": [
+        "блюдо с лососем"
+      ],
+      "clothing": [
+        "поварской колпак",
+        "поварская одежда"
+      ],
+      "decorations": [],
+      "intent": [
+        "вкусная еда",
+        "приготовление еды",
+        "аппетит"
+      ],
+      "search_aliases": [],
+      "migration_status": "READY_FOR_WORK",
+      "source_semantic_status": "semantic_approved",
+      "semantic_status": "approved_current_architecture_1_2"
+    },
+    {
+      "image_id": "RK17-0014",
+      "display_name": "Проба снята",
+      "character": "RK17 / Рыжий Кот №17",
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": "ПОВАР",
+      "mood": [
+        "УДОВОЛЬСТВИЕ",
+        "ДОВОЛЬСТВО"
+      ],
+      "themes": [
+        "кулинария",
+        "дегустация"
+      ],
+      "scenario": "пробует приготовленное",
+      "actions": [
+        "пробовать",
+        "дегустировать"
+      ],
+      "objects": [
+        "еда"
+      ],
+      "clothing": [
+        "поварской колпак"
+      ],
+      "decorations": [],
+      "intent": [
+        "проба снята",
+        "оценить вкус"
+      ],
+      "search_aliases": [],
+      "migration_status": "READY_FOR_WORK",
+      "source_semantic_status": "semantic_approved",
+      "semantic_status": "approved_current_architecture_1_2"
+    },
+    {
+      "image_id": "RK17-0015",
+      "display_name": "Саморазвитие IT",
+      "character": "RK17 / Рыжий Кот №17",
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": "ПРОГРАММИСТ",
+      "mood": [
+        "СОСРЕДОТОЧЕННОСТЬ",
+        "ИНТЕРЕС"
+      ],
+      "themes": [
+        "IT",
+        "обучение",
+        "саморазвитие",
+        "программирование"
+      ],
+      "scenario": "учится программированию среди книг",
+      "actions": [
+        "учиться",
+        "читать"
+      ],
+      "objects": [
+        "книги",
+        "компьютер"
+      ],
+      "clothing": [],
+      "decorations": [],
+      "intent": [
+        "самообразование",
+        "изучаю IT",
+        "развитие навыков"
+      ],
+      "search_aliases": [],
+      "migration_status": "READY_FOR_WORK",
+      "source_semantic_status": "semantic_approved",
+      "semantic_status": "approved_current_architecture_1_2"
+    },
+    {
+      "image_id": "RK17-0016",
+      "display_name": "Кодер",
+      "character": "RK17 / Рыжий Кот №17",
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": "ПРОГРАММИСТ",
+      "mood": [
+        "СОСРЕДОТОЧЕННОСТЬ"
+      ],
+      "themes": [
+        "IT",
+        "программирование"
+      ],
+      "scenario": "работает за ноутбуком и пишет код",
+      "actions": [
+        "программировать",
+        "работать за компьютером"
+      ],
+      "objects": [
+        "ноутбук"
+      ],
+      "clothing": [],
+      "decorations": [],
+      "intent": [
+        "программирование",
+        "работа с кодом"
+      ],
+      "search_aliases": [],
+      "migration_status": "READY_FOR_WORK",
+      "source_semantic_status": "semantic_approved",
+      "semantic_status": "approved_current_architecture_1_2"
+    },
+    {
+      "image_id": "RK17-0017",
+      "display_name": "Перерыв",
+      "character": "RK17 / Рыжий Кот №17",
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": "ПРОГРАММИСТ",
+      "mood": [
+        "РАССЛАБЛЕННОСТЬ",
+        "УСТАЛОСТЬ"
+      ],
+      "themes": [
+        "IT",
+        "работа",
+        "отдых"
+      ],
+      "scenario": "отдыхает возле компьютера",
+      "actions": [
+        "отдыхать",
+        "делать паузу"
+      ],
+      "objects": [
+        "компьютер"
+      ],
+      "clothing": [],
+      "decorations": [],
+      "intent": [
+        "перерыв",
+        "отдохнуть от работы"
+      ],
+      "search_aliases": [],
+      "migration_status": "READY_FOR_WORK",
+      "source_semantic_status": "semantic_approved",
+      "semantic_status": "approved_current_architecture_1_2"
+    },
+    {
+      "image_id": "RK17-0018",
+      "display_name": "Сытый и довольный",
+      "character": "RK17 / Рыжий Кот №17",
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": null,
+      "mood": [
+        "ДОВОЛЬСТВО",
+        "РАССЛАБЛЕННОСТЬ"
+      ],
+      "themes": [
+        "еда",
+        "отдых",
+        "комфорт"
+      ],
+      "scenario": "сыто отдыхает в кресле",
+      "actions": [
+        "отдыхать"
+      ],
+      "objects": [
+        "кресло"
+      ],
+      "clothing": [],
+      "decorations": [],
+      "intent": [
+        "сыт",
+        "объелся",
+        "после еды"
+      ],
+      "search_aliases": [],
+      "migration_status": "READY_FOR_WORK",
+      "source_semantic_status": "semantic_approved",
+      "semantic_status": "approved_current_architecture_1_2"
+    },
+    {
+      "image_id": "RK17-0019",
+      "display_name": "Жизнь удалась",
+      "character": "RK17 / Рыжий Кот №17",
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": null,
+      "mood": [
+        "ДОВОЛЬСТВО",
+        "УМИРОТВОРЕНИЕ"
+      ],
+      "themes": [
+        "отдых",
+        "комфорт",
+        "благополучие"
+      ],
+      "scenario": "расслабленно наслаждается жизнью",
+      "actions": [
+        "отдыхать",
+        "наслаждаться"
+      ],
+      "objects": [
+        "кресло"
+      ],
+      "clothing": [],
+      "decorations": [],
+      "intent": [
+        "всё хорошо",
+        "жизнь удалась",
+        "кайфую"
+      ],
+      "search_aliases": [],
+      "migration_status": "READY_FOR_WORK",
+      "source_semantic_status": "semantic_approved",
+      "semantic_status": "approved_current_architecture_1_2"
+    },
+    {
+      "image_id": "RK17-0020",
+      "display_name": "В поход!",
+      "character": "RK17 / Рыжий Кот №17",
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": "ТУРИСТ",
+      "mood": [
+        "ЭНТУЗИАЗМ",
+        "ПРЕДВКУШЕНИЕ"
+      ],
+      "themes": [
+        "туризм",
+        "поход",
+        "природа",
+        "приключения"
+      ],
+      "scenario": "идёт в поход со снаряжением и картой",
+      "actions": [
+        "идти в поход",
+        "путешествовать",
+        "ориентироваться по карте"
+      ],
+      "objects": [
+        "карта",
+        "рюкзак",
+        "туристическое снаряжение"
+      ],
+      "clothing": [
+        "туристическая одежда"
+      ],
+      "decorations": [],
+      "intent": [
+        "поход",
+        "путешествие",
+        "активный отдых"
+      ],
+      "search_aliases": [],
+      "migration_status": "READY_FOR_WORK",
+      "source_semantic_status": "semantic_approved",
+      "semantic_status": "approved_current_architecture_1_2"
+    },
+    {
+      "image_id": "RK17-0021",
+      "display_name": "Отпуск!",
+      "character": "RK17 / Рыжий Кот №17",
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": "ПУТЕШЕСТВЕННИК",
+      "mood": [
+        "РАДОСТЬ",
+        "ПРЕДВКУШЕНИЕ"
+      ],
+      "themes": [
+        "отпуск",
+        "путешествия",
+        "отдых"
+      ],
+      "scenario": "отправляется на отдых",
+      "actions": [
+        "путешествовать",
+        "отдыхать"
+      ],
+      "objects": [
+        "багаж"
+      ],
+      "clothing": [],
+      "decorations": [],
+      "intent": [
+        "я в отпуске",
+        "каникулы"
+      ],
+      "search_aliases": [],
+      "migration_status": "READY_FOR_WORK",
+      "source_semantic_status": "semantic_approved",
+      "semantic_status": "approved_current_architecture_1_2"
+    },
+    {
+      "image_id": "RK17-0022",
+      "display_name": "Вдохновение",
+      "character": "RK17 / Рыжий Кот №17",
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": "ХУДОЖНИК",
+      "mood": [
+        "ВДОХНОВЕНИЕ",
+        "УВЛЕЧЁННОСТЬ"
+      ],
+      "themes": [
+        "искусство",
+        "живопись",
+        "творчество"
+      ],
+      "scenario": "рисует большой кистью",
+      "actions": [
+        "рисовать",
+        "творить"
+      ],
+      "objects": [
+        "кисть",
+        "краски"
+      ],
+      "clothing": [],
+      "decorations": [],
+      "intent": [
+        "вдохновение",
+        "самовыражение"
+      ],
+      "search_aliases": [],
+      "migration_status": "READY_FOR_WORK",
+      "source_semantic_status": "semantic_approved",
+      "semantic_status": "approved_current_architecture_1_2"
+    },
+    {
+      "image_id": "RK17-0023",
+      "display_name": "Художник",
+      "character": "RK17 / Рыжий Кот №17",
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": "ХУДОЖНИК",
+      "mood": [
+        "СОСРЕДОТОЧЕННОСТЬ",
+        "ВДОХНОВЕНИЕ"
+      ],
+      "themes": [
+        "искусство",
+        "живопись",
+        "творчество"
+      ],
+      "scenario": "пишет картину у мольберта",
+      "actions": [
+        "рисовать"
+      ],
+      "objects": [
+        "мольберт",
+        "холст",
+        "краски"
+      ],
+      "clothing": [],
+      "decorations": [],
+      "intent": [
+        "рисую картину",
+        "творческий процесс"
+      ],
+      "search_aliases": [],
+      "migration_status": "READY_FOR_WORK",
+      "source_semantic_status": "semantic_approved",
+      "semantic_status": "approved_current_architecture_1_2"
+    },
+    {
+      "image_id": "RK17-0024",
+      "display_name": "Эскизы",
+      "character": "RK17 / Рыжий Кот №17",
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": "ХУДОЖНИК",
+      "mood": [
+        "СОСРЕДОТОЧЕННОСТЬ",
+        "ЗАДУМЧИВОСТЬ"
+      ],
+      "themes": [
+        "искусство",
+        "дизайн",
+        "творчество"
+      ],
+      "scenario": "работает над эскизами и набросками",
+      "actions": [
+        "рисовать",
+        "делать наброски"
+      ],
+      "objects": [
+        "эскизы",
+        "рисунки"
+      ],
+      "clothing": [],
+      "decorations": [],
+      "intent": [
+        "ищу идею",
+        "делаю эскиз"
+      ],
+      "search_aliases": [],
+      "migration_status": "READY_FOR_WORK",
+      "source_semantic_status": "semantic_approved",
+      "semantic_status": "approved_current_architecture_1_2"
+    },
+    {
+      "image_id": "RK17-0025",
+      "display_name": "Футболист",
+      "character": "RK17 / Рыжий Кот №17",
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": "ФУТБОЛИСТ",
+      "mood": [
+        "БОДРОСТЬ"
+      ],
+      "themes": [
+        "спорт",
+        "футбол",
+        "тренировка"
+      ],
+      "scenario": "играет с футбольным мячом",
+      "actions": [
+        "играть в футбол"
+      ],
+      "objects": [
+        "футбольный мяч"
+      ],
+      "clothing": [
+        "спортивная одежда"
+      ],
+      "decorations": [],
+      "intent": [
+        "играю в футбол",
+        "активность"
+      ],
+      "search_aliases": [],
+      "migration_status": "READY_FOR_WORK",
+      "source_semantic_status": "semantic_approved",
+      "semantic_status": "approved_current_architecture_1_2"
+    },
+    {
+      "image_id": "RK17-0026",
+      "display_name": "Качок",
+      "character": "RK17 / Рыжий Кот №17",
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": "СПОРТСМЕН",
+      "mood": [
+        "РЕШИТЕЛЬНОСТЬ"
+      ],
+      "themes": [
+        "спорт",
+        "силовая тренировка",
+        "фитнес"
+      ],
+      "scenario": "тренируется с отягощением",
+      "actions": [
+        "тренироваться",
+        "поднимать вес"
+      ],
+      "objects": [
+        "гантели"
+      ],
+      "clothing": [
+        "спортивная одежда"
+      ],
+      "decorations": [],
+      "intent": [
+        "качаюсь",
+        "становлюсь сильнее"
+      ],
+      "search_aliases": [],
+      "migration_status": "READY_FOR_WORK",
+      "source_semantic_status": "semantic_approved",
+      "semantic_status": "approved_current_architecture_1_2"
+    },
+    {
+      "image_id": "RK17-0027",
+      "display_name": "Ищу зацепку",
+      "character": "RK17 / Рыжий Кот №17",
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": "ДЕТЕКТИВ",
+      "mood": [
+        "СОСРЕДОТОЧЕННОСТЬ",
+        "ПОДОЗРЕНИЕ"
+      ],
+      "themes": [
+        "детектив",
+        "расследование",
+        "поиск улик"
+      ],
+      "scenario": "изучает следы через лупу",
+      "actions": [
+        "искать",
+        "исследовать",
+        "изучать следы"
+      ],
+      "objects": [
+        "лупа",
+        "следы лап"
+      ],
+      "clothing": [
+        "детективный костюм",
+        "детективная кепка"
+      ],
+      "decorations": [],
+      "intent": [
+        "найти зацепку",
+        "расследовать",
+        "разобраться"
+      ],
+      "search_aliases": [],
+      "migration_status": "READY_FOR_WORK",
+      "source_semantic_status": "semantic_approved",
+      "semantic_status": "approved_current_architecture_1_2"
+    },
+    {
+      "image_id": "RK17-0028",
+      "display_name": "Истина где-то рядом",
+      "character": "RK17 / Рыжий Кот №17",
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": "ДЕТЕКТИВ",
+      "mood": [
+        "СОСРЕДОТОЧЕННОСТЬ",
+        "РЕШИТЕЛЬНОСТЬ"
+      ],
+      "themes": [
+        "детектив",
+        "тайна",
+        "истина"
+      ],
+      "scenario": "ищет правду и разгадку",
+      "actions": [
+        "расследовать",
+        "искать истину"
+      ],
+      "objects": [],
+      "clothing": [
+        "детективный образ"
+      ],
+      "decorations": [],
+      "intent": [
+        "докопаться до истины",
+        "раскрыть тайну"
+      ],
+      "search_aliases": [],
+      "migration_status": "READY_FOR_WORK",
+      "source_semantic_status": "semantic_approved",
+      "semantic_status": "approved_current_architecture_1_2"
+    },
+    {
+      "image_id": "RK17-0029",
+      "display_name": "Весь мир",
+      "character": "RK17 / Рыжий Кот №17",
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": "ИНТЕЛЛЕКТУАЛ",
+      "mood": [
+        "ЗАДУМЧИВОСТЬ",
+        "ИНТЕРЕС"
+      ],
+      "themes": [
+        "знания",
+        "мир",
+        "кругозор"
+      ],
+      "scenario": "размышляет о мире",
+      "actions": [
+        "размышлять",
+        "изучать"
+      ],
+      "objects": [
+        "образ мира"
+      ],
+      "clothing": [
+        "очки"
+      ],
+      "decorations": [],
+      "intent": [
+        "широкий взгляд",
+        "размышления о мире"
+      ],
+      "search_aliases": [],
+      "migration_status": "READY_FOR_WORK",
+      "source_semantic_status": "semantic_approved",
+      "semantic_status": "approved_current_architecture_1_2"
+    },
+    {
+      "image_id": "RK17-0030",
+      "display_name": "Зимний поход",
+      "character": "RK17 / Рыжий Кот №17",
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": "ТУРИСТ",
+      "mood": [
+        "РЕШИТЕЛЬНОСТЬ",
+        "БОДРОСТЬ"
+      ],
+      "themes": [
+        "зима",
+        "поход",
+        "туризм"
+      ],
+      "scenario": "идёт в поход по снегу",
+      "actions": [
+        "идти",
+        "путешествовать"
+      ],
+      "objects": [
+        "снег",
+        "походное снаряжение"
+      ],
+      "clothing": [
+        "зимняя одежда",
+        "ушанка",
+        "валенки"
+      ],
+      "decorations": [],
+      "intent": [
+        "зимнее путешествие",
+        "поход зимой"
+      ],
+      "search_aliases": [],
+      "migration_status": "READY_FOR_WORK",
+      "source_semantic_status": "semantic_approved",
+      "semantic_status": "approved_current_architecture_1_2"
+    },
+    {
+      "image_id": "RK17-0031",
+      "display_name": "Снегопад",
+      "character": "RK17 / Рыжий Кот №17",
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": null,
+      "mood": [
+        "БОДРОСТЬ"
+      ],
+      "themes": [
+        "зима",
+        "снег",
+        "погода"
+      ],
+      "scenario": "находится среди сильного снега",
+      "actions": [
+        "идти по снегу"
+      ],
+      "objects": [
+        "снег"
+      ],
+      "clothing": [
+        "зимняя одежда"
+      ],
+      "decorations": [],
+      "intent": [
+        "снегопад",
+        "зимнее настроение"
+      ],
+      "search_aliases": [],
+      "migration_status": "READY_FOR_WORK",
+      "source_semantic_status": "semantic_approved",
+      "semantic_status": "approved_current_architecture_1_2"
+    },
+    {
+      "image_id": "RK17-0032",
+      "display_name": "Нашёл!",
+      "character": "RK17 / Рыжий Кот №17",
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": "АРХЕОЛОГ",
+      "mood": [
+        "ИНТЕРЕС",
+        "УВЛЕЧЁННОСТЬ"
+      ],
+      "themes": [
+        "археология",
+        "раскопки",
+        "древности",
+        "открытие"
+      ],
+      "scenario": "кисточкой расчищает древнюю находку на раскопках",
+      "actions": [
+        "раскапывать",
+        "расчищать",
+        "обнаруживать"
+      ],
+      "objects": [
+        "кисточка",
+        "древний артефакт"
+      ],
+      "clothing": [
+        "одежда археолога",
+        "полевая шляпа",
+        "защитные очки"
+      ],
+      "decorations": [],
+      "intent": [
+        "находка",
+        "открытие",
+        "поиск древностей"
+      ],
+      "search_aliases": [],
+      "migration_status": "READY_FOR_WORK",
+      "source_semantic_status": "semantic_approved",
+      "semantic_status": "approved_current_architecture_1_2"
+    },
+    {
+      "image_id": "RK17-0033",
+      "display_name": "Находка",
+      "character": "RK17 / Рыжий Кот №17",
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": "АРХЕОЛОГ",
+      "mood": [
+        "РАДОСТЬ",
+        "ВОСТОРГ"
+      ],
+      "themes": [
+        "археология",
+        "открытие",
+        "древности"
+      ],
+      "scenario": "радуется обнаруженной находке",
+      "actions": [
+        "найти",
+        "исследовать"
+      ],
+      "objects": [
+        "артефакт"
+      ],
+      "clothing": [
+        "одежда археолога"
+      ],
+      "decorations": [],
+      "intent": [
+        "ценная находка",
+        "открытие"
+      ],
+      "search_aliases": [],
+      "migration_status": "READY_FOR_WORK",
+      "source_semantic_status": "semantic_approved",
+      "semantic_status": "approved_current_architecture_1_2"
+    },
+    {
+      "image_id": "RK17-0034",
+      "display_name": "Карта древностей",
+      "character": "RK17 / Рыжий Кот №17",
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": "АРХЕОЛОГ",
+      "mood": [
+        "СОСРЕДОТОЧЕННОСТЬ",
+        "ИНТЕРЕС"
+      ],
+      "themes": [
+        "археология",
+        "экспедиция",
+        "поиск"
+      ],
+      "scenario": "изучает карту в экспедиции",
+      "actions": [
+        "изучать карту",
+        "искать место"
+      ],
+      "objects": [
+        "карта"
+      ],
+      "clothing": [
+        "одежда археолога"
+      ],
+      "decorations": [],
+      "intent": [
+        "ищу место",
+        "маршрут к древностям"
+      ],
+      "search_aliases": [],
+      "migration_status": "READY_FOR_WORK",
+      "source_semantic_status": "semantic_approved",
+      "semantic_status": "approved_current_architecture_1_2"
+    },
+    {
+      "image_id": "RK17-0035",
+      "display_name": "Немного отдыха",
+      "character": "RK17 / Рыжий Кот №17",
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": "АРХЕОЛОГ",
+      "mood": [
+        "УСТАЛОСТЬ",
+        "РАССЛАБЛЕННОСТЬ"
+      ],
+      "themes": [
+        "археология",
+        "экспедиция",
+        "отдых"
+      ],
+      "scenario": "отдыхает во время экспедиции",
+      "actions": [
+        "отдыхать"
+      ],
+      "objects": [
+        "экспедиционное снаряжение"
+      ],
+      "clothing": [
+        "одежда археолога"
+      ],
+      "decorations": [],
+      "intent": [
+        "немного отдыха",
+        "привал",
+        "пауза"
+      ],
+      "search_aliases": [],
+      "migration_status": "READY_FOR_WORK",
+      "source_semantic_status": "semantic_approved",
+      "semantic_status": "approved_current_architecture_1_2"
+    },
+    {
+      "image_id": "RK17-0036",
+      "display_name": "Большие планы",
+      "character": "RK17 / Рыжий Кот №17",
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": "ПЛАНИРОВЩИК",
+      "mood": [
+        "ЗАДУМЧИВОСТЬ",
+        "СОСРЕДОТОЧЕННОСТЬ"
+      ],
+      "themes": [
+        "планы",
+        "стратегия",
+        "идеи"
+      ],
+      "scenario": "строит планы и обдумывает стратегию",
+      "actions": [
+        "планировать",
+        "размышлять"
+      ],
+      "objects": [],
+      "clothing": [],
+      "decorations": [],
+      "intent": [
+        "большие планы",
+        "продумываю"
+      ],
+      "search_aliases": [],
+      "migration_status": "READY_FOR_WORK",
+      "source_semantic_status": "semantic_approved",
+      "semantic_status": "approved_current_architecture_1_2"
+    },
+    {
+      "image_id": "RK17-0037",
+      "display_name": "Дубак!",
+      "character": "RK17 / Рыжий Кот №17",
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": null,
+      "mood": [
+        "ДИСКОМФОРТ"
+      ],
+      "themes": [
+        "зима",
+        "мороз",
+        "погода"
+      ],
+      "scenario": "мёрзнет на сильном холоде",
+      "actions": [
+        "дрожать",
+        "мёрзнуть"
+      ],
+      "objects": [
+        "снег"
+      ],
+      "clothing": [
+        "зимняя одежда",
+        "ушанка",
+        "валенки"
+      ],
+      "decorations": [],
+      "intent": [
+        "дубак",
+        "я замёрз",
+        "очень холодно"
+      ],
+      "search_aliases": [],
+      "migration_status": "READY_FOR_WORK",
+      "source_semantic_status": "semantic_approved",
+      "semantic_status": "approved_current_architecture_1_2"
+    },
+    {
+      "image_id": "RK17-0038",
+      "display_name": "Куда идти?",
+      "character": "RK17 / Рыжий Кот №17",
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": "ПУТЕШЕСТВЕННИК",
+      "mood": [
+        "РАСТЕРЯННОСТЬ",
+        "СОСРЕДОТОЧЕННОСТЬ"
+      ],
+      "themes": [
+        "зима",
+        "зимний поход",
+        "навигация",
+        "путешествие"
+      ],
+      "scenario": "изучает карту и ищет маршрут зимой",
+      "actions": [
+        "изучать карту",
+        "искать дорогу"
+      ],
+      "objects": [
+        "карта",
+        "снег"
+      ],
+      "clothing": [
+        "зимняя одежда"
+      ],
+      "decorations": [],
+      "intent": [
+        "куда идти",
+        "заблудился",
+        "ищу маршрут"
+      ],
+      "search_aliases": [],
+      "migration_status": "READY_FOR_WORK",
+      "source_semantic_status": "semantic_approved",
+      "semantic_status": "approved_current_architecture_1_2"
+    },
+    {
+      "image_id": "RK17-0039",
+      "display_name": "Картежный фокусник",
+      "character": "RK17 / Рыжий Кот №17",
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": "ФОКУСНИК",
+      "mood": [
+        "УВЕРЕННОСТЬ",
+        "ИГРИВОСТЬ"
+      ],
+      "themes": [
+        "фокусы",
+        "иллюзия",
+        "сценическое шоу"
+      ],
+      "scenario": "показывает карточный фокус",
+      "actions": [
+        "показывать фокус",
+        "демонстрировать карты"
+      ],
+      "objects": [
+        "игральные карты"
+      ],
+      "clothing": [
+        "цилиндр",
+        "сценический костюм",
+        "плащ",
+        "бабочка"
+      ],
+      "decorations": [],
+      "intent": [
+        "карточный трюк",
+        "развлечение",
+        "шоу"
+      ],
+      "search_aliases": [],
+      "migration_status": "READY_FOR_WORK",
+      "source_semantic_status": "semantic_approved",
+      "semantic_status": "approved_current_architecture_1_2"
+    },
+    {
+      "image_id": "RK17-0040",
+      "display_name": "Фокус-покус",
+      "character": "RK17 / Рыжий Кот №17",
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": "ФОКУСНИК",
+      "mood": [
+        "УВЕРЕННОСТЬ",
+        "ИГРИВОСТЬ"
+      ],
+      "themes": [
+        "магия",
+        "иллюзия",
+        "шоу"
+      ],
+      "scenario": "показывает трюк с монетой",
+      "actions": [
+        "показывать фокус"
+      ],
+      "objects": [
+        "монета"
+      ],
+      "clothing": [
+        "сценический костюм"
+      ],
+      "decorations": [],
+      "intent": [
+        "фокус-покус",
+        "как он это сделал"
+      ],
+      "search_aliases": [],
+      "migration_status": "READY_FOR_WORK",
+      "source_semantic_status": "semantic_approved",
+      "semantic_status": "approved_current_architecture_1_2"
+    },
+    {
+      "image_id": "RK17-0041",
+      "display_name": "Авантюрист",
+      "character": "RK17 / Рыжий Кот №17",
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": "АВАНТЮРИСТ",
+      "mood": [
+        "УВЕРЕННОСТЬ",
+        "СМЕЛОСТЬ"
+      ],
+      "themes": [
+        "приключения",
+        "риск",
+        "герой"
+      ],
+      "scenario": "позирует как лихой искатель приключений",
+      "actions": [
+        "путешествовать",
+        "искать приключения"
+      ],
+      "objects": [
+        "шляпа"
+      ],
+      "clothing": [
+        "приключенческий костюм"
+      ],
+      "decorations": [],
+      "intent": [
+        "авантюрист",
+        "смелость"
+      ],
+      "search_aliases": [],
+      "migration_status": "READY_FOR_WORK",
+      "source_semantic_status": "semantic_approved",
+      "semantic_status": "approved_current_architecture_1_2"
+    },
+    {
+      "image_id": "RK17-0042",
+      "display_name": "Чеддер д'Артаньян",
+      "character": "RK17 / Рыжий Кот №17",
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": "МУШКЕТЁР",
+      "mood": [
+        "СМЕЛОСТЬ",
+        "УВЕРЕННОСТЬ"
+      ],
+      "themes": [
+        "приключения",
+        "история",
+        "дуэль",
+        "честь"
+      ],
+      "scenario": "позирует в образе мушкетёра",
+      "actions": [
+        "фехтовать",
+        "позировать"
+      ],
+      "objects": [
+        "шпага",
+        "шляпа"
+      ],
+      "clothing": [
+        "костюм мушкетёра"
+      ],
+      "decorations": [],
+      "intent": [
+        "мушкетёр",
+        "геройский образ"
+      ],
+      "search_aliases": [],
+      "migration_status": "READY_FOR_WORK",
+      "source_semantic_status": "semantic_approved",
+      "semantic_status": "approved_current_architecture_1_2"
+    },
+    {
+      "image_id": "RK17-0043",
+      "display_name": "Свежие новости",
+      "character": "RK17 / Рыжий Кот №17",
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": "ИНТЕЛЛЕКТУАЛ",
+      "mood": [
+        "СПОКОЙСТВИЕ",
+        "ИНТЕРЕС"
+      ],
+      "themes": [
+        "новости",
+        "чтение",
+        "домашний уют"
+      ],
+      "scenario": "читает газету в кресле у камина",
+      "actions": [
+        "читать"
+      ],
+      "objects": [
+        "газета",
+        "кресло",
+        "камин"
+      ],
+      "clothing": [
+        "очки",
+        "жилет"
+      ],
+      "decorations": [],
+      "intent": [
+        "узнаю новости",
+        "спокойный вечер"
+      ],
+      "search_aliases": [],
+      "migration_status": "READY_FOR_WORK",
+      "source_semantic_status": "semantic_approved",
+      "semantic_status": "approved_current_architecture_1_2"
+    },
+    {
+      "image_id": "RK17-0044",
+      "display_name": "Вот это да...",
+      "character": "RK17 / Рыжий Кот №17",
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": "ИЗОБРЕТАТЕЛЬ",
+      "mood": [
+        "УДИВЛЕНИЕ",
+        "ВДОХНОВЕНИЕ"
+      ],
+      "themes": [
+        "изобретения",
+        "инженерия",
+        "техническое творчество"
+      ],
+      "scenario": "изучает технический чертёж и поражён возникшей идеей",
+      "actions": [
+        "проектировать",
+        "изучать чертёж",
+        "придумывать"
+      ],
+      "objects": [
+        "технический чертёж",
+        "книги",
+        "свитки"
+      ],
+      "clothing": [
+        "защитные очки",
+        "лабораторная одежда"
+      ],
+      "decorations": [],
+      "intent": [
+        "придумать",
+        "найти решение",
+        "новая идея",
+        "эврика"
+      ],
+      "search_aliases": [],
+      "migration_status": "READY_FOR_WORK",
+      "source_semantic_status": "semantic_approved",
+      "semantic_status": "approved_current_architecture_1_2"
+    },
+    {
+      "image_id": "RK17-0045",
+      "display_name": "Что-то пошло не так!",
+      "character": "RK17 / Рыжий Кот №17",
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": "ИЗОБРЕТАТЕЛЬ",
+      "mood": [
+        "УДИВЛЕНИЕ",
+        "РАСТЕРЯННОСТЬ"
+      ],
+      "themes": [
+        "наука",
+        "химия",
+        "эксперимент"
+      ],
+      "scenario": "проводит химический эксперимент с неожиданным результатом",
+      "actions": [
+        "экспериментировать"
+      ],
+      "objects": [
+        "колбы",
+        "реактивы"
+      ],
+      "clothing": [],
+      "decorations": [],
+      "intent": [
+        "что-то пошло не так",
+        "неудачный эксперимент"
+      ],
+      "search_aliases": [],
+      "migration_status": "READY_FOR_WORK",
+      "source_semantic_status": "semantic_approved",
+      "semantic_status": "approved_current_architecture_1_2"
+    },
+    {
+      "image_id": "RK17-0046",
+      "display_name": "Оно работает!",
+      "character": "RK17 / Рыжий Кот №17",
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": "ИЗОБРЕТАТЕЛЬ",
+      "mood": [
+        "РАДОСТЬ",
+        "УДИВЛЕНИЕ",
+        "ГОРДОСТЬ"
+      ],
+      "themes": [
+        "технологии",
+        "инженерия",
+        "изобретения"
+      ],
+      "scenario": "успешно испытывает дрон",
+      "actions": [
+        "испытывать",
+        "запускать"
+      ],
+      "objects": [
+        "дрон"
+      ],
+      "clothing": [],
+      "decorations": [],
+      "intent": [
+        "оно работает",
+        "удачный запуск",
+        "получилось"
+      ],
+      "search_aliases": [],
+      "migration_status": "READY_FOR_WORK",
+      "source_semantic_status": "semantic_approved",
+      "semantic_status": "approved_current_architecture_1_2"
+    },
+    {
+      "image_id": "RK17-0047",
+      "display_name": "Робототехник",
+      "character": "RK17 / Рыжий Кот №17",
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": "РОБОТОТЕХНИК",
+      "mood": [
+        "СОСРЕДОТОЧЕННОСТЬ",
+        "ОЗАДАЧЕННОСТЬ"
+      ],
+      "themes": [
+        "робототехника",
+        "электроника",
+        "инженерия"
+      ],
+      "scenario": "работает с искрящим роботом",
+      "actions": [
+        "ремонтировать",
+        "собирать"
+      ],
+      "objects": [
+        "робот",
+        "искры"
+      ],
+      "clothing": [],
+      "decorations": [],
+      "intent": [
+        "чиню робота",
+        "техническая работа"
+      ],
+      "search_aliases": [],
+      "migration_status": "READY_FOR_WORK",
+      "source_semantic_status": "semantic_approved",
+      "semantic_status": "approved_current_architecture_1_2"
+    },
+    {
+      "image_id": "RK17-0048",
+      "display_name": "Для тебя!",
+      "character": "RK17 / Рыжий Кот №17",
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": "ФОКУСНИК",
+      "mood": [
+        "СИМПАТИЯ",
+        "ДОБРОЖЕЛАТЕЛЬНОСТЬ"
+      ],
+      "themes": [
+        "романтика",
+        "магия",
+        "подарок"
+      ],
+      "scenario": "преподносит букет роз",
+      "actions": [
+        "дарить цветы"
+      ],
+      "objects": [
+        "букет роз",
+        "цилиндр"
+      ],
+      "clothing": [
+        "плащ",
+        "сценический костюм"
+      ],
+      "decorations": [],
+      "intent": [
+        "для тебя",
+        "знак внимания",
+        "свидание"
+      ],
+      "search_aliases": [],
+      "migration_status": "READY_FOR_WORK",
+      "source_semantic_status": "semantic_approved",
+      "semantic_status": "approved_current_architecture_1_2"
+    },
+    {
+      "image_id": "RK17-0049",
+      "display_name": "Магия!",
+      "character": "RK17 / Рыжий Кот №17",
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": "ФОКУСНИК",
+      "mood": [
+        "ИГРИВОСТЬ",
+        "УВЕРЕННОСТЬ"
+      ],
+      "themes": [
+        "магия",
+        "иллюзия",
+        "шоу"
+      ],
+      "scenario": "достаёт цветной шарф из цилиндра",
+      "actions": [
+        "показывать фокус"
+      ],
+      "objects": [
+        "цилиндр",
+        "шарф"
+      ],
+      "clothing": [
+        "плащ",
+        "сценический костюм"
+      ],
+      "decorations": [],
+      "intent": [
+        "магия",
+        "сюрприз",
+        "фокус"
+      ],
+      "search_aliases": [],
+      "migration_status": "READY_FOR_WORK",
+      "source_semantic_status": "semantic_approved",
+      "semantic_status": "approved_current_architecture_1_2"
+    },
+    {
+      "image_id": "RK17-0050",
+      "display_name": "Зажигаем!",
+      "character": "RK17 / Рыжий Кот №17",
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": "ДИДЖЕЙ",
+      "mood": [
+        "РАДОСТЬ",
+        "ВООДУШЕВЛЕНИЕ"
+      ],
+      "themes": [
+        "музыка",
+        "вечеринка",
+        "танцы"
+      ],
+      "scenario": "играет музыку за DJ-пультом",
+      "actions": [
+        "играть музыку",
+        "выступать"
+      ],
+      "objects": [
+        "DJ-пульт"
+      ],
+      "clothing": [],
+      "decorations": [],
+      "intent": [
+        "зажигаем",
+        "вечеринка",
+        "праздник"
+      ],
+      "search_aliases": [],
+      "migration_status": "READY_FOR_WORK",
+      "source_semantic_status": "semantic_approved",
+      "semantic_status": "approved_current_architecture_1_2"
+    },
+    {
+      "image_id": "RK17-0051",
+      "display_name": "Рок-н-ролл!",
+      "character": "RK17 / Рыжий Кот №17",
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": "ГИТАРИСТ",
+      "mood": [
+        "РАДОСТЬ",
+        "ВООДУШЕВЛЕНИЕ"
+      ],
+      "themes": [
+        "музыка",
+        "рок",
+        "концерт"
+      ],
+      "scenario": "играет на гитаре",
+      "actions": [
+        "играть на гитаре",
+        "выступать"
+      ],
+      "objects": [
+        "гитара"
+      ],
+      "clothing": [],
+      "decorations": [],
+      "intent": [
+        "рок-н-ролл",
+        "выступление"
+      ],
+      "search_aliases": [],
+      "migration_status": "READY_FOR_WORK",
+      "source_semantic_status": "semantic_approved",
+      "semantic_status": "approved_current_architecture_1_2"
+    },
+    {
+      "image_id": "RK17-0052",
+      "display_name": "Споём?",
+      "character": "RK17 / Рыжий Кот №17",
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": "ПЕВЕЦ",
+      "mood": [
+        "РАДОСТЬ",
+        "ВООДУШЕВЛЕНИЕ"
+      ],
+      "themes": [
+        "музыка",
+        "вокал",
+        "выступление"
+      ],
+      "scenario": "поёт в микрофон перед публикой",
+      "actions": [
+        "петь",
+        "выступать"
+      ],
+      "objects": [
+        "микрофон"
+      ],
+      "clothing": [
+        "сценический жилет"
+      ],
+      "decorations": [
+        "музыкальные ноты"
+      ],
+      "intent": [
+        "петь",
+        "песня",
+        "выступление",
+        "концерт"
+      ],
+      "search_aliases": [],
+      "migration_status": "READY_FOR_WORK",
+      "source_semantic_status": "semantic_approved",
+      "semantic_status": "approved_current_architecture_1_2"
+    },
+    {
+      "image_id": "RK17-0053",
+      "display_name": "Есть ритм!",
+      "character": "RK17 / Рыжий Кот №17",
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": "МУЗЫКАНТ",
+      "mood": [
+        "РАДОСТЬ",
+        "ВООДУШЕВЛЕНИЕ"
+      ],
+      "themes": [
+        "музыка",
+        "ритм",
+        "перкуссия"
+      ],
+      "scenario": "играет на бубне",
+      "actions": [
+        "играть",
+        "держать ритм"
+      ],
+      "objects": [
+        "бубен"
+      ],
+      "clothing": [],
+      "decorations": [],
+      "intent": [
+        "есть ритм",
+        "веселье",
+        "танец"
+      ],
+      "search_aliases": [],
+      "migration_status": "READY_FOR_WORK",
+      "source_semantic_status": "semantic_approved",
+      "semantic_status": "approved_current_architecture_1_2"
+    },
+    {
+      "image_id": "RK17-0054",
+      "display_name": "Тренировка",
+      "character": "RK17 / Рыжий Кот №17",
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": "БЕГУН",
+      "mood": [
+        "РЕШИТЕЛЬНОСТЬ",
+        "ВООДУШЕВЛЕНИЕ"
+      ],
+      "themes": [
+        "спорт",
+        "бег",
+        "саморазвитие",
+        "мотивация",
+        "здоровый образ жизни"
+      ],
+      "scenario": "тренируется бегом в мотивационной футболке",
+      "actions": [
+        "бежать",
+        "тренироваться"
+      ],
+      "objects": [],
+      "clothing": [
+        "футболка «Бегу к лучшей версии себя»"
+      ],
+      "decorations": [],
+      "intent": [
+        "тренировка",
+        "лучшая версия себя",
+        "работа над собой",
+        "прогресс"
+      ],
+      "search_aliases": [],
+      "migration_status": "READY_FOR_WORK",
+      "source_semantic_status": "semantic_approved",
+      "semantic_status": "approved_current_architecture_1_2"
+    },
+    {
+      "image_id": "RK17-0055",
+      "display_name": "Следствие идёт!",
+      "character": "RK17 / Рыжий Кот №17",
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": "ДЕТЕКТИВ",
+      "mood": [
+        "СОСРЕДОТОЧЕННОСТЬ",
+        "РЕШИТЕЛЬНОСТЬ"
+      ],
+      "themes": [
+        "детектив",
+        "следствие",
+        "расследование"
+      ],
+      "scenario": "ведёт расследование и работает с уликой",
+      "actions": [
+        "расследовать",
+        "изучать улику"
+      ],
+      "objects": [
+        "улика",
+        "доказательство"
+      ],
+      "clothing": [
+        "детективный образ"
+      ],
+      "decorations": [],
+      "intent": [
+        "следствие идёт",
+        "ищу доказательства"
+      ],
+      "search_aliases": [],
+      "migration_status": "READY_FOR_WORK",
+      "source_semantic_status": "semantic_approved",
+      "semantic_status": "approved_current_architecture_1_2"
+    },
+    {
+      "image_id": "RK17-0056",
+      "display_name": "Симпатия",
+      "character": "RK17 / Рыжий Кот №17",
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": "ФОКУСНИК",
+      "mood": [
+        "СИМПАТИЯ",
+        "РАДОСТЬ"
+      ],
+      "themes": [
+        "романтика",
+        "свидание",
+        "праздник",
+        "магия"
+      ],
+      "scenario": "дарит розы в празднично-романтической сцене",
+      "actions": [
+        "дарить цветы",
+        "подмигивать"
+      ],
+      "objects": [
+        "букет роз",
+        "цилиндр",
+        "фейерверк"
+      ],
+      "clothing": [
+        "плащ",
+        "бабочка"
+      ],
+      "decorations": [],
+      "intent": [
+        "выразить симпатию",
+        "подарок",
+        "знак внимания"
+      ],
+      "search_aliases": [],
+      "migration_status": "READY_FOR_WORK",
+      "source_semantic_status": "semantic_approved",
+      "semantic_status": "approved_current_architecture_1_2"
+    },
+    {
+      "image_id": "RK17-0057",
+      "display_name": "Величие",
+      "character": "RK17 / Рыжий Кот №17",
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": "КОРОЛЬ",
+      "mood": [
+        "ВЕЛИЧИЕ",
+        "УВЕРЕННОСТЬ"
+      ],
+      "themes": [
+        "королевская власть",
+        "величие",
+        "статус"
+      ],
+      "scenario": "восседает на троне в королевском облачении",
+      "actions": [
+        "сидеть на троне"
+      ],
+      "objects": [
+        "трон"
+      ],
+      "clothing": [
+        "корона",
+        "королевская мантия"
+      ],
+      "decorations": [
+        "драгоценные камни",
+        "золото"
+      ],
+      "intent": [
+        "величие",
+        "статус",
+        "власть",
+        "важность"
+      ],
+      "search_aliases": [],
+      "migration_status": "READY_FOR_WORK",
+      "source_semantic_status": "semantic_approved",
+      "semantic_status": "approved_current_architecture_1_2"
+    },
+    {
+      "image_id": "RK17-0058",
+      "display_name": "Царь жизни",
+      "character": "RK17 / Рыжий Кот №17",
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": "КОРОЛЬ",
+      "mood": [
+        "ДОВОЛЬСТВО",
+        "УВЕРЕННОСТЬ"
+      ],
+      "themes": [
+        "успех",
+        "комфорт",
+        "власть"
+      ],
+      "scenario": "довольно сидит на троне",
+      "actions": [
+        "сидеть на троне"
+      ],
+      "objects": [
+        "трон"
+      ],
+      "clothing": [
+        "королевский наряд"
+      ],
+      "decorations": [],
+      "intent": [
+        "всё круто",
+        "царь жизни",
+        "доволен жизнью"
+      ],
+      "search_aliases": [],
+      "migration_status": "READY_FOR_WORK",
+      "source_semantic_status": "semantic_approved",
+      "semantic_status": "approved_current_architecture_1_2"
+    },
+    {
+      "image_id": "RK17-0059",
+      "display_name": "Крез",
+      "character": "RK17 / Рыжий Кот №17",
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": "КОРОЛЬ",
+      "mood": [
+        "ДОВОЛЬСТВО",
+        "САМОУВЕРЕННОСТЬ"
+      ],
+      "themes": [
+        "богатство",
+        "роскошь",
+        "успех"
+      ],
+      "scenario": "восседает среди сокровищ",
+      "actions": [
+        "сидеть на троне"
+      ],
+      "objects": [
+        "трон",
+        "сокровища",
+        "драгоценности"
+      ],
+      "clothing": [
+        "королевский наряд",
+        "украшения"
+      ],
+      "decorations": [],
+      "intent": [
+        "король богатства",
+        "богатство",
+        "изобилие"
+      ],
+      "search_aliases": [],
+      "migration_status": "READY_FOR_WORK",
+      "source_semantic_status": "semantic_approved",
+      "semantic_status": "approved_current_architecture_1_2"
+    },
+    {
+      "image_id": "RK17-0060",
+      "display_name": "Император",
+      "character": "RK17 / Рыжий Кот №17",
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": "ИМПЕРАТОР",
+      "mood": [
+        "УВЕРЕННОСТЬ",
+        "ВЕЛИЧИЕ"
+      ],
+      "themes": [
+        "успех",
+        "величие",
+        "статус"
+      ],
+      "scenario": "уверенно сидит на троне без окружающих сокровищ",
+      "actions": [
+        "сидеть на троне"
+      ],
+      "objects": [
+        "трон"
+      ],
+      "clothing": [
+        "императорский наряд"
+      ],
+      "decorations": [],
+      "intent": [
+        "император жизни",
+        "успешный",
+        "величие"
+      ],
+      "search_aliases": [],
+      "migration_status": "READY_FOR_WORK",
+      "source_semantic_status": "semantic_approved",
+      "semantic_status": "approved_current_architecture_1_2"
+    },
+    {
+      "image_id": "RK17-0061",
+      "display_name": "Сокровище",
+      "character": "RK17 / Рыжий Кот №17",
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": "КОРОЛЬ",
+      "mood": [
+        "ДОВОЛЬСТВО",
+        "РАДОСТЬ"
+      ],
+      "themes": [
+        "сокровища",
+        "богатство",
+        "счастье"
+      ],
+      "scenario": "сидит на троне рядом с сундуком сокровищ",
+      "actions": [
+        "сидеть на троне"
+      ],
+      "objects": [
+        "трон",
+        "сундук",
+        "драгоценности"
+      ],
+      "clothing": [
+        "королевский наряд"
+      ],
+      "decorations": [],
+      "intent": [
+        "счастье в мелочах",
+        "ценность",
+        "сокровище"
+      ],
+      "search_aliases": [],
+      "migration_status": "READY_FOR_WORK",
+      "source_semantic_status": "semantic_approved",
+      "semantic_status": "approved_current_architecture_1_2"
+    },
+    {
+      "image_id": "RK17-0062",
+      "display_name": "Пора в путь",
+      "character": "RK17 / Рыжий Кот №17",
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": "ПУТЕШЕСТВЕННИК",
+      "mood": [
+        "РАДОСТЬ",
+        "ПРЕДВКУШЕНИЕ",
+        "БОДРОСТЬ"
+      ],
+      "themes": [
+        "путешествие",
+        "отпуск",
+        "туризм",
+        "дорога",
+        "приключения",
+        "новые места"
+      ],
+      "scenario": "Рыжий Кот сидит на дорожных чемоданах с фотоаппаратом и машет лапой, готовясь к путешествию.",
+      "actions": [
+        "путешествовать",
+        "отправляться в путь",
+        "фотографировать",
+        "махать на прощание"
+      ],
+      "objects": [
+        "чемоданы",
+        "фотоаппарат",
+        "дорожные наклейки"
+      ],
+      "clothing": [
+        "кепка",
+        "туристическая одежда"
+      ],
+      "decorations": [],
+      "intent": [
+        "пора в путь",
+        "поехали",
+        "собираюсь в поездку"
+      ],
+      "search_aliases": [],
+      "migration_status": "READY_FOR_WORK",
+      "source_semantic_status": "semantic_approved",
+      "semantic_status": "approved_current_architecture_1_2"
+    },
+    {
+      "image_id": "RK17-0063",
+      "display_name": "План есть!",
+      "character": "RK17 / Рыжий Кот №17",
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": "ПЛАНИРОВЩИК",
+      "mood": [
+        "УВЕРЕННОСТЬ",
+        "СОСРЕДОТОЧЕННОСТЬ"
+      ],
+      "themes": [
+        "планирование",
+        "цели",
+        "организация",
+        "продуктивность",
+        "список дел"
+      ],
+      "scenario": "Кот стоит с планшетом и чек-листом PLAN в одной лапе и ручкой в другой.",
+      "actions": [
+        "планировать",
+        "составлять список",
+        "отмечать задачи"
+      ],
+      "objects": [
+        "планшет",
+        "чек-лист",
+        "ручка"
+      ],
+      "clothing": [],
+      "decorations": [],
+      "intent": [
+        "план есть",
+        "всё по плану",
+        "готов к работе"
+      ],
+      "search_aliases": [],
+      "migration_status": "READY_FOR_WORK",
+      "source_semantic_status": "semantic_approved",
+      "semantic_status": "approved_current_architecture_1_2"
+    },
+    {
+      "image_id": "RK17-0064",
+      "display_name": "В процессе",
+      "character": "RK17 / Рыжий Кот №17",
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": "ПЛАНИРОВЩИК",
+      "mood": [
+        "СОСРЕДОТОЧЕННОСТЬ",
+        "ЗАДУМЧИВОСТЬ",
+        "СПОКОЙСТВИЕ"
+      ],
+      "themes": [
+        "работа",
+        "стратегия",
+        "идеи",
+        "планирование",
+        "продуктивность",
+        "развитие"
+      ],
+      "scenario": "Кот работает за ноутбуком за столом, рядом записи, книги и план.",
+      "actions": [
+        "работать",
+        "планировать",
+        "размышлять",
+        "анализировать"
+      ],
+      "objects": [
+        "ноутбук",
+        "кружка",
+        "блокнот",
+        "книги",
+        "растение"
+      ],
+      "clothing": [],
+      "decorations": [],
+      "intent": [
+        "в процессе",
+        "работаю",
+        "думаю над планом"
+      ],
+      "search_aliases": [],
+      "migration_status": "READY_FOR_WORK",
+      "source_semantic_status": "semantic_approved",
+      "semantic_status": "approved_current_architecture_1_2"
+    },
+    {
+      "image_id": "RK17-0065",
+      "display_name": "Ход конём!",
+      "character": "RK17 / Рыжий Кот №17",
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": "ШАХМАТИСТ",
+      "mood": [
+        "УВЕРЕННОСТЬ",
+        "УДОВЛЕТВОРЕНИЕ"
+      ],
+      "themes": [
+        "шахматы",
+        "стратегия",
+        "интеллект",
+        "тактика",
+        "решение задач",
+        "нестандартное мышление"
+      ],
+      "scenario": "Кот играет в шахматы и демонстрирует шахматного коня.",
+      "actions": [
+        "играть в шахматы",
+        "делать ход",
+        "планировать стратегию"
+      ],
+      "objects": [
+        "шахматная доска",
+        "шахматные фигуры",
+        "конь"
+      ],
+      "clothing": [],
+      "decorations": [],
+      "intent": [
+        "ход конём",
+        "нестандартное решение",
+        "продуманный ход"
+      ],
+      "search_aliases": [],
+      "migration_status": "READY_FOR_WORK",
+      "source_semantic_status": "semantic_approved",
+      "semantic_status": "approved_current_architecture_1_2"
+    },
+    {
+      "image_id": "RK17-0066",
+      "display_name": "Большие планы",
+      "character": "RK17 / Рыжий Кот №17",
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": "ПЛАНИРОВЩИК",
+      "mood": [
+        "УВЕРЕННОСТЬ",
+        "ОПТИМИЗМ",
+        "ВООДУШЕВЛЕНИЕ"
+      ],
+      "themes": [
+        "большие планы",
+        "развитие",
+        "рост",
+        "цели",
+        "стратегия",
+        "успех",
+        "мотивация"
+      ],
+      "scenario": "Кот показывает указкой презентационную доску BIG PLANS с графиком роста и целями.",
+      "actions": [
+        "презентовать",
+        "планировать",
+        "объяснять",
+        "ставить цели"
+      ],
+      "objects": [
+        "доска",
+        "указка",
+        "график",
+        "список целей"
+      ],
+      "clothing": [],
+      "decorations": [],
+      "intent": [
+        "большие планы",
+        "планы на будущее",
+        "всё впереди"
+      ],
+      "search_aliases": [],
+      "migration_status": "READY_FOR_WORK",
+      "source_semantic_status": "semantic_approved",
+      "semantic_status": "approved_current_architecture_1_2"
+    },
+    {
+      "image_id": "RK17-0067",
+      "display_name": "Король говорит",
+      "character": "RK17 / Рыжий Кот №17",
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": "КОРОЛЬ",
+      "mood": [
+        "УВЕРЕННОСТЬ",
+        "ДЕЛОВИТОСТЬ"
+      ],
+      "themes": [
+        "королевская власть",
+        "бизнес",
+        "богатство",
+        "статус"
+      ],
+      "scenario": "сидит на троне среди денег и ведёт телефонный разговор",
+      "actions": [
+        "разговаривать по телефону",
+        "вести переговоры"
+      ],
+      "objects": [
+        "трон",
+        "мобильный телефон",
+        "пачки долларов",
+        "деньги"
+      ],
+      "clothing": [
+        "корона",
+        "чёрный деловой костюм"
+      ],
+      "decorations": [],
+      "intent": [
+        "деловой разговор",
+        "важные переговоры",
+        "власть",
+        "статус"
+      ],
+      "search_aliases": [],
+      "migration_status": "READY_FOR_WORK",
+      "source_semantic_status": "approved_keywords_awaiting_structured_metadata_v1",
+      "semantic_status": "approved_current_architecture_1_2"
+    },
+    {
+      "image_id": "RK17-0068",
+      "display_name": "Большой босс",
+      "character": "RK17 / Рыжий Кот №17",
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": "РУКОВОДИТЕЛЬ",
+      "mood": [
+        "УВЕРЕННОСТЬ",
+        "ДЕЛОВИТОСТЬ"
+      ],
+      "themes": [
+        "бизнес",
+        "руководство",
+        "управление",
+        "богатство"
+      ],
+      "scenario": "работает за ноутбуком и разговаривает по телефону как руководитель",
+      "actions": [
+        "работать за ноутбуком",
+        "разговаривать по телефону",
+        "руководить"
+      ],
+      "objects": [
+        "ноутбук",
+        "мобильный телефон",
+        "рабочий стол",
+        "деньги"
+      ],
+      "clothing": [
+        "корона",
+        "чёрный деловой костюм"
+      ],
+      "decorations": [],
+      "intent": [
+        "руководить",
+        "решать рабочие вопросы",
+        "деловой звонок"
+      ],
+      "search_aliases": [],
+      "migration_status": "READY_FOR_WORK",
+      "source_semantic_status": "approved_keywords_awaiting_structured_metadata_v1",
+      "semantic_status": "approved_current_architecture_1_2"
+    },
+    {
+      "image_id": "RK17-0069",
+      "display_name": "Хозяин жизни",
+      "character": "RK17 / Рыжий Кот №17",
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": "БИЗНЕСМЕН",
+      "mood": [
+        "САМОДОВОЛЬСТВО",
+        "УВЕРЕННОСТЬ"
+      ],
+      "themes": [
+        "богатство",
+        "роскошь",
+        "статус",
+        "власть"
+      ],
+      "scenario": "отдыхает в кресле среди денег с сигарой рядом с глобусом",
+      "actions": [
+        "отдыхать",
+        "демонстрировать статус"
+      ],
+      "objects": [
+        "пачки долларов",
+        "глобус",
+        "сигара",
+        "кресло"
+      ],
+      "clothing": [
+        "корона",
+        "чёрный деловой костюм"
+      ],
+      "decorations": [],
+      "intent": [
+        "богатая жизнь",
+        "большие деньги",
+        "высокий статус"
+      ],
+      "search_aliases": [],
+      "migration_status": "READY_FOR_WORK",
+      "source_semantic_status": "approved_keywords_awaiting_structured_metadata_v1",
+      "semantic_status": "approved_current_architecture_1_2"
+    },
+    {
+      "image_id": "RK17-0070",
+      "display_name": "За что?!",
+      "character": "RK17 / Рыжий Кот №17",
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": "ЗАКЛЮЧЁННЫЙ",
+      "mood": [
+        "ОТЧАЯНИЕ",
+        "ПЕЧАЛЬ",
+        "РАСТЕРЯННОСТЬ"
+      ],
+      "themes": [
+        "тюрьма",
+        "заключение",
+        "несвобода",
+        "наказание"
+      ],
+      "scenario": "стоит за тюремной решёткой и держится за прутья",
+      "actions": [
+        "держаться за решётку"
+      ],
+      "objects": [
+        "тюремная решётка",
+        "миска"
+      ],
+      "clothing": [
+        "заношенная белая майка"
+      ],
+      "decorations": [],
+      "intent": [
+        "за что",
+        "за решёткой",
+        "несправедливость"
+      ],
+      "search_aliases": [],
+      "migration_status": "READY_FOR_WORK",
+      "source_semantic_status": "approved_keywords_awaiting_structured_metadata_v1",
+      "semantic_status": "approved_current_architecture_1_2"
+    },
+    {
+      "image_id": "RK17-0071",
+      "display_name": "Мотаем срок",
+      "character": "RK17 / Рыжий Кот №17",
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": "ЗАКЛЮЧЁННЫЙ",
+      "mood": [
+        "УСТАЛОСТЬ",
+        "СКУКА"
+      ],
+      "themes": [
+        "тюрьма",
+        "заключение",
+        "срок",
+        "наказание"
+      ],
+      "scenario": "сидит в тюремной камере в полосатой форме с гирей на цепи",
+      "actions": [
+        "сидеть",
+        "отбывать срок"
+      ],
+      "objects": [
+        "гиря",
+        "цепь",
+        "нары"
+      ],
+      "clothing": [
+        "полосатая тюремная одежда",
+        "тюремная шапка"
+      ],
+      "decorations": [],
+      "intent": [
+        "мотать срок",
+        "отбывать наказание",
+        "отсидка"
+      ],
+      "search_aliases": [],
+      "migration_status": "READY_FOR_WORK",
+      "source_semantic_status": "approved_keywords_awaiting_structured_metadata_v1",
+      "semantic_status": "approved_current_architecture_1_2"
+    },
+    {
+      "image_id": "RK17-0072",
+      "display_name": "Сижу отдыхаю",
+      "character": "RK17 / Рыжий Кот №17",
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": "ЗАКЛЮЧЁННЫЙ",
+      "mood": [
+        "СПОКОЙСТВИЕ",
+        "РАССЛАБЛЕННОСТЬ",
+        "ИРОНИЯ"
+      ],
+      "themes": [
+        "тюрьма",
+        "заключение",
+        "передышка"
+      ],
+      "scenario": "сидит и отдыхает в тюремной камере с кружкой",
+      "actions": [
+        "сидеть",
+        "отдыхать",
+        "пить из кружки"
+      ],
+      "objects": [
+        "кружка",
+        "нары"
+      ],
+      "clothing": [
+        "полосатая тюремная одежда"
+      ],
+      "decorations": [],
+      "intent": [
+        "сижу отдыхаю",
+        "передышка",
+        "отдых"
+      ],
+      "search_aliases": [],
+      "migration_status": "READY_FOR_WORK",
+      "source_semantic_status": "approved_keywords_awaiting_structured_metadata_v1",
+      "semantic_status": "approved_current_architecture_1_2"
+    },
+    {
+      "image_id": "RK17-0073",
+      "display_name": "Авторитет",
+      "character": "RK17 / Рыжий Кот №17",
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": "ЗАКЛЮЧЁННЫЙ",
+      "mood": [
+        "УВЕРЕННОСТЬ",
+        "ДЕРЗОСТЬ"
+      ],
+      "themes": [
+        "тюрьма",
+        "заключение",
+        "криминальная стилизация",
+        "статус"
+      ],
+      "scenario": "уверенно сидит в тюремной камере и демонстрирует татуировку",
+      "actions": [
+        "сидеть",
+        "демонстрировать татуировку"
+      ],
+      "objects": [
+        "нары"
+      ],
+      "clothing": [
+        "полосатая тюремная одежда"
+      ],
+      "decorations": [
+        "татуировка"
+      ],
+      "intent": [
+        "авторитет",
+        "демонстрация статуса"
+      ],
+      "search_aliases": [],
+      "migration_status": "READY_FOR_WORK",
+      "source_semantic_status": "approved_keywords_awaiting_structured_metadata_v1",
+      "semantic_status": "approved_current_architecture_1_2"
+    },
+    {
+      "image_id": "RK17-0074",
+      "display_name": "Король говорит",
+      "character": "RK17 / Рыжий Кот №17",
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": "КОРОЛЬ",
+      "mood": [
+        "УВЕРЕННОСТЬ",
+        "САМОДОВОЛЬСТВО",
+        "СПОКОЙСТВИЕ"
+      ],
+      "themes": [
+        "бизнес",
+        "богатство",
+        "успех",
+        "власть",
+        "деньги",
+        "роскошь",
+        "высокий статус",
+        "переговоры",
+        "состоятельность"
+      ],
+      "scenario": "сидит на троне среди денег, разговаривает по мобильному телефону, держит бокал шампанского",
+      "actions": [
+        "разговаривать по телефону",
+        "вести переговоры",
+        "отдыхать",
+        "демонстрировать статус"
+      ],
+      "objects": [
+        "трон",
+        "корона",
+        "мобильный телефон",
+        "бокал шампанского",
+        "пачки долларов",
+        "мешок с деньгами",
+        "тёмные очки"
+      ],
+      "clothing": [
+        "чёрный деловой костюм",
+        "белая рубашка",
+        "галстук"
+      ],
+      "decorations": [],
+      "intent": [
+        "деловой разговор",
+        "успешный бизнес",
+        "большие деньги",
+        "богатая жизнь",
+        "власть",
+        "статус",
+        "важный звонок",
+        "переговоры"
+      ],
+      "search_aliases": [],
+      "migration_status": "READY_FOR_WORK",
+      "source_semantic_status": "semantic_approved",
+      "semantic_status": "approved_current_architecture_1_2"
+    },
+    {
+      "image_id": "RK17-0075",
+      "display_name": "Деловой разговор",
+      "character": "RK17 / Рыжий Кот №17",
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": "БИЗНЕСМЕН",
+      "mood": [
+        "СОСРЕДОТОЧЕННОСТЬ",
+        "ДЕЛОВИТОСТЬ",
+        "УВЕРЕННОСТЬ"
+      ],
+      "themes": [
+        "бизнес",
+        "переговоры",
+        "управление",
+        "инвестиции",
+        "деньги",
+        "богатство",
+        "успех",
+        "статус",
+        "руководство",
+        "принятие решений"
+      ],
+      "scenario": "сидит среди денег и ведёт серьёзный телефонный разговор",
+      "actions": [
+        "разговаривать по телефону",
+        "вести переговоры",
+        "принимать решение",
+        "обсуждать дела"
+      ],
+      "objects": [
+        "мобильный телефон",
+        "бокал шампанского",
+        "пачки долларов",
+        "мешок с деньгами",
+        "кресло",
+        "тёмные очки"
+      ],
+      "clothing": [
+        "чёрный деловой костюм",
+        "белая рубашка",
+        "галстук"
+      ],
+      "decorations": [],
+      "intent": [
+        "деловой разговор",
+        "важные переговоры",
+        "решение бизнес-вопросов",
+        "управление",
+        "успешный бизнес",
+        "серьёзный звонок"
+      ],
+      "search_aliases": [],
+      "migration_status": "READY_FOR_WORK",
+      "source_semantic_status": "semantic_approved",
+      "semantic_status": "approved_current_architecture_1_2"
+    }
+  ],
+  "architecture_revision": "1.2 current edition 2026-09-19",
+  "notes": [
+    "Раздел — редакционная классификация каталога; поисковая семантика хранится отдельно.",
+    "Для текущих 75 изображений RK17 раздел только КОТЫ.",
+    "tags не является отдельным обязательным полем и удалён из карточек.",
+    "Role необязателен; состояния и ситуации не превращаются в псевдороли.",
+    "Словоформы не хранятся в search_aliases; их нормализует Search."
+  ]
+}

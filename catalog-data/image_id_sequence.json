@@ -1,0 +1,671 @@
+{
+  "assignments": [
+    {
+      "image_id": "RK17-0001",
+      "number": 1,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0002",
+      "number": 2,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0003",
+      "number": 3,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0004",
+      "number": 4,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0005",
+      "number": 5,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0006",
+      "number": 6,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0007",
+      "number": 7,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0008",
+      "number": 8,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0009",
+      "number": 9,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0010",
+      "number": 10,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0011",
+      "number": 11,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0012",
+      "number": 12,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0013",
+      "number": 13,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0014",
+      "number": 14,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0015",
+      "number": 15,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0016",
+      "number": 16,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0017",
+      "number": 17,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0018",
+      "number": 18,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0019",
+      "number": 19,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0020",
+      "number": 20,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0021",
+      "number": 21,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0022",
+      "number": 22,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0023",
+      "number": 23,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0024",
+      "number": 24,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0025",
+      "number": 25,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0026",
+      "number": 26,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0027",
+      "number": 27,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0028",
+      "number": 28,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0029",
+      "number": 29,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0030",
+      "number": 30,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0031",
+      "number": 31,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0032",
+      "number": 32,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0033",
+      "number": 33,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0034",
+      "number": 34,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0035",
+      "number": 35,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0036",
+      "number": 36,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0037",
+      "number": 37,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0038",
+      "number": 38,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0039",
+      "number": 39,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0040",
+      "number": 40,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0041",
+      "number": 41,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0042",
+      "number": 42,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0043",
+      "number": 43,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0044",
+      "number": 44,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0045",
+      "number": 45,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0046",
+      "number": 46,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0047",
+      "number": 47,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0048",
+      "number": 48,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0049",
+      "number": 49,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0050",
+      "number": 50,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0051",
+      "number": 51,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0052",
+      "number": 52,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0053",
+      "number": 53,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0054",
+      "number": 54,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0055",
+      "number": 55,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0056",
+      "number": 56,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0057",
+      "number": 57,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0058",
+      "number": 58,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0059",
+      "number": 59,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0060",
+      "number": 60,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0061",
+      "number": 61,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0062",
+      "number": 62,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0063",
+      "number": 63,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0064",
+      "number": 64,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0065",
+      "number": 65,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0066",
+      "number": 66,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0067",
+      "number": 67,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0068",
+      "number": 68,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0069",
+      "number": 69,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0070",
+      "number": 70,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0071",
+      "number": 71,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0072",
+      "number": 72,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0073",
+      "number": 73,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0074",
+      "number": 74,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0075",
+      "number": 75,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "OTHER-0076",
+      "number": 76,
+      "registry": "OTHER_image_registry.json"
+    },
+    {
+      "image_id": "OTHER-0077",
+      "number": 77,
+      "registry": "OTHER_image_registry.json"
+    },
+    {
+      "image_id": "OTHER-0078",
+      "number": 78,
+      "registry": "OTHER_image_registry.json"
+    },
+    {
+      "image_id": "OTHER-0079",
+      "number": 79,
+      "registry": "OTHER_image_registry.json"
+    },
+    {
+      "image_id": "OTHER-0080",
+      "number": 80,
+      "registry": "OTHER_image_registry.json"
+    },
+    {
+      "image_id": "OTHER-0081",
+      "number": 81,
+      "registry": "OTHER_image_registry.json"
+    },
+    {
+      "image_id": "OTHER-0082",
+      "number": 82,
+      "registry": "OTHER_image_registry.json"
+    },
+    {
+      "image_id": "OTHER-0083",
+      "number": 83,
+      "registry": "OTHER_image_registry.json"
+    },
+    {
+      "image_id": "OTHER-0084",
+      "number": 84,
+      "registry": "OTHER_image_registry.json"
+    },
+    {
+      "image_id": "OTHER-0085",
+      "number": 85,
+      "registry": "OTHER_image_registry.json"
+    },
+    {
+      "image_id": "OTHER-0086",
+      "number": 86,
+      "registry": "OTHER_image_registry.json"
+    },
+    {
+      "image_id": "OTHER-0087",
+      "number": 87,
+      "registry": "OTHER_image_registry.json"
+    },
+    {
+      "image_id": "OTHER-0088",
+      "number": 88,
+      "registry": "OTHER_image_registry.json"
+    },
+    {
+      "image_id": "OTHER-0089",
+      "number": 89,
+      "registry": "OTHER_image_registry.json"
+    },
+    {
+      "image_id": "OTHER-0090",
+      "number": 90,
+      "registry": "OTHER_image_registry.json"
+    },
+    {
+      "image_id": "RK17-0091",
+      "number": 91,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0092",
+      "number": 92,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0093",
+      "number": 93,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0094",
+      "number": 94,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0095",
+      "number": 95,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0096",
+      "number": 96,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0097",
+      "number": 97,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0098",
+      "number": 98,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0099",
+      "number": 99,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0100",
+      "number": 100,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0101",
+      "number": 101,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0102",
+      "number": 102,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0103",
+      "number": 103,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0104",
+      "number": 104,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0105",
+      "number": 105,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0106",
+      "number": 106,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0107",
+      "number": 107,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0108",
+      "number": 108,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0109",
+      "number": 109,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0110",
+      "number": 110,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0111",
+      "number": 111,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0112",
+      "number": 112,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0113",
+      "number": 113,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0114",
+      "number": 114,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0115",
+      "number": 115,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0116",
+      "number": 116,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0117",
+      "number": 117,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0118",
+      "number": 118,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0119",
+      "number": 119,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0120",
+      "number": 120,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0121",
+      "number": 121,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0122",
+      "number": 122,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0123",
+      "number": 123,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0124",
+      "number": 124,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0125",
+      "number": 125,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0126",
+      "number": 126,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0127",
+      "number": 127,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0128",
+      "number": 128,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0129",
+      "number": 129,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0130",
+      "number": 130,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0131",
+      "number": 131,
+      "registry": "image_registry.json"
+    },
+    {
+      "image_id": "RK17-0132",
+      "number": 132,
+      "registry": "image_registry.json"
+    }
+  ],
+  "id_reuse_policy": "never_reassign",
+  "last_assigned_number": 132,
+  "next_available_number": 133,
+  "next_id_rule": "Use the next number globally, then apply the explicitly approved prefix.",
+  "numeric_sequence_policy": "shared_global_across_id_prefixes",
+  "registry_version": 1,
+  "sequence_scope": "all_permanent_image_ids_across_prefixes"
+}

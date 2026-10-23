@@ -1,0 +1,380 @@
+{
+  "manifest_version": "1.0",
+  "architecture_revision": "1.2 current edition 2026-09-19",
+  "batch_id": "OTHER-0076-0080",
+  "source": {
+    "source_file": "Изображение Codex 19 сент. 2026 г., 17_58_40.png",
+    "source_sha256": "6dfbb56b317764d3da716c7bc37548b59777b8f1733b14a0ecad7296c498e1d8",
+    "source_pixels": [
+      1536,
+      1024
+    ],
+    "numbering": "left-to-right, top-to-bottom"
+  },
+  "processing": {
+    "art_pixel_exact_crop": true,
+    "master_rgb_pixels_preserved": true,
+    "transparent_padding_px": 32,
+    "web_max_dimension": 768,
+    "print_variants_created": false,
+    "cut_path_created": false,
+    "artistic_changes": false
+  },
+  "items": [
+    {
+      "image_id": "OTHER-0076",
+      "sheet_number": 3,
+      "status": "approved_ready",
+      "semantic_status": "approved_current_architecture_1_2",
+      "character_id": null,
+      "character_assignment": "OTHER",
+      "art_file": "OTHER-0076_ART.png",
+      "master_file": "OTHER-0076_MASTER.png",
+      "web_file": "OTHER-0076_WEB.webp",
+      "art_sha256": "36c6e678c3d5388f443f5c3a6dac466280e7da2a886f30cee965d390e3d327dc",
+      "master_sha256": "e557dde10ef1775aeb541396726219b6c19ee95cb5b58b586200ffe616cdd6f9",
+      "web_sha256": "24ac8195152d89d2f116c174064bb6261bad299752edc19c873b5f226a80fda6",
+      "source_crop_xyxy": [
+        627,
+        13,
+        911,
+        342
+      ],
+      "art_pixels": [
+        284,
+        329
+      ],
+      "master_pixels": [
+        340,
+        272
+      ],
+      "web_pixels": [
+        340,
+        272
+      ],
+      "transparent_padding_px": 32,
+      "rgb_pixels_verified": true,
+      "display_name": "На удалёнке",
+      "character": null,
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": null,
+      "mood": [
+        "СОСРЕДОТОЧЕННОСТЬ"
+      ],
+      "themes": [
+        "IT",
+        "компьютер",
+        "удалённая работа"
+      ],
+      "scenario": "Кот в очках сосредоточенно работает за ноутбуком.",
+      "actions": [
+        "работать за ноутбуком"
+      ],
+      "objects": [
+        "ноутбук",
+        "очки"
+      ],
+      "clothing": [],
+      "decorations": [],
+      "intent": [
+        "работа за компьютером",
+        "удалённая работа"
+      ],
+      "search_aliases": []
+    },
+    {
+      "image_id": "OTHER-0077",
+      "sheet_number": 6,
+      "status": "approved_ready",
+      "semantic_status": "approved_current_architecture_1_2",
+      "character_id": null,
+      "character_assignment": "OTHER",
+      "art_file": "OTHER-0077_ART.png",
+      "master_file": "OTHER-0077_MASTER.png",
+      "web_file": "OTHER-0077_WEB.webp",
+      "art_sha256": "30bdfbad8ba150e3b88c3438f808dbd657200a3f7319057ce7a5d7caa520a4c6",
+      "master_sha256": "572657edcae9993637452260078fa7472c27c5fbf3cdb74b202a56bc38294df3",
+      "web_sha256": "d1b6af3cddf7af5d6bfcdc502bf2af3f95eb8d5ee3ab75b2db3d9e32e087cf73",
+      "source_crop_xyxy": [
+        16,
+        351,
+        311,
+        649
+      ],
+      "art_pixels": [
+        295,
+        298
+      ],
+      "master_pixels": [
+        336,
+        288
+      ],
+      "web_pixels": [
+        336,
+        288
+      ],
+      "transparent_padding_px": 32,
+      "rgb_pixels_verified": true,
+      "display_name": "Ещё подход",
+      "character": null,
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": "СПОРТСМЕН",
+      "mood": [
+        "РЕШИТЕЛЬНОСТЬ",
+        "СОСРЕДОТОЧЕННОСТЬ"
+      ],
+      "themes": [
+        "спорт",
+        "фитнес",
+        "тренировка"
+      ],
+      "scenario": "Кот тренируется с гантелью.",
+      "actions": [
+        "тренироваться",
+        "поднимать гантель"
+      ],
+      "objects": [
+        "гантель"
+      ],
+      "clothing": [
+        "спортивная повязка"
+      ],
+      "decorations": [],
+      "intent": [
+        "тренировка",
+        "заниматься спортом",
+        "стать сильнее"
+      ],
+      "search_aliases": []
+    },
+    {
+      "image_id": "OTHER-0078",
+      "sheet_number": 8,
+      "status": "approved_ready",
+      "semantic_status": "approved_current_architecture_1_2",
+      "character_id": null,
+      "character_assignment": "OTHER",
+      "art_file": "OTHER-0078_ART.png",
+      "master_file": "OTHER-0078_MASTER.png",
+      "web_file": "OTHER-0078_WEB.webp",
+      "art_sha256": "d54486fe68f062f7a88fbf885b6ad8db9c7241de0bc5572be8a4891c1af79382",
+      "master_sha256": "fcad3e94c8de902284cb9a15872f463d6623c26d5b84a652433390270b838246",
+      "web_sha256": "067af42ae881c27bb57eeef42991693253460bd5f4610f7ae151cddd645bb85c",
+      "source_crop_xyxy": [
+        627,
+        351,
+        911,
+        649
+      ],
+      "art_pixels": [
+        284,
+        298
+      ],
+      "master_pixels": [
+        346,
+        283
+      ],
+      "web_pixels": [
+        346,
+        283
+      ],
+      "transparent_padding_px": 32,
+      "rgb_pixels_verified": true,
+      "display_name": "Древняя находка",
+      "character": null,
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": "АРХЕОЛОГ",
+      "mood": [
+        "СОСРЕДОТОЧЕННОСТЬ",
+        "ИНТЕРЕС"
+      ],
+      "themes": [
+        "археология",
+        "наука",
+        "раскопки",
+        "древности"
+      ],
+      "scenario": "Кот-археолог кистью расчищает древнюю находку.",
+      "actions": [
+        "исследовать",
+        "расчищать находку"
+      ],
+      "objects": [
+        "кисть",
+        "артефакт/останки"
+      ],
+      "clothing": [
+        "полевая шляпа"
+      ],
+      "decorations": [],
+      "intent": [
+        "исследование",
+        "раскопки",
+        "научная находка"
+      ],
+      "search_aliases": []
+    },
+    {
+      "image_id": "OTHER-0079",
+      "sheet_number": 10,
+      "status": "approved_ready",
+      "semantic_status": "approved_current_architecture_1_2",
+      "character_id": null,
+      "character_assignment": "OTHER",
+      "art_file": "OTHER-0079_ART.png",
+      "master_file": "OTHER-0079_MASTER.png",
+      "web_file": "OTHER-0079_WEB.webp",
+      "art_sha256": "c088effe9bd43642dbfd733069693f6dc4899a0318ec38c2aa21e28ca76b62ec",
+      "master_sha256": "9592605f5decf02a585beaec6d1f37c10c7aec344b0297399d19881983007211",
+      "web_sha256": "200fb2dbdfc3c7e0251c9d32fa9ed1742dfd43789b40fd61153d12d093ed8a0c",
+      "source_crop_xyxy": [
+        1224,
+        351,
+        1522,
+        649
+      ],
+      "art_pixels": [
+        298,
+        298
+      ],
+      "master_pixels": [
+        366,
+        277
+      ],
+      "web_pixels": [
+        366,
+        277
+      ],
+      "transparent_padding_px": 32,
+      "rgb_pixels_verified": true,
+      "display_name": "Твой ход",
+      "character": null,
+      "primary_subjects": [
+        "кот",
+        "собака"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ",
+        "СОБАКИ"
+      ],
+      "role": "ШАХМАТИСТ",
+      "mood": [
+        "АЗАРТ",
+        "СОСРЕДОТОЧЕННОСТЬ"
+      ],
+      "themes": [
+        "шахматы",
+        "настольная игра",
+        "дружеское соперничество"
+      ],
+      "scenario": "Кот и собака как равноправные участники играют в шахматы.",
+      "actions": [
+        "играть в шахматы"
+      ],
+      "objects": [
+        "шахматная доска",
+        "шахматные фигуры"
+      ],
+      "clothing": [],
+      "decorations": [],
+      "intent": [
+        "шахматы",
+        "игра вдвоём",
+        "соревнование"
+      ],
+      "search_aliases": []
+    },
+    {
+      "image_id": "OTHER-0080",
+      "sheet_number": 15,
+      "status": "approved_ready",
+      "semantic_status": "approved_current_architecture_1_2",
+      "character_id": null,
+      "character_assignment": "OTHER",
+      "art_file": "OTHER-0080_ART.png",
+      "master_file": "OTHER-0080_MASTER.png",
+      "web_file": "OTHER-0080_WEB.webp",
+      "art_sha256": "6c7257860d0281a4d95feda28ae4c1f88c8f317913689af311e93d18a27b2973",
+      "master_sha256": "be6cf7d306bdc4afe6e6dba9698495aec63c3b86d5f60074403a4292309b254b",
+      "web_sha256": "f1596d9debcc54589a0018fa9d544fc476f5f9e07295f5e5523ec63ab91858f0",
+      "source_crop_xyxy": [
+        1224,
+        658,
+        1522,
+        1007
+      ],
+      "art_pixels": [
+        298,
+        349
+      ],
+      "master_pixels": [
+        348,
+        311
+      ],
+      "web_pixels": [
+        348,
+        311
+      ],
+      "transparent_padding_px": 32,
+      "rgb_pixels_verified": true,
+      "display_name": "Под звёздами",
+      "character": null,
+      "primary_subjects": [
+        "кот"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "role": "ТУРИСТ",
+      "mood": [
+        "СПОКОЙСТВИЕ",
+        "ВОСХИЩЕНИЕ"
+      ],
+      "themes": [
+        "туризм",
+        "природа",
+        "ночь",
+        "звёздное небо"
+      ],
+      "scenario": "Кот с рюкзаком сидит ночью под звёздным небом рядом с фонарём.",
+      "actions": [
+        "смотреть на звёзды",
+        "отдыхать"
+      ],
+      "objects": [
+        "рюкзак",
+        "фонарь"
+      ],
+      "clothing": [],
+      "decorations": [],
+      "intent": [
+        "путешествие",
+        "ночёвка на природе",
+        "любоваться звёздами"
+      ],
+      "search_aliases": []
+    }
+  ],
+  "semantic_schema_version": "semantic_metadata_1.2_current",
+  "semantic_source": "semantic/OTHER/architecture_1_2/OTHER_semantic_metadata_1_2.json"
+}

@@ -1,0 +1,98 @@
+{
+  "schema_version": "character_card_1.0",
+  "architecture_revision": "1.2 current edition 2026-09-19",
+  "characters": [
+    {
+      "card_version": "1.0",
+      "character_id": "RK17",
+      "public_name": "Чеддер",
+      "sex": "мужской",
+      "species": "кот",
+      "entity_type": "персонаж",
+      "anthropomorphic": true,
+      "status": "active",
+      "semantic_relations": [
+        {
+          "subject": "RK17",
+          "relation": "public_name",
+          "object": "Чеддер"
+        },
+        {
+          "subject": "RK17",
+          "relation": "entity_type",
+          "object": "персонаж"
+        },
+        {
+          "subject": "RK17",
+          "relation": "species_subject",
+          "object": "кот"
+        },
+        {
+          "subject": "кот",
+          "relation": "broader",
+          "object": "животное"
+        }
+      ],
+      "search": {
+        "direct_terms": [
+          "Чеддер",
+          "RK17"
+        ],
+        "subject_hierarchy_terms": [
+          "кот",
+          "животное"
+        ],
+        "entity_type_term": "персонаж",
+        "must_not_create_sections": true,
+        "must_not_create_image_roles_moods_or_themes": true
+      },
+      "visual_passport": {
+        "age": "взрослый",
+        "coat_color": "рыжая шерсть",
+        "eye_color": "зелёные глаза",
+        "body_type": "нормальное, не толстое телосложение",
+        "tail": "средне-пушистый хвост",
+        "marking": "большое овальное белое пятно, занимающее почти всю грудь и живот",
+        "proportions": "устойчивые взрослые мультяшные пропорции",
+        "marking_may_be_hidden_by": [
+          "одежда",
+          "предметы",
+          "поза",
+          "элементы сцены или декорации",
+          "кадрирование"
+        ],
+        "eyes_may_be_hidden_by": [
+          "закрытые глаза",
+          "очки",
+          "ракурс",
+          "предметы",
+          "кадрирование"
+        ],
+        "hidden_traits_do_not_cancel_identity": true
+      },
+      "variable_image_attributes": [
+        "роль",
+        "профессия",
+        "настроение",
+        "действие",
+        "сценарий",
+        "одежда",
+        "головной убор",
+        "предметы",
+        "декорации",
+        "окружение",
+        "тема конкретного изображения"
+      ],
+      "identification_policy": {
+        "explicit_approved_assignment_required": true,
+        "visual_similarity_is_insufficient": true,
+        "work_must_not_reassign_other_automatically": true
+      },
+      "ui": {
+        "filter_label": "Персонаж",
+        "display_value": "Чеддер",
+        "hide_character_id_from_user": true
+      }
+    }
+  ]
+}

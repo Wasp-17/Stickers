@@ -1,0 +1,81 @@
+{
+  "changed_concept_ids": [
+    {
+      "change": "canonical_renamed",
+      "concept_id": "OBJECT_E088CF6E529952F2",
+      "from": "АРТЕФАКТ/ОСТАНКИ",
+      "id_preserved": true,
+      "to": "ДРЕВНЯЯ НАХОДКА"
+    },
+    {
+      "change": "canonical_renamed",
+      "concept_id": "CLOTHING_63A0098198B110D5",
+      "from": "БАБОЧКА",
+      "id_preserved": true,
+      "to": "ГАЛСТУК-БАБОЧКА"
+    },
+    {
+      "change": "canonical_renamed",
+      "concept_id": "OBJECT_1F51D90E60F35336",
+      "from": "КОНЬ",
+      "id_preserved": true,
+      "to": "ШАХМАТНЫЙ КОНЬ"
+    },
+    {
+      "change": "canonical_renamed",
+      "concept_id": "THEME_16827D589E6F04AB",
+      "from": "МИР",
+      "id_preserved": true,
+      "to": "ОКРУЖАЮЩИЙ МИР"
+    },
+    {
+      "change": "canonical_renamed",
+      "concept_id": "OBJECT_69682F813D2ADA8E",
+      "from": "КИСТЬ",
+      "id_preserved": true,
+      "to": "КИСТЬ (ИНСТРУМЕНТ)"
+    },
+    {
+      "change": "concept_type_changed",
+      "concept_id": "OBJECT_3391CAD0210C9B60",
+      "from": "OBJECT",
+      "id_preserved": true,
+      "to": "CLOTHING"
+    },
+    {
+      "change": "concept_type_changed",
+      "concept_id": "OBJECT_56E61B4223D3DB06",
+      "from": "OBJECT",
+      "id_preserved": true,
+      "to": "CLOTHING"
+    },
+    {
+      "change": "concept_type_changed",
+      "concept_id": "OBJECT_EE381614F191A450",
+      "from": "OBJECT",
+      "id_preserved": true,
+      "to": "CLOTHING"
+    },
+    {
+      "change": "concept_type_changed",
+      "concept_id": "OBJECT_FCC46A4280BBF672",
+      "from": "OBJECT",
+      "id_preserved": true,
+      "to": "CLOTHING"
+    },
+    {
+      "change": "retired_redirect",
+      "concept_id": "INTENT_5836FBC9A0DA8468",
+      "id_preserved_as_redirect": true,
+      "to_concept_id": "ACTION_729E1802333D3582"
+    }
+  ],
+  "preserved_active_ids": 697,
+  "remaining_requires_semantic_approval": [
+    "ОБРАЗ МИРА"
+  ],
+  "schema_version": "concept_id_migration_1.0",
+  "source_bindings": "migration-source/legacy_bindings.pre_id_registry.json",
+  "source_dictionary": "migration-source/legacy_dictionary.pre_id_registry.json",
+  "status": "approved"
+}

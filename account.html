@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Личный кабинет покупателя наклеек.">
   <title>Личный кабинет — Наклейки</title>
-  <link rel="stylesheet" href="account.css?v=20261013-1">
-  <script src="layout.js" defer></script>
-  <script src="local-store.js?v=20261013-1" defer></script>
-  <script src="account.js?v=20261013-1" defer></script>
+  <link rel="stylesheet" href="account.css?v=20261018-3">
+  <script src="layout.js?v=20261018-2" defer></script>
+  <script src="local-store.js?v=20261018-3" defer></script>
+  <script src="account.js?v=20261018-6" defer></script>
 </head>
 <body>
   <header class="cabinet-header">
@@ -45,24 +45,23 @@
         <nav class="cabinet-menu" aria-label="Разделы личного кабинета">
           <a class="is-current" href="#current-order">Текущий заказ <span id="menu-order-count">0</span></a>
           <a href="#cart-orders">Корзина <span id="menu-cart-count">0</span></a>
-          <a href="#drafts">Черновики <span id="menu-draft-count">0</span></a>
-          <span>История заказов <small>позже</small></span>
+          <a href="#my-orders">Мои заказы <small>после оплаты</small></a>
           <a href="#addresses">Адреса <span id="menu-address-count">0</span></a>
           <a href="#my-collection">Моя коллекция <small>скоро</small></a>
-          <span>Избранное <small>позже</small></span>
+          <a href="#favorites">Избранное <span id="menu-favorites-count">0</span></a>
         </nav>
 
         <section id="current-order" class="order-card" aria-labelledby="order-title">
           <div class="order-card-heading">
             <div>
-              <p class="eyebrow">КОРЗИНА</p>
+              <p class="eyebrow">ЛИСТ-МАКЕТ</p>
               <h2 id="order-title">Текущий заказ</h2>
             </div>
             <p id="order-updated" class="muted"></p>
           </div>
 
           <div id="cabinet-order-empty" class="empty-order" hidden>
-            <p>В корзине пока нет наклеек.</p>
+            <p>На листе-макете пока нет наклеек.</p>
             <a class="primary-link" href="index.html#sections">Выбрать наклейки</a>
           </div>
 
@@ -77,8 +76,8 @@
               <p></p>
             </div>
             <div class="order-actions">
-              <a class="primary-link" href="index.html#sections">Продолжить собирать заказ</a>
-              <button id="park-order" class="dark-secondary" type="button">Отложить в черновики</button>
+              <a class="primary-link" href="catalog.html">Продолжить оформление заказа</a>
+              <button id="save-order-to-cart" class="dark-secondary" type="button">Сохранить в корзине</button>
             </div>
           </div>
         </section>
@@ -87,19 +86,37 @@
       <section id="cart-orders" class="drafts-section" aria-labelledby="cart-orders-title">
         <div class="drafts-heading">
           <div><p class="eyebrow">КОРЗИНА</p><h2 id="cart-orders-title">Заказы в корзине</h2></div>
-          <p>Здесь можно переименовать заказ или снова открыть его на листах-макетах.</p>
+          <p>Здесь можно открыть, переименовать или удалить сохранённый заказ.</p>
         </div>
+        <p id="cart-orders-message" class="favorites-message" role="status" aria-live="polite"></p>
         <div id="cart-orders-empty" class="drafts-empty">Корзина пока пуста.</div>
         <div id="cart-orders-list" class="drafts-list"></div>
       </section>
 
-      <section id="drafts" class="drafts-section" aria-labelledby="drafts-title">
+      <section id="favorites" class="drafts-section favorites-section" aria-labelledby="favorites-title">
         <div class="drafts-heading">
-          <div><p class="eyebrow">ОТЛОЖЕННЫЕ ЗАКАЗЫ</p><h2 id="drafts-title">Черновики</h2></div>
-          <p>Сюда можно отложить текущую корзину и продолжить её позже.</p>
+          <div><p class="eyebrow">СОХРАНЁННЫЕ НАКЛЕЙКИ</p><h2 id="favorites-title">Избранное</h2></div>
+          <p>Выбирай размер здесь или открой наклейку в каталоге, чтобы рассмотреть и настроить её.</p>
         </div>
-        <div id="drafts-empty" class="drafts-empty">Черновиков пока нет.</div>
-        <div id="drafts-list" class="drafts-list"></div>
+        <div class="favorites-order-bar">
+          <fieldset><legend>Размер для добавления</legend><div id="favorite-sizes" class="favorite-sizes"></div></fieldset>
+          <div class="favorites-order-actions"><button id="add-all-favorites" class="primary-button" type="button">Добавить все в заказ</button><a id="favorites-to-layout" class="layout-shortcut" href="catalog.html" hidden>Перейти к листу-макету →</a></div>
+        </div>
+        <p id="favorites-message" class="favorites-message" role="status" aria-live="polite"></p>
+        <div id="favorites-empty" class="drafts-empty">В избранном пока ничего нет. Нажми сердечко на наклейке в каталоге.</div>
+        <div id="favorites-list" class="favorites-list"></div>
+      </section>
+
+      <section id="my-orders" class="drafts-section" aria-labelledby="my-orders-title">
+        <div class="drafts-heading">
+          <div><p class="eyebrow">ПОКУПКИ</p><h2 id="my-orders-title">Мои заказы</h2></div>
+          <p>После оплаты заказ исчезнет из корзины и появится здесь.</p>
+        </div>
+        <div class="collection-placeholder">
+          <span class="collection-placeholder-mark" aria-hidden="true">✓</span>
+          <h3>Оплаченных заказов пока нет</h3>
+          <p>Здесь будут храниться состав, статус и сведения об оплаченных заказах.</p>
+        </div>
       </section>
 
       <section id="addresses" class="drafts-section" aria-labelledby="addresses-title">
@@ -141,20 +158,16 @@
 
       <section class="future-grid" aria-label="Будущие разделы кабинета">
         <article><span>01</span><h2>История заказов</h2><p>После подключения оплаты здесь появятся завершённые заказы.</p></article>
-        <article><span>02</span><h2>Избранное</h2><p>Место для наклеек, к которым хочется вернуться.</p></article>
       </section>
     </div>
   </main>
 
-  <dialog id="draft-name-dialog" aria-labelledby="draft-name-title">
-    <button class="dialog-close" type="button" data-close-dialog aria-label="Закрыть">×</button>
-    <p class="eyebrow">ЧЕРНОВИК</p>
-    <h2 id="draft-name-title">Как назвать черновик?</h2>
-    <form id="draft-name-form">
-      <label for="draft-name">Название</label>
-      <input id="draft-name" type="text" maxlength="60" required placeholder="Например, подарок другу">
-      <div class="dialog-actions"><button class="primary-button" type="submit">Сохранить</button><button class="plain-button" type="button" data-close-dialog>Отмена</button></div>
-    </form>
+  <dialog id="account-order-switch-dialog" aria-labelledby="account-order-switch-title">
+    <p class="eyebrow">ПЕРЕКЛЮЧЕНИЕ ЗАКАЗА</p>
+    <h2 id="account-order-switch-title">Сохранить текущий заказ?</h2>
+    <p id="account-order-switch-copy"></p>
+    <p id="account-order-switch-limit" class="favorites-message" hidden></p>
+    <div class="dialog-actions"><button id="account-order-switch-save" class="primary-button" type="button">Сохранить и открыть</button><button id="account-order-switch-discard" class="danger-button" type="button">Удалить и открыть</button><button id="account-order-switch-cancel" class="plain-button" type="button">Остаться на текущем</button></div>
   </dialog>
 
   <dialog id="cart-name-dialog" aria-labelledby="cart-name-title">
@@ -168,24 +181,12 @@
     </form>
   </dialog>
 
-  <dialog id="activate-draft-dialog" aria-labelledby="activate-draft-title">
-    <button class="dialog-close" type="button" data-close-dialog aria-label="Закрыть">×</button>
-    <p class="eyebrow">ПЕРЕКЛЮЧЕНИЕ</p>
-    <h2 id="activate-draft-title">В корзине уже есть заказ</h2>
-    <p>Что сделать с текущим заказом перед открытием черновика?</p>
-    <div class="dialog-actions vertical-actions">
-      <button id="park-and-activate" class="primary-button" type="button">Отложить текущий и открыть</button>
-      <button id="replace-and-activate" class="danger-button" type="button">Заменить текущий</button>
-      <button class="plain-button" type="button" data-close-dialog>Отмена</button>
-    </div>
-  </dialog>
-
-  <dialog id="delete-draft-dialog" aria-labelledby="delete-draft-title">
+  <dialog id="delete-cart-dialog" aria-labelledby="delete-cart-title">
     <button class="dialog-close" type="button" data-close-dialog aria-label="Закрыть">×</button>
     <p class="eyebrow">УДАЛЕНИЕ</p>
-    <h2 id="delete-draft-title">Удалить черновик?</h2>
-    <p id="delete-draft-copy"></p>
-    <div class="dialog-actions"><button id="confirm-delete-draft" class="danger-button" type="button">Удалить</button><button class="plain-button" type="button" data-close-dialog>Отмена</button></div>
+    <h2 id="delete-cart-title">Удалить заказ?</h2>
+    <p id="delete-cart-copy"></p>
+    <div class="dialog-actions"><button id="confirm-delete-cart" class="danger-button" type="button">Удалить из корзины</button><button class="plain-button" type="button" data-close-dialog>Отмена</button></div>
   </dialog>
 
   <dialog id="delete-address-dialog" aria-labelledby="delete-address-title">

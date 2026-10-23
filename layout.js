@@ -5,9 +5,9 @@
   const config = {
     sheet: { width: 210, height: 297 },
     margins: { top: 12, right: 12, bottom: 12, left: 12 },
-    technicalHeight: 12, gap: 4, maxSheets: 7,
-    // A-D are square bounding boxes. E uses the whole calibrated work area.
-    sizes: { A: 15, B: 25, C: 50, D: 100, E: 'sheet' }
+    technicalHeight: 12, gap: 4, maxSheets: 10, maxItems: 350,
+    // A-E are square bounding boxes. F uses the whole calibrated work area.
+    sizes: { A: 30, A1: 35, B: 50, C: 75, D: 100, E: 125, F: 'sheet' }
   };
   function validQuantity(value) {
     return String(value).trim() !== '' && Number.isSafeInteger(Number(value)) && Number(value) > 0;
@@ -34,6 +34,7 @@
   }
   // MaxRects, largest first: a packing heuristic, not a global optimum.
   function pack(items, c = config) {
+    if (Number.isSafeInteger(c.maxItems) && items.length > c.maxItems) return { ok: false, reason: 'item-limit' };
     const a = area(c), pages = [];
     const sorted = items.map(item => {
       const { width: w, height: h } = dimensions(item.size, item.aspect, c);
@@ -83,15 +84,20 @@
       return sum + itemDimensions.width * itemDimensions.height;
     }, 0);
     // Bound work by physical capacity, even for enormous requested quantities.
-    const upper = Math.min(quantity, Math.max(0, Math.floor((a.w * a.h * c.maxSheets - occupied) / stickerArea + 1e-8)));
+    const itemCapacity = Number.isSafeInteger(c.maxItems) ? Math.max(0, c.maxItems - existing.length) : quantity;
+    const limitedByItemCount = quantity > itemCapacity;
+    const upper = Math.min(quantity, itemCapacity, Math.max(0, Math.floor((a.w * a.h * c.maxSheets - occupied) / stickerArea + 1e-8)));
     // Descending search: heuristic packing need not be monotonic across counts.
     // Keep every existing item; accept the largest batch our packer can place.
     for (let count = upper; count > 0; count--) {
       const added = Array.from({ length: count }, (_, i) => ({ ...sticker, id: nextId + i }));
       const result = pack([...existing, ...added], c);
-      if (result.ok) return { added, pages: result.pages, remaining: quantity - count };
+      if (result.ok) return {
+        added, pages: result.pages, remaining: quantity - count,
+        ...(limitedByItemCount && count === itemCapacity ? { reason:'item-limit' } : {}),
+      };
     }
-    return { added: [], remaining: quantity, reason: 'limit' };
+    return { added: [], remaining: quantity, reason: itemCapacity === 0 ? 'item-limit' : 'limit' };
   }
   const api = { config, area, sizeBox, dimensions, pack, validQuantity, fitAddition };
   if (typeof module !== 'undefined') module.exports = api;

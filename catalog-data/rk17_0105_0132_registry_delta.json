@@ -1,0 +1,1757 @@
+{
+  "batch_id": "RK17-0105-0132",
+  "existing_concept_ids_used": [
+    "ACTION_095F9CAEA67430CB",
+    "ACTION_7C1BF90556397F52",
+    "ACTION_AB04A44D05C5A267",
+    "ACTION_D414574A2AACD6BE",
+    "ACTION_ED5DFE8F788DDF33",
+    "ACTION_FB02BEA1341AD69E",
+    "CLOTHING_397202441A348B4A",
+    "INTENT_7C9DC84B6300E877",
+    "MOOD_02557292CC9A6972",
+    "MOOD_1807E5C0E3BBDF30",
+    "MOOD_1E105ABB7B0B99F9",
+    "MOOD_4280C24EDBDC1118",
+    "MOOD_463E1CF6DF9027E9",
+    "MOOD_475F7A5AE7B74D71",
+    "MOOD_7B9D686BA6E937D5",
+    "MOOD_95D26E7AA030537E",
+    "MOOD_98DAD9BF0EA697A8",
+    "MOOD_B3DBBDD0E78BEABF",
+    "MOOD_C3986D9DAFA07F51",
+    "MOOD_EF7BDE5C85390CC6",
+    "MOOD_F2236E285B9AB16A",
+    "OBJECT_18C3436DAD8B27A0",
+    "OBJECT_2EC0BF371232ADFF",
+    "OBJECT_D341B4759D5B0A51",
+    "SUBJECT_CAT",
+    "THEME_049373C82A446E3C",
+    "THEME_1F8833A8A58FCD5D",
+    "THEME_2500CEA69B64EB26",
+    "THEME_276517D99E0E5781",
+    "THEME_4296809D62037409",
+    "THEME_4EC116834CA7D35F",
+    "THEME_5051DB8F6B403AA4",
+    "THEME_552D043416FD4144",
+    "THEME_7267CC168DB88E42",
+    "THEME_79ADB5C50F831B17",
+    "THEME_C7F45CD55FB86876",
+    "THEME_F39E41B90F8E162F",
+    "THEME_F3A4A60573BA7017"
+  ],
+  "new_concepts": [
+    {
+      "canonical": "ВЫПУСКНИК",
+      "concept_id": "GSC-000039",
+      "concept_type": "ROLE",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000039"
+    },
+    {
+      "canonical": "ОБРАЗОВАНИЕ",
+      "concept_id": "GSC-000040",
+      "concept_type": "THEME",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000040"
+    },
+    {
+      "canonical": "УНИВЕРСИТЕТ",
+      "concept_id": "GSC-000041",
+      "concept_type": "THEME",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000041"
+    },
+    {
+      "canonical": "ВЫПУСК",
+      "concept_id": "GSC-000042",
+      "concept_type": "THEME",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000042"
+    },
+    {
+      "canonical": "ДИПЛОМ",
+      "concept_id": "GSC-000043",
+      "concept_type": "THEME",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000043"
+    },
+    {
+      "canonical": "ДЕРЖАТЬ ДИПЛОМ",
+      "concept_id": "GSC-000044",
+      "concept_type": "ACTION",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000044"
+    },
+    {
+      "canonical": "АКАДЕМИЧЕСКАЯ ШАПОЧКА",
+      "concept_id": "GSC-000045",
+      "concept_type": "OBJECT",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000045"
+    },
+    {
+      "canonical": "АКАДЕМИЧЕСКАЯ МАНТИЯ",
+      "concept_id": "GSC-000046",
+      "concept_type": "CLOTHING",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000046"
+    },
+    {
+      "canonical": "ОКОНЧАНИЕ УЧЁБЫ",
+      "concept_id": "GSC-000047",
+      "concept_type": "INTENT",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000047"
+    },
+    {
+      "canonical": "ДОСТИЖЕНИЕ",
+      "concept_id": "GSC-000048",
+      "concept_type": "INTENT",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000048"
+    },
+    {
+      "canonical": "ВЫПУСКНОЙ",
+      "concept_id": "GSC-000049",
+      "concept_type": "THEME",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000049"
+    },
+    {
+      "canonical": "ПРАЗДНОВАТЬ",
+      "concept_id": "GSC-000050",
+      "concept_type": "ACTION",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000050"
+    },
+    {
+      "canonical": "ЗАВЕРШЕНИЕ УЧЁБЫ",
+      "concept_id": "GSC-000051",
+      "concept_type": "INTENT",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000051"
+    },
+    {
+      "canonical": "ПОЛУЧИТЬ ДИПЛОМ",
+      "concept_id": "GSC-000052",
+      "concept_type": "INTENT",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000052"
+    },
+    {
+      "canonical": "ДАЛЬНОБОЙЩИК",
+      "concept_id": "GSC-000053",
+      "concept_type": "ROLE",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000053"
+    },
+    {
+      "canonical": "ДАЛЬНОБОЙ",
+      "concept_id": "GSC-000054",
+      "concept_type": "THEME",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000054"
+    },
+    {
+      "canonical": "ТРАНСПОРТ",
+      "concept_id": "GSC-000055",
+      "concept_type": "THEME",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000055"
+    },
+    {
+      "canonical": "ГРУЗОПЕРЕВОЗКИ",
+      "concept_id": "GSC-000056",
+      "concept_type": "THEME",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000056"
+    },
+    {
+      "canonical": "ОПИРАТЬСЯ НА ГРУЗОВИК",
+      "concept_id": "GSC-000057",
+      "concept_type": "ACTION",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000057"
+    },
+    {
+      "canonical": "ГРУЗОВИК",
+      "concept_id": "GSC-000058",
+      "concept_type": "OBJECT",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000058"
+    },
+    {
+      "canonical": "ТЯГАЧ",
+      "concept_id": "GSC-000059",
+      "concept_type": "OBJECT",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000059"
+    },
+    {
+      "canonical": "КУРТКА",
+      "concept_id": "GSC-000060",
+      "concept_type": "CLOTHING",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000060"
+    },
+    {
+      "canonical": "ДЖИНСЫ",
+      "concept_id": "GSC-000061",
+      "concept_type": "CLOTHING",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000061"
+    },
+    {
+      "canonical": "БОТИНКИ",
+      "concept_id": "GSC-000062",
+      "concept_type": "CLOTHING",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000062"
+    },
+    {
+      "canonical": "РЕЙС",
+      "concept_id": "GSC-000063",
+      "concept_type": "INTENT",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000063"
+    },
+    {
+      "canonical": "РАБОТА ВОДИТЕЛЯ",
+      "concept_id": "GSC-000064",
+      "concept_type": "INTENT",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000064"
+    },
+    {
+      "canonical": "ТРАССА",
+      "concept_id": "GSC-000065",
+      "concept_type": "INTENT",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000065"
+    },
+    {
+      "canonical": "ВОЖДЕНИЕ",
+      "concept_id": "GSC-000066",
+      "concept_type": "THEME",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000066"
+    },
+    {
+      "canonical": "ВЕСТИ ГРУЗОВИК",
+      "concept_id": "GSC-000067",
+      "concept_type": "ACTION",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000067"
+    },
+    {
+      "canonical": "ДЕРЖАТЬ РУЛЬ",
+      "concept_id": "GSC-000068",
+      "concept_type": "ACTION",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000068"
+    },
+    {
+      "canonical": "РУЛЬ",
+      "concept_id": "GSC-000069",
+      "concept_type": "OBJECT",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000069"
+    },
+    {
+      "canonical": "КАБИНА ГРУЗОВИКА",
+      "concept_id": "GSC-000070",
+      "concept_type": "OBJECT",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000070"
+    },
+    {
+      "canonical": "КЛЕТЧАТАЯ РУБАШКА",
+      "concept_id": "GSC-000071",
+      "concept_type": "CLOTHING",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000071"
+    },
+    {
+      "canonical": "ЗА РУЛЁМ",
+      "concept_id": "GSC-000072",
+      "concept_type": "INTENT",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000072"
+    },
+    {
+      "canonical": "МАРШРУТ",
+      "concept_id": "GSC-000073",
+      "concept_type": "INTENT",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000073"
+    },
+    {
+      "canonical": "ПОЕЗДКА",
+      "concept_id": "GSC-000074",
+      "concept_type": "INTENT",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000074"
+    },
+    {
+      "canonical": "ДЕЛОВОЙ НАСТРОЙ",
+      "concept_id": "GSC-000075",
+      "concept_type": "MOOD",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000075"
+    },
+    {
+      "canonical": "ПЛАНИРОВАТЬ МАРШРУТ",
+      "concept_id": "GSC-000076",
+      "concept_type": "ACTION",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000076"
+    },
+    {
+      "canonical": "ГОТОВИТЬСЯ К РЕЙСУ",
+      "concept_id": "GSC-000077",
+      "concept_type": "ACTION",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000077"
+    },
+    {
+      "canonical": "РАБОЧАЯ ОДЕЖДА",
+      "concept_id": "GSC-000078",
+      "concept_type": "CLOTHING",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000078"
+    },
+    {
+      "canonical": "ПУТЬ",
+      "concept_id": "GSC-000079",
+      "concept_type": "INTENT",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000079"
+    },
+    {
+      "canonical": "СТОЯТЬ РЯДОМ С ГРУЗОВИКОМ",
+      "concept_id": "GSC-000080",
+      "concept_type": "ACTION",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000080"
+    },
+    {
+      "canonical": "ПЕРЕВОЗКИ",
+      "concept_id": "GSC-000081",
+      "concept_type": "INTENT",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000081"
+    },
+    {
+      "canonical": "ОДЕЖДА ВОДИТЕЛЯ",
+      "concept_id": "GSC-000082",
+      "concept_type": "CLOTHING",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000082"
+    },
+    {
+      "canonical": "ВРАЧ",
+      "concept_id": "GSC-000083",
+      "concept_type": "ROLE",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000083"
+    },
+    {
+      "canonical": "МЕДИЦИНА",
+      "concept_id": "GSC-000084",
+      "concept_type": "THEME",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000084"
+    },
+    {
+      "canonical": "ПРИЁМ",
+      "concept_id": "GSC-000085",
+      "concept_type": "THEME",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000085"
+    },
+    {
+      "canonical": "ОСМОТР",
+      "concept_id": "GSC-000086",
+      "concept_type": "THEME",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000086"
+    },
+    {
+      "canonical": "ДИАГНОСТИКА",
+      "concept_id": "GSC-000087",
+      "concept_type": "THEME",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000087"
+    },
+    {
+      "canonical": "ДЕРЖАТЬ ПЛАНШЕТ",
+      "concept_id": "GSC-000088",
+      "concept_type": "ACTION",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000088"
+    },
+    {
+      "canonical": "СТЕТОСКОП",
+      "concept_id": "GSC-000089",
+      "concept_type": "OBJECT",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000089"
+    },
+    {
+      "canonical": "БЕЛЫЙ ХАЛАТ",
+      "concept_id": "GSC-000090",
+      "concept_type": "CLOTHING",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000090"
+    },
+    {
+      "canonical": "ПРИЁМ ПАЦИЕНТА",
+      "concept_id": "GSC-000091",
+      "concept_type": "INTENT",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000091"
+    },
+    {
+      "canonical": "РАБОТА ВРАЧА",
+      "concept_id": "GSC-000092",
+      "concept_type": "INTENT",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000092"
+    },
+    {
+      "canonical": "ВДУМЧИВОСТЬ",
+      "concept_id": "GSC-000093",
+      "concept_type": "MOOD",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000093"
+    },
+    {
+      "canonical": "РЕНТГЕН",
+      "concept_id": "GSC-000094",
+      "concept_type": "THEME",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000094"
+    },
+    {
+      "canonical": "ИЗУЧАТЬ СНИМОК",
+      "concept_id": "GSC-000095",
+      "concept_type": "ACTION",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000095"
+    },
+    {
+      "canonical": "РЕНТГЕНОВСКИЙ СНИМОК",
+      "concept_id": "GSC-000096",
+      "concept_type": "OBJECT",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000096"
+    },
+    {
+      "canonical": "МЕДИЦИНСКАЯ ФОРМА",
+      "concept_id": "GSC-000097",
+      "concept_type": "CLOTHING",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000097"
+    },
+    {
+      "canonical": "ХАЛАТ",
+      "concept_id": "GSC-000098",
+      "concept_type": "CLOTHING",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000098"
+    },
+    {
+      "canonical": "ШАПОЧКА",
+      "concept_id": "GSC-000099",
+      "concept_type": "CLOTHING",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000099"
+    },
+    {
+      "canonical": "ПОСТАВИТЬ ДИАГНОЗ",
+      "concept_id": "GSC-000100",
+      "concept_type": "INTENT",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000100"
+    },
+    {
+      "canonical": "АНАЛИЗ",
+      "concept_id": "GSC-000101",
+      "concept_type": "INTENT",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000101"
+    },
+    {
+      "canonical": "ПОМОЩЬ",
+      "concept_id": "GSC-000102",
+      "concept_type": "THEME",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000102"
+    },
+    {
+      "canonical": "ЛЕЧЕНИЕ",
+      "concept_id": "GSC-000103",
+      "concept_type": "THEME",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000103"
+    },
+    {
+      "canonical": "ДЕРЖАТЬ АПТЕЧКУ",
+      "concept_id": "GSC-000104",
+      "concept_type": "ACTION",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000104"
+    },
+    {
+      "canonical": "АПТЕЧКА",
+      "concept_id": "GSC-000105",
+      "concept_type": "OBJECT",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000105"
+    },
+    {
+      "canonical": "ПЕРВАЯ ПОМОЩЬ",
+      "concept_id": "GSC-000106",
+      "concept_type": "INTENT",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000106"
+    },
+    {
+      "canonical": "ЗАБОТА",
+      "concept_id": "GSC-000107",
+      "concept_type": "INTENT",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000107"
+    },
+    {
+      "canonical": "ВЕТЕРИНАР",
+      "concept_id": "GSC-000108",
+      "concept_type": "ROLE",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000108"
+    },
+    {
+      "canonical": "ВЕТЕРИНАРИЯ",
+      "concept_id": "GSC-000109",
+      "concept_type": "THEME",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000109"
+    },
+    {
+      "canonical": "ПОМОЩЬ ЖИВОТНЫМ",
+      "concept_id": "GSC-000110",
+      "concept_type": "THEME",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000110"
+    },
+    {
+      "canonical": "ОСМАТРИВАТЬ ЩЕНКА",
+      "concept_id": "GSC-000111",
+      "concept_type": "ACTION",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000111"
+    },
+    {
+      "canonical": "ЛЕЧИТЬ",
+      "concept_id": "GSC-000112",
+      "concept_type": "ACTION",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000112"
+    },
+    {
+      "canonical": "ЩЕНОК",
+      "concept_id": "GSC-000113",
+      "concept_type": "OBJECT",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000113"
+    },
+    {
+      "canonical": "УЧЁНЫЙ",
+      "concept_id": "GSC-000114",
+      "concept_type": "ROLE",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000114"
+    },
+    {
+      "canonical": "ЛАБОРАТОРИЯ",
+      "concept_id": "GSC-000115",
+      "concept_type": "THEME",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000115"
+    },
+    {
+      "canonical": "ДЕРЖАТЬ КОЛБУ",
+      "concept_id": "GSC-000116",
+      "concept_type": "ACTION",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000116"
+    },
+    {
+      "canonical": "ПРОВОДИТЬ ОПЫТ",
+      "concept_id": "GSC-000117",
+      "concept_type": "ACTION",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000117"
+    },
+    {
+      "canonical": "КОЛБА",
+      "concept_id": "GSC-000118",
+      "concept_type": "OBJECT",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000118"
+    },
+    {
+      "canonical": "РЕАКТИВ",
+      "concept_id": "GSC-000119",
+      "concept_type": "OBJECT",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000119"
+    },
+    {
+      "canonical": "ЛАБОРАТОРНЫЙ ХАЛАТ",
+      "concept_id": "GSC-000120",
+      "concept_type": "CLOTHING",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000120"
+    },
+    {
+      "canonical": "МИКРОСКОПИЯ",
+      "concept_id": "GSC-000121",
+      "concept_type": "THEME",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000121"
+    },
+    {
+      "canonical": "СМОТРЕТЬ В МИКРОСКОП",
+      "concept_id": "GSC-000122",
+      "concept_type": "ACTION",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000122"
+    },
+    {
+      "canonical": "МИКРОСКОП",
+      "concept_id": "GSC-000123",
+      "concept_type": "OBJECT",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000123"
+    },
+    {
+      "canonical": "ИЗУЧЕНИЕ",
+      "concept_id": "GSC-000124",
+      "concept_type": "INTENT",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000124"
+    },
+    {
+      "canonical": "ОЗАРЕНИЕ",
+      "concept_id": "GSC-000125",
+      "concept_type": "MOOD",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000125"
+    },
+    {
+      "canonical": "ФИЗИКА",
+      "concept_id": "GSC-000126",
+      "concept_type": "THEME",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000126"
+    },
+    {
+      "canonical": "ОТКРЫТИЯ",
+      "concept_id": "GSC-000127",
+      "concept_type": "THEME",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000127"
+    },
+    {
+      "canonical": "ДЕЛАТЬ ЗАПИСЬ",
+      "concept_id": "GSC-000128",
+      "concept_type": "ACTION",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000128"
+    },
+    {
+      "canonical": "УКАЗЫВАТЬ ВВЕРХ",
+      "concept_id": "GSC-000129",
+      "concept_type": "ACTION",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000129"
+    },
+    {
+      "canonical": "ОЧКИ НА ГОЛОВЕ",
+      "concept_id": "GSC-000130",
+      "concept_type": "CLOTHING",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000130"
+    },
+    {
+      "canonical": "МОЛЕКУЛА",
+      "concept_id": "GSC-000131",
+      "concept_type": "OBJECT",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000131"
+    },
+    {
+      "canonical": "ТЕОРИЯ",
+      "concept_id": "GSC-000132",
+      "concept_type": "INTENT",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000132"
+    },
+    {
+      "canonical": "ВОЕННЫЙ",
+      "concept_id": "GSC-000133",
+      "concept_type": "ROLE",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000133"
+    },
+    {
+      "canonical": "ГЕНЕРАЛ",
+      "concept_id": "GSC-000134",
+      "concept_type": "ROLE",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000134"
+    },
+    {
+      "canonical": "СТРОГИЙ",
+      "concept_id": "GSC-000135",
+      "concept_type": "MOOD",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000135"
+    },
+    {
+      "canonical": "ТРЕБОВАТЕЛЬНЫЙ",
+      "concept_id": "GSC-000136",
+      "concept_type": "MOOD",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000136"
+    },
+    {
+      "canonical": "ВЛАСТНЫЙ",
+      "concept_id": "GSC-000137",
+      "concept_type": "MOOD",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000137"
+    },
+    {
+      "canonical": "СОЛДАТ",
+      "concept_id": "GSC-000138",
+      "concept_type": "ROLE",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000138"
+    },
+    {
+      "canonical": "СОБРАННЫЙ",
+      "concept_id": "GSC-000139",
+      "concept_type": "MOOD",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000139"
+    },
+    {
+      "canonical": "СЕРЬЁЗНЫЙ",
+      "concept_id": "GSC-000140",
+      "concept_type": "MOOD",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000140"
+    },
+    {
+      "canonical": "УВЕРЕННЫЙ",
+      "concept_id": "GSC-000141",
+      "concept_type": "MOOD",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000141"
+    },
+    {
+      "canonical": "ПАРАДНЫЙ",
+      "concept_id": "GSC-000142",
+      "concept_type": "ROLE",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000142"
+    },
+    {
+      "canonical": "ДИСЦИПЛИНИРОВАННЫЙ",
+      "concept_id": "GSC-000143",
+      "concept_type": "MOOD",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000143"
+    },
+    {
+      "canonical": "ТОРЖЕСТВЕННЫЙ",
+      "concept_id": "GSC-000144",
+      "concept_type": "MOOD",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000144"
+    },
+    {
+      "canonical": "ТАНКИСТ",
+      "concept_id": "GSC-000145",
+      "concept_type": "ROLE",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000145"
+    },
+    {
+      "canonical": "БОДРЫЙ",
+      "concept_id": "GSC-000146",
+      "concept_type": "MOOD",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000146"
+    },
+    {
+      "canonical": "РАДИСТ",
+      "concept_id": "GSC-000147",
+      "concept_type": "ROLE",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000147"
+    },
+    {
+      "canonical": "СОСРЕДОТОЧЕННЫЙ",
+      "concept_id": "GSC-000148",
+      "concept_type": "MOOD",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000148"
+    },
+    {
+      "canonical": "РАБОЧИЙ",
+      "concept_id": "GSC-000149",
+      "concept_type": "MOOD",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000149"
+    },
+    {
+      "canonical": "ПОЖАРНЫЙ",
+      "concept_id": "GSC-000150",
+      "concept_type": "ROLE",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000150"
+    },
+    {
+      "canonical": "СПОКОЙНЫЙ",
+      "concept_id": "GSC-000151",
+      "concept_type": "MOOD",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000151"
+    },
+    {
+      "canonical": "ГОТОВЫЙ К ДЕЛУ",
+      "concept_id": "GSC-000152",
+      "concept_type": "MOOD",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000152"
+    },
+    {
+      "canonical": "ДОБРОЖЕЛАТЕЛЬНЫЙ",
+      "concept_id": "GSC-000153",
+      "concept_type": "MOOD",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000153"
+    },
+    {
+      "canonical": "КОТЁНОК",
+      "concept_id": "GSC-000154",
+      "concept_type": "SUBJECT",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000154"
+    },
+    {
+      "canonical": "СПАСАТЕЛЬ",
+      "concept_id": "GSC-000155",
+      "concept_type": "ROLE",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000155"
+    },
+    {
+      "canonical": "ЗАБОТЛИВЫЙ",
+      "concept_id": "GSC-000156",
+      "concept_type": "MOOD",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000156"
+    },
+    {
+      "canonical": "ГЕРОИЧЕСКИЙ",
+      "concept_id": "GSC-000157",
+      "concept_type": "MOOD",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000157"
+    },
+    {
+      "canonical": "ПРОФЕССИОНАЛЬНЫЙ",
+      "concept_id": "GSC-000158",
+      "concept_type": "MOOD",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000158"
+    },
+    {
+      "canonical": "ХРАБРЫЙ",
+      "concept_id": "GSC-000159",
+      "concept_type": "MOOD",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000159"
+    },
+    {
+      "canonical": "ЭНЕРГИЧНЫЙ",
+      "concept_id": "GSC-000160",
+      "concept_type": "MOOD",
+      "history": [
+        {
+          "batch_id": "RK17-0105-0132",
+          "event": "created_from_approved_semantic_card",
+          "id_preserved_on_future_rename_or_retype": true
+        }
+      ],
+      "lifecycle": "active",
+      "sense_key": "RK17-0105-0132_GSC-000160"
+    }
+  ],
+  "new_relations": [],
+  "requires_semantic_approval": [],
+  "source_bindings_added": [],
+  "untyped_search_semantics_policy": "Preserved verbatim in semantic cards and lexical Search; not converted into typed concepts without an approved field assignment."
+}

@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "devices": [
+    {
+      "device_id": "PRN-01",
+      "kind": "printer",
+      "display_name": "Epson L8050 — наклейки",
+      "model": "Epson EcoTank L8050",
+      "connection": "windows_spooler",
+      "windows_printer_name": "L8050 Series(Сеть)",
+      "roles": ["stickers"],
+      "approved_materials": ["matte_white", "glossy_white"],
+      "status": "ready",
+      "loaded_media": "matte_white"
+    },
+    {
+      "device_id": "PRN-02",
+      "kind": "printer",
+      "display_name": "Второй принтер — пример",
+      "model": "not_configured",
+      "connection": "not_configured",
+      "roles": ["stickers", "envelopes"],
+      "approved_materials": ["matte_white"],
+      "approved_profiles": ["outer_only", "internal_holes_b_plus"],
+      "status": "ready",
+      "loaded_media": null
+    },
+    {
+      "device_id": "CUT-01",
+      "kind": "cutter",
+      "display_name": "Cameo 5 Alpha",
+      "model": "Silhouette Cameo 5 Alpha",
+      "connection": "usb",
+      "roles": ["contour_cut"],
+      "approved_materials": ["matte_white", "glossy_white"],
+      "status": "requires_calibration",
+      "loaded_media": null
+    }
+  ]
+}
+

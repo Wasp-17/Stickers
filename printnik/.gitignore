@@ -1,0 +1,10 @@
+.build-deps/
+build/
+installer-payload/
+*.spec
+data/
+jobs/
+validation-jobs/
+tests/_work/
+__pycache__/
+*.pyc

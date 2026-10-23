@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "materials": [
+    {
+      "material_id": "matte_white",
+      "name": "Белая матовая самоклеящаяся бумага",
+      "print_side_instruction": "Загрузите лист печатной стороной вверх. Стороны различаются: сначала проверьте покрытие.",
+      "printer_media_type": "Epson Matte",
+      "quality": "Высокий",
+      "blade": 3,
+      "force": 10,
+      "speed": 4,
+      "passes": 1,
+      "minimum_hole_mm_b": 2.2,
+      "minimum_hole_mm_c_plus": 1.5,
+      "calibrated": true
+    },
+    {
+      "material_id": "glossy_white",
+      "name": "Белая глянцевая самоклеящаяся бумага",
+      "print_side_instruction": "Загрузите лист глянцевой печатной стороной вверх.",
+      "printer_media_type": "Фотобумага глянцевая",
+      "quality": "Стандартный",
+      "blade": 2,
+      "force": 12,
+      "speed": 4,
+      "passes": 1,
+      "minimum_hole_mm_b": 2.2,
+      "minimum_hole_mm_c_plus": 1.5,
+      "calibrated": true
+    }
+  ]
+}

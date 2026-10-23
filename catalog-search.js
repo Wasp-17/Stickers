@@ -6,6 +6,76 @@
   function normalize(value) {
     return String(value || '').normalize('NFC').trim().toLocaleUpperCase('ru').replaceAll('Ё', 'Е').replace(/\s+/g, ' ');
   }
+  function words(value) {
+    return normalize(value).match(/[A-ZА-Я0-9]+/g) || [];
+  }
+  function russianStem(word) {
+    if (!/^[А-Я]+$/.test(word) || word.length < 4) return word;
+    const endings = [
+      'ИЯМИ','ЯМИ','АМИ','ЕГО','ОГО','ЕМУ','ОМУ','ИМИ','ЫМИ','ИХ','ЫХ','АЯ','ЯЯ','ОЕ','ЕЕ','ЫЕ','ИЕ','ОЙ','ЕЙ','ИЙ','ЫЙ',
+      'ОВ','ЕВ','АМ','ЯМ','АХ','ЯХ','ОМ','ЕМ','УЮ','ЮЮ','ЫЙ','ОЮ','ЕЮ','ИЯ','ЬЯ','ИЯХ','ИЯМ','ИЮ','ЬЮ',
+      'А','Я','Ы','И','У','Ю','Е','О','Й','Ь'
+    ];
+    for (const ending of endings) {
+      if (word.endsWith(ending) && word.length - ending.length >= 3) return word.slice(0, -ending.length);
+    }
+    return word;
+  }
+  function distanceAtMostOne(left, right) {
+    if (left === right) return 0;
+    if (left.length < 4 || right.length < 4 || Math.abs(left.length - right.length) > 1) return 2;
+    let prefix = 0;
+    while (prefix < left.length && prefix < right.length && left[prefix] === right[prefix]) prefix += 1;
+    if (left.length === right.length) {
+      if (prefix + 1 < left.length && left[prefix] === right[prefix + 1] && left[prefix + 1] === right[prefix] && left.slice(prefix + 2) === right.slice(prefix + 2)) return 1;
+      return left.slice(prefix + 1) === right.slice(prefix + 1) ? 1 : 2;
+    }
+    const longer = left.length > right.length ? left : right;
+    const shorter = left.length > right.length ? right : left;
+    return longer.slice(prefix + 1) === shorter.slice(prefix) ? 1 : 2;
+  }
+  function containsTokenSequence(target, query) {
+    if (!query.length || query.length > target.length) return false;
+    for (let start = 0; start <= target.length - query.length; start += 1) {
+      if (query.every((token, index) => token === target[start + index])) return true;
+    }
+    return false;
+  }
+  function fuzzyTokenMatch(targetTokens, queryTokens) {
+    if (!queryTokens.length || queryTokens.length > targetTokens.length) return null;
+    const targetStems = targetTokens.map(russianStem);
+    const queryStems = queryTokens.map(russianStem);
+    const used = new Set();
+    let edits = 0;
+    for (const queryStem of queryStems) {
+      let selected = -1;
+      let selectedDistance = 2;
+      for (let index = 0; index < targetStems.length; index += 1) {
+        if (used.has(index)) continue;
+        const distance = distanceAtMostOne(queryStem, targetStems[index]);
+        if (distance < selectedDistance) {
+          selected = index;
+          selectedDistance = distance;
+          if (distance === 0) break;
+        }
+      }
+      if (selected < 0 || selectedDistance > 1 || edits + selectedDistance > 1) return null;
+      used.add(selected);
+      edits += selectedDistance;
+    }
+    return edits;
+  }
+  function lexicalTier(target, query, queryTokens) {
+    if (!query) return null;
+    if (target === query) return 'EXACT';
+    const targetTokens = words(target);
+    if (containsTokenSequence(targetTokens, queryTokens)) return 'WHOLE_WORD';
+    const fuzzy = fuzzyTokenMatch(targetTokens, queryTokens);
+    if (fuzzy === 0) return 'MORPHOLOGY';
+    if (fuzzy === 1) return 'TYPO';
+    if (query.length >= 4 && target.includes(query)) return 'SUBSTRING';
+    return null;
+  }
   function createEngine(catalog, dictionary) {
     const concepts = new Map(dictionary.concepts.map(concept => [concept.concept_id, concept]));
     const byCanonical = new Map();
@@ -75,6 +145,7 @@
     }
     function run(rawQuery, filters = {}) {
       const query = normalize(rawQuery);
+      const queryTokens = words(query);
       const queryIds = query ? queryConcepts(query) : [];
       const results = [];
       for (const entry of normalizedEntries) {
@@ -83,10 +154,17 @@
         if (!hardRequirementPasses(entry, query, queryIds)) continue;
         let score = 0;
         const reasons = [];
-        if (entry.normalizedName === query) { score += 1200; reasons.push('DISPLAY_NAME_EXACT'); }
-        else if (entry.normalizedName.includes(query)) { score += 850; reasons.push('DISPLAY_NAME'); }
-        if (entry.normalizedText.some(text => text === query)) { score += 700; reasons.push('DIRECT_TEXT_EXACT'); }
-        else if (entry.normalizedText.some(text => text.includes(query))) { score += 520; reasons.push('DIRECT_TEXT'); }
+        const nameTier = lexicalTier(entry.normalizedName, query, queryTokens);
+        const nameScores = { EXACT:10000, WHOLE_WORD:8500, MORPHOLOGY:7600, TYPO:6800, SUBSTRING:5600 };
+        if (nameTier) { score += nameScores[nameTier]; reasons.push(`DISPLAY_NAME_${nameTier}`); }
+        let textTier = null;
+        const tierOrder = ['EXACT','WHOLE_WORD','MORPHOLOGY','TYPO','SUBSTRING'];
+        for (const text of entry.normalizedText) {
+          const candidate = lexicalTier(text, query, queryTokens);
+          if (candidate && (!textTier || tierOrder.indexOf(candidate) < tierOrder.indexOf(textTier))) textTier = candidate;
+        }
+        const textScores = { EXACT:2200, WHOLE_WORD:1900, MORPHOLOGY:1650, TYPO:1400, SUBSTRING:1100 };
+        if (textTier) { score += textScores[textTier]; reasons.push(`DIRECT_TEXT_${textTier}`); }
         if (characterNames.get(query) === entry.character_id) { score += 900; reasons.push('CHARACTER'); }
         for (const queryId of queryIds) {
           if (entry.conceptSet.has(queryId)) { score += 600; reasons.push('DIRECT_CONCEPT'); continue; }
@@ -106,5 +184,5 @@
     }
     return { run, normalize };
   }
-  return { normalize, createEngine };
+  return { normalize, words, russianStem, distanceAtMostOne, createEngine };
 });

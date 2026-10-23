@@ -1,0 +1,1386 @@
+{
+  "batch_id": "RK17-0105-0132",
+  "records": [
+    {
+      "actions": [
+        "держать диплом",
+        "позировать"
+      ],
+      "character": "RK17 / Чеддер",
+      "character_id": "RK17",
+      "clothing": [
+        "академическая мантия"
+      ],
+      "decorations": [],
+      "display_name": "Первый диплом",
+      "image_id": "RK17-0105",
+      "intent": [
+        "окончание учёбы",
+        "успех",
+        "праздник",
+        "достижение"
+      ],
+      "mood": [
+        "радость",
+        "гордость"
+      ],
+      "objects": [
+        "диплом",
+        "академическая шапочка"
+      ],
+      "primary_subjects": [
+        "кот"
+      ],
+      "public_name": "Чеддер",
+      "role": [
+        "выпускник"
+      ],
+      "scenario": "Чеддер в образе выпускника с дипломом.",
+      "search_aliases": [],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "semantic_status": "approved",
+      "source_batch": "RK17_DIPLOMA_TRUCKER_APPROVED",
+      "source_file": "DT-01.png",
+      "source_variant": "DT-01",
+      "themes": [
+        "образование",
+        "учёба",
+        "университет",
+        "выпуск",
+        "диплом"
+      ],
+      "variant_key": "DT-01"
+    },
+    {
+      "actions": [
+        "держать диплом",
+        "праздновать"
+      ],
+      "character": "RK17 / Чеддер",
+      "character_id": "RK17",
+      "clothing": [
+        "академическая мантия"
+      ],
+      "decorations": [],
+      "display_name": "Выпускной день",
+      "image_id": "RK17-0106",
+      "intent": [
+        "выпускной",
+        "успех",
+        "праздник",
+        "достижение"
+      ],
+      "mood": [
+        "радость",
+        "довольство"
+      ],
+      "objects": [
+        "диплом",
+        "академическая шапочка"
+      ],
+      "primary_subjects": [
+        "кот"
+      ],
+      "public_name": "Чеддер",
+      "role": [
+        "выпускник"
+      ],
+      "scenario": "Чеддер празднует завершение учёбы и показывает диплом.",
+      "search_aliases": [],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "semantic_status": "approved",
+      "source_batch": "RK17_DIPLOMA_TRUCKER_APPROVED",
+      "source_file": "DT-02.png",
+      "source_variant": "DT-02",
+      "themes": [
+        "образование",
+        "выпускной",
+        "диплом"
+      ],
+      "variant_key": "DT-02"
+    },
+    {
+      "actions": [
+        "держать диплом",
+        "позировать"
+      ],
+      "character": "RK17 / Чеддер",
+      "character_id": "RK17",
+      "clothing": [
+        "академическая мантия"
+      ],
+      "decorations": [],
+      "display_name": "Гордый выпускник",
+      "image_id": "RK17-0107",
+      "intent": [
+        "успех",
+        "гордость",
+        "достижение",
+        "завершение учёбы"
+      ],
+      "mood": [
+        "уверенность",
+        "гордость"
+      ],
+      "objects": [
+        "диплом",
+        "академическая шапочка"
+      ],
+      "primary_subjects": [
+        "кот"
+      ],
+      "public_name": "Чеддер",
+      "role": [
+        "выпускник"
+      ],
+      "scenario": "Чеддер с дипломом в уверенной позе.",
+      "search_aliases": [],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "semantic_status": "approved",
+      "source_batch": "RK17_DIPLOMA_TRUCKER_APPROVED",
+      "source_file": "DT-03.png",
+      "source_variant": "DT-03",
+      "themes": [
+        "образование",
+        "выпуск",
+        "диплом"
+      ],
+      "variant_key": "DT-03"
+    },
+    {
+      "actions": [
+        "держать диплом",
+        "радоваться"
+      ],
+      "character": "RK17 / Чеддер",
+      "character_id": "RK17",
+      "clothing": [
+        "академическая мантия"
+      ],
+      "decorations": [],
+      "display_name": "Диплом получен",
+      "image_id": "RK17-0108",
+      "intent": [
+        "получить диплом",
+        "выпускной",
+        "успех",
+        "достижение"
+      ],
+      "mood": [
+        "радость",
+        "воодушевление"
+      ],
+      "objects": [
+        "диплом",
+        "академическая шапочка"
+      ],
+      "primary_subjects": [
+        "кот"
+      ],
+      "public_name": "Чеддер",
+      "role": [
+        "выпускник"
+      ],
+      "scenario": "Чеддер получил диплом и доволен результатом.",
+      "search_aliases": [],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "semantic_status": "approved",
+      "source_batch": "RK17_DIPLOMA_TRUCKER_APPROVED",
+      "source_file": "DT-04.png",
+      "source_variant": "DT-04",
+      "themes": [
+        "образование",
+        "выпуск",
+        "диплом"
+      ],
+      "variant_key": "DT-04"
+    },
+    {
+      "actions": [
+        "опираться на грузовик",
+        "позировать"
+      ],
+      "character": "RK17 / Чеддер",
+      "character_id": "RK17",
+      "clothing": [
+        "куртка",
+        "джинсы",
+        "ботинки",
+        "кепка"
+      ],
+      "decorations": [],
+      "display_name": "Король трассы",
+      "image_id": "RK17-0109",
+      "intent": [
+        "рейс",
+        "работа водителя",
+        "трасса",
+        "путешествие"
+      ],
+      "mood": [
+        "уверенность",
+        "спокойствие"
+      ],
+      "objects": [
+        "грузовик",
+        "тягач"
+      ],
+      "primary_subjects": [
+        "кот"
+      ],
+      "public_name": "Чеддер",
+      "role": [
+        "дальнобойщик"
+      ],
+      "scenario": "Чеддер в одежде дальнобойщика опирается на красный тягач.",
+      "search_aliases": [],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "semantic_status": "approved",
+      "source_batch": "RK17_DIPLOMA_TRUCKER_APPROVED",
+      "source_file": "DT-06.png",
+      "source_variant": "DT-06",
+      "themes": [
+        "дальнобой",
+        "дорога",
+        "транспорт",
+        "грузоперевозки"
+      ],
+      "variant_key": "DT-06"
+    },
+    {
+      "actions": [
+        "вести грузовик",
+        "держать руль"
+      ],
+      "character": "RK17 / Чеддер",
+      "character_id": "RK17",
+      "clothing": [
+        "клетчатая рубашка",
+        "джинсы"
+      ],
+      "decorations": [],
+      "display_name": "Держу курс",
+      "image_id": "RK17-0110",
+      "intent": [
+        "за рулём",
+        "рейс",
+        "маршрут",
+        "поездка"
+      ],
+      "mood": [
+        "сосредоточенность",
+        "спокойствие"
+      ],
+      "objects": [
+        "руль",
+        "кабина грузовика",
+        "грузовик"
+      ],
+      "primary_subjects": [
+        "кот"
+      ],
+      "public_name": "Чеддер",
+      "role": [
+        "дальнобойщик"
+      ],
+      "scenario": "Чеддер в одежде водителя сидит за рулём грузовика и ведёт машину.",
+      "search_aliases": [],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "semantic_status": "approved",
+      "source_batch": "RK17_DIPLOMA_TRUCKER_APPROVED",
+      "source_file": "DT-07.png",
+      "source_variant": "DT-07",
+      "themes": [
+        "дальнобой",
+        "дорога",
+        "транспорт",
+        "вождение"
+      ],
+      "variant_key": "DT-07"
+    },
+    {
+      "actions": [
+        "планировать маршрут",
+        "готовиться к рейсу"
+      ],
+      "character": "RK17 / Чеддер",
+      "character_id": "RK17",
+      "clothing": [
+        "рабочая одежда",
+        "кепка"
+      ],
+      "decorations": [],
+      "display_name": "Маршрут готов",
+      "image_id": "RK17-0111",
+      "intent": [
+        "рейс",
+        "маршрут",
+        "путь",
+        "работа водителя"
+      ],
+      "mood": [
+        "уверенность",
+        "деловой настрой"
+      ],
+      "objects": [
+        "грузовик",
+        "маршрут"
+      ],
+      "primary_subjects": [
+        "кот"
+      ],
+      "public_name": "Чеддер",
+      "role": [
+        "дальнобойщик"
+      ],
+      "scenario": "Чеддер как водитель-дальнобойщик готовится к маршруту рядом с грузовиком.",
+      "search_aliases": [],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "semantic_status": "approved",
+      "source_batch": "RK17_DIPLOMA_TRUCKER_APPROVED",
+      "source_file": "DT-08.png",
+      "source_variant": "DT-08",
+      "themes": [
+        "дальнобой",
+        "маршрут",
+        "дорога",
+        "грузоперевозки"
+      ],
+      "variant_key": "DT-08"
+    },
+    {
+      "actions": [
+        "стоять рядом с грузовиком",
+        "позировать"
+      ],
+      "character": "RK17 / Чеддер",
+      "character_id": "RK17",
+      "clothing": [
+        "рабочая одежда",
+        "кепка"
+      ],
+      "decorations": [],
+      "display_name": "Большая дорога",
+      "image_id": "RK17-0112",
+      "intent": [
+        "трасса",
+        "работа водителя",
+        "перевозки",
+        "путешествие"
+      ],
+      "mood": [
+        "уверенность"
+      ],
+      "objects": [
+        "грузовик",
+        "тягач"
+      ],
+      "primary_subjects": [
+        "кот"
+      ],
+      "public_name": "Чеддер",
+      "role": [
+        "дальнобойщик"
+      ],
+      "scenario": "Чеддер рядом с большим грузовиком в образе дорожного профессионала.",
+      "search_aliases": [],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "semantic_status": "approved",
+      "source_batch": "RK17_DIPLOMA_TRUCKER_APPROVED",
+      "source_file": "DT-09.png",
+      "source_variant": "DT-09",
+      "themes": [
+        "дальнобой",
+        "дорога",
+        "транспорт",
+        "грузоперевозки"
+      ],
+      "variant_key": "DT-09"
+    },
+    {
+      "actions": [
+        "вести грузовик",
+        "держать руль"
+      ],
+      "character": "RK17 / Чеддер",
+      "character_id": "RK17",
+      "clothing": [
+        "одежда водителя"
+      ],
+      "decorations": [],
+      "display_name": "За рулём",
+      "image_id": "RK17-0113",
+      "intent": [
+        "за рулём",
+        "рейс",
+        "дорога",
+        "маршрут"
+      ],
+      "mood": [
+        "спокойствие",
+        "сосредоточенность"
+      ],
+      "objects": [
+        "руль",
+        "кабина грузовика",
+        "грузовик"
+      ],
+      "primary_subjects": [
+        "кот"
+      ],
+      "public_name": "Чеддер",
+      "role": [
+        "дальнобойщик"
+      ],
+      "scenario": "Чеддер в кабине грузовика ведёт машину.",
+      "search_aliases": [],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "semantic_status": "approved",
+      "source_batch": "RK17_DIPLOMA_TRUCKER_APPROVED",
+      "source_file": "DT-10.png",
+      "source_variant": "DT-10",
+      "themes": [
+        "дальнобой",
+        "вождение",
+        "дорога",
+        "транспорт"
+      ],
+      "variant_key": "DT-10"
+    },
+    {
+      "actions": [
+        "держать планшет",
+        "позировать"
+      ],
+      "character": "RK17 / Чеддер",
+      "character_id": "RK17",
+      "clothing": [
+        "белый халат"
+      ],
+      "decorations": [],
+      "display_name": "На приёме",
+      "image_id": "RK17-0114",
+      "intent": [
+        "приём пациента",
+        "осмотр",
+        "работа врача"
+      ],
+      "mood": [
+        "спокойствие",
+        "деловой настрой"
+      ],
+      "objects": [
+        "планшет",
+        "стетоскоп"
+      ],
+      "primary_subjects": [
+        "кот"
+      ],
+      "public_name": "Чеддер",
+      "role": [
+        "врач"
+      ],
+      "scenario": "Чеддер в образе врача с планшетом и стетоскопом готов к приёму.",
+      "search_aliases": [],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "semantic_status": "approved",
+      "source_batch": "RK17_DOCTOR_SCIENTIST_APPROVED",
+      "source_file": "MS-01.png",
+      "source_variant": "MS-01",
+      "themes": [
+        "медицина",
+        "приём",
+        "осмотр",
+        "диагностика"
+      ],
+      "variant_key": "MS-01"
+    },
+    {
+      "actions": [
+        "изучать снимок",
+        "анализировать"
+      ],
+      "character": "RK17 / Чеддер",
+      "character_id": "RK17",
+      "clothing": [
+        "медицинская форма",
+        "халат",
+        "шапочка"
+      ],
+      "decorations": [],
+      "display_name": "Точный диагноз",
+      "image_id": "RK17-0115",
+      "intent": [
+        "поставить диагноз",
+        "осмотр",
+        "анализ"
+      ],
+      "mood": [
+        "сосредоточенность",
+        "вдумчивость"
+      ],
+      "objects": [
+        "рентгеновский снимок",
+        "стетоскоп"
+      ],
+      "primary_subjects": [
+        "кот"
+      ],
+      "public_name": "Чеддер",
+      "role": [
+        "врач"
+      ],
+      "scenario": "Чеддер внимательно изучает рентгеновский снимок как врач-диагност.",
+      "search_aliases": [],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "semantic_status": "approved",
+      "source_batch": "RK17_DOCTOR_SCIENTIST_APPROVED",
+      "source_file": "MS-02.png",
+      "source_variant": "MS-02",
+      "themes": [
+        "медицина",
+        "диагностика",
+        "рентген",
+        "осмотр"
+      ],
+      "variant_key": "MS-02"
+    },
+    {
+      "actions": [
+        "держать аптечку",
+        "позировать"
+      ],
+      "character": "RK17 / Чеддер",
+      "character_id": "RK17",
+      "clothing": [
+        "белый халат"
+      ],
+      "decorations": [],
+      "display_name": "Первая помощь",
+      "image_id": "RK17-0116",
+      "intent": [
+        "первая помощь",
+        "лечение",
+        "забота"
+      ],
+      "mood": [
+        "бодрость",
+        "доброжелательность"
+      ],
+      "objects": [
+        "аптечка",
+        "стетоскоп"
+      ],
+      "primary_subjects": [
+        "кот"
+      ],
+      "public_name": "Чеддер",
+      "role": [
+        "врач"
+      ],
+      "scenario": "Чеддер как доктор с аптечкой готов оказать первую помощь.",
+      "search_aliases": [],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "semantic_status": "approved",
+      "source_batch": "RK17_DOCTOR_SCIENTIST_APPROVED",
+      "source_file": "MS-03.png",
+      "source_variant": "MS-03",
+      "themes": [
+        "медицина",
+        "помощь",
+        "лечение"
+      ],
+      "variant_key": "MS-03"
+    },
+    {
+      "actions": [
+        "осматривать щенка",
+        "лечить"
+      ],
+      "character": "RK17 / Чеддер",
+      "character_id": "RK17",
+      "clothing": [
+        "белый халат"
+      ],
+      "decorations": [],
+      "display_name": "Добрый ветеринар",
+      "image_id": "RK17-0117",
+      "intent": [
+        "помощь животным",
+        "забота",
+        "лечение"
+      ],
+      "mood": [
+        "забота",
+        "доброжелательность"
+      ],
+      "objects": [
+        "щенок",
+        "стетоскоп"
+      ],
+      "primary_subjects": [
+        "кот"
+      ],
+      "public_name": "Чеддер",
+      "role": [
+        "ветеринар"
+      ],
+      "scenario": "Чеддер в роли ветеринара осматривает щенка.",
+      "search_aliases": [],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "semantic_status": "approved",
+      "source_batch": "RK17_DOCTOR_SCIENTIST_APPROVED",
+      "source_file": "MS-05.png",
+      "source_variant": "MS-05",
+      "themes": [
+        "ветеринария",
+        "помощь животным",
+        "лечение"
+      ],
+      "variant_key": "MS-05"
+    },
+    {
+      "actions": [
+        "держать колбу",
+        "проводить опыт"
+      ],
+      "character": "RK17 / Чеддер",
+      "character_id": "RK17",
+      "clothing": [
+        "лабораторный халат"
+      ],
+      "decorations": [],
+      "display_name": "Светлая формула",
+      "image_id": "RK17-0118",
+      "intent": [
+        "открытие",
+        "исследование",
+        "эксперимент"
+      ],
+      "mood": [
+        "вдохновение",
+        "интерес"
+      ],
+      "objects": [
+        "колба",
+        "реактив"
+      ],
+      "primary_subjects": [
+        "кот"
+      ],
+      "public_name": "Чеддер",
+      "role": [
+        "учёный"
+      ],
+      "scenario": "Чеддер-учёный держит сияющую колбу с результатом удачного опыта.",
+      "search_aliases": [],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "semantic_status": "approved",
+      "source_batch": "RK17_DOCTOR_SCIENTIST_APPROVED",
+      "source_file": "MS-06.png",
+      "source_variant": "MS-06",
+      "themes": [
+        "наука",
+        "лаборатория",
+        "химия"
+      ],
+      "variant_key": "MS-06"
+    },
+    {
+      "actions": [
+        "проводить опыт",
+        "держать колбу"
+      ],
+      "character": "RK17 / Чеддер",
+      "character_id": "RK17",
+      "clothing": [
+        "лабораторный халат"
+      ],
+      "decorations": [],
+      "display_name": "Удачный опыт",
+      "image_id": "RK17-0119",
+      "intent": [
+        "эксперимент",
+        "исследование",
+        "открытие"
+      ],
+      "mood": [
+        "увлечённость",
+        "радость"
+      ],
+      "objects": [
+        "колба",
+        "реактив"
+      ],
+      "primary_subjects": [
+        "кот"
+      ],
+      "public_name": "Чеддер",
+      "role": [
+        "учёный"
+      ],
+      "scenario": "Чеддер увлечённо проводит химический эксперимент с пузырящейся колбой.",
+      "search_aliases": [],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "semantic_status": "approved",
+      "source_batch": "RK17_DOCTOR_SCIENTIST_APPROVED",
+      "source_file": "MS-07.png",
+      "source_variant": "MS-07",
+      "themes": [
+        "наука",
+        "химия",
+        "лаборатория"
+      ],
+      "variant_key": "MS-07"
+    },
+    {
+      "actions": [
+        "смотреть в микроскоп",
+        "исследовать"
+      ],
+      "character": "RK17 / Чеддер",
+      "character_id": "RK17",
+      "clothing": [
+        "лабораторный халат"
+      ],
+      "decorations": [],
+      "display_name": "Мир под микроскопом",
+      "image_id": "RK17-0120",
+      "intent": [
+        "исследование",
+        "изучение",
+        "анализ"
+      ],
+      "mood": [
+        "сосредоточенность"
+      ],
+      "objects": [
+        "микроскоп"
+      ],
+      "primary_subjects": [
+        "кот"
+      ],
+      "public_name": "Чеддер",
+      "role": [
+        "учёный"
+      ],
+      "scenario": "Чеддер изучает образец через микроскоп.",
+      "search_aliases": [],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "semantic_status": "approved",
+      "source_batch": "RK17_DOCTOR_SCIENTIST_APPROVED",
+      "source_file": "MS-08.png",
+      "source_variant": "MS-08",
+      "themes": [
+        "наука",
+        "лаборатория",
+        "микроскопия"
+      ],
+      "variant_key": "MS-08"
+    },
+    {
+      "actions": [
+        "держать колбу",
+        "делать запись",
+        "указывать вверх"
+      ],
+      "character": "RK17 / Чеддер",
+      "character_id": "RK17",
+      "clothing": [
+        "лабораторный халат",
+        "очки на голове"
+      ],
+      "decorations": [],
+      "display_name": "Эврика!",
+      "image_id": "RK17-0121",
+      "intent": [
+        "озарение",
+        "идея",
+        "открытие",
+        "вдохновение"
+      ],
+      "mood": [
+        "восторг",
+        "озарение"
+      ],
+      "objects": [
+        "колба",
+        "блокнот",
+        "книги"
+      ],
+      "primary_subjects": [
+        "кот"
+      ],
+      "public_name": "Чеддер",
+      "role": [
+        "учёный"
+      ],
+      "scenario": "Чеддер в образе учёного переживает момент озарения, сидя на стопке книг и держа колбу и блокнот.",
+      "search_aliases": [],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "semantic_status": "approved",
+      "source_batch": "RK17_DOCTOR_SCIENTIST_APPROVED",
+      "source_file": "MS-09.png",
+      "source_variant": "MS-09",
+      "themes": [
+        "наука",
+        "физика",
+        "химия",
+        "технологии",
+        "открытия"
+      ],
+      "variant_key": "MS-09"
+    },
+    {
+      "actions": [
+        "изучать",
+        "размышлять"
+      ],
+      "character": "RK17 / Чеддер",
+      "character_id": "RK17",
+      "clothing": [
+        "лабораторный халат"
+      ],
+      "decorations": [],
+      "display_name": "Формула знаний",
+      "image_id": "RK17-0122",
+      "intent": [
+        "знания",
+        "исследование",
+        "теория"
+      ],
+      "mood": [
+        "вдумчивость"
+      ],
+      "objects": [
+        "молекула",
+        "книги"
+      ],
+      "primary_subjects": [
+        "кот"
+      ],
+      "public_name": "Чеддер",
+      "role": [
+        "учёный"
+      ],
+      "scenario": "Чеддер размышляет над научной задачей рядом с молекулой и книгами.",
+      "search_aliases": [],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "semantic_status": "approved",
+      "source_batch": "RK17_DOCTOR_SCIENTIST_APPROVED",
+      "source_file": "MS-10.png",
+      "source_variant": "MS-10",
+      "themes": [
+        "наука",
+        "знания",
+        "обучение"
+      ],
+      "variant_key": "MS-10"
+    },
+    {
+      "actions": [],
+      "character": "RK17 / Чеддер",
+      "character_id": "RK17",
+      "character_name": "Чеддер",
+      "clothing": [],
+      "decorations": [],
+      "display_name": "Генерал",
+      "image_id": "RK17-0123",
+      "intent": [],
+      "mood": [
+        "строгий",
+        "требовательный",
+        "властный"
+      ],
+      "objects": [],
+      "primary_subjects": [
+        "кот"
+      ],
+      "public_name": "Чеддер",
+      "role": [
+        "военный",
+        "генерал"
+      ],
+      "scenario": "Чеддер в образе генерала указывает вперёд.",
+      "search_aliases": [],
+      "search_semantics": [
+        "генерал",
+        "военный",
+        "командир",
+        "армия",
+        "офицер",
+        "приказ",
+        "требовательный",
+        "строгий",
+        "лидер",
+        "власть"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "semantic_status": "approved",
+      "source_batch": "RK17_WAR_FIRE_APPROVED",
+      "source_file": "WF-01.png",
+      "source_variant": "WF-01",
+      "themes": []
+    },
+    {
+      "actions": [],
+      "character": "RK17 / Чеддер",
+      "character_id": "RK17",
+      "character_name": "Чеддер",
+      "clothing": [],
+      "decorations": [],
+      "display_name": "На задании",
+      "image_id": "RK17-0124",
+      "intent": [],
+      "mood": [
+        "собранный",
+        "серьёзный",
+        "уверенный"
+      ],
+      "objects": [],
+      "primary_subjects": [
+        "кот"
+      ],
+      "public_name": "Чеддер",
+      "role": [
+        "военный",
+        "солдат"
+      ],
+      "scenario": "Чеддер в тактической форме.",
+      "search_aliases": [],
+      "search_semantics": [
+        "солдат",
+        "военный",
+        "армия",
+        "служба",
+        "форма",
+        "тактика",
+        "задание",
+        "дисциплина",
+        "уверенность"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "semantic_status": "approved",
+      "source_batch": "RK17_WAR_FIRE_APPROVED",
+      "source_file": "WF-02.png",
+      "source_variant": "WF-02",
+      "themes": []
+    },
+    {
+      "actions": [],
+      "character": "RK17 / Чеддер",
+      "character_id": "RK17",
+      "character_name": "Чеддер",
+      "clothing": [],
+      "decorations": [],
+      "display_name": "Парадный шаг",
+      "image_id": "RK17-0125",
+      "intent": [],
+      "mood": [
+        "дисциплинированный",
+        "торжественный"
+      ],
+      "objects": [],
+      "primary_subjects": [
+        "кот"
+      ],
+      "public_name": "Чеддер",
+      "role": [
+        "военный",
+        "парадный"
+      ],
+      "scenario": "Чеддер марширует в парадной форме.",
+      "search_aliases": [],
+      "search_semantics": [
+        "марш",
+        "парад",
+        "военный",
+        "строевой шаг",
+        "форма",
+        "дисциплина",
+        "торжество",
+        "служба"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "semantic_status": "approved",
+      "source_batch": "RK17_WAR_FIRE_APPROVED",
+      "source_file": "WF-03.png",
+      "source_variant": "WF-03",
+      "themes": []
+    },
+    {
+      "actions": [],
+      "character": "RK17 / Чеддер",
+      "character_id": "RK17",
+      "character_name": "Чеддер",
+      "clothing": [],
+      "decorations": [],
+      "display_name": "Танкист",
+      "image_id": "RK17-0126",
+      "intent": [],
+      "mood": [
+        "бодрый",
+        "уверенный"
+      ],
+      "objects": [],
+      "primary_subjects": [
+        "кот"
+      ],
+      "public_name": "Чеддер",
+      "role": [
+        "военный",
+        "танкист"
+      ],
+      "scenario": "Чеддер-танкист показывает большой палец.",
+      "search_aliases": [],
+      "search_semantics": [
+        "танкист",
+        "военный",
+        "армия",
+        "бронетехника",
+        "экипаж",
+        "служба",
+        "победа",
+        "уверенность"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "semantic_status": "approved",
+      "source_batch": "RK17_WAR_FIRE_APPROVED",
+      "source_file": "WF-04.png",
+      "source_variant": "WF-04",
+      "themes": []
+    },
+    {
+      "actions": [],
+      "character": "RK17 / Чеддер",
+      "character_id": "RK17",
+      "character_name": "Чеддер",
+      "clothing": [],
+      "decorations": [],
+      "display_name": "На связи",
+      "image_id": "RK17-0127",
+      "intent": [],
+      "mood": [
+        "сосредоточенный",
+        "рабочий"
+      ],
+      "objects": [],
+      "primary_subjects": [
+        "кот"
+      ],
+      "public_name": "Чеддер",
+      "role": [
+        "военный",
+        "радист"
+      ],
+      "scenario": "Чеддер-радист в снаряжении.",
+      "search_aliases": [],
+      "search_semantics": [
+        "радист",
+        "связь",
+        "рация",
+        "военный",
+        "армия",
+        "связь на службе",
+        "командование",
+        "тактика"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "semantic_status": "approved",
+      "source_batch": "RK17_WAR_FIRE_APPROVED",
+      "source_file": "WF-05.png",
+      "source_variant": "WF-05",
+      "themes": []
+    },
+    {
+      "actions": [],
+      "character": "RK17 / Чеддер",
+      "character_id": "RK17",
+      "character_name": "Чеддер",
+      "clothing": [],
+      "decorations": [],
+      "display_name": "Пожарный",
+      "image_id": "RK17-0128",
+      "intent": [],
+      "mood": [
+        "спокойный",
+        "готовый к делу"
+      ],
+      "objects": [],
+      "primary_subjects": [
+        "кот"
+      ],
+      "public_name": "Чеддер",
+      "role": [
+        "пожарный"
+      ],
+      "scenario": "Чеддер в пожарной экипировке.",
+      "search_aliases": [],
+      "search_semantics": [
+        "пожарный",
+        "спасатель",
+        "огонь",
+        "экипировка",
+        "каска",
+        "служба спасения",
+        "безопасность"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "semantic_status": "approved",
+      "source_batch": "RK17_WAR_FIRE_APPROVED",
+      "source_file": "WF-06.png",
+      "source_variant": "WF-06",
+      "themes": []
+    },
+    {
+      "actions": [],
+      "character": "RK17 / Чеддер",
+      "character_id": "RK17",
+      "character_name": "Чеддер",
+      "clothing": [],
+      "decorations": [],
+      "display_name": "Огнетушитель",
+      "image_id": "RK17-0129",
+      "intent": [],
+      "mood": [
+        "доброжелательный",
+        "уверенный"
+      ],
+      "objects": [],
+      "primary_subjects": [
+        "кот"
+      ],
+      "public_name": "Чеддер",
+      "role": [
+        "пожарный"
+      ],
+      "scenario": "Чеддер-пожарный с огнетушителем.",
+      "search_aliases": [],
+      "search_semantics": [
+        "пожарный",
+        "огнетушитель",
+        "спасатель",
+        "безопасность",
+        "тушение",
+        "помощь",
+        "служба"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "semantic_status": "approved",
+      "source_batch": "RK17_WAR_FIRE_APPROVED",
+      "source_file": "WF-07.png",
+      "source_variant": "WF-07",
+      "themes": []
+    },
+    {
+      "actions": [],
+      "character": "RK17 / Чеддер",
+      "character_id": "RK17",
+      "character_name": "Чеддер",
+      "clothing": [],
+      "decorations": [],
+      "display_name": "Спасение",
+      "image_id": "RK17-0130",
+      "intent": [],
+      "mood": [
+        "заботливый",
+        "героический"
+      ],
+      "objects": [],
+      "primary_subjects": [
+        "кот"
+      ],
+      "public_name": "Чеддер",
+      "role": [
+        "пожарный",
+        "спасатель"
+      ],
+      "scenario": "Чеддер спасает котёнка.",
+      "search_aliases": [],
+      "search_semantics": [
+        "спасение",
+        "пожарный",
+        "спасатель",
+        "котёнок",
+        "помощь",
+        "забота",
+        "герой",
+        "спас жизнь"
+      ],
+      "secondary_subjects": [
+        "котёнок"
+      ],
+      "sections": [
+        "КОТЫ"
+      ],
+      "semantic_status": "approved",
+      "source_batch": "RK17_WAR_FIRE_APPROVED",
+      "source_file": "WF-08.png",
+      "source_variant": "WF-08",
+      "themes": []
+    },
+    {
+      "actions": [],
+      "character": "RK17 / Чеддер",
+      "character_id": "RK17",
+      "character_name": "Чеддер",
+      "clothing": [],
+      "decorations": [],
+      "display_name": "Спасатель",
+      "image_id": "RK17-0131",
+      "intent": [],
+      "mood": [
+        "собранный",
+        "профессиональный"
+      ],
+      "objects": [],
+      "primary_subjects": [
+        "кот"
+      ],
+      "public_name": "Чеддер",
+      "role": [
+        "пожарный",
+        "спасатель"
+      ],
+      "scenario": "Чеддер в полной экипировке спасателя.",
+      "search_aliases": [],
+      "search_semantics": [
+        "спасатель",
+        "пожарный",
+        "экипировка",
+        "каска",
+        "служба спасения",
+        "готовность",
+        "безопасность"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "semantic_status": "approved",
+      "source_batch": "RK17_WAR_FIRE_APPROVED",
+      "source_file": "WF-09.png",
+      "source_variant": "WF-09",
+      "themes": []
+    },
+    {
+      "actions": [],
+      "character": "RK17 / Чеддер",
+      "character_id": "RK17",
+      "character_name": "Чеддер",
+      "clothing": [],
+      "decorations": [],
+      "display_name": "Тушение",
+      "image_id": "RK17-0132",
+      "intent": [],
+      "mood": [
+        "храбрый",
+        "энергичный"
+      ],
+      "objects": [],
+      "primary_subjects": [
+        "кот"
+      ],
+      "public_name": "Чеддер",
+      "role": [
+        "пожарный"
+      ],
+      "scenario": "Чеддер тушит огонь мощной струёй воды.",
+      "search_aliases": [],
+      "search_semantics": [
+        "пожарный",
+        "вода",
+        "тушение пожара",
+        "спасатель",
+        "рукав",
+        "пожарная служба",
+        "борьба с огнём"
+      ],
+      "secondary_subjects": [],
+      "sections": [
+        "КОТЫ"
+      ],
+      "semantic_status": "approved",
+      "source_batch": "RK17_WAR_FIRE_APPROVED",
+      "source_file": "WF-10.png",
+      "source_variant": "WF-10",
+      "themes": []
+    }
+  ],
+  "status": "approved"
+}

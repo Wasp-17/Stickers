@@ -1,0 +1,1423 @@
+{
+  "schema_version": "rk17_catalog_asset_map_1",
+  "scope": {
+    "first_id": "RK17-0001",
+    "last_id": "RK17-0056",
+    "count": 56
+  },
+  "source_archive": "C:\\Users\\PC\\.codex\\.chatgpt-projects\\g-p-6a97e197cf408191b11487cfed12954a\\RK17_catalog_migration_source.zip",
+  "source_file_sha256": {
+    "image_registry.json": "745dcab9df4ba05c8a57d61461acea4155f5816790e5a87776b5de9c90f9361a",
+    "catalog_index.json": "baeab2da9c80288d3abcacd4f5697790d7d76fc2a5395048ff4a2f0ab41e71c1",
+    "catalog_index.csv": "48088e3064aab63d0e20723b94252bd416eb2ee6f68934ebfc5029b997b6a5a8"
+  },
+  "derivation_rule": "Only exact image_id, filenames, paths and SHA-256 values from image_registry.json, catalog_index.json and catalog_index.csv were used. No semantic or visual matching.",
+  "cross_source_conflicts": [],
+  "entries": [
+    {
+      "image_id": "RK17-0001",
+      "display_name": "Космический мечтатель",
+      "web": {
+        "file": "RK17_astronaut_dreamer_001_catalog.webp",
+        "source_path": "output/RK17_batch_08_space/RK17_astronaut_dreamer_001_catalog.webp",
+        "archive_path": "WEB/RK17-0001/RK17_astronaut_dreamer_001_catalog.webp",
+        "sha256": "1ea44fd991932ad6a395682add34adcc258bb39b80edf8a3fdbec96a2d5d78fc",
+        "hash_verified_in_source_archive": true
+      },
+      "master": {
+        "file": "RK17_astronaut_dreamer_001_MASTER.png",
+        "source_path": "output/RK17_batch_08_space/RK17_astronaut_dreamer_001_MASTER.png",
+        "sha256": "69f631c38ce26790adc40b267cec95932c63355c511b2b7b094d6b6a78128c08",
+        "matching_physical_copies": [
+          {
+            "container": "C:\\Users\\PC\\Desktop\\Для будущего канала\\Проект Наклейки\\После Work\\RK17_повор, испуганный, космос.zip",
+            "entry": "RK17_astronaut_dreamer_001_MASTER.png",
+            "sha256": "69f631c38ce26790adc40b267cec95932c63355c511b2b7b094d6b6a78128c08"
+          }
+        ]
+      },
+      "metadata_file": "output/RK17_batch_08_space/manifest.json",
+      "status": "approved_ready"
+    },
+    {
+      "image_id": "RK17-0002",
+      "display_name": "Невесомость",
+      "web": {
+        "file": "RK17_astronaut_floating_001_catalog.webp",
+        "source_path": "output/RK17_batch_08_space/RK17_astronaut_floating_001_catalog.webp",
+        "archive_path": "WEB/RK17-0002/RK17_astronaut_floating_001_catalog.webp",
+        "sha256": "9a7425f136a0288d8914f0a8a9678191342d7edf9dedf22fd20d25d8be87db42",
+        "hash_verified_in_source_archive": true
+      },
+      "master": {
+        "file": "RK17_astronaut_floating_001_MASTER.png",
+        "source_path": "output/RK17_batch_08_space/RK17_astronaut_floating_001_MASTER.png",
+        "sha256": "bbeeeaf2ca14426efd6b7cc1e7d6fca411f5f254254d7542ea7731abf26bc5e6",
+        "matching_physical_copies": [
+          {
+            "container": "C:\\Users\\PC\\Desktop\\Для будущего канала\\Проект Наклейки\\После Work\\RK17_повор, испуганный, космос.zip",
+            "entry": "RK17_astronaut_floating_001_MASTER.png",
+            "sha256": "bbeeeaf2ca14426efd6b7cc1e7d6fca411f5f254254d7542ea7731abf26bc5e6"
+          }
+        ]
+      },
+      "metadata_file": "output/RK17_batch_08_space/manifest.json",
+      "status": "approved_ready"
+    },
+    {
+      "image_id": "RK17-0003",
+      "display_name": "Созерцатель",
+      "web": {
+        "file": "RK17_astronaut_porthole_001_catalog.webp",
+        "source_path": "output/RK17_batch_08_space/RK17_astronaut_porthole_001_catalog.webp",
+        "archive_path": "WEB/RK17-0003/RK17_astronaut_porthole_001_catalog.webp",
+        "sha256": "350a37e175a8bb256d96fd8447904f483748fb14f1c0ab4027bbca6f0592c654",
+        "hash_verified_in_source_archive": true
+      },
+      "master": {
+        "file": "RK17_astronaut_porthole_001_MASTER.png",
+        "source_path": "output/RK17_batch_08_space/RK17_astronaut_porthole_001_MASTER.png",
+        "sha256": "c1f6ee99ac0a586841588200f15ddd62fd27e5c4e0be8661d2742d1646295c3d",
+        "matching_physical_copies": [
+          {
+            "container": "C:\\Users\\PC\\Desktop\\Для будущего канала\\Проект Наклейки\\После Work\\RK17_повор, испуганный, космос.zip",
+            "entry": "RK17_astronaut_porthole_001_MASTER.png",
+            "sha256": "c1f6ee99ac0a586841588200f15ddd62fd27e5c4e0be8661d2742d1646295c3d"
+          }
+        ]
+      },
+      "metadata_file": "output/RK17_batch_08_space/manifest.json",
+      "status": "approved_ready"
+    },
+    {
+      "image_id": "RK17-0004",
+      "display_name": "Предвкушение",
+      "web": {
+        "file": "RK17_chef_slicing_salmon_001_catalog.webp",
+        "source_path": "output/RK17_batch_08_space/RK17_chef_slicing_salmon_001_catalog.webp",
+        "archive_path": "WEB/RK17-0004/RK17_chef_slicing_salmon_001_catalog.webp",
+        "sha256": "221009197270177bc195b71ffab9738fb08bde8f4a3c949552cfdf10d29ac5f0",
+        "hash_verified_in_source_archive": true
+      },
+      "master": {
+        "file": "RK17_chef_slicing_salmon_001_MASTER.png",
+        "source_path": "output/RK17_batch_08_space/RK17_chef_slicing_salmon_001_MASTER.png",
+        "sha256": "83fa586dbb2c7db9f8c67156780e0a3e3c2975149c688ed747c17561dd8dd33d",
+        "matching_physical_copies": [
+          {
+            "container": "C:\\Users\\PC\\Desktop\\Для будущего канала\\Проект Наклейки\\После Work\\RK17_повор, испуганный, космос.zip",
+            "entry": "RK17_chef_slicing_salmon_001_MASTER.png",
+            "sha256": "83fa586dbb2c7db9f8c67156780e0a3e3c2975149c688ed747c17561dd8dd33d"
+          }
+        ]
+      },
+      "metadata_file": "output/RK17_batch_08_space/manifest.json",
+      "status": "approved_ready"
+    },
+    {
+      "image_id": "RK17-0005",
+      "display_name": "Кулинарное творчество",
+      "web": {
+        "file": "RK17_chef_whole_fish_001_catalog.webp",
+        "source_path": "output/RK17_batch_08_space/RK17_chef_whole_fish_001_catalog.webp",
+        "archive_path": "WEB/RK17-0005/RK17_chef_whole_fish_001_catalog.webp",
+        "sha256": "fa5503164af65ca31444cfdc49623671cafc03554ddb6cdcb62793cc2f55149c",
+        "hash_verified_in_source_archive": true
+      },
+      "master": {
+        "file": "RK17_chef_whole_fish_001_MASTER.png",
+        "source_path": "output/RK17_batch_08_space/RK17_chef_whole_fish_001_MASTER.png",
+        "sha256": "0d77e8da17834ec44507733995862ed7d9b7b744c15f49596324dad13928a086",
+        "matching_physical_copies": [
+          {
+            "container": "C:\\Users\\PC\\Desktop\\Для будущего канала\\Проект Наклейки\\После Work\\RK17_повор, испуганный, космос.zip",
+            "entry": "RK17_chef_whole_fish_001_MASTER.png",
+            "sha256": "0d77e8da17834ec44507733995862ed7d9b7b744c15f49596324dad13928a086"
+          }
+        ]
+      },
+      "metadata_file": "output/RK17_batch_08_space/manifest.json",
+      "status": "approved_ready"
+    },
+    {
+      "image_id": "RK17-0006",
+      "display_name": "Шерсть дыбом",
+      "web": {
+        "file": "RK17_startled_arched_back_001_catalog.webp",
+        "source_path": "output/RK17_batch_08_space/RK17_startled_arched_back_001_catalog.webp",
+        "archive_path": "WEB/RK17-0006/RK17_startled_arched_back_001_catalog.webp",
+        "sha256": "248efd68eeb4759db78fb65bb03a0caa2c039a47cbd8e920323f17870ae31020",
+        "hash_verified_in_source_archive": true
+      },
+      "master": {
+        "file": "RK17_startled_arched_back_001_MASTER.png",
+        "source_path": "output/RK17_batch_08_space/RK17_startled_arched_back_001_MASTER.png",
+        "sha256": "c933181dd0fe1b07579b7acf6cb1a6f38325cdcde0e50b7752c1076b3430f862",
+        "matching_physical_copies": [
+          {
+            "container": "C:\\Users\\PC\\Desktop\\Для будущего канала\\Проект Наклейки\\После Work\\RK17_повор, испуганный, космос.zip",
+            "entry": "RK17_startled_arched_back_001_MASTER.png",
+            "sha256": "c933181dd0fe1b07579b7acf6cb1a6f38325cdcde0e50b7752c1076b3430f862"
+          }
+        ]
+      },
+      "metadata_file": "output/RK17_batch_08_space/manifest.json",
+      "status": "approved_ready"
+    },
+    {
+      "image_id": "RK17-0007",
+      "display_name": "Ошеломление",
+      "web": {
+        "file": "RK17_startled_jump_001_catalog.webp",
+        "source_path": "output/RK17_batch_08_space/RK17_startled_jump_001_catalog.webp",
+        "archive_path": "WEB/RK17-0007/RK17_startled_jump_001_catalog.webp",
+        "sha256": "628bc23d284b2757b405a8322235ee6a3a7b5774f12e5675f0071ebd71c6209f",
+        "hash_verified_in_source_archive": true
+      },
+      "master": {
+        "file": "RK17_startled_jump_001_MASTER.png",
+        "source_path": "output/RK17_batch_08_space/RK17_startled_jump_001_MASTER.png",
+        "sha256": "12a58e5136fb30f06b3615134b24d80e4f43c53a104257bc9a3b01a0095ee9ba",
+        "matching_physical_copies": [
+          {
+            "container": "C:\\Users\\PC\\Desktop\\Для будущего канала\\Проект Наклейки\\После Work\\RK17_повор, испуганный, космос.zip",
+            "entry": "RK17_startled_jump_001_MASTER.png",
+            "sha256": "12a58e5136fb30f06b3615134b24d80e4f43c53a104257bc9a3b01a0095ee9ba"
+          }
+        ]
+      },
+      "metadata_file": "output/RK17_batch_08_space/manifest.json",
+      "status": "approved_ready"
+    },
+    {
+      "image_id": "RK17-0008",
+      "display_name": "Ой!",
+      "web": {
+        "file": "RK17_startled_spilled_coffee_001_catalog.webp",
+        "source_path": "output/RK17_batch_08_space/RK17_startled_spilled_coffee_001_catalog.webp",
+        "archive_path": "WEB/RK17-0008/RK17_startled_spilled_coffee_001_catalog.webp",
+        "sha256": "cfcc442f4d55bb168585d43e345c310545362dfb6a50ef5fb529080fb22e6364",
+        "hash_verified_in_source_archive": true
+      },
+      "master": {
+        "file": "RK17_startled_spilled_coffee_001_MASTER.png",
+        "source_path": "output/RK17_batch_08_space/RK17_startled_spilled_coffee_001_MASTER.png",
+        "sha256": "4e09c74ba73965ad2733cfe763820db75ac06785de7bf4e1c52f11001ac1f864",
+        "matching_physical_copies": [
+          {
+            "container": "C:\\Users\\PC\\Desktop\\Для будущего канала\\Проект Наклейки\\После Work\\RK17_повор, испуганный, космос.zip",
+            "entry": "RK17_startled_spilled_coffee_001_MASTER.png",
+            "sha256": "4e09c74ba73965ad2733cfe763820db75ac06785de7bf4e1c52f11001ac1f864"
+          }
+        ]
+      },
+      "metadata_file": "output/RK17_batch_08_space/manifest.json",
+      "status": "approved_ready"
+    },
+    {
+      "image_id": "RK17-0009",
+      "display_name": "Домашка достала",
+      "web": {
+        "file": "RK17_angry_homework_001_catalog.webp",
+        "source_path": "output/RK17_batch_13/RK17_angry_homework_001_catalog.webp",
+        "archive_path": "WEB/RK17-0009/RK17_angry_homework_001_catalog.webp",
+        "sha256": "7dba8b3473af4a8d605d05fdac1a0561011d96a63c219eb0d3395d6dc5e2b68a",
+        "hash_verified_in_source_archive": true
+      },
+      "master": {
+        "file": "RK17_angry_homework_001_MASTER.png",
+        "source_path": "output/RK17_batch_13/RK17_angry_homework_001_MASTER.png",
+        "sha256": "6983bc4c9d76256dd8889865d3bee65581755216771c7e04242a2c1c123356fe",
+        "matching_physical_copies": [
+          {
+            "container": "C:\\Users\\PC\\Desktop\\Для будущего канала\\Проект Наклейки\\После Work\\RK17_Путешественник, повар, злой.zip",
+            "entry": "RK17_angry_homework_001_MASTER.png",
+            "sha256": "6983bc4c9d76256dd8889865d3bee65581755216771c7e04242a2c1c123356fe"
+          }
+        ]
+      },
+      "metadata_file": "output/RK17_batch_13/manifest.json",
+      "status": "approved_ready"
+    },
+    {
+      "image_id": "RK17-0010",
+      "display_name": "Заколебали!",
+      "web": {
+        "file": "RK17_angry_office_001_catalog.webp",
+        "source_path": "output/RK17_batch_13/RK17_angry_office_001_catalog.webp",
+        "archive_path": "WEB/RK17-0010/RK17_angry_office_001_catalog.webp",
+        "sha256": "c28a43cace5f30c60c539bae53d00004c185a8b47dd172aefd941f2d2a0d1773",
+        "hash_verified_in_source_archive": true
+      },
+      "master": {
+        "file": "RK17_angry_office_001_MASTER.png",
+        "source_path": "output/RK17_batch_13/RK17_angry_office_001_MASTER.png",
+        "sha256": "4b158c5bc7a6d95403b1d16641890388abc2df2d1181a1bd5e7d851c9b198b20",
+        "matching_physical_copies": [
+          {
+            "container": "C:\\Users\\PC\\Desktop\\Для будущего канала\\Проект Наклейки\\После Work\\RK17_Путешественник, повар, злой.zip",
+            "entry": "RK17_angry_office_001_MASTER.png",
+            "sha256": "4b158c5bc7a6d95403b1d16641890388abc2df2d1181a1bd5e7d851c9b198b20"
+          }
+        ]
+      },
+      "metadata_file": "output/RK17_batch_13/manifest.json",
+      "status": "approved_ready"
+    },
+    {
+      "image_id": "RK17-0011",
+      "display_name": "Бесит!",
+      "web": {
+        "file": "RK17_angry_red_hoodie_001_catalog.webp",
+        "source_path": "output/RK17_batch_13/RK17_angry_red_hoodie_001_catalog.webp",
+        "archive_path": "WEB/RK17-0011/RK17_angry_red_hoodie_001_catalog.webp",
+        "sha256": "db0b449ceaaa66bdb43f4fdcbe7748dbfaeadce3d63ea833d6f33ae7ae36bfe7",
+        "hash_verified_in_source_archive": true
+      },
+      "master": {
+        "file": "RK17_angry_red_hoodie_001_MASTER.png",
+        "source_path": "output/RK17_batch_13/RK17_angry_red_hoodie_001_MASTER.png",
+        "sha256": "a8fdb3fc42a3ea7061a130c0b72097b11337d590038e237da011d61763f64e7a",
+        "matching_physical_copies": [
+          {
+            "container": "C:\\Users\\PC\\Desktop\\Для будущего канала\\Проект Наклейки\\После Work\\RK17_Путешественник, повар, злой.zip",
+            "entry": "RK17_angry_red_hoodie_001_MASTER.png",
+            "sha256": "a8fdb3fc42a3ea7061a130c0b72097b11337d590038e237da011d61763f64e7a"
+          }
+        ]
+      },
+      "metadata_file": "output/RK17_batch_13/manifest.json",
+      "status": "approved_ready"
+    },
+    {
+      "image_id": "RK17-0012",
+      "display_name": "Шеф-повар",
+      "web": {
+        "file": "RK17_chef_pan_001_catalog.webp",
+        "source_path": "output/RK17_batch_13/RK17_chef_pan_001_catalog.webp",
+        "archive_path": "WEB/RK17-0012/RK17_chef_pan_001_catalog.webp",
+        "sha256": "1d9910ddd89e95b03c7a699315f66f5b80519ebc27e434c48666160e369f2fdd",
+        "hash_verified_in_source_archive": true
+      },
+      "master": {
+        "file": "RK17_chef_pan_001_MASTER.png",
+        "source_path": "output/RK17_batch_13/RK17_chef_pan_001_MASTER.png",
+        "sha256": "2268f6d1487db83d7dfbbf217e8f56326fea62c6953068a8cffbaff0962ae628",
+        "matching_physical_copies": [
+          {
+            "container": "C:\\Users\\PC\\Desktop\\Для будущего канала\\Проект Наклейки\\После Work\\RK17_Путешественник, повар, злой.zip",
+            "entry": "RK17_chef_pan_001_MASTER.png",
+            "sha256": "2268f6d1487db83d7dfbbf217e8f56326fea62c6953068a8cffbaff0962ae628"
+          }
+        ]
+      },
+      "metadata_file": "output/RK17_batch_13/manifest.json",
+      "status": "approved_ready"
+    },
+    {
+      "image_id": "RK17-0013",
+      "display_name": "Будет вкусно",
+      "web": {
+        "file": "RK17_chef_salmon_001_catalog.webp",
+        "source_path": "output/RK17_batch_13/RK17_chef_salmon_001_catalog.webp",
+        "archive_path": "WEB/RK17-0013/RK17_chef_salmon_001_catalog.webp",
+        "sha256": "831b2aa2b8ca1c2eec2368b7574d63bda1bf8e85e269151d71db675cc3754ade",
+        "hash_verified_in_source_archive": true
+      },
+      "master": {
+        "file": "RK17_chef_salmon_001_MASTER.png",
+        "source_path": "output/RK17_batch_13/RK17_chef_salmon_001_MASTER.png",
+        "sha256": "cbc58a490d67dc7b3e66be13fc6be2a59b007f26f875eb8d12e9f5547e1f7da6",
+        "matching_physical_copies": [
+          {
+            "container": "C:\\Users\\PC\\Desktop\\Для будущего канала\\Проект Наклейки\\После Work\\RK17_Путешественник, повар, злой.zip",
+            "entry": "RK17_chef_salmon_001_MASTER.png",
+            "sha256": "cbc58a490d67dc7b3e66be13fc6be2a59b007f26f875eb8d12e9f5547e1f7da6"
+          }
+        ]
+      },
+      "metadata_file": "output/RK17_batch_13/manifest.json",
+      "status": "approved_ready"
+    },
+    {
+      "image_id": "RK17-0014",
+      "display_name": "Проба снята",
+      "web": {
+        "file": "RK17_chef_tasting_001_catalog.webp",
+        "source_path": "output/RK17_batch_13/RK17_chef_tasting_001_catalog.webp",
+        "archive_path": "WEB/RK17-0014/RK17_chef_tasting_001_catalog.webp",
+        "sha256": "8583b8eefb688405fde0e0cb90afeb660db26994cae006e403b8cb18cc56bb68",
+        "hash_verified_in_source_archive": true
+      },
+      "master": {
+        "file": "RK17_chef_tasting_001_MASTER.png",
+        "source_path": "output/RK17_batch_13/RK17_chef_tasting_001_MASTER.png",
+        "sha256": "fb4030466ffdf0719de85387bd1d0a4fb8562874d6c77e2c9e0a1019613869b4",
+        "matching_physical_copies": [
+          {
+            "container": "C:\\Users\\PC\\Desktop\\Для будущего канала\\Проект Наклейки\\После Work\\RK17_Путешественник, повар, злой.zip",
+            "entry": "RK17_chef_tasting_001_MASTER.png",
+            "sha256": "fb4030466ffdf0719de85387bd1d0a4fb8562874d6c77e2c9e0a1019613869b4"
+          }
+        ]
+      },
+      "metadata_file": "output/RK17_batch_13/manifest.json",
+      "status": "approved_ready"
+    },
+    {
+      "image_id": "RK17-0015",
+      "display_name": "Саморазвитие IT",
+      "web": {
+        "file": "RK17_programmer_books_001_catalog.webp",
+        "source_path": "output/RK17_batch_13/RK17_programmer_books_001_catalog.webp",
+        "archive_path": "WEB/RK17-0015/RK17_programmer_books_001_catalog.webp",
+        "sha256": "b8fa763cd2e78ae325a5e3cebea00e3237891d5fd45309c5d7c274ca3684b36f",
+        "hash_verified_in_source_archive": true
+      },
+      "master": {
+        "file": "RK17_programmer_books_001_MASTER.png",
+        "source_path": "output/RK17_batch_13/RK17_programmer_books_001_MASTER.png",
+        "sha256": "9ec63e122e1b2adaaae246cea8aaa2eb8d5e8a60c0420c97870271107c148bd1",
+        "matching_physical_copies": [
+          {
+            "container": "C:\\Users\\PC\\Desktop\\Для будущего канала\\Проект Наклейки\\После Work\\RK17_Путешественник, повар, злой.zip",
+            "entry": "RK17_programmer_books_001_MASTER.png",
+            "sha256": "9ec63e122e1b2adaaae246cea8aaa2eb8d5e8a60c0420c97870271107c148bd1"
+          }
+        ]
+      },
+      "metadata_file": "output/RK17_batch_13/manifest.json",
+      "status": "approved_ready"
+    },
+    {
+      "image_id": "RK17-0016",
+      "display_name": "Кодер",
+      "web": {
+        "file": "RK17_programmer_laptop_001_catalog.webp",
+        "source_path": "output/RK17_batch_13/RK17_programmer_laptop_001_catalog.webp",
+        "archive_path": "WEB/RK17-0016/RK17_programmer_laptop_001_catalog.webp",
+        "sha256": "33822fe3a7efa92da64618349816f005c44e51d1a9b0b614e3a2a675e66208be",
+        "hash_verified_in_source_archive": true
+      },
+      "master": {
+        "file": "RK17_programmer_laptop_001_MASTER.png",
+        "source_path": "output/RK17_batch_13/RK17_programmer_laptop_001_MASTER.png",
+        "sha256": "31fc66220eafe52d5a2428ef39be8ff6cbd8521e33ae3acbd19837df346ee453",
+        "matching_physical_copies": [
+          {
+            "container": "C:\\Users\\PC\\Desktop\\Для будущего канала\\Проект Наклейки\\После Work\\RK17_Путешественник, повар, злой.zip",
+            "entry": "RK17_programmer_laptop_001_MASTER.png",
+            "sha256": "31fc66220eafe52d5a2428ef39be8ff6cbd8521e33ae3acbd19837df346ee453"
+          }
+        ]
+      },
+      "metadata_file": "output/RK17_batch_13/manifest.json",
+      "status": "approved_ready"
+    },
+    {
+      "image_id": "RK17-0017",
+      "display_name": "Перерыв",
+      "web": {
+        "file": "RK17_programmer_relax_001_catalog.webp",
+        "source_path": "output/RK17_batch_13/RK17_programmer_relax_001_catalog.webp",
+        "archive_path": "WEB/RK17-0017/RK17_programmer_relax_001_catalog.webp",
+        "sha256": "df47110ff5cc678591d25e109aaee7c3b59d0d31f07753cd4b97972a7e3d34d5",
+        "hash_verified_in_source_archive": true
+      },
+      "master": {
+        "file": "RK17_programmer_relax_001_MASTER.png",
+        "source_path": "output/RK17_batch_13/RK17_programmer_relax_001_MASTER.png",
+        "sha256": "f94a59ee892c9d7cf08ad7b5390abffed939e3770eb78cb593b84b21f5ca50f1",
+        "matching_physical_copies": [
+          {
+            "container": "C:\\Users\\PC\\Desktop\\Для будущего канала\\Проект Наклейки\\После Work\\RK17_Путешественник, повар, злой.zip",
+            "entry": "RK17_programmer_relax_001_MASTER.png",
+            "sha256": "f94a59ee892c9d7cf08ad7b5390abffed939e3770eb78cb593b84b21f5ca50f1"
+          }
+        ]
+      },
+      "metadata_file": "output/RK17_batch_13/manifest.json",
+      "status": "approved_ready"
+    },
+    {
+      "image_id": "RK17-0018",
+      "display_name": "Сытый и довольный",
+      "web": {
+        "file": "RK17_relax_contented_001_catalog.webp",
+        "source_path": "output/RK17_batch_13/RK17_relax_contented_001_catalog.webp",
+        "archive_path": "WEB/RK17-0018/RK17_relax_contented_001_catalog.webp",
+        "sha256": "3aab05505748c2c1ad5f2768fb363be47b848d34039504ecb7e7a7c96ddd4c3f",
+        "hash_verified_in_source_archive": true
+      },
+      "master": {
+        "file": "RK17_relax_contented_001_MASTER.png",
+        "source_path": "output/RK17_batch_13/RK17_relax_contented_001_MASTER.png",
+        "sha256": "19d9bfd776956c387bdfcc40f064e6420e4bbc1b25dcc2ae147004af53ccb44a",
+        "matching_physical_copies": [
+          {
+            "container": "C:\\Users\\PC\\Desktop\\Для будущего канала\\Проект Наклейки\\После Work\\RK17_Путешественник, повар, злой.zip",
+            "entry": "RK17_relax_contented_001_MASTER.png",
+            "sha256": "19d9bfd776956c387bdfcc40f064e6420e4bbc1b25dcc2ae147004af53ccb44a"
+          }
+        ]
+      },
+      "metadata_file": "output/RK17_batch_13/manifest.json",
+      "status": "approved_ready"
+    },
+    {
+      "image_id": "RK17-0019",
+      "display_name": "Жизнь удалась",
+      "web": {
+        "file": "RK17_relax_life_is_good_001_catalog.webp",
+        "source_path": "output/RK17_batch_13/RK17_relax_life_is_good_001_catalog.webp",
+        "archive_path": "WEB/RK17-0019/RK17_relax_life_is_good_001_catalog.webp",
+        "sha256": "75dc7f75ce92a90a0ec7799e5e77e51926d7993eb4b0fe6dd9fc5355a5337720",
+        "hash_verified_in_source_archive": true
+      },
+      "master": {
+        "file": "RK17_relax_life_is_good_001_MASTER.png",
+        "source_path": "output/RK17_batch_13/RK17_relax_life_is_good_001_MASTER.png",
+        "sha256": "df9fa67bdc19d7a353fc5692ba8d59e9654e698dca11a51c419246681cf37f9f",
+        "matching_physical_copies": [
+          {
+            "container": "C:\\Users\\PC\\Desktop\\Для будущего канала\\Проект Наклейки\\После Work\\RK17_Путешественник, повар, злой.zip",
+            "entry": "RK17_relax_life_is_good_001_MASTER.png",
+            "sha256": "df9fa67bdc19d7a353fc5692ba8d59e9654e698dca11a51c419246681cf37f9f"
+          }
+        ]
+      },
+      "metadata_file": "output/RK17_batch_13/manifest.json",
+      "status": "approved_ready"
+    },
+    {
+      "image_id": "RK17-0020",
+      "display_name": "В поход!",
+      "web": {
+        "file": "RK17_traveler_hiker_001_catalog.webp",
+        "source_path": "output/RK17_batch_13/RK17_traveler_hiker_001_catalog.webp",
+        "archive_path": "WEB/RK17-0020/RK17_traveler_hiker_001_catalog.webp",
+        "sha256": "17ceb0b23a09a291e8689c08243d9421ce6d907b407c1d22259a07bbd4ac25c8",
+        "hash_verified_in_source_archive": true
+      },
+      "master": {
+        "file": "RK17_traveler_hiker_001_MASTER.png",
+        "source_path": "output/RK17_batch_13/RK17_traveler_hiker_001_MASTER.png",
+        "sha256": "8dc3ac477e99a4dedb2a159df2b6dbf45b80f954af1286b8f3cb478f71049edf",
+        "matching_physical_copies": [
+          {
+            "container": "C:\\Users\\PC\\Desktop\\Для будущего канала\\Проект Наклейки\\После Work\\RK17_Путешественник, повар, злой.zip",
+            "entry": "RK17_traveler_hiker_001_MASTER.png",
+            "sha256": "8dc3ac477e99a4dedb2a159df2b6dbf45b80f954af1286b8f3cb478f71049edf"
+          }
+        ]
+      },
+      "metadata_file": "output/RK17_batch_13/manifest.json",
+      "status": "approved_ready"
+    },
+    {
+      "image_id": "RK17-0021",
+      "display_name": "Отпуск!",
+      "web": {
+        "file": "RK17_traveler_vacation_001_catalog.webp",
+        "source_path": "output/RK17_batch_13/RK17_traveler_vacation_001_catalog.webp",
+        "archive_path": "WEB/RK17-0021/RK17_traveler_vacation_001_catalog.webp",
+        "sha256": "83004b7312fa3d3f36663687e03fcc64e5c27a16a8b722763c0ad696246f6719",
+        "hash_verified_in_source_archive": true
+      },
+      "master": {
+        "file": "RK17_traveler_vacation_001_MASTER.png",
+        "source_path": "output/RK17_batch_13/RK17_traveler_vacation_001_MASTER.png",
+        "sha256": "3bdf0b69f6460572d55df350694118dd4692c42dc24c34ffb31e47b7dbb56b11",
+        "matching_physical_copies": [
+          {
+            "container": "C:\\Users\\PC\\Desktop\\Для будущего канала\\Проект Наклейки\\После Work\\RK17_Путешественник, повар, злой.zip",
+            "entry": "RK17_traveler_vacation_001_MASTER.png",
+            "sha256": "3bdf0b69f6460572d55df350694118dd4692c42dc24c34ffb31e47b7dbb56b11"
+          }
+        ]
+      },
+      "metadata_file": "output/RK17_batch_13/manifest.json",
+      "status": "approved_ready"
+    },
+    {
+      "image_id": "RK17-0022",
+      "display_name": "Вдохновение",
+      "web": {
+        "file": "RK17_artist_big_brush_001_catalog.webp",
+        "source_path": "output/RK17_batch_detective_sport_artist/RK17_artist_big_brush_001_catalog.webp",
+        "archive_path": "WEB/RK17-0022/RK17_artist_big_brush_001_catalog.webp",
+        "sha256": "48eef54d5f41d1539210a2d00cac5b16796ad1f779225853a33109ce3f09d537",
+        "hash_verified_in_source_archive": true
+      },
+      "master": {
+        "file": "RK17_artist_big_brush_001_MASTER.png",
+        "source_path": "output/RK17_batch_detective_sport_artist/RK17_artist_big_brush_001_MASTER.png",
+        "sha256": "3721cfc37c4419ce6988ca4b27724677c4e6a6141a7a676989c7d1646d063f05",
+        "matching_physical_copies": [
+          {
+            "container": "C:\\Users\\PC\\Desktop\\Для будущего канала\\Проект Наклейки\\После Work\\RK17_batch_detective_sport_artist.zip",
+            "entry": "RK17_artist_big_brush_001_MASTER.png",
+            "sha256": "3721cfc37c4419ce6988ca4b27724677c4e6a6141a7a676989c7d1646d063f05"
+          }
+        ]
+      },
+      "metadata_file": "output/RK17_batch_detective_sport_artist/manifest.json",
+      "status": "approved_ready"
+    },
+    {
+      "image_id": "RK17-0023",
+      "display_name": "Художник",
+      "web": {
+        "file": "RK17_artist_easel_001_catalog.webp",
+        "source_path": "output/RK17_batch_detective_sport_artist/RK17_artist_easel_001_catalog.webp",
+        "archive_path": "WEB/RK17-0023/RK17_artist_easel_001_catalog.webp",
+        "sha256": "dbdb66cc017abd5e4968a743e133851e134315d8d20e81ed3d28723c3c3bcc93",
+        "hash_verified_in_source_archive": true
+      },
+      "master": {
+        "file": "RK17_artist_easel_001_MASTER.png",
+        "source_path": "output/RK17_batch_detective_sport_artist/RK17_artist_easel_001_MASTER.png",
+        "sha256": "03dfac15582bc642c06ff6008fbb9582ae8f23cf4b0639d1dca10ee0a2ab1ffd",
+        "matching_physical_copies": [
+          {
+            "container": "C:\\Users\\PC\\Desktop\\Для будущего канала\\Проект Наклейки\\После Work\\RK17_batch_detective_sport_artist.zip",
+            "entry": "RK17_artist_easel_001_MASTER.png",
+            "sha256": "03dfac15582bc642c06ff6008fbb9582ae8f23cf4b0639d1dca10ee0a2ab1ffd"
+          }
+        ]
+      },
+      "metadata_file": "output/RK17_batch_detective_sport_artist/manifest.json",
+      "status": "approved_ready"
+    },
+    {
+      "image_id": "RK17-0024",
+      "display_name": "Эскизы",
+      "web": {
+        "file": "RK17_artist_sketches_001_catalog.webp",
+        "source_path": "output/RK17_batch_detective_sport_artist/RK17_artist_sketches_001_catalog.webp",
+        "archive_path": "WEB/RK17-0024/RK17_artist_sketches_001_catalog.webp",
+        "sha256": "7fe1114a2313d77752485a2516254f73b3199262da2ebe78cf9fec3b1589d773",
+        "hash_verified_in_source_archive": true
+      },
+      "master": {
+        "file": "RK17_artist_sketches_001_MASTER.png",
+        "source_path": "output/RK17_batch_detective_sport_artist/RK17_artist_sketches_001_MASTER.png",
+        "sha256": "8d660187c32cc634c159ced4c4afa1de0671ecf12443b8712baaede7b15c6c49",
+        "matching_physical_copies": [
+          {
+            "container": "C:\\Users\\PC\\Desktop\\Для будущего канала\\Проект Наклейки\\После Work\\RK17_batch_detective_sport_artist.zip",
+            "entry": "RK17_artist_sketches_001_MASTER.png",
+            "sha256": "8d660187c32cc634c159ced4c4afa1de0671ecf12443b8712baaede7b15c6c49"
+          }
+        ]
+      },
+      "metadata_file": "output/RK17_batch_detective_sport_artist/manifest.json",
+      "status": "approved_ready"
+    },
+    {
+      "image_id": "RK17-0025",
+      "display_name": "Футболист",
+      "web": {
+        "file": "RK17_athlete_football_001_catalog.webp",
+        "source_path": "output/RK17_batch_detective_sport_artist/RK17_athlete_football_001_catalog.webp",
+        "archive_path": "WEB/RK17-0025/RK17_athlete_football_001_catalog.webp",
+        "sha256": "a5b791db364feac851c3e59949c1814b95e64c4a74edd034f2036588a393b418",
+        "hash_verified_in_source_archive": true
+      },
+      "master": {
+        "file": "RK17_athlete_football_001_MASTER.png",
+        "source_path": "output/RK17_batch_detective_sport_artist/RK17_athlete_football_001_MASTER.png",
+        "sha256": "c9e7a1b4de3b65e12aa98a29dcdfecfb1d010d580fbe773cb8eae660a87f368b",
+        "matching_physical_copies": [
+          {
+            "container": "C:\\Users\\PC\\Desktop\\Для будущего канала\\Проект Наклейки\\После Work\\RK17_batch_detective_sport_artist.zip",
+            "entry": "RK17_athlete_football_001_MASTER.png",
+            "sha256": "c9e7a1b4de3b65e12aa98a29dcdfecfb1d010d580fbe773cb8eae660a87f368b"
+          }
+        ]
+      },
+      "metadata_file": "output/RK17_batch_detective_sport_artist/manifest.json",
+      "status": "approved_ready"
+    },
+    {
+      "image_id": "RK17-0026",
+      "display_name": "Качок",
+      "web": {
+        "file": "RK17_athlete_weights_001_catalog.webp",
+        "source_path": "output/RK17_batch_detective_sport_artist/RK17_athlete_weights_001_catalog.webp",
+        "archive_path": "WEB/RK17-0026/RK17_athlete_weights_001_catalog.webp",
+        "sha256": "c4332b84b49041b9220438679fae684bcb553447827117c186507c6c46175779",
+        "hash_verified_in_source_archive": true
+      },
+      "master": {
+        "file": "RK17_athlete_weights_001_MASTER.png",
+        "source_path": "output/RK17_batch_detective_sport_artist/RK17_athlete_weights_001_MASTER.png",
+        "sha256": "700181cbeb05027b082ead9c399234035968a132ad3232fd245bf160ecf84c1c",
+        "matching_physical_copies": [
+          {
+            "container": "C:\\Users\\PC\\Desktop\\Для будущего канала\\Проект Наклейки\\После Work\\RK17_batch_detective_sport_artist.zip",
+            "entry": "RK17_athlete_weights_001_MASTER.png",
+            "sha256": "700181cbeb05027b082ead9c399234035968a132ad3232fd245bf160ecf84c1c"
+          }
+        ]
+      },
+      "metadata_file": "output/RK17_batch_detective_sport_artist/manifest.json",
+      "status": "approved_ready"
+    },
+    {
+      "image_id": "RK17-0027",
+      "display_name": "Ищу зацепку",
+      "web": {
+        "file": "RK17_detective_magnifier_001_catalog.webp",
+        "source_path": "output/RK17_batch_detective_sport_artist/RK17_detective_magnifier_001_catalog.webp",
+        "archive_path": "WEB/RK17-0027/RK17_detective_magnifier_001_catalog.webp",
+        "sha256": "491e34a612eed1e34dbc66b10bf7b0bc3ce6e8650a6cbe3d98c249bde2a97bae",
+        "hash_verified_in_source_archive": true
+      },
+      "master": {
+        "file": "RK17_detective_magnifier_001_MASTER.png",
+        "source_path": "output/RK17_batch_detective_sport_artist/RK17_detective_magnifier_001_MASTER.png",
+        "sha256": "c734438e4408d3af59e1ea6ffb2cd033bb82a788ccd64446ec19de1775838f75",
+        "matching_physical_copies": [
+          {
+            "container": "C:\\Users\\PC\\Desktop\\Для будущего канала\\Проект Наклейки\\После Work\\RK17_batch_detective_sport_artist.zip",
+            "entry": "RK17_detective_magnifier_001_MASTER.png",
+            "sha256": "c734438e4408d3af59e1ea6ffb2cd033bb82a788ccd64446ec19de1775838f75"
+          }
+        ]
+      },
+      "metadata_file": "output/RK17_batch_detective_sport_artist/manifest.json",
+      "status": "approved_ready"
+    },
+    {
+      "image_id": "RK17-0028",
+      "display_name": "Истина где-то рядом",
+      "web": {
+        "file": "RK17_detective_truth_001_catalog.webp",
+        "source_path": "output/RK17_batch_detective_sport_artist/RK17_detective_truth_001_catalog.webp",
+        "archive_path": "WEB/RK17-0028/RK17_detective_truth_001_catalog.webp",
+        "sha256": "b706ed0e24fe001e7199ffe84befd397243cc13ab97cd8871cb660991eb48d4c",
+        "hash_verified_in_source_archive": true
+      },
+      "master": {
+        "file": "RK17_detective_truth_001_MASTER.png",
+        "source_path": "output/RK17_batch_detective_sport_artist/RK17_detective_truth_001_MASTER.png",
+        "sha256": "c5d67954541bd2a442add8a027c4d6fbf2a88b11e0c5a40f954d9a751e924ecd",
+        "matching_physical_copies": [
+          {
+            "container": "C:\\Users\\PC\\Desktop\\Для будущего канала\\Проект Наклейки\\После Work\\RK17_batch_detective_sport_artist.zip",
+            "entry": "RK17_detective_truth_001_MASTER.png",
+            "sha256": "c5d67954541bd2a442add8a027c4d6fbf2a88b11e0c5a40f954d9a751e924ecd"
+          }
+        ]
+      },
+      "metadata_file": "output/RK17_batch_detective_sport_artist/manifest.json",
+      "status": "approved_ready"
+    },
+    {
+      "image_id": "RK17-0029",
+      "display_name": "Весь мир",
+      "web": {
+        "file": "RK17_intellectual_cat_and_world_001_catalog.webp",
+        "source_path": "output/RK17_batch_four_followup/RK17_intellectual_cat_and_world_001_catalog.webp",
+        "archive_path": "WEB/RK17-0029/RK17_intellectual_cat_and_world_001_catalog.webp",
+        "sha256": "e2b74ab8b7cce6125546cffead99fcf196e5ad0b4dbe27f14923523bc991ea2d",
+        "hash_verified_in_source_archive": true
+      },
+      "master": {
+        "file": "RK17_intellectual_cat_and_world_001_MASTER.png",
+        "source_path": "output/RK17_batch_four_followup/RK17_intellectual_cat_and_world_001_MASTER.png",
+        "sha256": "0832175d83f40d1534a4c7e162995d37def1e692c4d9a344653a38a21fd5e602",
+        "matching_physical_copies": [
+          {
+            "container": "C:\\Users\\PC\\Desktop\\Для будущего канала\\Проект Наклейки\\После Work\\RK17_batch_four_followup.zip",
+            "entry": "RK17_intellectual_cat_and_world_001_MASTER.png",
+            "sha256": "0832175d83f40d1534a4c7e162995d37def1e692c4d9a344653a38a21fd5e602"
+          }
+        ]
+      },
+      "metadata_file": "output/RK17_batch_four_followup/manifest.json",
+      "status": "approved_ready"
+    },
+    {
+      "image_id": "RK17-0030",
+      "display_name": "Зимний поход",
+      "web": {
+        "file": "RK17_winter_hike_001_catalog.webp",
+        "source_path": "output/RK17_batch_four_followup/RK17_winter_hike_001_catalog.webp",
+        "archive_path": "WEB/RK17-0030/RK17_winter_hike_001_catalog.webp",
+        "sha256": "9fe5f3302202046becf2cb51a2c12a9635a421d267a56ac1087cfa96250b18a6",
+        "hash_verified_in_source_archive": true
+      },
+      "master": {
+        "file": "RK17_winter_hike_001_MASTER.png",
+        "source_path": "output/RK17_batch_four_followup/RK17_winter_hike_001_MASTER.png",
+        "sha256": "f6bc8ace03940b3c492005c73c53ffe626cb53383aff1232eca3793161024b7a",
+        "matching_physical_copies": [
+          {
+            "container": "C:\\Users\\PC\\Desktop\\Для будущего канала\\Проект Наклейки\\После Work\\RK17_batch_four_followup.zip",
+            "entry": "RK17_winter_hike_001_MASTER.png",
+            "sha256": "f6bc8ace03940b3c492005c73c53ffe626cb53383aff1232eca3793161024b7a"
+          }
+        ]
+      },
+      "metadata_file": "output/RK17_batch_four_followup/manifest.json",
+      "status": "approved_ready"
+    },
+    {
+      "image_id": "RK17-0031",
+      "display_name": "Снегопад",
+      "web": {
+        "file": "RK17_winter_snow_001_catalog.webp",
+        "source_path": "output/RK17_batch_four_followup/RK17_winter_snow_001_catalog.webp",
+        "archive_path": "WEB/RK17-0031/RK17_winter_snow_001_catalog.webp",
+        "sha256": "1eb712633dba706824311cb01166c9d464ff83efedd147028072e006e17c0226",
+        "hash_verified_in_source_archive": true
+      },
+      "master": {
+        "file": "RK17_winter_snow_001_MASTER.png",
+        "source_path": "output/RK17_batch_four_followup/RK17_winter_snow_001_MASTER.png",
+        "sha256": "b4013f79dd0b44a168e493c77929f8aab6aaa86849a37743ba20bccdec5439b3",
+        "matching_physical_copies": [
+          {
+            "container": "C:\\Users\\PC\\Desktop\\Для будущего канала\\Проект Наклейки\\После Work\\RK17_batch_four_followup.zip",
+            "entry": "RK17_winter_snow_001_MASTER.png",
+            "sha256": "b4013f79dd0b44a168e493c77929f8aab6aaa86849a37743ba20bccdec5439b3"
+          }
+        ]
+      },
+      "metadata_file": "output/RK17_batch_four_followup/manifest.json",
+      "status": "approved_ready"
+    },
+    {
+      "image_id": "RK17-0032",
+      "display_name": "Нашёл!",
+      "web": {
+        "file": "RK17_archaeologist_brush_001_catalog.webp",
+        "source_path": "output/RK17_batch_intellectual_winter_archaeology/RK17_archaeologist_brush_001_catalog.webp",
+        "archive_path": "WEB/RK17-0032/RK17_archaeologist_brush_001_catalog.webp",
+        "sha256": "8c32ce8702ebc7dd0eb45e972fb5b6a3c96f28afd28b04ac598fd5048fc3e7bf",
+        "hash_verified_in_source_archive": true
+      },
+      "master": {
+        "file": "RK17_archaeologist_brush_001_MASTER.png",
+        "source_path": "output/RK17_batch_intellectual_winter_archaeology/RK17_archaeologist_brush_001_MASTER.png",
+        "sha256": "0839d6d6ec95ffe6a32129c0ba670fd33911f188a559f73c36621cc6ae60f3e9",
+        "matching_physical_copies": [
+          {
+            "container": "C:\\Users\\PC\\Desktop\\Для будущего канала\\Проект Наклейки\\После Work\\RK17_batch_intellectual_winter_archaeology.zip",
+            "entry": "RK17_archaeologist_brush_001_MASTER.png",
+            "sha256": "0839d6d6ec95ffe6a32129c0ba670fd33911f188a559f73c36621cc6ae60f3e9"
+          }
+        ]
+      },
+      "metadata_file": "output/RK17_batch_intellectual_winter_archaeology/manifest.json",
+      "status": "approved_ready"
+    },
+    {
+      "image_id": "RK17-0033",
+      "display_name": "Находка",
+      "web": {
+        "file": "RK17_archaeologist_find_001_catalog.webp",
+        "source_path": "output/RK17_batch_intellectual_winter_archaeology/RK17_archaeologist_find_001_catalog.webp",
+        "archive_path": "WEB/RK17-0033/RK17_archaeologist_find_001_catalog.webp",
+        "sha256": "7030d5e4c2bfddbb28aba4b3233d38766c1fa072342e15d4cd0cf49e9b7c152c",
+        "hash_verified_in_source_archive": true
+      },
+      "master": {
+        "file": "RK17_archaeologist_find_001_MASTER.png",
+        "source_path": "output/RK17_batch_intellectual_winter_archaeology/RK17_archaeologist_find_001_MASTER.png",
+        "sha256": "cf24ed5cef89a34a2727801c018d786710b2c7c28189b5e7491027d00c424ac9",
+        "matching_physical_copies": [
+          {
+            "container": "C:\\Users\\PC\\Desktop\\Для будущего канала\\Проект Наклейки\\После Work\\RK17_batch_intellectual_winter_archaeology.zip",
+            "entry": "RK17_archaeologist_find_001_MASTER.png",
+            "sha256": "cf24ed5cef89a34a2727801c018d786710b2c7c28189b5e7491027d00c424ac9"
+          }
+        ]
+      },
+      "metadata_file": "output/RK17_batch_intellectual_winter_archaeology/manifest.json",
+      "status": "approved_ready"
+    },
+    {
+      "image_id": "RK17-0034",
+      "display_name": "Карта древностей",
+      "web": {
+        "file": "RK17_archaeologist_map_001_catalog.webp",
+        "source_path": "output/RK17_batch_intellectual_winter_archaeology/RK17_archaeologist_map_001_catalog.webp",
+        "archive_path": "WEB/RK17-0034/RK17_archaeologist_map_001_catalog.webp",
+        "sha256": "dd02addcad361b41a5bf10b8943408630bd1facf1951c4b641138494a9ce9b77",
+        "hash_verified_in_source_archive": true
+      },
+      "master": {
+        "file": "RK17_archaeologist_map_001_MASTER.png",
+        "source_path": "output/RK17_batch_intellectual_winter_archaeology/RK17_archaeologist_map_001_MASTER.png",
+        "sha256": "7af3d3972e5cebafec4448113a4c9705ae9311c0e71df1882cbcf27a5a63696b",
+        "matching_physical_copies": [
+          {
+            "container": "C:\\Users\\PC\\Desktop\\Для будущего канала\\Проект Наклейки\\После Work\\RK17_batch_intellectual_winter_archaeology.zip",
+            "entry": "RK17_archaeologist_map_001_MASTER.png",
+            "sha256": "7af3d3972e5cebafec4448113a4c9705ae9311c0e71df1882cbcf27a5a63696b"
+          }
+        ]
+      },
+      "metadata_file": "output/RK17_batch_intellectual_winter_archaeology/manifest.json",
+      "status": "approved_ready"
+    },
+    {
+      "image_id": "RK17-0035",
+      "display_name": "Немного отдыха",
+      "web": {
+        "file": "RK17_archaeologist_rest_001_catalog.webp",
+        "source_path": "output/RK17_batch_intellectual_winter_archaeology/RK17_archaeologist_rest_001_catalog.webp",
+        "archive_path": "WEB/RK17-0035/RK17_archaeologist_rest_001_catalog.webp",
+        "sha256": "bbb6b033d4016dd860ce00036e5691ad732fa0c9c833daa7dff775650100a9a8",
+        "hash_verified_in_source_archive": true
+      },
+      "master": {
+        "file": "RK17_archaeologist_rest_001_MASTER.png",
+        "source_path": "output/RK17_batch_intellectual_winter_archaeology/RK17_archaeologist_rest_001_MASTER.png",
+        "sha256": "11441dc2396e734cd9d9acf17c0d5a6b278eb8773c603449becb9ec5246fca7a",
+        "matching_physical_copies": [
+          {
+            "container": "C:\\Users\\PC\\Desktop\\Для будущего канала\\Проект Наклейки\\После Work\\RK17_batch_intellectual_winter_archaeology.zip",
+            "entry": "RK17_archaeologist_rest_001_MASTER.png",
+            "sha256": "11441dc2396e734cd9d9acf17c0d5a6b278eb8773c603449becb9ec5246fca7a"
+          }
+        ]
+      },
+      "metadata_file": "output/RK17_batch_intellectual_winter_archaeology/manifest.json",
+      "status": "approved_ready"
+    },
+    {
+      "image_id": "RK17-0036",
+      "display_name": "Большие планы",
+      "web": {
+        "file": "RK17_intellectual_plans_001_catalog.webp",
+        "source_path": "output/RK17_batch_intellectual_winter_archaeology/RK17_intellectual_plans_001_catalog.webp",
+        "archive_path": "WEB/RK17-0036/RK17_intellectual_plans_001_catalog.webp",
+        "sha256": "9025f0fa986d1270d22e4017673898fb37790c17e7e84c42d562c322b887e18f",
+        "hash_verified_in_source_archive": true
+      },
+      "master": {
+        "file": "RK17_intellectual_plans_001_MASTER.png",
+        "source_path": "output/RK17_batch_intellectual_winter_archaeology/RK17_intellectual_plans_001_MASTER.png",
+        "sha256": "44869c465b682adcf7c83e28bf4e8f845324f70be4f284814aa087bd5c36cd9f",
+        "matching_physical_copies": [
+          {
+            "container": "C:\\Users\\PC\\.codex\\.chatgpt-projects\\g-p-6a97e197cf408191b11487cfed12954a\\output\\RK17_batch_intellectual_winter_archaeology\\RK17_intellectual_plans_001_MASTER.png",
+            "entry": null,
+            "sha256": "44869c465b682adcf7c83e28bf4e8f845324f70be4f284814aa087bd5c36cd9f"
+          },
+          {
+            "container": "C:\\Users\\PC\\.codex\\.chatgpt-projects\\g-p-6a97e197cf408191b11487cfed12954a\\output\\RK17_batch_intellectual_winter_archaeology.zip",
+            "entry": "RK17_intellectual_plans_001_MASTER.png",
+            "sha256": "44869c465b682adcf7c83e28bf4e8f845324f70be4f284814aa087bd5c36cd9f"
+          }
+        ]
+      },
+      "metadata_file": "output/RK17_batch_intellectual_winter_archaeology/manifest.json",
+      "status": "approved_ready"
+    },
+    {
+      "image_id": "RK17-0037",
+      "display_name": "Дубак!",
+      "web": {
+        "file": "RK17_winter_cold_001_catalog.webp",
+        "source_path": "output/RK17_batch_intellectual_winter_archaeology/RK17_winter_cold_001_catalog.webp",
+        "archive_path": "WEB/RK17-0037/RK17_winter_cold_001_catalog.webp",
+        "sha256": "fb039de43775abc50d6b3624e056233b9ad81bc8969c8836a4d163e955c0c61d",
+        "hash_verified_in_source_archive": true
+      },
+      "master": {
+        "file": "RK17_winter_cold_001_MASTER.png",
+        "source_path": "output/RK17_batch_intellectual_winter_archaeology/RK17_winter_cold_001_MASTER.png",
+        "sha256": "7259ef453d27763170eac743ff11fbede8e7b6e579ab75c786057d590c9bfcb0",
+        "matching_physical_copies": [
+          {
+            "container": "C:\\Users\\PC\\Desktop\\Для будущего канала\\Проект Наклейки\\После Work\\RK17_batch_intellectual_winter_archaeology.zip",
+            "entry": "RK17_winter_cold_001_MASTER.png",
+            "sha256": "7259ef453d27763170eac743ff11fbede8e7b6e579ab75c786057d590c9bfcb0"
+          }
+        ]
+      },
+      "metadata_file": "output/RK17_batch_intellectual_winter_archaeology/manifest.json",
+      "status": "approved_ready"
+    },
+    {
+      "image_id": "RK17-0038",
+      "display_name": "Куда идти?",
+      "web": {
+        "file": "RK17_winter_map_001_catalog.webp",
+        "source_path": "output/RK17_batch_intellectual_winter_archaeology/RK17_winter_map_001_catalog.webp",
+        "archive_path": "WEB/RK17-0038/RK17_winter_map_001_catalog.webp",
+        "sha256": "4cf96033f40cd5e624b3c07f70fd361edc342a74c7c20cf8c77c8de33ee41d6b",
+        "hash_verified_in_source_archive": true
+      },
+      "master": {
+        "file": "RK17_winter_map_001_MASTER.png",
+        "source_path": "output/RK17_batch_intellectual_winter_archaeology/RK17_winter_map_001_MASTER.png",
+        "sha256": "e473089d757d10d64003b2a1c61a112d95fc3935e2d8383678c18587a9e8d5d1",
+        "matching_physical_copies": [
+          {
+            "container": "C:\\Users\\PC\\Desktop\\Для будущего канала\\Проект Наклейки\\После Work\\RK17_batch_intellectual_winter_archaeology.zip",
+            "entry": "RK17_winter_map_001_MASTER.png",
+            "sha256": "e473089d757d10d64003b2a1c61a112d95fc3935e2d8383678c18587a9e8d5d1"
+          }
+        ]
+      },
+      "metadata_file": "output/RK17_batch_intellectual_winter_archaeology/manifest.json",
+      "status": "approved_ready"
+    },
+    {
+      "image_id": "RK17-0039",
+      "display_name": "Картежный фокусник",
+      "web": {
+        "file": "RK17_magician_cards_001_catalog.webp",
+        "source_path": "output/RK17_magic_2026-09-16/READY/RK17_magician_cards_001_catalog.webp",
+        "archive_path": "WEB/RK17-0039/RK17_magician_cards_001_catalog.webp",
+        "sha256": "7c87c6207cac83dd95cc84553ea15d9ffb30a3506f7489178eaaab049ebca02b",
+        "hash_verified_in_source_archive": true
+      },
+      "master": {
+        "file": "RK17_magician_cards_001_MASTER.png",
+        "source_path": "output/RK17_magic_2026-09-16/READY/RK17_magician_cards_001_MASTER.png",
+        "sha256": "c0f16c34987c1bd8924f1faf0bbcb659ac71c2a3601addcd0fdaf6eb73babd47",
+        "matching_physical_copies": [
+          {
+            "container": "C:\\Users\\PC\\Desktop\\Для будущего канала\\Проект Наклейки\\После Work\\RK17 Фокусник\\RK17_magician_cards_001_MASTER.png",
+            "entry": null,
+            "sha256": "c0f16c34987c1bd8924f1faf0bbcb659ac71c2a3601addcd0fdaf6eb73babd47"
+          }
+        ]
+      },
+      "metadata_file": "output/RK17_magic_2026-09-16/READY/manifest.json",
+      "status": "approved_ready"
+    },
+    {
+      "image_id": "RK17-0040",
+      "display_name": "Фокус-покус",
+      "web": {
+        "file": "RK17_magician_coin_001_catalog.webp",
+        "source_path": "output/RK17_magic_2026-09-16/READY/RK17_magician_coin_001_catalog.webp",
+        "archive_path": "WEB/RK17-0040/RK17_magician_coin_001_catalog.webp",
+        "sha256": "be5716c87ea8889f1251f52862e34b67d67b00ffbd7778c34938b073653ec2d6",
+        "hash_verified_in_source_archive": true
+      },
+      "master": {
+        "file": "RK17_magician_coin_001_MASTER.png",
+        "source_path": "output/RK17_magic_2026-09-16/READY/RK17_magician_coin_001_MASTER.png",
+        "sha256": "2c5060dd47fd5032c63a41619379091e0751f0a01c2594a7377f8157b91bfc34",
+        "matching_physical_copies": [
+          {
+            "container": "C:\\Users\\PC\\Desktop\\Для будущего канала\\Проект Наклейки\\После Work\\RK17 Фокусник\\RK17_magician_coin_001_MASTER.png",
+            "entry": null,
+            "sha256": "2c5060dd47fd5032c63a41619379091e0751f0a01c2594a7377f8157b91bfc34"
+          }
+        ]
+      },
+      "metadata_file": "output/RK17_magic_2026-09-16/READY/manifest.json",
+      "status": "approved_ready"
+    },
+    {
+      "image_id": "RK17-0041",
+      "display_name": "Авантюрист",
+      "web": {
+        "file": "RK17_adventurer_001_catalog.webp",
+        "source_path": "output/RK17_production_corrected/RK17_adventurer_001_catalog.webp",
+        "archive_path": "WEB/RK17-0041/RK17_adventurer_001_catalog.webp",
+        "sha256": "2fc05371c94b4d3c52ca58b483928c808f792c94a3ef497919028714d7c907ca",
+        "hash_verified_in_source_archive": true
+      },
+      "master": {
+        "file": "RK17_adventurer_001_MASTER.png",
+        "source_path": "output/RK17_production_corrected/RK17_adventurer_001_MASTER.png",
+        "sha256": "2be052757f54ecc6052ae2f756c58cf6a82ba80c84780e23a1a5a779675a039e",
+        "matching_physical_copies": [
+          {
+            "container": "C:\\Users\\PC\\Desktop\\Для будущего канала\\Проект Наклейки\\После Work\\RK17 Мушкетер и Авантюрист.zip",
+            "entry": "RK17_adventurer_001_MASTER.png",
+            "sha256": "2be052757f54ecc6052ae2f756c58cf6a82ba80c84780e23a1a5a779675a039e"
+          }
+        ]
+      },
+      "metadata_file": "output/RK17_production_corrected/manifest.json",
+      "status": "approved_repaired_ready"
+    },
+    {
+      "image_id": "RK17-0042",
+      "display_name": "Чеддер д'Артаньян",
+      "web": {
+        "file": "RK17_musketeer_001_catalog.webp",
+        "source_path": "output/RK17_production_corrected/RK17_musketeer_001_catalog.webp",
+        "archive_path": "WEB/RK17-0042/RK17_musketeer_001_catalog.webp",
+        "sha256": "1967b03a75d700430bc4244b1644474348032155b5c29b40be8c76c9b81a2530",
+        "hash_verified_in_source_archive": true
+      },
+      "master": {
+        "file": "RK17_musketeer_001_MASTER.png",
+        "source_path": "output/RK17_production_corrected/RK17_musketeer_001_MASTER.png",
+        "sha256": "f746eb02afd790c8ff5c54e317876ccd43872a8912078f84430606525a8dbc70",
+        "matching_physical_copies": [
+          {
+            "container": "C:\\Users\\PC\\Desktop\\Для будущего канала\\Проект Наклейки\\После Work\\RK17 Мушкетер и Авантюрист.zip",
+            "entry": "RK17_musketeer_001_MASTER.png",
+            "sha256": "f746eb02afd790c8ff5c54e317876ccd43872a8912078f84430606525a8dbc70"
+          }
+        ]
+      },
+      "metadata_file": "output/RK17_production_corrected/manifest.json",
+      "status": "approved_repaired_ready"
+    },
+    {
+      "image_id": "RK17-0043",
+      "display_name": "Свежие новости",
+      "web": {
+        "file": "RK17_intellectual_newspaper_001_REPAIRED_catalog.webp",
+        "source_path": "output/RK17_ready_eleven_2026-09-16/READY/RK17_intellectual_newspaper_001_REPAIRED_catalog.webp",
+        "archive_path": "WEB/RK17-0043/RK17_intellectual_newspaper_001_REPAIRED_catalog.webp",
+        "sha256": "284edde016d7f3cc4e384fcf0d51f963e93106e5f6c9cfe3b0a5988632716a2e",
+        "hash_verified_in_source_archive": true
+      },
+      "master": {
+        "file": "RK17_intellectual_newspaper_001_REPAIRED_MASTER.png",
+        "source_path": "output/RK17_ready_eleven_2026-09-16/READY/RK17_intellectual_newspaper_001_REPAIRED_MASTER.png",
+        "sha256": "ddb6370cf08124879b692974daa2b8e644bee05c965ea5e29750b4175ac06407",
+        "matching_physical_copies": [
+          {
+            "container": "C:\\Users\\PC\\Desktop\\Для будущего канала\\Проект Наклейки\\После Work\\RK17. Химик, Механик, Фокусник, Музыкант, Отдыхает у камина\\RK17_intellectual_newspaper_001_REPAIRED_MASTER.png",
+            "entry": null,
+            "sha256": "ddb6370cf08124879b692974daa2b8e644bee05c965ea5e29750b4175ac06407"
+          }
+        ]
+      },
+      "metadata_file": "output/RK17_ready_eleven_2026-09-16/READY/manifest.json",
+      "status": "approved_repaired_ready"
+    },
+    {
+      "image_id": "RK17-0044",
+      "display_name": "Вот это да...",
+      "web": {
+        "file": "RK17_inventor_blueprint_001_catalog.webp",
+        "source_path": "output/RK17_ready_eleven_2026-09-16/READY/RK17_inventor_blueprint_001_catalog.webp",
+        "archive_path": "WEB/RK17-0044/RK17_inventor_blueprint_001_catalog.webp",
+        "sha256": "c6c9e8b36f0c19766b818a7a5a9a38df7c2ca77e1ee1377eb7700b16be9ed4f9",
+        "hash_verified_in_source_archive": true
+      },
+      "master": {
+        "file": "RK17_inventor_blueprint_001_MASTER.png",
+        "source_path": "output/RK17_ready_eleven_2026-09-16/READY/RK17_inventor_blueprint_001_MASTER.png",
+        "sha256": "452ca7b855a8da3e06548e00f83f0bbbab0f34340545f8c1fb4236765040c1cf",
+        "matching_physical_copies": [
+          {
+            "container": "C:\\Users\\PC\\Desktop\\Для будущего канала\\Проект Наклейки\\После Work\\RK17. Химик, Механик, Фокусник, Музыкант, Отдыхает у камина\\RK17_inventor_blueprint_001_MASTER.png",
+            "entry": null,
+            "sha256": "452ca7b855a8da3e06548e00f83f0bbbab0f34340545f8c1fb4236765040c1cf"
+          }
+        ]
+      },
+      "metadata_file": "output/RK17_ready_eleven_2026-09-16/READY/manifest.json",
+      "status": "approved_ready"
+    },
+    {
+      "image_id": "RK17-0045",
+      "display_name": "Что-то пошло не так!",
+      "web": {
+        "file": "RK17_inventor_chemistry_001_catalog.webp",
+        "source_path": "output/RK17_ready_eleven_2026-09-16/READY/RK17_inventor_chemistry_001_catalog.webp",
+        "archive_path": "WEB/RK17-0045/RK17_inventor_chemistry_001_catalog.webp",
+        "sha256": "87b5de460244b4a2d46a4873de0dc8ecfcb3dc726cad55fe93755e9d656b9cc0",
+        "hash_verified_in_source_archive": true
+      },
+      "master": {
+        "file": "RK17_inventor_chemistry_001_MASTER.png",
+        "source_path": "output/RK17_ready_eleven_2026-09-16/READY/RK17_inventor_chemistry_001_MASTER.png",
+        "sha256": "5c2373367142ae52c322825a5f0f742170c810a48d18a5d137975b3e52bdab48",
+        "matching_physical_copies": [
+          {
+            "container": "C:\\Users\\PC\\Desktop\\Для будущего канала\\Проект Наклейки\\После Work\\RK17. Химик, Механик, Фокусник, Музыкант, Отдыхает у камина\\RK17_inventor_chemistry_001_MASTER.png",
+            "entry": null,
+            "sha256": "5c2373367142ae52c322825a5f0f742170c810a48d18a5d137975b3e52bdab48"
+          }
+        ]
+      },
+      "metadata_file": "output/RK17_ready_eleven_2026-09-16/READY/manifest.json",
+      "status": "approved_ready"
+    },
+    {
+      "image_id": "RK17-0046",
+      "display_name": "Оно работает!",
+      "web": {
+        "file": "RK17_inventor_drone_001_catalog.webp",
+        "source_path": "output/RK17_ready_eleven_2026-09-16/READY/RK17_inventor_drone_001_catalog.webp",
+        "archive_path": "WEB/RK17-0046/RK17_inventor_drone_001_catalog.webp",
+        "sha256": "11e7ffbf3c44516e74c4f3b71ebc1b0ca174aeccd5f37ca6d63da146a1266e9f",
+        "hash_verified_in_source_archive": true
+      },
+      "master": {
+        "file": "RK17_inventor_drone_001_MASTER.png",
+        "source_path": "output/RK17_ready_eleven_2026-09-16/READY/RK17_inventor_drone_001_MASTER.png",
+        "sha256": "b3352d08cd87a0ec0a564e64e18bb823c2d5c8a5ce81e95745367af41d1d95e1",
+        "matching_physical_copies": [
+          {
+            "container": "C:\\Users\\PC\\Desktop\\Для будущего канала\\Проект Наклейки\\После Work\\RK17. Химик, Механик, Фокусник, Музыкант, Отдыхает у камина\\RK17_inventor_drone_001_MASTER.png",
+            "entry": null,
+            "sha256": "b3352d08cd87a0ec0a564e64e18bb823c2d5c8a5ce81e95745367af41d1d95e1"
+          }
+        ]
+      },
+      "metadata_file": "output/RK17_ready_eleven_2026-09-16/READY/manifest.json",
+      "status": "approved_ready"
+    },
+    {
+      "image_id": "RK17-0047",
+      "display_name": "Робототехник",
+      "web": {
+        "file": "RK17_inventor_robot_001_catalog.webp",
+        "source_path": "output/RK17_ready_eleven_2026-09-16/READY/RK17_inventor_robot_001_catalog.webp",
+        "archive_path": "WEB/RK17-0047/RK17_inventor_robot_001_catalog.webp",
+        "sha256": "9710fa1b72b063cd7575700299105a4eddcc9d8462eb3f87e2e6cd82868b60ee",
+        "hash_verified_in_source_archive": true
+      },
+      "master": {
+        "file": "RK17_inventor_robot_001_MASTER.png",
+        "source_path": "output/RK17_ready_eleven_2026-09-16/READY/RK17_inventor_robot_001_MASTER.png",
+        "sha256": "8eac5213742be3e765f5286eee50ed71f83b5b3864d6ebeda4e9fd9540ac2dd1",
+        "matching_physical_copies": [
+          {
+            "container": "C:\\Users\\PC\\Desktop\\Для будущего канала\\Проект Наклейки\\После Work\\RK17. Химик, Механик, Фокусник, Музыкант, Отдыхает у камина\\RK17_inventor_robot_001_MASTER.png",
+            "entry": null,
+            "sha256": "8eac5213742be3e765f5286eee50ed71f83b5b3864d6ebeda4e9fd9540ac2dd1"
+          }
+        ]
+      },
+      "metadata_file": "output/RK17_ready_eleven_2026-09-16/READY/manifest.json",
+      "status": "approved_ready"
+    },
+    {
+      "image_id": "RK17-0048",
+      "display_name": "Для тебя!",
+      "web": {
+        "file": "RK17_magician_roses_001_REPAIRED_catalog.webp",
+        "source_path": "output/RK17_ready_eleven_2026-09-16/READY/RK17_magician_roses_001_REPAIRED_catalog.webp",
+        "archive_path": "WEB/RK17-0048/RK17_magician_roses_001_REPAIRED_catalog.webp",
+        "sha256": "031a351e541eaf83cbc43d9061a40775894781e2da21edd3c12f05ae04d143f3",
+        "hash_verified_in_source_archive": true
+      },
+      "master": {
+        "file": "RK17_magician_roses_001_REPAIRED_MASTER.png",
+        "source_path": "output/RK17_ready_eleven_2026-09-16/READY/RK17_magician_roses_001_REPAIRED_MASTER.png",
+        "sha256": "11733e4131171d1c6a37e220582bea7f1b2135ac5ab86b5c6121ee33c44ea522",
+        "matching_physical_copies": [
+          {
+            "container": "C:\\Users\\PC\\Desktop\\Для будущего канала\\Проект Наклейки\\После Work\\RK17. Химик, Механик, Фокусник, Музыкант, Отдыхает у камина\\RK17_magician_roses_001_REPAIRED_MASTER.png",
+            "entry": null,
+            "sha256": "11733e4131171d1c6a37e220582bea7f1b2135ac5ab86b5c6121ee33c44ea522"
+          }
+        ]
+      },
+      "metadata_file": "output/RK17_ready_eleven_2026-09-16/READY/manifest.json",
+      "status": "approved_repaired_ready"
+    },
+    {
+      "image_id": "RK17-0049",
+      "display_name": "Магия!",
+      "web": {
+        "file": "RK17_magician_scarf_001_REPAIRED_catalog.webp",
+        "source_path": "output/RK17_ready_eleven_2026-09-16/READY/RK17_magician_scarf_001_REPAIRED_catalog.webp",
+        "archive_path": "WEB/RK17-0049/RK17_magician_scarf_001_REPAIRED_catalog.webp",
+        "sha256": "75e55f704dbc2300be976777848fa2b6be9f3ce6371223050b710051f5f2547c",
+        "hash_verified_in_source_archive": true
+      },
+      "master": {
+        "file": "RK17_magician_scarf_001_REPAIRED_MASTER.png",
+        "source_path": "output/RK17_ready_eleven_2026-09-16/READY/RK17_magician_scarf_001_REPAIRED_MASTER.png",
+        "sha256": "671a6f445d8089c192788bb92bbc944636e19bf68dcec4ba0fc1f690687dbe4e",
+        "matching_physical_copies": [
+          {
+            "container": "C:\\Users\\PC\\Desktop\\Для будущего канала\\Проект Наклейки\\После Work\\RK17. Химик, Механик, Фокусник, Музыкант, Отдыхает у камина\\RK17_magician_scarf_001_REPAIRED_MASTER.png",
+            "entry": null,
+            "sha256": "671a6f445d8089c192788bb92bbc944636e19bf68dcec4ba0fc1f690687dbe4e"
+          }
+        ]
+      },
+      "metadata_file": "output/RK17_ready_eleven_2026-09-16/READY/manifest.json",
+      "status": "approved_repaired_ready"
+    },
+    {
+      "image_id": "RK17-0050",
+      "display_name": "Зажигаем!",
+      "web": {
+        "file": "RK17_musician_dj_001_catalog.webp",
+        "source_path": "output/RK17_ready_eleven_2026-09-16/READY/RK17_musician_dj_001_catalog.webp",
+        "archive_path": "WEB/RK17-0050/RK17_musician_dj_001_catalog.webp",
+        "sha256": "af1161ccca66524af8984f52d5c463bde3390a8590b283659dc63c4674d89246",
+        "hash_verified_in_source_archive": true
+      },
+      "master": {
+        "file": "RK17_musician_dj_001_MASTER.png",
+        "source_path": "output/RK17_ready_eleven_2026-09-16/READY/RK17_musician_dj_001_MASTER.png",
+        "sha256": "82d52faa3e75508407e6bf5a509900e5f1a460a77553b08d99654410adcc698d",
+        "matching_physical_copies": [
+          {
+            "container": "C:\\Users\\PC\\Desktop\\Для будущего канала\\Проект Наклейки\\После Work\\RK17. Химик, Механик, Фокусник, Музыкант, Отдыхает у камина\\RK17_musician_dj_001_MASTER.png",
+            "entry": null,
+            "sha256": "82d52faa3e75508407e6bf5a509900e5f1a460a77553b08d99654410adcc698d"
+          }
+        ]
+      },
+      "metadata_file": "output/RK17_ready_eleven_2026-09-16/READY/manifest.json",
+      "status": "approved_ready"
+    },
+    {
+      "image_id": "RK17-0051",
+      "display_name": "Рок-н-ролл!",
+      "web": {
+        "file": "RK17_musician_guitar_001_catalog.webp",
+        "source_path": "output/RK17_ready_eleven_2026-09-16/READY/RK17_musician_guitar_001_catalog.webp",
+        "archive_path": "WEB/RK17-0051/RK17_musician_guitar_001_catalog.webp",
+        "sha256": "d3e33c857df438aa22b0c3873f65e99329fe1110d924a9bd4565d8c6a8b0a561",
+        "hash_verified_in_source_archive": true
+      },
+      "master": {
+        "file": "RK17_musician_guitar_001_MASTER.png",
+        "source_path": "output/RK17_ready_eleven_2026-09-16/READY/RK17_musician_guitar_001_MASTER.png",
+        "sha256": "e0e1176d6d8ee867c3e01b838e976afab619b0deeeec20f97943a262f9866115",
+        "matching_physical_copies": [
+          {
+            "container": "C:\\Users\\PC\\Desktop\\Для будущего канала\\Проект Наклейки\\После Work\\RK17. Химик, Механик, Фокусник, Музыкант, Отдыхает у камина\\RK17_musician_guitar_001_MASTER.png",
+            "entry": null,
+            "sha256": "e0e1176d6d8ee867c3e01b838e976afab619b0deeeec20f97943a262f9866115"
+          }
+        ]
+      },
+      "metadata_file": "output/RK17_ready_eleven_2026-09-16/READY/manifest.json",
+      "status": "approved_ready"
+    },
+    {
+      "image_id": "RK17-0052",
+      "display_name": "Споём?",
+      "web": {
+        "file": "RK17_musician_singer_001_catalog.webp",
+        "source_path": "output/RK17_ready_eleven_2026-09-16/READY/RK17_musician_singer_001_catalog.webp",
+        "archive_path": "WEB/RK17-0052/RK17_musician_singer_001_catalog.webp",
+        "sha256": "b4fffaf9f1ee5126a9e0988f7358a478dfa5fc97f9d295698e79ae1fa6f0873f",
+        "hash_verified_in_source_archive": true
+      },
+      "master": {
+        "file": "RK17_musician_singer_001_MASTER.png",
+        "source_path": "output/RK17_ready_eleven_2026-09-16/READY/RK17_musician_singer_001_MASTER.png",
+        "sha256": "1398f482bc26cd852ed33200cfb51c28459bbab17dda5fa2bfb41d507ee6d308",
+        "matching_physical_copies": [
+          {
+            "container": "C:\\Users\\PC\\Desktop\\Для будущего канала\\Проект Наклейки\\После Work\\RK17. Химик, Механик, Фокусник, Музыкант, Отдыхает у камина\\RK17_musician_singer_001_MASTER.png",
+            "entry": null,
+            "sha256": "1398f482bc26cd852ed33200cfb51c28459bbab17dda5fa2bfb41d507ee6d308"
+          }
+        ]
+      },
+      "metadata_file": "output/RK17_ready_eleven_2026-09-16/READY/manifest.json",
+      "status": "approved_ready"
+    },
+    {
+      "image_id": "RK17-0053",
+      "display_name": "Есть ритм!",
+      "web": {
+        "file": "RK17_musician_tambourine_001_catalog.webp",
+        "source_path": "output/RK17_ready_eleven_2026-09-16/READY/RK17_musician_tambourine_001_catalog.webp",
+        "archive_path": "WEB/RK17-0053/RK17_musician_tambourine_001_catalog.webp",
+        "sha256": "0c3f94bcd30ec830523ca229f4b87a36ca4a00a9329d206cf98542debfad735e",
+        "hash_verified_in_source_archive": true
+      },
+      "master": {
+        "file": "RK17_musician_tambourine_001_MASTER.png",
+        "source_path": "output/RK17_ready_eleven_2026-09-16/READY/RK17_musician_tambourine_001_MASTER.png",
+        "sha256": "b84ee1ebd67a5eeb4762b6ce7c0c046b24827d4fd1e2484abfb45d5de8e0d2d6",
+        "matching_physical_copies": [
+          {
+            "container": "C:\\Users\\PC\\Desktop\\Для будущего канала\\Проект Наклейки\\После Work\\RK17. Химик, Механик, Фокусник, Музыкант, Отдыхает у камина\\RK17_musician_tambourine_001_MASTER.png",
+            "entry": null,
+            "sha256": "b84ee1ebd67a5eeb4762b6ce7c0c046b24827d4fd1e2484abfb45d5de8e0d2d6"
+          }
+        ]
+      },
+      "metadata_file": "output/RK17_ready_eleven_2026-09-16/READY/manifest.json",
+      "status": "approved_ready"
+    },
+    {
+      "image_id": "RK17-0054",
+      "display_name": "Тренировка",
+      "web": {
+        "file": "RK17_athlete_running_001_REPAIRED_catalog.webp",
+        "source_path": "output/RK17_repaired_running_detective/RK17_athlete_running_001_REPAIRED_catalog.webp",
+        "archive_path": "WEB/RK17-0054/RK17_athlete_running_001_REPAIRED_catalog.webp",
+        "sha256": "aee3e1070854a8435c70be03f67121b3a6dd4347aee543e4189e7df6e14d242e",
+        "hash_verified_in_source_archive": true
+      },
+      "master": {
+        "file": "RK17_athlete_running_001_REPAIRED_MASTER.png",
+        "source_path": "output/RK17_repaired_running_detective/RK17_athlete_running_001_REPAIRED_MASTER.png",
+        "sha256": "d12e900f5734ab9e11fdc9083a92e5260e3469feb36e0a7efda828ac8cfc50c7",
+        "matching_physical_copies": [
+          {
+            "container": "C:\\Users\\PC\\Desktop\\Для будущего канала\\Проект Наклейки\\После Work\\RK17_Пробежка, детектив.zip",
+            "entry": "RK17_athlete_running_001_REPAIRED_MASTER.png",
+            "sha256": "d12e900f5734ab9e11fdc9083a92e5260e3469feb36e0a7efda828ac8cfc50c7"
+          }
+        ]
+      },
+      "metadata_file": "output/RK17_repaired_running_detective/manifest.json",
+      "status": "approved_repaired_ready"
+    },
+    {
+      "image_id": "RK17-0055",
+      "display_name": "Следствие идёт!",
+      "web": {
+        "file": "RK17_detective_evidence_001_REPAIRED_catalog.webp",
+        "source_path": "output/RK17_repaired_running_detective/RK17_detective_evidence_001_REPAIRED_catalog.webp",
+        "archive_path": "WEB/RK17-0055/RK17_detective_evidence_001_REPAIRED_catalog.webp",
+        "sha256": "a406a09296ca35cbe767512613f2bfcac1b7afa8c97fa744d5a79e534e7c806a",
+        "hash_verified_in_source_archive": true
+      },
+      "master": {
+        "file": "RK17_detective_evidence_001_REPAIRED_MASTER.png",
+        "source_path": "output/RK17_repaired_running_detective/RK17_detective_evidence_001_REPAIRED_MASTER.png",
+        "sha256": "f60fb803043e7c9ab9da1a611f3946f3fb78849800c37d6e94012de860001e11",
+        "matching_physical_copies": [
+          {
+            "container": "C:\\Users\\PC\\Desktop\\Для будущего канала\\Проект Наклейки\\После Work\\RK17_Пробежка, детектив.zip",
+            "entry": "RK17_detective_evidence_001_REPAIRED_MASTER.png",
+            "sha256": "f60fb803043e7c9ab9da1a611f3946f3fb78849800c37d6e94012de860001e11"
+          }
+        ]
+      },
+      "metadata_file": "output/RK17_repaired_running_detective/manifest.json",
+      "status": "approved_repaired_ready"
+    },
+    {
+      "image_id": "RK17-0056",
+      "display_name": "Симпатия",
+      "web": {
+        "file": "RK17_magician_roses_fireworks_001_catalog.webp",
+        "source_path": "output/RK17_royal_followup_2026-09-17/READY/RK17_magician_roses_fireworks_001_catalog.webp",
+        "archive_path": "WEB/RK17-0056/RK17_magician_roses_fireworks_001_catalog.webp",
+        "sha256": "cc5be4e1ce9b224061d2692482390d31588f767acda756ea5eb1947e334753de",
+        "hash_verified_in_source_archive": true
+      },
+      "master": {
+        "file": "RK17_magician_roses_fireworks_001_MASTER.png",
+        "source_path": "output/RK17_royal_followup_2026-09-17/READY/RK17_magician_roses_fireworks_001_MASTER.png",
+        "sha256": "8bc121044ce076f8bbbc429948dbabb978d4c2ac60a902e6d6967e70b49ede05",
+        "matching_physical_copies": [
+          {
+            "container": "C:\\Users\\PC\\Desktop\\Для будущего канала\\Проект Наклейки\\После Work\\RK17 Фокусник на свидание с букетом 1 картинка.zip",
+            "entry": "READY/RK17_magician_roses_fireworks_001_MASTER.png",
+            "sha256": "8bc121044ce076f8bbbc429948dbabb978d4c2ac60a902e6d6967e70b49ede05"
+          }
+        ]
+      },
+      "metadata_file": "output/RK17_royal_followup_2026-09-17/READY/manifest.json",
+      "status": "approved_ready"
+    }
+  ]
+}
