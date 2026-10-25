@@ -11,6 +11,9 @@ build = ["pyinstaller>=6,<7"]
 [project.scripts]
 printnik = "printnik.prototype:main"
 
+[tool.setuptools]
+packages = ["printnik"]
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 

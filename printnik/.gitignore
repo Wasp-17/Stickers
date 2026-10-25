@@ -1,4 +1,5 @@
 .build-deps/
+.venv/
 build/
 dist/
 installer-payload/
