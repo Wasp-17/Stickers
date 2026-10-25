@@ -1,5 +1,6 @@
 .build-deps/
 .venv/
+*.egg-info/
 build/
 dist/
 installer-payload/
