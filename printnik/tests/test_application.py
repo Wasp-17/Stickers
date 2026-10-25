@@ -6,7 +6,7 @@ from pathlib import Path
 from PIL import Image, ImageDraw
 
 from printnik.catalog import AssetCatalog
-from printnik.calibration import create_calibration_package
+from printnik.calibration import create_calibration_package, create_registration_test_package
 from printnik.envelopes import create_envelopes_pdf
 from printnik.dxf import bounds, render_dxf
 from printnik.importer import import_payload
@@ -168,6 +168,19 @@ class ApplicationTests(unittest.TestCase):
         self.assertEqual(result["registration_inset_mm"], 10)
         svg = Path(result["cut_svg"]).read_text(encoding="utf-8")
         self.assertIn('width="40" height="36"', svg)
+
+    def test_registration_experiment_moves_bottom_marks_without_changing_working_profile(self):
+        artwork = self.root / "local-art.png"
+        Image.new("RGBA", (120, 200), (225, 90, 30, 255)).save(artwork)
+        trial = create_registration_test_package(self.root / "registration", bottom_mm=10,
+                                                 image_source=artwork, dpi=100)
+        self.assertEqual(trial["mark_origins_mm"], [[10, 10], [200, 10], [10, 287], [200, 287]])
+        self.assertEqual(trial["image_box_mm"], {"left": 34, "top": 237, "right": 64, "bottom": 287})
+        self.assertEqual(trial["status"], "experimental_unverified")
+        self.assertIsNone(trial["cut_file"])
+        self.assertTrue(Path(trial["print_pdf"]).exists())
+        with self.assertRaises(ValueError):
+            create_registration_test_package(self.root / "too-close", bottom_mm=1, dpi=100)
 
 
 if __name__ == "__main__":

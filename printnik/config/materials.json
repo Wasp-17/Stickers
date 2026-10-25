@@ -13,7 +13,7 @@
       "passes": 1,
       "minimum_hole_mm_b": 2.2,
       "minimum_hole_mm_c_plus": 1.5,
-      "calibrated": true
+      "calibrated": false
     },
     {
       "material_id": "glossy_white",

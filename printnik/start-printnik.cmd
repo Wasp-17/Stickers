@@ -1,7 +1,8 @@
 @echo off
-set "PRINTNIK_PYTHON=C:\Users\PC\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe"
-if not exist "%PRINTNIK_PYTHON%" (
-  echo Не найден встроенный Python Codex. Установочная сборка Printnik-Setup.exe еще не создана.
+if not defined PRINTNIK_PYTHON set "PRINTNIK_PYTHON=python"
+"%PRINTNIK_PYTHON%" -c "import PIL, numpy" >nul 2>&1
+if errorlevel 1 (
+  echo Не найден Python с Pillow и NumPy. Установи зависимости из pyproject.toml или запусти Printnik-Setup.exe.
   pause
   exit /b 1
 )
