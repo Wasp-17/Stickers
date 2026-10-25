@@ -16,6 +16,12 @@ from printnik.cameo_usb import (CONTROL_LINE_MOVE, FIRST_CUT_PATH, FIRST_CUT_SET
                                _status_burst_worker, _tool_up_motion_worker)
 
 
+def local_pilot_fixture(name):
+    """Skip hardware-pilot cases when private printed-sheet fixtures are absent."""
+    folder = Path(__file__).resolve().parents[1] / "experiments" / name
+    return unittest.skipUnless(folder.is_dir(), f"Local pilot fixture is absent: {name}")
+
+
 class CameoUsbTests(unittest.TestCase):
     def test_read_only_probe_identifies_tool_holders(self):
         self.assertEqual(parse_tool_setup(b"    2,    0\x03"), (2, 0))
@@ -224,6 +230,7 @@ class CameoUsbTests(unittest.TestCase):
                          list(KISS_TEST_PATH))
         self.assertEqual(sum(command.startswith(b"D") for command in device.writes), 4)
 
+    @local_pilot_fixture("first-cut-matte-25")
     def test_second_trial_rejects_changed_pressure_or_position(self):
         import shutil
         source = Path(__file__).resolve().parents[1] / "experiments" / "first-cut-matte-25"
@@ -248,6 +255,7 @@ class CameoUsbTests(unittest.TestCase):
                 (path / name).unlink(missing_ok=True)
             path.rmdir()
 
+    @local_pilot_fixture("direct-cat-matte-25")
     def test_cat_trial_is_bound_to_exact_print_and_contour(self):
         import shutil
         source = Path(__file__).resolve().parents[1] / "experiments" / "direct-cat-matte-25"
@@ -275,6 +283,7 @@ class CameoUsbTests(unittest.TestCase):
                 (path / name).unlink(missing_ok=True)
             path.rmdir()
 
+    @local_pilot_fixture("cat-gap-correction-matte-25")
     def test_corrected_cat_trial_is_bound_to_its_own_print_and_contour(self):
         import shutil
         source = Path(__file__).resolve().parents[1] / "experiments" / "cat-gap-correction-matte-25"
@@ -302,6 +311,7 @@ class CameoUsbTests(unittest.TestCase):
                 (path / name).unlink(missing_ok=True)
             path.rmdir()
 
+    @local_pilot_fixture("cat-gap-correction-matte-25")
     def test_blade_check_requires_failed_cat_sheet_and_is_only_one_square(self):
         import shutil
         from contextlib import nullcontext
@@ -344,6 +354,7 @@ class CameoUsbTests(unittest.TestCase):
                 (path / name).unlink(missing_ok=True)
             path.rmdir()
 
+    @local_pilot_fixture("cat-gap-correction-matte-25")
     def test_cat_retry_requires_failed_first_cut_and_successful_blade_check(self):
         import shutil
         source = Path(__file__).resolve().parents[1] / "experiments" / "cat-gap-correction-matte-25"
@@ -367,6 +378,7 @@ class CameoUsbTests(unittest.TestCase):
                 (path / name).unlink(missing_ok=True)
             path.rmdir()
 
+    @local_pilot_fixture("direct-cat-matte-25")
     def test_cat_trial_only_cuts_after_valid_tool_and_marks(self):
         from contextlib import nullcontext
         source = Path(__file__).resolve().parents[1] / "experiments" / "direct-cat-matte-25"
@@ -414,6 +426,7 @@ class CameoUsbTests(unittest.TestCase):
                 self.assertEqual(sum(command == b"\x1b\x05"
                                      for command in device.events[first_batch:last_batch + 1]), 0)
 
+    @local_pilot_fixture("cat-batched-matte-25")
     def test_batched_cat_trial_requires_exact_new_sheet_files(self):
         import shutil
         source = Path(__file__).resolve().parents[1] / "experiments" / "cat-batched-matte-25"
@@ -438,6 +451,7 @@ class CameoUsbTests(unittest.TestCase):
                 (path / name).unlink(missing_ok=True)
             path.rmdir()
 
+    @local_pilot_fixture("cat-smooth-matte-25")
     def test_smooth_cat_trial_uses_physically_verified_path(self):
         import shutil
         source = Path(__file__).resolve().parents[1] / "experiments" / "cat-smooth-matte-25"
@@ -462,6 +476,7 @@ class CameoUsbTests(unittest.TestCase):
                 (path / name).unlink(missing_ok=True)
             path.rmdir()
 
+    @local_pilot_fixture("direct-cat-matte-25")
     def test_tool_up_motion_uses_only_m_after_marks(self):
         from contextlib import nullcontext
         source = Path(__file__).resolve().parents[1] / "experiments" / "direct-cat-matte-25"
@@ -489,6 +504,7 @@ class CameoUsbTests(unittest.TestCase):
             self.assertEqual(sum(command.startswith(b"M") for command in device.writes),
                              86 if status == "motion_device_ready" else 0)
 
+    @local_pilot_fixture("direct-cat-matte-25")
     def test_smooth_tool_up_motion_does_not_poll_between_moves(self):
         from contextlib import nullcontext
         source = Path(__file__).resolve().parents[1] / "experiments" / "direct-cat-matte-25"
