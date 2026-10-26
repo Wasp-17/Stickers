@@ -11,6 +11,7 @@ if __name__ == "__main__":
                                        "--cameo-position-worker", "--cameo-kiss-test-worker",
                                        "--cameo-blade-check-worker",
                                        "--cameo-direct-cat-worker", "--cameo-status-burst-worker",
+                                       "--cameo-direct-order-worker",
                                        "--cameo-tool-up-motion-worker", "--cameo-tool-up-smooth-worker")):
         from printnik.cameo_usb import main as cameo_probe_main
         raise SystemExit(cameo_probe_main())

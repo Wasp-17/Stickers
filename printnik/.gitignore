@@ -11,6 +11,7 @@ validation-jobs/
 tests/_work/
 test-tmp/
 test-results.txt
+build-output.txt
 experiments/
 __pycache__/
 *.pyc

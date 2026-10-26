@@ -21,6 +21,7 @@ from ctypes import wintypes
 from pathlib import Path
 
 from .cut_plan import CutPlanError, plan_svg
+from .direct_cut import prepare_direct_sheet
 
 
 USBPRINT_GUID = uuid.UUID("28d78fad-5a12-11d1-ae5b-0000f803a8c2")
@@ -585,6 +586,39 @@ def _direct_cat_worker(manifest_path: Path) -> dict[str, str]:
                 "raw_response_hex": answer.hex()}
 
 
+def _direct_order_worker(output_dir: Path, sheet_no: int) -> dict:
+    """One approved sheet, using the exact setup and transport of the pilot."""
+    try:
+        preview = prepare_direct_sheet(output_dir, sheet_no)
+    except CutPlanError as exc:
+        raise CameoConnectionError(str(exc)) from exc
+    packets = packetize_cut_path(preview.commands)
+    with _connection(preview.commands) as device:
+        firmware = parse_firmware(device.exchange(FIRMWARE_QUERY))
+        if parse_status(device.exchange(STATUS_QUERY)) != "ready":
+            raise CameoConnectionError("Загрузите утверждённый лист и дождитесь состояния «Готово»")
+        tool_1, _ = parse_tool_setup(device.exchange(TOOL_QUERY))
+        if tool_1 != 2:
+            raise CameoConnectionError("В гнезде 1 должен быть AutoBlade; рез не запускался")
+        for command in KISS_TEST_SETUP:
+            device.write(command)
+        for command in registration_commands(FIRST_CUT_GEOMETRY):
+            device.write(command)
+        answer = device.read()
+        if parse_registration_result(answer) != "found":
+            return {"firmware": firmware, "status": "not_found",
+                    "raw_response_hex": answer.hex(), "sent_packet_count": 0}
+        sent = 0
+        for packet in packets:
+            device.write_batch(packet, preview.commands)
+            sent += 1
+        state = _wait_for_ready(device, timeout=300)
+        return {"firmware": firmware,
+                "status": "cut_device_ready" if state == "ready" else "cut_completion_unconfirmed",
+                "raw_response_hex": answer.hex(), "sent_packet_count": sent,
+                "packet_count": len(packets), "command_count": preview.command_count}
+
+
 def _status_burst_worker() -> dict[str, str | list[str]]:
     """Read-only diagnostic: twenty status requests, with no motion commands."""
     with _connection() as device:
@@ -631,7 +665,7 @@ def _tool_up_motion_worker(manifest_path: Path, *, interleaved_status: bool = Tr
 
 
 def _run_worker(mode: str, timeout: float, geometry: tuple[int, int, int, int] | None = None,
-                manifest_path: Path | None = None) -> dict[str, str]:
+                manifest_path: Path | None = None, sheet_no: int | None = None) -> dict:
     if sys.platform != "win32":
         raise CameoConnectionError("Проверка USB рассчитана на Windows")
     descriptor, result_path = tempfile.mkstemp(prefix="printnik-cameo-", suffix=".json")
@@ -640,6 +674,7 @@ def _run_worker(mode: str, timeout: float, geometry: tuple[int, int, int, int] |
                   "kiss_test": "--cameo-kiss-test-worker",
                   "blade_check": "--cameo-blade-check-worker",
                   "direct_cat": "--cameo-direct-cat-worker",
+                  "direct_order": "--cameo-direct-order-worker",
                   "status_burst": "--cameo-status-burst-worker",
                   "tool_up_motion": "--cameo-tool-up-motion-worker",
                   "tool_up_smooth": "--cameo-tool-up-smooth-worker",
@@ -655,6 +690,11 @@ def _run_worker(mode: str, timeout: float, geometry: tuple[int, int, int, int] |
         if manifest_path is None:
             raise CameoConnectionError("Не выбран пробный лист с котом")
         command.append(f"--cameo-trial-manifest={Path(manifest_path).resolve()}")
+    if mode == "direct_order":
+        if manifest_path is None or type(sheet_no) is not int or sheet_no < 1:
+            raise CameoConnectionError("Не задан лист заказа для прямого реза")
+        command.append(f"--cameo-order-dir={Path(manifest_path).resolve()}")
+        command.append(f"--cameo-sheet-no={sheet_no}")
     command.append(f"--cameo-probe-result={result_path}")
     try:
         result = subprocess.run(command, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
@@ -872,6 +912,42 @@ def run_direct_cat_trial(manifest_path: Path, timeout: float = 600) -> dict[str,
     return result
 
 
+def run_direct_order_sheet(output_dir: Path, sheet_no: int, timeout: float = 600) -> dict:
+    """Send one approved sheet once; an uncertain result still blocks repeats."""
+    output_dir = Path(output_dir).resolve()
+    try:
+        preview = prepare_direct_sheet(output_dir, sheet_no)
+    except CutPlanError as exc:
+        raise CameoConnectionError(str(exc)) from exc
+    attempt_path = output_dir / f"sheet-{sheet_no:02d}-direct-attempt.json"
+    record = {
+        "started_at": datetime.now(timezone.utc).isoformat(),
+        "status": "started_unsafe_to_repeat", "order_id": preview.order_id,
+        "sheet_no": sheet_no, "print_sha256": preview.print_sha256,
+        "cut_sha256": preview.cut_sha256, "command_count": preview.command_count,
+    }
+    try:
+        with attempt_path.open("x", encoding="utf-8") as file:
+            json.dump(record, file, ensure_ascii=False, indent=2)
+    except FileExistsError as exc:
+        raise CameoConnectionError("Этот лист уже отправлялся. Осмотрите его; повтор остановлен.") from exc
+    except OSError as exc:
+        raise CameoConnectionError("Не удалось записать попытку; рез не запускался") from exc
+    try:
+        result = _run_worker("direct_order", timeout, manifest_path=output_dir, sheet_no=sheet_no)
+        record.update(result)
+    except CameoConnectionError as exc:
+        record.update(status="error_after_attempt_started", error=str(exc))
+        raise
+    finally:
+        record["finished_at"] = datetime.now(timezone.utc).isoformat()
+        try:
+            attempt_path.write_text(json.dumps(record, ensure_ascii=False, indent=2), encoding="utf-8")
+        except OSError as exc:
+            raise CameoConnectionError("Результат отправки не сохранился. Не повторяйте рез без осмотра листа.") from exc
+    return result
+
+
 def main() -> int:
     try:
         if "--cameo-status-burst-worker" in sys.argv:
@@ -889,6 +965,16 @@ def main() -> int:
             if trial_arg is None:
                 raise CameoConnectionError("Не указан пробный лист с котом")
             payload = _direct_cat_worker(Path(trial_arg.split("=", 1)[1]))
+        elif "--cameo-direct-order-worker" in sys.argv:
+            folder_arg = next((arg for arg in sys.argv if arg.startswith("--cameo-order-dir=")), None)
+            sheet_arg = next((arg for arg in sys.argv if arg.startswith("--cameo-sheet-no=")), None)
+            if folder_arg is None or sheet_arg is None:
+                raise CameoConnectionError("Не указан утверждённый лист заказа")
+            try:
+                sheet_no = int(sheet_arg.split("=", 1)[1])
+            except ValueError as exc:
+                raise CameoConnectionError("Неверный номер листа заказа") from exc
+            payload = _direct_order_worker(Path(folder_arg.split("=", 1)[1]), sheet_no)
         elif "--cameo-kiss-test-worker" in sys.argv:
             payload = _kiss_test_worker()
         elif "--cameo-blade-check-worker" in sys.argv:

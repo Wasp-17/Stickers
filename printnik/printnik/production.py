@@ -292,6 +292,8 @@ def render_order(order: Order, catalog: AssetCatalog, material: MaterialProfile,
         page = Image.new("RGB", (px(210), px(297)), "white")
         draw = ImageDraw.Draw(page)
         _draw_marks(draw, dpi)
+        # Print-only dimensional check used by the verified direct-cut pilot.
+        draw.line([(px(80), px(279)), (px(130), px(279))], fill="black", width=3)
         all_paths: list[tuple[float, str, float]] = []
         for placement in placements:
             sticker = placement.sticker

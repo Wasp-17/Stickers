@@ -17,9 +17,9 @@ from .cameo_usb import (CameoConnectionError, position_over_control_line, probe_
                         registration_geometry, run_kiss_test, scan_registration_marks,
                         validate_kiss_test_manifest, run_blade_check,
                         validate_blade_check_manifest, run_direct_cat_trial,
-                        validate_direct_cat_manifest)
+                        validate_direct_cat_manifest, run_direct_order_sheet)
 from .cut_plan import CutPlanError, write_order_cut_plans
-from .direct_cut import approved_file_hashes
+from .direct_cut import approved_file_hashes, prepare_direct_sheet
 from .devices import open_folder, open_silhouette_bridge, send_pdf_to_printer
 from .equipment import Device, DeviceKind, DeviceStatus, EquipmentScheduler
 from .envelopes import create_envelopes_pdf
@@ -205,6 +205,8 @@ class PrintnikApp(tk.Tk):
         ttk.Button(right, text="План прямой резки (без отправки)", command=self.show_direct_cut_plan).pack(fill="x", pady=4)
         ttk.Button(right, text="2. Открыть листы для печати", command=self.print_selected).pack(fill="x", pady=4)
         ttk.Button(right, text="3. Открыть задание для плоттера", command=self.cut_selected).pack(fill="x", pady=4)
+        self.direct_cut_button = ttk.Button(right, text="Пробный прямой рез одного листа", command=self.direct_cut_selected)
+        self.direct_cut_button.pack(fill="x", pady=4)
         ttk.Button(right, text="4. Учесть рез листа", command=self.confirm_cut_sheet).pack(fill="x", pady=4)
         ttk.Button(right, text="Отметить заказ готовым", command=self.complete_selected).pack(fill="x", pady=4)
         ttk.Button(right, text="Открыть папку заказа", command=self.open_selected_folder).pack(fill="x", pady=(18, 4))
@@ -1213,6 +1215,73 @@ class PrintnikApp(tk.Tk):
             )
         except Exception as exc:
             self._show_error("Не удалось открыть Silhouette Studio", str(exc))
+
+    def direct_cut_selected(self):
+        order = self.selected_order()
+        if not order or not order.output_dir or self.busy:
+            messagebox.showwarning("Нет готового листа", "Сначала подготовьте и напечатайте заказ.")
+            return
+        if order.status not in {OrderStatus.PRINTED_WAITING_CUT, OrderStatus.LOADED_FOR_CUT}:
+            messagebox.showwarning("Лист ещё не напечатан", "Сначала подтвердите печать листа в Печатнике.")
+            return
+        sheet_no = simpledialog.askinteger("Прямой USB-рез", f"Номер листа (1–{order.sheet_count})",
+                                           parent=self, minvalue=1, maxvalue=order.sheet_count,
+                                           initialvalue=1)
+        if sheet_no is None:
+            return
+        try:
+            preview = prepare_direct_sheet(Path(order.output_dir), sheet_no)
+        except CutPlanError as exc:
+            messagebox.showerror("Прямой рез остановлен", str(exc))
+            return
+        if not messagebox.askyesno(
+            "Пробный прямой рез",
+            f"Заказ {preview.order_id}, лист {sheet_no}. Контуров: {preview.contour_count}.\n"
+            f"Команд: {preview.command_count}. Печатный PDF и контуры совпали с утверждёнными.\n\n"
+            "Проверь: это НОВЫЙ лист из этого PDF, контрольная линия 50 мм, "
+            "та же матовая самоклейка без коврика, печатной стороной вверх. "
+            "AutoBlade плотно закреплён в первом гнезде; Cameo показывает «Готово», "
+            "Silhouette Studio закрыта.\n\n"
+            "Печатник найдёт четыре метки и вырежет только выбранный лист "
+            "(нож 1, сила 4, скорость 4, один проход). Повтор этой попытки будет заблокирован. Начать?",
+            parent=self,
+        ):
+            return
+        self.busy = True
+        self.direct_cut_button.configure(state="disabled")
+        self.set_banner(f"Пробный прямой рез листа {sheet_no}…")
+
+        def worker():
+            try:
+                result = run_direct_order_sheet(Path(order.output_dir), sheet_no)
+                error = None
+            except CameoConnectionError as exc:
+                result, error = None, str(exc)
+
+            def finish():
+                self.busy = False
+                self.direct_cut_button.configure(state="normal")
+                if error:
+                    self._show_error("Прямой рез не подтверждён", error + "\n\nОсмотри лист перед любым повтором.")
+                    return
+                if result["status"] != "cut_device_ready":
+                    self.set_banner("Поиск меток или завершение реза не подтверждены")
+                    messagebox.showwarning("Прямой рез не подтверждён",
+                                           "Осмотри лист. Повтор этого задания заблокирован.", parent=self)
+                    return
+                self.store.save(order, "direct_usb_sheet_sent", {"sheet_no": sheet_no,
+                                "command_count": preview.command_count,
+                                "print_sha256": preview.print_sha256,
+                                "cut_sha256": preview.cut_sha256})
+                self.set_banner("Рез отправлен; проверь наклейки и подложку")
+                messagebox.showinfo("Прямой рез завершён",
+                                    "Cameo сообщил «Готово». Выгрузи лист, проверь все наклейки и подложку. "
+                                    "После осмотра нажми «Учесть рез листа». Повторная отправка заблокирована.",
+                                    parent=self)
+
+            self.after(0, finish)
+
+        threading.Thread(target=worker, daemon=True).start()
 
     def confirm_cut_sheet(self):
         order = self.selected_order()

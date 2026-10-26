@@ -1,8 +1,7 @@
 $ErrorActionPreference = 'Stop'
-$Python = if ($env:PRINTNIK_PYTHON) { $env:PRINTNIK_PYTHON } else { 'python' }
-if (Test-Path "$PSScriptRoot\.build-deps") {
-  $env:PYTHONPATH = "$PSScriptRoot\.build-deps"
-}
+$Python = if ($env:PRINTNIK_PYTHON) { $env:PRINTNIK_PYTHON }
+          elseif (Test-Path "$PSScriptRoot\.venv\Scripts\python.exe") { "$PSScriptRoot\.venv\Scripts\python.exe" }
+          else { 'python' }
 Set-Location $PSScriptRoot
 
 & $Python -m PyInstaller --noconfirm --clean --windowed --onefile `

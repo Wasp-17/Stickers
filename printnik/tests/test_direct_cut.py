@@ -2,9 +2,13 @@ import hashlib
 import json
 import unittest
 import uuid
+from contextlib import nullcontext
 from pathlib import Path
+from unittest.mock import patch
 
-from printnik.cameo_usb import packetize_cut_path
+from printnik.cameo_usb import (CameoConnectionError, FIRMWARE_QUERY, STATUS_QUERY,
+                               TOOL_QUERY, _direct_order_worker, packetize_cut_path,
+                               run_direct_order_sheet)
 from printnik.cut_plan import CutPlanError
 from printnik.direct_cut import (VERIFIED_REGISTRATION, VERIFIED_SETTINGS,
                                  approved_file_hashes, compile_svg_commands,
@@ -40,7 +44,8 @@ class DirectCutPlanTests(unittest.TestCase):
         self._save()
 
     def tearDown(self):
-        for path in (self.job, self.svg, self.pdf, self.preview):
+        for path in (self.job, self.svg, self.pdf, self.preview,
+                     self.folder / "sheet-01-direct-attempt.json"):
             path.unlink(missing_ok=True)
         self.folder.rmdir()
 
@@ -80,6 +85,50 @@ class DirectCutPlanTests(unittest.TestCase):
         self.preview.write_bytes(b"changed preview")
         with self.assertRaises(CutPlanError):
             prepare_direct_sheet(self.folder, 1)
+
+    def test_worker_sends_only_after_marks_and_keeps_path_packets_together(self):
+        class FakeDevice:
+            def __init__(self, marks):
+                self.marks, self.events = marks, []
+
+            def exchange(self, command):
+                self.events.append(command)
+                return {FIRMWARE_QUERY: b"CAMEO 5 ALPHA V1.03\x03",
+                        STATUS_QUERY: b"0\x03", TOOL_QUERY: b"2,0\x03"}[command]
+
+            def write(self, command):
+                self.events.append(command)
+
+            def write_batch(self, packet, allowed):
+                self.events.append((packet, allowed))
+
+            def read(self):
+                return self.marks
+
+        for marks, expected in ((b"    10\x03", "not_found"),
+                                (b"    0\x03", "cut_device_ready")):
+            device = FakeDevice(marks)
+            with patch("printnik.cameo_usb._connection", return_value=nullcontext(device)), \
+                 patch("printnik.cameo_usb.time.sleep"):
+                result = _direct_order_worker(self.folder, 1)
+            self.assertEqual(result["status"], expected)
+            batches = [event for event in device.events if isinstance(event, tuple)]
+            self.assertEqual(len(batches), 0 if expected == "not_found" else 1)
+            if batches:
+                self.assertEqual(batches[0][0], prepare_direct_sheet(self.folder, 1).commands)
+                first_batch = device.events.index(batches[0])
+                self.assertTrue(all(isinstance(event, tuple) for event in device.events[first_batch:first_batch+1]))
+
+    def test_attempt_record_blocks_a_second_send(self):
+        outcome = {"firmware": "CAMEO 5 ALPHA V1.03", "status": "not_found",
+                   "sent_packet_count": 0}
+        with patch("printnik.cameo_usb._run_worker", return_value=outcome) as worker:
+            self.assertEqual(run_direct_order_sheet(self.folder, 1)["status"], "not_found")
+            with self.assertRaises(CameoConnectionError):
+                run_direct_order_sheet(self.folder, 1)
+        worker.assert_called_once()
+        record = json.loads((self.folder / "sheet-01-direct-attempt.json").read_text(encoding="utf-8"))
+        self.assertEqual(record["status"], "not_found")
 
     @unittest.skipUnless(
         (Path(__file__).resolve().parents[1] / "experiments" / "mixed-sheet-pilot" /

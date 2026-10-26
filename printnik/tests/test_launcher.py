@@ -28,6 +28,24 @@ class LauncherTests(unittest.TestCase):
             result.unlink(missing_ok=True)
             folder.rmdir()
 
+    def test_direct_order_worker_flag_is_routed_without_opening_app(self):
+        root = Path(__file__).resolve().parents[1]
+        folder = root / "tests" / "_work" / uuid.uuid4().hex
+        folder.mkdir(parents=True)
+        try:
+            result = folder / "worker-result.json"
+            completed = subprocess.run(
+                [sys.executable, str(root / "printnik_launcher.py"),
+                 "--cameo-direct-order-worker", f"--cameo-order-dir={folder}",
+                 "--cameo-sheet-no=1", f"--cameo-probe-result={result}"],
+                cwd=root, capture_output=True, timeout=10, check=False,
+            )
+            self.assertEqual(completed.returncode, 1)
+            self.assertIn("error", json.loads(result.read_text(encoding="utf-8")))
+        finally:
+            result.unlink(missing_ok=True)
+            folder.rmdir()
+
 
 if __name__ == "__main__":
     unittest.main()
