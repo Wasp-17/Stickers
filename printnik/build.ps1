@@ -1,8 +1,8 @@
 $ErrorActionPreference = 'Stop'
-$Python = 'C:\Users\PC\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe'
-$env:PYTHONPATH = "$PSScriptRoot\.build-deps"
+$Python = if ($env:PRINTNIK_PYTHON) { $env:PRINTNIK_PYTHON }
+          elseif (Test-Path "$PSScriptRoot\.venv\Scripts\python.exe") { "$PSScriptRoot\.venv\Scripts\python.exe" }
+          else { 'python' }
 Set-Location $PSScriptRoot
-Copy-Item "$PSScriptRoot\..\catalog-data\cut_size_rules.json" "$PSScriptRoot\config\cut_size_rules.json" -Force
 
 & $Python -m PyInstaller --noconfirm --clean --windowed --onefile `
   --name Printnik `
@@ -19,5 +19,9 @@ Copy-Item "$PSScriptRoot\dist\Printnik.exe" "$PSScriptRoot\installer-payload\pay
   installer.py
 if ($LASTEXITCODE -ne 0) { throw "Не удалось собрать Printnik-Setup.exe (код $LASTEXITCODE)" }
 
+$VersionedSetup = "$PSScriptRoot\dist\Printnik-Setup-$(Get-Date -Format 'yyyyMMdd-HHmmss').exe"
+Copy-Item "$PSScriptRoot\dist\Printnik-Setup.exe" $VersionedSetup -Force
+
 Write-Host "READY: $PSScriptRoot\dist\Printnik.exe"
 Write-Host "READY: $PSScriptRoot\dist\Printnik-Setup.exe"
+Write-Host "READY FOR DOWNLOAD: $VersionedSetup"

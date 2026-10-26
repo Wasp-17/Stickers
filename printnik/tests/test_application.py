@@ -6,7 +6,7 @@ from pathlib import Path
 from PIL import Image, ImageDraw
 
 from printnik.catalog import AssetCatalog
-from printnik.calibration import create_calibration_package
+from printnik.calibration import create_calibration_package, create_registration_test_package
 from printnik.envelopes import create_envelopes_pdf
 from printnik.dxf import bounds, render_dxf
 from printnik.importer import import_payload
@@ -82,7 +82,7 @@ class ApplicationTests(unittest.TestCase):
         draw.ellipse((10, 10, 210, 170), fill="red")
         draw.ellipse((90, 65, 130, 105), fill=(0, 0, 0, 0))
         image.save(source)
-        material = MaterialProfile("matte_white", "Матовая", "Вверх", "Epson Matte", "Высокий", 3, 10, 4, 1, 2.2, 1.5, True)
+        material = MaterialProfile("matte_white", "Матовая", "Вверх", "Epson Matte", "Высокий", 1, 4, 4, 1, 2.2, 1.5, False)
         order = Order("RK-TEST-1", "matte_white", items=[OrderItem("RK17-9999", "B", 2)])
         result = render_order(order, AssetCatalog([assets]), material, self.root / "jobs", dpi=100)
         self.assertEqual(result["sheet_count"], 1)
@@ -94,7 +94,11 @@ class ApplicationTests(unittest.TestCase):
         self.assertFalse(result["contour_review_approved"])
         self.assertGreater(result["cut_bounds_mm"][0]["width"], 0)
         payload = json.loads((self.root / "jobs" / order.order_id / "job.json").read_text(encoding="utf-8"))
-        self.assertEqual(payload["cut_settings"]["force"], 10)
+        self.assertEqual(payload["cut_settings"], {"blade": 1, "force": 4, "speed": 4, "passes": 1})
+        with Image.open(result["print_pages"][0]) as page:
+            px = lambda mm: round(mm / 25.4 * 100)
+            self.assertEqual(page.getpixel((px(80), px(279))), (0, 0, 0))
+            self.assertEqual(page.getpixel((px(130), px(279))), (0, 0, 0))
         self.assertEqual(len(payload["cut_length_mm_per_sheet"]), 1)
         self.assertGreater(payload["cut_length_mm_per_sheet"][0], 0)
         self.assertAlmostEqual(payload["planned_cut_length_mm"], payload["cut_length_mm_per_sheet"][0])
@@ -168,6 +172,19 @@ class ApplicationTests(unittest.TestCase):
         self.assertEqual(result["registration_inset_mm"], 10)
         svg = Path(result["cut_svg"]).read_text(encoding="utf-8")
         self.assertIn('width="40" height="36"', svg)
+
+    def test_registration_experiment_moves_bottom_marks_without_changing_working_profile(self):
+        artwork = self.root / "local-art.png"
+        Image.new("RGBA", (120, 200), (225, 90, 30, 255)).save(artwork)
+        trial = create_registration_test_package(self.root / "registration", bottom_mm=10,
+                                                 image_source=artwork, dpi=100)
+        self.assertEqual(trial["mark_origins_mm"], [[10, 10], [200, 10], [10, 287], [200, 287]])
+        self.assertEqual(trial["image_box_mm"], {"left": 34, "top": 237, "right": 64, "bottom": 287})
+        self.assertEqual(trial["status"], "experimental_unverified")
+        self.assertIsNone(trial["cut_file"])
+        self.assertTrue(Path(trial["print_pdf"]).exists())
+        with self.assertRaises(ValueError):
+            create_registration_test_package(self.root / "too-close", bottom_mm=1, dpi=100)
 
 
 if __name__ == "__main__":

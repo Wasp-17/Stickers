@@ -26,7 +26,7 @@ def create_shortcut(link: Path, target: Path):
         f"$s.WorkingDirectory='{str(target.parent).replace("'", "''")}';"
         "$s.Description='Локальная производственная программа Печатник';$s.Save()"
     )
-    subprocess.run(["powershell.exe", "-NoProfile", "-ExecutionPolicy", "Bypass", "-Command", script], check=True,
+    subprocess.run(["powershell.exe", "-NoProfile", "-Command", script], check=True,
                    creationflags=getattr(subprocess, "CREATE_NO_WINDOW", 0))
 
 

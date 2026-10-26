@@ -11,7 +11,15 @@ from pathlib import Path
 from tkinter import filedialog, messagebox, simpledialog, ttk
 
 from .catalog import AssetCatalog
-from .calibration import create_calibration_package
+from .calibration import create_calibration_package, create_registration_test_package
+from .cameo_usb import (CameoConnectionError, position_over_control_line, probe_cameo,
+                        probe_tool_up_smooth,
+                        registration_geometry, run_kiss_test, scan_registration_marks,
+                        validate_kiss_test_manifest, run_blade_check,
+                        validate_blade_check_manifest, run_direct_cat_trial,
+                        validate_direct_cat_manifest, run_direct_order_sheet)
+from .cut_plan import CutPlanError, write_order_cut_plans
+from .direct_cut import approved_file_hashes, prepare_direct_sheet
 from .devices import open_folder, open_silhouette_bridge, send_pdf_to_printer
 from .equipment import Device, DeviceKind, DeviceStatus, EquipmentScheduler
 from .envelopes import create_envelopes_pdf
@@ -194,8 +202,11 @@ class PrintnikApp(tk.Tk):
         self.prepare_btn.pack(fill="x", pady=4)
         ttk.Button(right, text="Посмотреть все контуры реза", command=self.open_contour_previews).pack(fill="x", pady=4)
         ttk.Button(right, text="Утвердить контуры листов", command=self.approve_contours).pack(fill="x", pady=4)
+        ttk.Button(right, text="План прямой резки (без отправки)", command=self.show_direct_cut_plan).pack(fill="x", pady=4)
         ttk.Button(right, text="2. Открыть листы для печати", command=self.print_selected).pack(fill="x", pady=4)
         ttk.Button(right, text="3. Открыть задание для плоттера", command=self.cut_selected).pack(fill="x", pady=4)
+        self.direct_cut_button = ttk.Button(right, text="Пробный прямой рез одного листа", command=self.direct_cut_selected)
+        self.direct_cut_button.pack(fill="x", pady=4)
         ttk.Button(right, text="4. Учесть рез листа", command=self.confirm_cut_sheet).pack(fill="x", pady=4)
         ttk.Button(right, text="Отметить заказ готовым", command=self.complete_selected).pack(fill="x", pady=4)
         ttk.Button(right, text="Открыть папку заказа", command=self.open_selected_folder).pack(fill="x", pady=(18, 4))
@@ -204,24 +215,45 @@ class PrintnikApp(tk.Tk):
 
         ttk.Label(equipment_tab, text="Материалы", font=("Segoe UI Semibold", 14)).pack(anchor="w")
         ttk.Button(equipment_tab, text="Создать калибровочный лист A/B", command=self.create_calibration).pack(anchor="e")
-        material_tree = ttk.Treeview(equipment_tab, columns=("name", "side", "cut", "status"), show="headings", height=5)
+        ttk.Button(equipment_tab, text="Пробный лист регистрационных меток", command=self.create_registration_test).pack(anchor="e", pady=(4, 0))
+        self.registration_scan_button = ttk.Button(equipment_tab, text="Проверить считывание меток (без резки)",
+                                                   command=self.check_registration_marks)
+        self.registration_scan_button.pack(anchor="e", pady=(4, 0))
+        self.position_check_button = ttk.Button(equipment_tab, text="Проверить положение над полосой (без резки)",
+                                                command=self.check_control_line_position)
+        self.position_check_button.pack(anchor="e", pady=(4, 0))
+        self.first_cut_button = ttk.Button(equipment_tab, text="Проверить глубину реза на том же листе",
+                                           command=self.check_kiss_test)
+        self.first_cut_button.pack(anchor="e", pady=(4, 0))
+        self.direct_cat_button = ttk.Button(equipment_tab, text="Пробный плавный рез кота на новом листе",
+                                            command=self.check_direct_cat_trial)
+        self.direct_cat_button.pack(anchor="e", pady=(4, 0))
+        self.blade_check_button = ttk.Button(equipment_tab, text="Проверить нож малым квадратом на том же листе",
+                                             command=self.check_blade_on_cat_sheet)
+        self.blade_check_button.pack(anchor="e", pady=(4, 0))
+        self.smooth_motion_button = ttk.Button(equipment_tab, text="Проверить плавность движения (без резки)",
+                                               command=self.check_smooth_motion)
+        self.smooth_motion_button.pack(anchor="e", pady=(4, 0))
+        material_tree = ttk.Treeview(equipment_tab, columns=("name", "side", "cut", "status"), show="headings", height=3)
         for key, title, width in (("name", "Материал", 260), ("side", "Загрузка", 430), ("cut", "Резка", 180), ("status", "Статус", 130)):
             material_tree.heading(key, text=title); material_tree.column(key, width=width)
         for material in self.materials.values():
             cut = f"нож {material.blade}, сила {material.force}, скорость {material.speed}, проходов {material.passes}"
             status = "Откалиброван" if material.calibrated else "Нужен тест"
             material_tree.insert("", "end", values=(material.name, material.print_side_instruction, cut, status))
-        material_tree.pack(fill="x", pady=(8, 22))
+        material_tree.pack(fill="x", pady=(8, 14))
         ttk.Label(equipment_tab, text="Оборудование", font=("Segoe UI Semibold", 14)).pack(anchor="w")
-        self.device_tree = ttk.Treeview(equipment_tab, columns=("id", "name", "kind", "connection", "status"), show="headings", height=7)
+        device_buttons = ttk.Frame(equipment_tab)
+        device_buttons.pack(fill="x", pady=(8, 0))
+        ttk.Button(device_buttons, text="Добавить устройство", command=self.add_device).pack(side="left")
+        ttk.Button(device_buttons, text="Отметить откалиброванным", command=self.calibrate_device).pack(side="left", padx=8)
+        self.cameo_check_button = ttk.Button(device_buttons, text="Проверить Cameo по USB", command=self.check_cameo_usb)
+        self.cameo_check_button.pack(side="left", padx=8)
+        ttk.Button(device_buttons, text="Указать папку производственного каталога", command=self.choose_catalog).pack(side="left", padx=8)
+        self.device_tree = ttk.Treeview(equipment_tab, columns=("id", "name", "kind", "connection", "status"), show="headings", height=4)
         for key, title, width in (("id", "ID", 110), ("name", "Устройство", 280), ("kind", "Тип", 120), ("connection", "Подключение", 170), ("status", "Состояние", 180)):
             self.device_tree.heading(key, text=title); self.device_tree.column(key, width=width)
         self.device_tree.pack(fill="x", pady=(8, 8))
-        device_buttons = ttk.Frame(equipment_tab)
-        device_buttons.pack(fill="x")
-        ttk.Button(device_buttons, text="Добавить устройство", command=self.add_device).pack(side="left")
-        ttk.Button(device_buttons, text="Отметить откалиброванным", command=self.calibrate_device).pack(side="left", padx=8)
-        ttk.Button(device_buttons, text="Указать папку производственного каталога", command=self.choose_catalog).pack(side="left", padx=8)
         self.refresh_devices()
 
     def on_close(self):
@@ -411,6 +443,400 @@ class PrintnikApp(tk.Tk):
         for device in self.devices:
             self.device_tree.insert("", "end", values=(device["device_id"], device["display_name"], labels.get(device["kind"], device["kind"]), device["connection"], statuses.get(device["status"], device["status"])))
 
+    def check_cameo_usb(self):
+        self.cameo_check_button.configure(state="disabled")
+        self.set_banner("Проверка Cameo по USB...")
+
+        def worker():
+            try:
+                result = probe_cameo()
+                error = None
+            except CameoConnectionError as exc:
+                result, error = None, str(exc)
+
+            def finish():
+                if not self.winfo_exists():
+                    return
+                self.cameo_check_button.configure(state="normal")
+                self.set_banner("Готов" if not error else "Cameo: проверка не удалась")
+                if error:
+                    messagebox.showerror("Связь с Cameo", error, parent=self)
+                    return
+                states = {"ready": "готов", "moving": "занят", "unloaded": "материал не загружен", "unknown": "неизвестно"}
+                tool_names = {"0": "пусто", "1": "ручной нож", "2": "AutoBlade",
+                              "3": "нож для глубокой резки", "4": "крафт-нож", "5": "роторный нож"}
+                first_tool = result["tool_1"]
+                second_tool = result["tool_2"]
+                messagebox.showinfo(
+                    "Связь с Cameo",
+                    f"Плоттер ответил напрямую по USB.\n"
+                    f"{result['firmware']}\n"
+                    f"Состояние: {states.get(result['status'], result['status'])}.\n"
+                    f"Гнездо 1: {tool_names.get(first_tool, 'код ' + first_tool)}.\n"
+                    f"Гнездо 2: {tool_names.get(second_tool, 'код ' + second_tool)}.\n\n"
+                    "Движение и резка не запускались.",
+                    parent=self,
+                )
+
+            self.after(0, finish)
+
+        threading.Thread(target=worker, daemon=True).start()
+
+    def check_registration_marks(self):
+        manifest = filedialog.askopenfilename(
+            parent=self, title="Выберите описание напечатанного пробного листа",
+            filetypes=[("Пробный лист", "registration-test.json"), ("JSON", "*.json")],
+        )
+        if not manifest:
+            return
+        try:
+            registration_geometry(Path(manifest))
+        except CameoConnectionError as exc:
+            messagebox.showerror("Пробный лист", str(exc), parent=self)
+            return
+        if not messagebox.askyesno(
+            "Проверка меток без резки",
+            "Загрузите напечатанный лист A4 в Cameo без коврика, как раньше, "
+            "и дождитесь состояния «Готово». Закройте Silhouette Studio.\n\n"
+            "После нажатия «Да» плоттер передвинет лист и оптический датчик, "
+            "чтобы найти четыре метки. Нож и резка не включаются. Начать?",
+            parent=self,
+        ):
+            return
+        self.registration_scan_button.configure(state="disabled")
+        self.set_banner("Cameo ищет регистрационные метки...")
+
+        def worker():
+            try:
+                result = scan_registration_marks(Path(manifest))
+                error = None
+            except CameoConnectionError as exc:
+                result, error = None, str(exc)
+
+            def finish():
+                if not self.winfo_exists():
+                    return
+                self.registration_scan_button.configure(state="normal")
+                self.set_banner("Готов" if not error else "Поиск меток не завершён")
+                if error:
+                    messagebox.showerror("Поиск меток", error, parent=self)
+                elif result["status"] == "found":
+                    messagebox.showinfo("Поиск меток", "Cameo сообщил об успешном поиске меток. "
+                                        "Нож и резка не включались. Сохраните этот лист для следующего опыта.",
+                                        parent=self)
+                else:
+                    messagebox.showwarning("Поиск меток", "Cameo не подтвердил поиск всех меток. "
+                                           f"Код ответа: {result['raw_response_hex']}. "
+                                           "Нож и резка не включались.", parent=self)
+
+            self.after(0, finish)
+
+        threading.Thread(target=worker, daemon=True).start()
+
+    def check_control_line_position(self):
+        manifest = filedialog.askopenfilename(
+            parent=self, title="Выберите описание успешного листа с нижним отступом 25 мм",
+            filetypes=[("Пробный лист", "registration-test.json"), ("JSON", "*.json")],
+        )
+        if not manifest:
+            return
+        try:
+            if registration_geometry(Path(manifest)) != (5240, 3800, 0, 0):
+                raise CameoConnectionError("Нужен пробный лист с нижним отступом 25 мм")
+        except CameoConnectionError as exc:
+            messagebox.showerror("Пробный лист", str(exc), parent=self)
+            return
+        if not messagebox.askyesno(
+            "Проверка положения без резки",
+            "Загрузите успешный лист A4 с нижним отступом 25 мм без коврика и "
+            "дождитесь состояния «Готово». Закройте Silhouette Studio.\n\n"
+            "Плоттер снова найдёт четыре метки, затем поднимет инструмент и "
+            "переместится к середине контрольной полосы 50 мм. "
+            "Нож не опускается и резка не включается. Начать?",
+            parent=self,
+        ):
+            return
+        self.position_check_button.configure(state="disabled")
+        self.set_banner("Cameo ищет метки и проверяет положение...")
+
+        def worker():
+            try:
+                result = position_over_control_line(Path(manifest))
+                error = None
+            except CameoConnectionError as exc:
+                result, error = None, str(exc)
+
+            def finish():
+                if not self.winfo_exists():
+                    return
+                self.position_check_button.configure(state="normal")
+                self.set_banner("Готов" if not error else "Проверка положения не завершена")
+                if error:
+                    messagebox.showerror("Проверка положения", error, parent=self)
+                elif result["status"] == "position_command_sent":
+                    messagebox.showinfo(
+                        "Проверка положения",
+                        "Метки найдены. Команда перемещения с поднятым инструментом отправлена. "
+                        "Посмотрите, остановилась ли головка над серединой полосы 50 мм. "
+                        "Возможен небольшой сдвиг между датчиком и ножом; резки не было.", parent=self)
+                else:
+                    messagebox.showwarning("Проверка положения",
+                                           "Cameo не подтвердил поиск всех меток. "
+                                           f"Код ответа: {result['raw_response_hex']}. Движение к полосе не запускалось.",
+                                           parent=self)
+
+            self.after(0, finish)
+
+        threading.Thread(target=worker, daemon=True).start()
+
+    def check_kiss_test(self):
+        manifest = filedialog.askopenfilename(
+            parent=self, title="Выберите описание второго пробного реза на том же листе",
+            filetypes=[("Пробный рез", "kiss-test-1.json"), ("JSON", "*.json")],
+        )
+        if not manifest:
+            return
+        try:
+            validate_kiss_test_manifest(Path(manifest))
+        except CameoConnectionError as exc:
+            messagebox.showerror("Пробный рез", str(exc), parent=self)
+            return
+        if not messagebox.askyesno(
+            "Проверка глубины реза",
+            "В Cameo должен быть загружен ТОТ ЖЕ матовый лист с уже вырезанным "
+            "квадратом 12 мм, без коврика. "
+            "В первом гнезде — AutoBlade; Silhouette Studio закрыта.\n\n"
+            "Печатник заново найдёт четыре метки и только после успеха "
+            "вырежет ОДИН квадрат 10 × 10 мм на свободном месте правее первого. "
+            "Нож 1, сила 4, скорость 4, один проход. Это новая проба, "
+            "глубина ещё не подтверждена. Начать рез?",
+            parent=self,
+        ):
+            return
+        self.first_cut_button.configure(state="disabled")
+        self.set_banner("Cameo ищет метки для пробного реза...")
+
+        def worker():
+            try:
+                result = run_kiss_test(Path(manifest))
+                error = None
+            except CameoConnectionError as exc:
+                result, error = None, str(exc)
+
+            def finish():
+                if not self.winfo_exists():
+                    return
+                self.first_cut_button.configure(state="normal")
+                banner = {"cut_device_ready": "Плоттер готов; лист загружен",
+                          "not_found": "Метки не найдены; рез не запускался"}
+                self.set_banner(banner.get(result["status"], "Завершение реза не подтверждено")
+                                if result else "Пробный рез не завершён")
+                if error:
+                    messagebox.showerror("Пробный рез", error, parent=self)
+                elif result["status"] == "cut_device_ready":
+                    messagebox.showinfo("Пробный рез",
+                                        "Метки найдены. Команды одного квадрата отправлены, "
+                                        "и Cameo снова сообщил состояние «Готово». "
+                                        "Лист остаётся загруженным: осмотрите рез и выгрузите "
+                                        "лист кнопкой на плоттере, когда будете готовы. "
+                                        "Глубину реза нужно проверить вручную.", parent=self)
+                elif result["status"] == "cut_completion_unconfirmed":
+                    messagebox.showwarning("Пробный рез",
+                                           "Команды квадрата отправлены, но Cameo не подтвердил "
+                                           "завершение движения. Не повторяйте рез. Проверьте плоттер "
+                                           "и дождитесь его полной остановки перед выгрузкой листа.", parent=self)
+                else:
+                    messagebox.showwarning("Пробный рез",
+                                           "Cameo не нашёл все метки; рез не запускался. "
+                                           f"Код ответа: {result['raw_response_hex']}.", parent=self)
+
+            self.after(0, finish)
+
+        threading.Thread(target=worker, daemon=True).start()
+
+    def check_smooth_motion(self):
+        manifest = filedialog.askopenfilename(
+            parent=self, title="Выберите описание листа с котом для движения без резки",
+            filetypes=[("Пробный лист с котом", "direct-cat-trial.json"), ("JSON", "*.json")],
+        )
+        if not manifest:
+            return
+        try:
+            validate_direct_cat_manifest(Path(manifest))
+        except CameoConnectionError as exc:
+            messagebox.showerror("Проверка плавности", str(exc), parent=self)
+            return
+        if not messagebox.askyesno(
+            "Проверка плавности без резки",
+            "Загрузите тот же лист с котом без коврика, дождитесь состояния «Готово» "
+            "и закройте Silhouette Studio.\n\n"
+            "Печатник найдёт четыре метки, затем проведёт головку по пробному "
+            "маршруту с ПОДНЯТЫМ ножом. Между командами движения не будет "
+            "запросов состояния. В конце головка должна остановиться над полосой 50 мм. "
+            "Резки не будет. Начать?",
+            parent=self,
+        ):
+            return
+        self.smooth_motion_button.configure(state="disabled")
+        self.set_banner("Проверка плавности без резки...")
+
+        def worker():
+            try:
+                result = probe_tool_up_smooth(Path(manifest))
+                error = None
+            except CameoConnectionError as exc:
+                result, error = None, str(exc)
+
+            def finish():
+                if not self.winfo_exists():
+                    return
+                self.smooth_motion_button.configure(state="normal")
+                self.set_banner("Cameo сообщил «Готово»" if result and result["status"] == "motion_device_ready"
+                                else "Проверка плавности не подтверждена")
+                if error:
+                    messagebox.showerror("Проверка плавности", error, parent=self)
+                elif result["status"] == "motion_device_ready":
+                    messagebox.showinfo("Проверка плавности",
+                                        "Команды маршрута без резки отправлены; Cameo сообщил «Готово». "
+                                        "Проверьте, двигалась ли головка по всему маршруту и "
+                                        "остановилась ли над полосой 50 мм. "
+                                        "Сообщите, были ли паузы и мерцание панели.", parent=self)
+                elif result["status"] == "not_found":
+                    messagebox.showwarning("Проверка плавности",
+                                           "Метки не найдены; движение по маршруту не запускалось.", parent=self)
+                else:
+                    messagebox.showwarning("Проверка плавности",
+                                           "Завершение движения не подтверждено. Осмотрите плоттер "
+                                           "перед следующим действием.", parent=self)
+
+            self.after(0, finish)
+
+        threading.Thread(target=worker, daemon=True).start()
+
+    def check_direct_cat_trial(self):
+        manifest = filedialog.askopenfilename(
+            parent=self, title="Выберите описание плавного реза кота на новом листе",
+            filetypes=[("Плавный рез кота", "cat-smooth-trial.json")],
+        )
+        if not manifest:
+            return
+        try:
+            if Path(manifest).name != "cat-smooth-trial.json":
+                raise CameoConnectionError("Выберите cat-smooth-trial.json для нового листа")
+            validate_direct_cat_manifest(Path(manifest))
+        except CameoConnectionError as exc:
+            messagebox.showerror("Пробный контур кота", str(exc), parent=self)
+            return
+        if not messagebox.askyesno(
+            "Пробный контур кота",
+            "В Cameo должен быть загружен НОВЫЙ матовый лист с напечатанным котом "
+            "из cat-gap-print.pdf, в фактическом размере. "
+            "Лист загружен без коврика, печатной стороной вверх; "
+            "в первом гнезде — AutoBlade; Silhouette Studio закрыта.\n\n"
+            "Печатник найдёт четыре метки и вырежет ОДИН контур кота. "
+            "Контур +0,6 мм наружу от изображения, в двух узких промежутках у головы "
+            "уменьшен до 0,2–0,4 мм; нож 1, сила 4, "
+            "скорость 4, один проход. Проверенный на напечатанном коте плавный "
+            "контур будет отправлен пятью пакетами. "
+            "Начать рез на новом листе?",
+            parent=self,
+        ):
+            return
+        self.direct_cat_button.configure(state="disabled")
+        self.set_banner("Cameo ищет метки для пробного контура кота...")
+
+        def worker():
+            try:
+                result = run_direct_cat_trial(Path(manifest))
+                error = None
+            except CameoConnectionError as exc:
+                result, error = None, str(exc)
+
+            def finish():
+                if not self.winfo_exists():
+                    return
+                self.direct_cat_button.configure(state="normal")
+                self.set_banner(
+                    "Плоттер готов; лист загружен" if result and result["status"] == "cut_device_ready"
+                    else "Пробный контур кота не подтверждён"
+                )
+                if error:
+                    messagebox.showerror("Пробный контур кота", error, parent=self)
+                elif result["status"] == "cut_device_ready":
+                    messagebox.showinfo(
+                        "Пробный контур кота",
+                        "Метки найдены. Контур кота отправлен, Cameo снова сообщил «Готово». "
+                        "Лист остаётся загруженным. Осмотрите рез, затем выгрузите лист "
+                        "кнопкой на плоттере. Проверьте наклейку и подложку вручную.", parent=self)
+                elif result["status"] == "not_found":
+                    messagebox.showwarning("Пробный контур кота",
+                                           "Не все метки найдены; рез не запускался.", parent=self)
+                else:
+                    messagebox.showwarning(
+                        "Пробный контур кота",
+                        "Завершение реза не подтверждено. Не повторяйте опыт; "
+                        "проверьте плоттер и лист после полной остановки.", parent=self)
+
+            self.after(0, finish)
+
+        threading.Thread(target=worker, daemon=True).start()
+
+    def check_blade_on_cat_sheet(self):
+        manifest = filedialog.askopenfilename(
+            parent=self, title="Выберите проверку ножа на листе с котом",
+            filetypes=[("Проверка ножа", "cat-gap-blade-check.json")],
+        )
+        if not manifest:
+            return
+        try:
+            validate_blade_check_manifest(Path(manifest))
+        except CameoConnectionError as exc:
+            messagebox.showerror("Проверка ножа", str(exc), parent=self)
+            return
+        if not messagebox.askyesno(
+            "Проверка ножа",
+            "Загрузите ТОТ ЖЕ матовый лист с котом без коврика, печатной стороной вверх. "
+            "В первом гнезде должен быть плотно зафиксирован AutoBlade; Silhouette Studio закрыта.\n\n"
+            "Печатник найдёт четыре метки и вырежет только ОДИН квадрат 10 × 10 мм "
+            "в пустом месте внизу листа. Нож 1, сила 4, скорость 4, один проход. "
+            "Повторный рез кота не запускается. Начать проверку?",
+            parent=self,
+        ):
+            return
+        self.blade_check_button.configure(state="disabled")
+        self.set_banner("Проверка ножа: поиск меток...")
+
+        def worker():
+            try:
+                result = run_blade_check(Path(manifest))
+                error = None
+            except CameoConnectionError as exc:
+                result, error = None, str(exc)
+
+            def finish():
+                if not self.winfo_exists():
+                    return
+                self.blade_check_button.configure(state="normal")
+                self.set_banner("Плоттер готов; лист загружен" if result and result["status"] == "cut_device_ready"
+                                else "Проверка ножа не подтверждена")
+                if error:
+                    messagebox.showerror("Проверка ножа", error, parent=self)
+                elif result["status"] == "cut_device_ready":
+                    messagebox.showinfo(
+                        "Проверка ножа",
+                        "Команды квадрата отправлены; Cameo сообщил «Готово». "
+                        "Лист остаётся загруженным. После остановки выгрузите его кнопкой плоттера "
+                        "и вручную проверьте маленький квадрат и подложку.", parent=self)
+                elif result["status"] == "not_found":
+                    messagebox.showwarning("Проверка ножа", "Метки не найдены; рез не запускался.", parent=self)
+                else:
+                    messagebox.showwarning("Проверка ножа",
+                                           "Завершение не подтверждено. Не повторяйте опыт; осмотрите лист.", parent=self)
+
+            self.after(0, finish)
+
+        threading.Thread(target=worker, daemon=True).start()
+
     def add_device(self):
         kind = simpledialog.askstring("Тип оборудования", "Введите: printer для принтера или cutter для плоттера", parent=self)
         if kind not in {"printer", "cutter"}:
@@ -459,6 +885,57 @@ class PrintnikApp(tk.Tk):
             messagebox.showinfo("Калибровочный пакет", "Созданы PDF для печати, SVG резки и контрольная шкала 50 мм. Метки: 10 мм сверху и сбоку, 25 мм снизу.")
         except Exception as exc:
             self._show_error("Не удалось создать калибровочный лист", str(exc))
+
+    def create_registration_test(self):
+        raw = simpledialog.askstring(
+            "Отступы регистрационных меток",
+            "Введите четыре отступа в мм через запятую: слева, справа, сверху, снизу.\n"
+            "Например: 10, 10, 10, 10. Это пробный лист без резки.",
+            parent=self, initialvalue="10, 10, 10, 10",
+        )
+        if raw is None:
+            return
+        try:
+            values = [float(part.strip().replace(",", ".")) for part in raw.split(",")]
+            if len(values) != 4:
+                raise ValueError("Нужны ровно четыре числа: слева, справа, сверху, снизу.")
+            order = self.selected_order()
+            image_source = None
+            image_label = "local-art"
+            if order and order.items:
+                image_label = order.items[0].asset_id
+                try:
+                    image_source = self.catalog.resolve(image_label)
+                except FileNotFoundError:
+                    if order.output_dir:
+                        report_path = Path(order.output_dir) / "job.json"
+                        if report_path.exists():
+                            report = json.loads(report_path.read_text(encoding="utf-8"))
+                            for item in report.get("preflight", []):
+                                if item.get("asset_id") == image_label and Path(item.get("source", "")).is_file():
+                                    image_source = Path(item["source"])
+                                    break
+            if image_source is None:
+                chosen = filedialog.askopenfilename(parent=self, title="Картинка для нижней части листа",
+                                                    filetypes=[("Картинки", "*.png *.webp *.jpg *.jpeg")])
+                if not chosen:
+                    return
+                image_source = Path(chosen)
+            folder_name = "registration-" + "-".join(f"{value:g}" for value in values).replace(".", "p")
+            folder_name += "-" + "".join(char for char in image_label if char.isalnum() or char in "-_")[:40]
+            folder = OUTPUT_DIR / "experiments" / folder_name
+            manifest = create_registration_test_package(folder, left_mm=values[0], right_mm=values[1],
+                                                        top_mm=values[2], bottom_mm=values[3],
+                                                        image_source=image_source)
+            os.startfile(manifest["preview_png"])
+            messagebox.showinfo("Пробный лист меток", "Создан пробный лист A4 с картинкой у нижней левой метки. "
+                                "Открыт предпросмотр; PDF лежит в папке "
+                                "эксперимента. Никаких команд плоттеру не отправлено. "
+                                "Рабочий профиль заказов остаётся 10/10/10/25 мм.")
+        except ValueError as exc:
+            messagebox.showerror("Неверные отступы", str(exc))
+        except OSError as exc:
+            messagebox.showerror("Не удалось создать пробный лист", str(exc))
 
     def choose_catalog(self):
         path = filedialog.askdirectory(parent=self, title="Папка с MASTER/ART файлами")
@@ -544,12 +1021,34 @@ class PrintnikApp(tk.Tk):
         if not messagebox.askyesno("Утвердить контуры", "Вы просмотрели каждый печатный лист со всеми красными линиями реза?\n\n"
                                   "Утвердить именно эти контуры для печати и резки?"):
             return
+        try:
+            report["approved_files_sha256"] = approved_file_hashes(Path(order.output_dir), report)
+        except CutPlanError as exc:
+            messagebox.showerror("Не удалось утвердить листы", str(exc))
+            return
         report["contour_review_approved"] = True
         report["status"] = "ready_to_print"
         report_path.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
         order.status = OrderStatus.READY_TO_PRINT
         self.store.save(order, "sheet_contours_approved", {"previews": report["sheet_previews"]})
         self.refresh_orders()
+
+    def show_direct_cut_plan(self):
+        order = self.selected_order()
+        if not order or not order.output_dir:
+            messagebox.showwarning("Нет задания", "Сначала подготовьте заказ.")
+            return
+        try:
+            paths = write_order_cut_plans(Path(order.output_dir))
+            os.startfile(paths[0])
+            messagebox.showinfo(
+                "Черновой план прямой резки",
+                f"Создано планов: {len(paths)}. Открыт первый; остальные лежат в папке заказа.\n\n"
+                "Это только проверка последовательности движений. Начало координат и поиск меток "
+                "ещё не откалиброваны; плоттеру ничего не отправлено.",
+            )
+        except (CutPlanError, OSError) as exc:
+            messagebox.showerror("План не создан", str(exc))
 
     def _handle_preflight(self, order: Order, exc: PreflightError, opaque: set[str]):
         self.busy = False
@@ -716,6 +1215,76 @@ class PrintnikApp(tk.Tk):
             )
         except Exception as exc:
             self._show_error("Не удалось открыть Silhouette Studio", str(exc))
+
+    def direct_cut_selected(self):
+        order = self.selected_order()
+        if not order or not order.output_dir or self.busy:
+            messagebox.showwarning("Нет готового листа", "Сначала подготовьте и напечатайте заказ.")
+            return
+        if order.status not in {OrderStatus.PRINTED_WAITING_CUT, OrderStatus.LOADED_FOR_CUT}:
+            messagebox.showwarning("Лист ещё не напечатан", "Сначала подтвердите печать листа в Печатнике.")
+            return
+        sheet_no = simpledialog.askinteger("Прямой USB-рез", f"Номер листа (1–{order.sheet_count})",
+                                           parent=self, minvalue=1, maxvalue=order.sheet_count,
+                                           initialvalue=1)
+        if sheet_no is None:
+            return
+        try:
+            preview = prepare_direct_sheet(Path(order.output_dir), sheet_no)
+        except CutPlanError as exc:
+            messagebox.showerror("Прямой рез остановлен", str(exc))
+            return
+        if not messagebox.askyesno(
+            "Пробный прямой рез",
+            f"Заказ {preview.order_id}, лист {sheet_no}. Контуров: {preview.contour_count}.\n"
+            f"Команд: {preview.command_count}. Печатный PDF и контуры совпали с утверждёнными.\n\n"
+            "Проверь: это НОВЫЙ лист из этого PDF, контрольная линия 50 мм, "
+            "та же матовая самоклейка без коврика, печатной стороной вверх. "
+            "AutoBlade плотно закреплён в первом гнезде; Cameo показывает «Готово», "
+            "Silhouette Studio закрыта.\n\n"
+            "Печатник найдёт четыре метки и вырежет только выбранный лист "
+            "(нож 1, сила 4, скорость 4, один проход). "
+            + ("Этот лист сложнее проверенного восьмиконтурного: пробный рез может занять больше времени. "
+               if preview.command_count > 3000 or preview.contour_count > 8 else "")
+            + "Повтор этой попытки будет заблокирован. Начать?",
+            parent=self,
+        ):
+            return
+        self.busy = True
+        self.direct_cut_button.configure(state="disabled")
+        self.set_banner(f"Пробный прямой рез листа {sheet_no}…")
+
+        def worker():
+            try:
+                result = run_direct_order_sheet(Path(order.output_dir), sheet_no)
+                error = None
+            except CameoConnectionError as exc:
+                result, error = None, str(exc)
+
+            def finish():
+                self.busy = False
+                self.direct_cut_button.configure(state="normal")
+                if error:
+                    self._show_error("Прямой рез не подтверждён", error + "\n\nОсмотри лист перед любым повтором.")
+                    return
+                if result["status"] != "cut_device_ready":
+                    self.set_banner("Поиск меток или завершение реза не подтверждены")
+                    messagebox.showwarning("Прямой рез не подтверждён",
+                                           "Осмотри лист. Повтор этого задания заблокирован.", parent=self)
+                    return
+                self.store.save(order, "direct_usb_sheet_sent", {"sheet_no": sheet_no,
+                                "command_count": preview.command_count,
+                                "print_sha256": preview.print_sha256,
+                                "cut_sha256": preview.cut_sha256})
+                self.set_banner("Рез отправлен; проверь наклейки и подложку")
+                messagebox.showinfo("Прямой рез завершён",
+                                    "Cameo сообщил «Готово». Выгрузи лист, проверь все наклейки и подложку. "
+                                    "После осмотра нажми «Учесть рез листа». Повторная отправка заблокирована.",
+                                    parent=self)
+
+            self.after(0, finish)
+
+        threading.Thread(target=worker, daemon=True).start()
 
     def confirm_cut_sheet(self):
         order = self.selected_order()
