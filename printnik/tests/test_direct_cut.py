@@ -1,5 +1,6 @@
 import hashlib
 import json
+import math
 import unittest
 import uuid
 from contextlib import nullcontext
@@ -85,6 +86,38 @@ class DirectCutPlanTests(unittest.TestCase):
         self.preview.write_bytes(b"changed preview")
         with self.assertRaises(CutPlanError):
             prepare_direct_sheet(self.folder, 1)
+
+    def test_denser_sheet_stays_within_bounded_usb_packets(self):
+        paths = []
+        for index in range(17):
+            cx, cy = 24 + (index % 5) * 32, 24 + (index // 5) * 32
+            points = [(cx + 8 * math.cos(2 * math.pi * i / 400),
+                       cy + 8 * math.sin(2 * math.pi * i / 400)) for i in range(400)]
+            path = "M " + " L ".join(f"{x:.5f} {y:.5f}" for x, y in points) + " Z"
+            paths.append(f'<path d="{path}"/>')
+        self.svg.write_text('<svg xmlns="http://www.w3.org/2000/svg" '
+                            'width="210mm" height="297mm" viewBox="0 0 210 297">'
+                            + "".join(paths) + "</svg>", encoding="utf-8")
+        commands = compile_svg_commands(self.svg)
+        packets = packetize_cut_path(commands)
+        self.assertEqual(sum(command.startswith(b"M") for command in commands), 34)
+        self.assertGreater(len(commands), 3000)
+        self.assertLessEqual(len(commands), 8000)
+        self.assertTrue(all(sum(map(len, packet)) <= 750 for packet in packets))
+        self.report["approved_files_sha256"] = approved_file_hashes(self.folder, self.report)
+        self._save()
+        with patch("printnik.cameo_usb._run_worker", return_value={"status": "not_found"}) as worker:
+            self.assertEqual(run_direct_order_sheet(self.folder, 1)["status"], "not_found")
+        self.assertEqual(worker.call_args.args[:2], ("direct_order", 1500))
+
+    def test_rejects_contour_beyond_expanded_point_limit(self):
+        points = " L ".join(f"{20 + i % 100 * 0.01:.3f} {20 + i // 100 * 0.01:.3f}"
+                              for i in range(1501))
+        self.svg.write_text('<svg xmlns="http://www.w3.org/2000/svg" '
+                            'width="210mm" height="297mm" viewBox="0 0 210 297">'
+                            f'<path d="M {points} Z"/></svg>', encoding="utf-8")
+        with self.assertRaises(CutPlanError):
+            compile_svg_commands(self.svg)
 
     def test_worker_sends_only_after_marks_and_keeps_path_packets_together(self):
         class FakeDevice:

@@ -612,7 +612,9 @@ def _direct_order_worker(output_dir: Path, sheet_no: int) -> dict:
         for packet in packets:
             device.write_batch(packet, preview.commands)
             sent += 1
-        state = _wait_for_ready(device, timeout=300)
+        # The first, denser sheet can take much longer than the verified
+        # 2,809-command pilot. Keep waiting for the cutter after the last write.
+        state = _wait_for_ready(device, timeout=900 if preview.command_count > 3000 else 300)
         return {"firmware": firmware,
                 "status": "cut_device_ready" if state == "ready" else "cut_completion_unconfirmed",
                 "raw_response_hex": answer.hex(), "sent_packet_count": sent,
@@ -934,7 +936,8 @@ def run_direct_order_sheet(output_dir: Path, sheet_no: int, timeout: float = 600
     except OSError as exc:
         raise CameoConnectionError("Не удалось записать попытку; рез не запускался") from exc
     try:
-        result = _run_worker("direct_order", timeout, manifest_path=output_dir, sheet_no=sheet_no)
+        worker_timeout = max(timeout, 1500 if preview.command_count > 3000 else 600)
+        result = _run_worker("direct_order", worker_timeout, manifest_path=output_dir, sheet_no=sheet_no)
         record.update(result)
     except CameoConnectionError as exc:
         record.update(status="error_after_attempt_started", error=str(exc))

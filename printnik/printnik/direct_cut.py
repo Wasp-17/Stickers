@@ -1,7 +1,7 @@
 """Offline compilation of reviewed A4 sheets for the physically tested Cameo path.
 
-This module never opens the USB device. The existing Studio route remains the
-only order-cut action until a separate physical test approves this integration.
+This module never opens the USB device. Larger sheets remain experimental even
+though the first eight-sticker order sheet was physically verified.
 """
 
 from __future__ import annotations
@@ -19,9 +19,9 @@ VERIFIED_REGISTRATION = {
     "left_mm": 10, "right_mm": 10, "top_mm": 10,
     "bottom_mm": 25, "length_mm": 20, "status": "physically_tested",
 }
-MAX_CONTOURS = 8
-MAX_POINTS_PER_CONTOUR = 500
-MAX_COMMANDS = 3000
+MAX_CONTOURS = 24
+MAX_POINTS_PER_CONTOUR = 1500
+MAX_COMMANDS = 8000
 
 
 @dataclass(frozen=True)
@@ -40,12 +40,12 @@ def compile_svg_commands(svg_file: Path) -> tuple[bytes, ...]:
     plan = plan_svg(svg_file)
     contours = plan["contours"]
     if not 1 <= len(contours) <= MAX_CONTOURS:
-        raise CutPlanError(f"Для первого прямого задания допустимо 1–{MAX_CONTOURS} контуров.")
+        raise CutPlanError(f"Для расширенного пробного реза допустимо 1–{MAX_CONTOURS} контуров на лист.")
     commands: list[bytes] = []
     for contour in contours:
         points = contour["points_mm"]
         if not 3 <= len(points) <= MAX_POINTS_PER_CONTOUR:
-            raise CutPlanError("Контур слишком подробный для проверенного USB-маршрута.")
+            raise CutPlanError(f"Контур содержит более {MAX_POINTS_PER_CONTOUR} точек; пробный рез остановлен.")
         if any(not (11 <= x <= 199 and 11 <= y <= 245) for x, y in points):
             raise CutPlanError("Контур вышел за проверенную область листа с метками.")
         coords = [(round((y - 10) * 20), round((x - 10) * 20)) for x, y in points]
@@ -57,7 +57,7 @@ def compile_svg_commands(svg_file: Path) -> tuple[bytes, ...]:
         commands.append(f"D{coords[0][0]},{coords[0][1]}\x03".encode("ascii"))
         commands.append(first)
     if len(commands) > MAX_COMMANDS:
-        raise CutPlanError("В задании больше команд, чем в проверенном пробном листе.")
+        raise CutPlanError(f"На листе более {MAX_COMMANDS} команд; пробный рез остановлен.")
     return tuple(commands)
 
 
