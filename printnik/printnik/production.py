@@ -13,7 +13,7 @@ from .dxf import bounds, path_points, render_dxf
 from .materials import MaterialProfile
 from .models import Order
 from .prototype import (
-    SIZES_MM, cut_mask_for_size, fill_internal_holes, grow_bleed,
+    SIZES_MM, _components, cut_mask_for_size, fill_internal_holes, grow_bleed,
     needs_small_contour_review, scaled_to_frame, simplify, trace_loops,
 )
 from .size_rules import validate_size_rule
@@ -95,6 +95,39 @@ def _packing_mask(cut_mask: np.ndarray, dpi: int, gap_mm: float = 1.5) -> tuple[
     return np.array(tiny) > 0, radius
 
 
+def _repair_firefighter_cut(image: Image.Image, mask: np.ndarray, dpi: int) -> np.ndarray:
+    """Cut two white areas that are opaque in RK17-0132's source artwork.
+
+    The extinguisher/hose gap must become an internal cut. The small white
+    sliver inside the collar notch on the viewer's right must join the exterior cut.
+    Restrict both repairs to their measured artwork regions so highlights
+    elsewhere in the illustration cannot turn into holes.
+    """
+    rgba = np.asarray(image)
+    bright = (rgba[:, :, :3].min(axis=2) >= 200) & (rgba[:, :, 3] > 24)
+    height, width = bright.shape
+    corrected = mask.copy()
+    for name, reference_box, min_reference_area in (
+        ("extinguisher", (25, 235, 85, 340), 500),
+        ("collar", (365, 282, 405, 300), 30),
+    ):
+        x0, y0, x1, y1 = reference_box
+        x0, x1 = round(x0 * width / 565), round(x1 * width / 565)
+        y0, y1 = round(y0 * height / 886), round(y1 * height / 886)
+        components = _components(bright[y0:y1, x0:x1])
+        largest = max(components, key=len, default=[])
+        scaled_minimum = min_reference_area * width / 565 * height / 886
+        if len(largest) < scaled_minimum:
+            raise ValueError(f"Не удалось проверить поправку контура RK17-0132: {name}")
+        carve = np.zeros((height, width), dtype=np.uint8)
+        for y, x in largest:
+            carve[y + y0, x + x0] = 255
+        radius_px = max(1, round(0.17 * dpi / 25.4))
+        carve = np.asarray(Image.fromarray(carve).filter(ImageFilter.MaxFilter(radius_px * 2 + 1))) > 0
+        corrected &= ~carve
+    return corrected
+
+
 def prepare_sticker(path: Path, asset_id: str, size_code: str, dpi: int = 300, bleed_mm: float = 0.75,
                     *, rectangular_cut: bool = False, material: MaterialProfile | None = None) -> PreparedSticker:
     source = Image.open(path).convert("RGBA")
@@ -109,6 +142,8 @@ def prepare_sticker(path: Path, asset_id: str, size_code: str, dpi: int = 300, b
                 cut_mask_for_size(raw_mask, size_code, dpi, safe_a=review_required,
                                   min_hole_mm_b=material.minimum_hole_mm_b if material else 2.2,
                                   min_hole_mm_c_plus=material.minimum_hole_mm_c_plus if material else 1.5))
+    if asset_id.upper() == "RK17-0132" and size_code == "C" and not rectangular_cut:
+        cut_mask = _repair_firefighter_cut(scaled, cut_mask, dpi)
     bleed_px = max(1, round(bleed_mm / 25.4 * dpi))
     pad_px = bleed_px + 2
     packing_mask, packing_pad_mm = _packing_mask(cut_mask, dpi)
