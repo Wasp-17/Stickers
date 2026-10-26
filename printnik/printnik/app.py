@@ -19,6 +19,7 @@ from .cameo_usb import (CameoConnectionError, position_over_control_line, probe_
                         validate_blade_check_manifest, run_direct_cat_trial,
                         validate_direct_cat_manifest)
 from .cut_plan import CutPlanError, write_order_cut_plans
+from .direct_cut import approved_file_hashes
 from .devices import open_folder, open_silhouette_bridge, send_pdf_to_printer
 from .equipment import Device, DeviceKind, DeviceStatus, EquipmentScheduler
 from .envelopes import create_envelopes_pdf
@@ -1017,6 +1018,11 @@ class PrintnikApp(tk.Tk):
             return
         if not messagebox.askyesno("Утвердить контуры", "Вы просмотрели каждый печатный лист со всеми красными линиями реза?\n\n"
                                   "Утвердить именно эти контуры для печати и резки?"):
+            return
+        try:
+            report["approved_files_sha256"] = approved_file_hashes(Path(order.output_dir), report)
+        except CutPlanError as exc:
+            messagebox.showerror("Не удалось утвердить листы", str(exc))
             return
         report["contour_review_approved"] = True
         report["status"] = "ready_to_print"
